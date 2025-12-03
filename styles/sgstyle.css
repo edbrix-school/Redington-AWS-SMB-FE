@@ -1,0 +1,67 @@
+.boxBg {
+    backdrop-filter: blur(10px);
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+}
+
+.p-dialog .p-dialog-content {
+    padding: 20px;
+}
+
+.p-dialog .p-dialog-header {
+    padding: 24px;
+}
+
+.uploadpopup .p-dialog-header {
+    display: none;
+}
+
+.uploadpopup.p-dialog .p-dialog-content {
+    padding: 0px;
+}
+
+.uploadpopup.p-dialog .p-dialog-content:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.custdropinput .p-inputtext {
+    font-size: 12px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.custcalenderinput .p-inputtext{
+    font-size: 12px;
+    padding: 8px;
+  }
+  .custupload .uploader label {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px dashed #98A2B3;
+}
+.custupload .uploader input[type="file"] {
+    display: none;
+}
+
+/* .custuploadpopup .p-dialog-header{
+    display: none;
+    } */
+.custuploadpopup.p-dialog .p-dialog-content {
+    background: #ffffff;
+    color: #495057;
+    padding: 24px;
+    width: 400px;
+}

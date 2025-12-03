@@ -1,0 +1,574 @@
+.landingBg {
+    background-color: #F0F2F6;
+}
+
+.CalendarGradient {
+    background: linear-gradient(0deg, transparent, white 15%) ;
+}
+
+.number_wrapper_bg {
+    background: url(../public/images/banner_bg.png);
+    background-size: 100% 100%;
+}
+
+.solution_provider_wrapper {
+    background: url(../public/images/solution_provider_bg.png);
+    background-size: 100% 100%;
+}
+
+.custSearch .p-inputtext {
+    width: 500px;
+    border: 1px solid #BECDE3;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: #F5F6F7;
+}
+
+.custSearch.p-icon-field-left .p-inputtext {
+    padding-left: 2.5rem;
+}
+
+.cardHover:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+}
+.imageShadow {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+/* .subCardHover:hover{
+    background: #077397;
+} */
+
+.blendbg {
+    position: absolute;
+    bottom: -4px;
+    background: url(../public/images/svg/card_shap_icon.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0.777vw;
+    background-size: 100%;
+    z-index: 10;
+}
+
+/* .blendbg:hover {
+    position: absolute;
+    bottom: -2px;
+    background: url(../public/images/svg/card_shap_active_icon.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0.777vw;
+    background-size: 100%;
+} */
+.hovereffect:hover::before {
+    content: '';
+    position: absolute;
+    background: url(../public/images/svg/card_shap_active_icon.svg);
+    /* z-index: ; */
+    background-repeat: no-repeat;
+    height: 0.777vw;
+    width: 100%;
+    z-index: 10;
+    top: -11px;
+    left: 0;
+}
+.hovereffect
+{
+   /* transition: color 0.3s ease, transform 0.3s ease;  Smooth transition */
+}
+
+.hovereffect:hover
+
+{
+    /* transform: scale(1.05); Slightly increase size */
+}
+
+/* new checkbox start */
+.newCheckbox.p-checkbox .p-checkbox-input {
+    border-radius: 4px;
+}
+.newCheckbox.p-checkbox .p-checkbox-box {
+    border: 1px solid #BECDE3;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+}
+.newCheckbox.p-checkbox {
+    width: 18px;
+    height: 18px;
+}
+.newCheckbox.p-checkbox .p-checkbox-box .p-checkbox-icon.p-icon {
+    width: 12px;
+    height: 12px;
+}
+.newCheckbox.p-checkbox.p-highlight .p-checkbox-box {
+    border-color: #0090BC;
+    background: #0090BC;
+}
+/* new checkbox end */
+
+.p-multiselect-checkbox .p-checkbox-input {
+    border-radius: 4px;
+    margin-right: 4px;
+}
+.p-multiselect-checkbox .p-checkbox-box {
+    border: 1px solid #BECDE3;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.p-multiselect-checkbox .p-checkbox-box .p-checkbox-icon.p-icon {
+    width: 12px;
+    height: 12px;
+}
+.p-multiselect-checkbox .p-highlight .p-checkbox-box {
+    border-color: #0090BC;
+    background: #0090BC;
+}
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item .p-checkbox {
+    margin-right: 10px !important;
+}
+
+/* adminSearch start */
+.adminSearch .p-inputtext {
+    width: 100%;
+}
+/* adminSearch end */
+
+/* calendar start */
+.customCalendar .p-inputtext {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #4b5563;
+    background: #F5F6F7;
+}
+
+.customCalendar .p-icon {
+    display: none;
+}
+
+.customCalendar .p-datepicker-trigger:before  {
+    font-family: 'erdi-instituteportal' !important;
+    content: "\e91d";
+}
+.customTime .p-datepicker-trigger:before  {
+    font-family: 'erdi-instituteportal' !important;
+    content: "\e93e";
+}
+
+
+.customHourse .p-datepicker-trigger:before  {
+    font-family: 'erdi-instituteportal' !important;
+    content: "\e93e";
+}
+
+.customCalendar .p-button {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #4b5563;
+    background: #F5F6F7;
+    border-left: none;
+    border-right: 1px solid #BECDE3;
+    border-top: 1px solid #BECDE3;
+    border-bottom: 1px solid #BECDE3;
+}
+
+.customCalendar .p-inputtext {
+    border: 1px solid #BECDE3;
+    border-left: 1px solid #BECDE3;
+    border-right: none;
+    border-top: 1px solid #BECDE3;
+    border-bottom: 1px solid #BECDE3;
+}
+.customCalendar .p-inputtext:enabled:hover{
+    border-color: #BECDE3;
+}
+
+.customCalendar .p-button:enabled:hover,.customCalendar .p-button:not(button):not(a):not(.p-disabled):hover{
+    background: #F5F6F7;
+    color: #4B586E;
+    border-color: #BECDE3;
+}
+.customCalendar .p-inputtext:enabled:focus {
+    box-shadow: none !important;
+    border-color: #BECDE3;
+}
+
+.customCalendar .pi-calendar:before{
+    font-family: 'austin-isd';
+    content: "\e90a" ;
+    font-size: 15px;
+}
+/* calendar end */
+
+/* sort dropdown start */
+.custom_selectdropdown .p-dropdown
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+.custom_selectdropdown .p-inputtext
+{
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4B586E;
+}
+.custom_selectdropdown .p-dropdown .p-dropdown-trigger
+{
+    width: 2rem;
+}
+.custom_selectdropdown .p-dropdown .p-dropdown-trigger svg
+{
+   display: none;
+}
+
+.custom_selectdropdown .p-dropdown .p-dropdown-trigger:before
+{
+    font-family: 'erdi-instituteportal' !important;
+    content: "\e918";
+    font-size: 13px;
+}
+
+.custom_selectdropdown .p-dropdown:not(.p-disabled):hover { border-color: white; }
+.custom_selectdropdown .p-dropdown:not(.p-disabled).p-focus { box-shadow: none; border-color: transparent; }
+/* sort dropdown end */
+
+.p-datatable-loading-overlay {
+    background-color: rgb(0 0 0 / 18%) !important;
+    transition-duration: 0.2s !important;
+  }
+
+/* custom_fileUpload start */
+.custom_fileUpload .p-button {
+    background: #077397;
+    border: 1px solid #077397;
+    padding: 8px 14px;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+.custom_fileUpload .p-button-label {
+    font-weight: 400;
+}
+/* custom_fileUpload end */
+
+.whiteBg {
+    background: #fff !important;
+}
+
+.borderBottom {
+    border-bottom: 4px solid #077397;
+    width: 50px;
+    margin-top: 2px;
+}
+
+/* specialPopup start */
+.specialPopup.p-dialog .p-dialog-header {
+    display: none;
+}
+.specialPopup {
+    width: 50vw;
+}
+.specialPopup.p-dialog {
+   box-shadow: 0 10px 21px rgba(173,178,197,.17);
+}
+.specialPopup.p-dialog .p-dialog-content:last-of-type {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+body .p-dialog-mask {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.imageShadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* specialPopup end */
+
+.displayFlexShow {
+    display: flex !important;
+}
+
+.tooltipWrap2 { position: relative; display: inline-block; }
+.hoverContent2 { display: none; position: absolute; z-index: 10; border-radius: 8px; min-width: 180px; left: 0px; top: 16px;}
+.trigger2:hover + .hoverContent2 { display: block;}
+.hoverContent2:hover {display: block;}
+
+/* .tooltipWrap { position: relative; display: inline-block; }
+.hoverContent { display: none; position: absolute; z-index: 10; border-radius: 8px; box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25); min-width: 180px; left: 25.708vw;}
+.trigger:hover + .hoverContent { display: block;}
+.hoverContent:hover {display: block;} */
+
+.tooltipWrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hoverContent {
+    position: absolute;
+    z-index: 10;
+    border-radius: 8px;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    min-width: 180px;
+    left: 31vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform-origin: center top;
+  }
+
+  .trigger:hover + .hoverContent,
+  .hoverContent:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .disabledSwitch .p-inputswitch:not(.p-disabled):has(.p-inputswitch-input:hover).p-highlight .p-inputswitch-slider {
+    opacity: 0.5 ;
+  }
+  .disabledSwitch .p-inputswitch.p-highlight .p-inputswitch-slider {
+    opacity: 0.5 ;
+  }
+
+
+@media (max-width: 1900px) {
+    .specialPopup {
+        width: 60vw;
+    }
+    .hoverContent {left: 31vw;}
+}
+@media (max-width: 1800px) {
+    .specialPopup {
+        width: 50vw;
+    }
+}
+@media (max-width: 1536px) {
+    .specialPopup {
+        width: 60vw;
+    }
+    .hoverContent {left: 425px;}
+}
+
+@media (max-width: 1366px) {.hoverContent {left: 305px;}}
+@media (max-width: 1440px) {.hoverContent {left: 376px;}}
+@media screen and (min-width:1024px) and (max-width:1279px) {
+    .hoverContent {left: 96%; top: 60px;}
+}
+
+@media (max-width: 1024px) {
+    .specialPopup {
+        width: 60vw;
+    }
+    .hoverContent {left: 96%; top: 60px;}
+}
+
+@media (max-width: 768px) {
+    .specialPopup {
+        width: 90%;
+    }
+    .hoverContent {left: 96%; top: 60px;}
+}
+
+@media (min-width: 1800px) {
+    .custSearch .p-inputtext {
+        border-radius: 0.417vw;
+        padding: 0.625vw 0.833vw;
+        width: 34.635vw;
+    }
+    .adminSearch .p-inputtext {
+        width: 100%;
+    }
+
+    .blendbg {
+        position: absolute;
+        bottom: -3px;
+        background: url(../public/images/svg/card_shap_icon.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0.777vw;
+        background-size: 100%;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Bggradient::after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        content: '';
+        background: linear-gradient(270deg, rgba(29, 38, 47, 0.00) 84%, #10465e 99%);
+        /* url(<path-to-image>) lightgray 50% / cover no-repeat; */
+        /* linear-gradient(91deg, rgba(29, 38, 47, 0.00) 18.78%, #063347 94.54%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
+    }
+
+}
+@media (max-width: 1040px) {
+
+.solution_provider_wrapper {
+    background-size: cover;
+    background-position: center;
+}
+}
+@media (max-width: 440px) {
+    .custSearch .p-inputtext {
+        width: 100%;
+    }
+}
+@media (max-width: 420px) {
+.custSearch .p-inputtext {
+    width: 100%;
+}
+}
+.solution_provider_wrapper {
+    background-size: cover;
+}
+
+.icon-display {
+    display: none;
+}
+
+.padding_left {
+    padding-left: 118px;
+}
+.padding_left_top {
+    padding-left: 118px;
+}
+.top_position {
+    position: static;
+}
+
+@media only screen and (max-width: 1023px) {
+    .top_position {
+        position: fixed;
+    }
+    .padding_left {
+        padding-left: 12px;
+    }
+    .padding_left_top {
+        padding-left: 50px;
+    }
+
+    .icon-display {
+        display: block;
+    }
+    .left-menu-postion {
+        width: 80% ;
+        height: 100%;
+        display: block;
+        position: absolute;
+    }
+    .menu-toggle.menu-active-toggle {
+        display: block;
+        transform: translate(0%, 0%);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+    .menu-toggle {
+        display: block;
+        transform: translate(-100px, 0);
+        transition: all 1s ease-out;
+        z-index: 99;
+        position: fixed;
+    }
+
+    .menu-active-width {
+        width: 100% !important;
+        height: 100%;
+    }
+    .hover.menu-active-width:hover {
+        width: 100%;
+    }
+    .left-menu-postion:hover .logo_icon {
+        display: none;
+    }
+    .left-menu-postion .logo_icon {
+        display: none;
+    }
+    .left-menu-postion:hover .logo {
+        display: block;
+    }
+
+    .left-menu-postion .logo {
+        display: block;
+    }
+
+    .left-menu-postion:hover ul.left-menu li a span, .left-menu-postion:hover ul.left-menu li a span i {
+        font-size: 15px;
+    }
+
+    .left-menu-postion ul.left-menu li a span, .left-menu-postion ul.left-menu li a span i {
+        font-size: 15px;
+    }
+
+    .menu-toggle-icon {
+        right: 5%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .left-menu-postion {
+        width: 100% ;
+        height: 100%;
+        display: block;
+        position: absolute;
+    }
+    .menu-toggle.menu-active-toggle {
+        display: block;
+        transform: translate(0%, 0%);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+    .menu-toggle {
+        display: block;
+        transform: translate(-100px, 0);
+        transition: all 1s ease-out;
+        z-index: 99;
+        position: fixed;
+    }
+
+    .menu-active-width {
+        width: 100% !important;
+        height: 100%;
+    }
+    .hover.menu-active-width:hover {
+        width: 100%;
+    }
+    .left-menu-postion:hover .logo_icon {
+        display: none;
+    }
+    .left-menu-postion .logo_icon {
+        display: none;
+    }
+    .left-menu-postion:hover .logo {
+        display: block;
+    }
+
+    .left-menu-postion .logo {
+        display: block;
+    }
+
+    .left-menu-postion:hover ul.left-menu li a span, .left-menu-postion:hover ul.left-menu li a span i {
+        font-size: 15px;
+    }
+
+    .left-menu-postion ul.left-menu li a span, .left-menu-postion ul.left-menu li a span i {
+        font-size: 15px;
+    }
+
+    .menu-toggle-icon {
+        right: 5%;
+    }
+}

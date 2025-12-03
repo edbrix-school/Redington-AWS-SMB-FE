@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+  font-family: 'erdi-instituteportal';
+  src:  url('/fonts/erdi-instituteportal.eot?3u7r8y');
+  src:  url('/fonts/erdi-instituteportal.eot?3u7r8y#iefix') format('embedded-opentype'),
+    url('/fonts/erdi-instituteportal.ttf?3u7r8y') format('truetype'),
+    url('/fonts/erdi-instituteportal.woff?3u7r8y') format('woff'),
+    url('/fonts/erdi-instituteportal.svg?3u7r8y#erdi-instituteportal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="erdi-"], [class*=" erdi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'erdi-instituteportal' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.erdi-arrow-right:before {content: "\e900";}
+.erdi-arrow-right-line:before {content: "\e901";}
+.erdi-calendar:before {content: "\e902";}
+.erdi-close:before {content: "\e903";}
+.erdi-close-circle:before {content: "\e904";}
+.erdi-copy:before {content: "\e905";}
+.erdi-edit:before {content: "\e906";}
+.erdi-export:before {content: "\e907";}
+.erdi-facebook:before {content: "\e908";}
+.erdi-linkdin:before {content: "\e909";}
+.erdi-linkdin-outline:before {content: "\e90a";}
+.erdi-location:before {content: "\e90b";}
+.erdi-logo:before {content: "\e90c";}
+.erdi-mail:before {content: "\e90d";}
+.erdi-map:before {content: "\e90e";}
+.erdi-menu:before {content: "\e90f";}
+.erdi-search-outline:before {content: "\e910";}
+.erdi-sms:before {content: "\e911";}
+.erdi-teacher:before {content: "\e912";}
+.erdi-trash:before {content: "\e913";}
+.erdi-x:before {content: "\e914";}
+.erdi-briefcase:before {content: "\e915";}
+.erdi-arrow-circle-left-line:before {content: "\e916";}
+.erdi-grid:before {content: "\e917";}
+.erdi-sort:before {content: "\e918";}
+.erdi-edit-box:before {content: "\e919";}
+.erdi-eye:before {content: "\e91a";}
+.erdi-down:before {content: "\e91b";}
+.erdi-plus:before {content: "\e91c";}
+.erdi-calendar-full:before {content: "\e91d";}
+.erdi-buildings-2:before {content: "\e91e";}
+.erdi-arrow-circle-left:before {content: "\e91f";}
+.erdi-arrow-circle-right:before {content: "\e920";}
+.erdi-button-search:before {content: "\e921";}
+.erdi-heart-circle:before {content: "\e922";}
+.erdi-eye-fill-slash:before {content: "\e923";}
+.erdi-send-fill:before {content: "\e924";}
+.erdi-heart-fill:before {content: "\e925";}
+.erdi-filter-search:before {content: "\e926";}
+.erdi-back-square:before {content: "\e927";}
+.erdi-document-text:before {content: "\e928";}
+.erdi-flag:before {content: "\e929";}
+.erdi-document:before {content: "\e92a";}
+.erdi-row-vertical:before {content: "\e92b";}
+.erdi-arrow-down:before {content: "\e92c";}
+.erdi-send:before {content: "\e92d";}
+.erdi-more-square:before {content: "\e92e";}
+.erdi-direct:before {content: "\e92f";}
+.erdi-comment:before {content: "\e930";}
+.erdi-like:before {content: "\e931";}
+.erdi-ping-fill:before {content: "\e932";}
+.erdi-document-download:before {content: "\e933";}
+.erdi-heart-circle-outline:before {content: "\e934";}
+.erdi-eye-slash:before {content: "\e935";}
+.erdi-arrow-square-down:before {content: "\e936";}
+.erdi-arrow-circle-right-fill:before {content: "\e937";}
+.erdi-right-tick-fill:before {content: "\e938";}
+.erdi-close-x:before {content: "\e939";}
+.erdi-calendar-edit:before {content: "\e93a";}
+.erdi-export-box:before {content: "\e93b";}
+.erdi-ping-outline:before {content: "\e93c";}
+.erdi-close-circle-fill:before {content: "\e93d";}
+.erdi-clock:before {content: "\e93e";}
+.erdi-briefcase:before {content: "\e915";}
+.erdi-arrow-circle-left-line:before {content: "\e916";}
+.erdi-grid:before {content: "\e917";}
+.erdi-sort:before {content: "\e918";}
+.erdi-edit-box:before {content: "\e919";}
+.erdi-eye:before {content: "\e91a";}
+.erdi-down:before {content: "\e91b";}
+.erdi-plus:before {content: "\e91c";}
+.erdi-calendar-full:before {content: "\e91d";}
+.erdi-buildings-2:before {content: "\e91e";}
+.erdi-arrow-circle-left:before {content: "\e91f";}
+.erdi-arrow-circle-right:before {content: "\e920";}
+
+.calendar_events::after {
+  font-family: 'erdi-instituteportal' !important;
+  content: "\e90c";
+  color: #BAB8B8;
+  opacity: 0.1;
+  font-size: 33.438vw;
+  position: absolute;
+  top: -18.229vw;
+  left: 1.875vw;
+
+}
+/**** tile_active *****/
+.tile_active_effect {
+  height: 100px;
+}
+.tile_active_effect.bg_gray_gradiant::after {
+  content: '';
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(5,50,71,1) 15%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.tile_active_effect .text_white_h {
+  color: #fff;
+}
+
+.tile_active_effect .tile_icon.clock::after {
+  background: url('/images/svg/clock-over.svg') no-repeat;
+  background-size: 100%;
+}
+
+.tile_active_effect .tile_icon.location::after {
+  background: url('/images/svg/location-over.svg') no-repeat;
+  background-size: 100%;
+}
+
+/**** tile_active *****/
+
+/**** tile_hover *****/
+.tile_hover_effect {
+  height: 90px;
+}
+/* .tile_hover_effect:hover {
+  height: 100px;
+} */
+.tile_hover_effect.bg_gray_gradiant::after {
+  content: '';
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(224,233,237,1) 10%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.tile_hover_effect:hover.bg_gray_gradiant::after {
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(5,50,71,1) 15%);
+}
+
+.tile_hover_effect1:hover.bg_gray_gradiant1::after {
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(5,50,71,1) 12%);
+}
+
+.tile_hover_effect:hover .text_white_h {
+  color: #fff;
+}
+.tile_hover_effect:hover .tile_icon.clock::after {
+  background: url('/images/svg/clock-over.svg') no-repeat;
+  background-size: 100%;
+}
+
+.tile_hover_effect:hover .tile_icon.location::after {
+  background: url('/images/svg/location-over.svg') no-repeat;
+  background-size: 100%;
+}
+/**** tile_hover *****/
+.tile_icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: relative;
+}
+.tile_icon::after {
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 14px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.tile_icon.clock::after {
+  background: url('/images/svg/clock.svg') no-repeat;
+  background-size: 100%;
+}
+.tile_icon.location::after {
+  background: url('/images/svg/location.svg') no-repeat;
+  background-size: 100%;
+}
+
+.inner_banner_wrap {
+  background: url('/images/inner_banner_bg.png') no-repeat;
+  background-size: 100%;
+}
+
+/* Shadows/shadow */
+.shadow01{box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);}
+
+.summer_institute::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  content: '';
+  background: rgb(6,51,71);
+  background: linear-gradient(90deg, rgba(6,51,71,1) 45%, rgba(6,51,71,0) 100%);
+}
+
+.custm_InputText.p-inputtext {
+  border-radius: 8px;
+  border: 1px solid var(--interface-stroke-default, #BECDE3);
+  background: var(--interface-surface-component-muted, #F5F6F7);
+}
+.custm_InputText.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0rem #BECDE3 !important;
+  border-color: #BECDE3;
+}
+.custm_Dropdown.p-dropdown {
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid var(--interface-stroke-soft, #E5E7EB);
+  background: var(--brand-neutral-50, #F3F7F8);
+}
+.custm_Dropdown.p-dropdown .p-dropdown-label.p-inputtext.p-placeholder {
+  color: #4B586E;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  transform: translate(0, -50%);
+  top: 50%;
+  position: relative;
+  padding: 0 0 0 10px;
+  height: fit-content;
+}
+.cust_inputText.p-inputtext {
+  border: 1px solid var(--interface-stroke-soft, #E5E7EB);
+  background: var(--interface-surface-component, #FFF);
+  padding-right: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0;
+}
+.cust_inputText.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0rem #C7D2FE !important;
+  border-color: #E5E7EB;
+}
+.custm_Card.p-card {
+  background: none;
+  box-shadow: 0 0 0;
+}
+.custm_Card.p-card .p-card-body {
+  padding: 0;
+  height: 100%;
+}
+.custm_Card.p-card .p-card-body .p-card-title {
+  padding: 0;
+  margin: 0;
+}
+.custm_Card.p-card .p-card-body .p-card-content {
+  padding: 0;
+  height: 100%;
+}
+.box-shadow02{box-shadow: 0px 20px 40px -9.6px rgba(0, 0, 0, 0.25);}
+.box-shadow03{box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.25);}
+.box-shadow04{box-shadow: 0px 0px 40px -9.6px rgba(94, 94, 94, 0.25);}
+.solutionprovider_table.p-datatable .p-datatable-wrapper .p-datatable-table .p-datatable-thead > tr > th {
+  color: var(--interface-text-subtitle, #9CA1AB);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  padding: 14px;
+}
+.solutionprovider_table.p-datatable .p-datatable-wrapper .p-datatable-table .p-datatable-tbody > tr > td {
+  color: var(--interface-text-default, #4B586E);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  padding: 14px;
+}
+.custm_Calendar.p-calendar {
+  width: 100%;
+  height: 100%;
+}
+.custm_Calendar.p-calendar .p-datepicker {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-prev, .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-next {
+  display: none;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar {
+  table-layout: fixed;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group {
+  padding: 0;
+  border: 0;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar thead > tr > th {
+  color: var(--interface-text-title, #374151);
+  text-align: center;
+  font-size: 10.24px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar tbody > tr > td span {
+  color: var(--interface-text-subtitle, #9CA1AB);
+  text-align: center;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: auto;
+  height: auto;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-title button {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #374151;
+  padding: 0 0 10px 10px;
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-title {
+  color: var(--interface-text-title, #374151);
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12.24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 18.36px */
+}
+.custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar tbody tr td .p-highlight {
+  color: #fff;
+  border-radius: 24.48px;
+  background: var(--brand-primary-pure, #077397);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/**************** New *********************/
+.custm_Calendar .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month:after
+{
+  
+}
+/**************** New *********************/
+
+
+.img_bg_gray {
+  background: #F5F6F7;
+}
+.content_box_bg {
+  background: #FFFFFF;
+}
+.text_gray_700 {
+  color: #374151;
+}
+.text_gray_600 {
+  color: #4B586E;
+}
+.text_black_600 {
+  color: #000;
+}
+.text_white_600 {
+  color: #fff;
+}
+.cardHover:hover .img_bg_gray {
+  background: #FFFFFF;
+}
+.cardHover:hover .content_box_bg {
+  background: #077397;
+  color: #fff;
+}
+.cardHover:hover .text_black_600 {
+  color: #fff;
+}
+.cardHover:hover .content_box_bg .text_gray_700, .cardHover:hover .content_box_bg .text_gray_600 {
+  color: #fff;
+  opacity: 1;
+}
+
+.cardHover:hover .blendbg {
+  background: url('/images/card_shap_top.svg') no-repeat;
+  background-size: 100%;
+}
+.custm_input_serach.p-inputtext {
+  border-radius: var(--rounded-full, 9999px);
+  border: 1px solid var(--interface-stroke-default, #BECDE3);
+  background: var(--interface-surface-component, #FFF);
+}
+.custm_Dropdown_filter.p-dropdown {
+  border-radius: 8px;
+  border: 1px solid var(--gray-300, #D1D5DB);
+  background: var(--gray-50, #F9FAFB);
+}
+.custm_Dropdown_filter.p-dropdown .p-dropdown-label.p-inputtext.p-placeholder, .custm_Dropdown_filter.p-dropdown .p-dropdown-label.p-inputtext {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  transform:translateY(-50%);
+  top: 50%;
+  height: fit-content;
+  color: var(--gray-500, var(--gray-500, #6B7280));
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+.custm_calendar.p-calendar {
+  border-radius: var(--border-radius-rounded-xl, 12px);
+  background: var(--interface-surface-component-muted, #F5F6F7);
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  width: 100%;
+}
+.custm_calendar.p-calendar .p-datepicker-header {
+  display: block;
+  position: relative;
+  background: none;
+  padding: 0;
+}
+.custm_calendar.p-calendar .p-datepicker-header .p-datepicker-prev {
+  position: absolute;
+  right: 29px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custm_calendar.p-calendar .p-datepicker-header .p-datepicker-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.custm_calendar.p-calendar .p-datepicker {
+  background: none;
+  border: 0;
+  width: 100%;
+}
+.custm_calendar.p-calendar .p-datepicker-calendar-container .p-datepicker-calendar tbody tr td {
+  padding: 0;
+}
+.custm_calendar.p-calendar .p-datepicker-calendar-container .p-datepicker-calendar thead tr th {
+  padding: 0;
+}
+.sponsors_img img {
+  width: 60px;
+  object-fit: scale-down;
+}
+/***********************************************
+            Responsive
+***********************************************/
+
+@media (min-width:1800px) { 
+  .tile_hover_effect {
+    height: 5.158vw;
+  }
+  .tile_hover_effect:hover {
+    /* height: 6.927vw; */
+  }
+  .tile_active_effect {
+    height: 6.927vw;
+  }
+  .calendar_events::after {
+    top: -18.229vw;
+    left: 1.875vw;
+  }
+  .custm_InputText.p-inputtext {
+    border-radius: 0.417vw;
+    border: 0.052vw solid var(--interface-stroke-default, #BECDE3);
+    background: var(--interface-surface-component-muted, #F5F6F7);
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar thead > tr > th {
+    font-size: 0.533vw;
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar tbody > tr > td span {
+    font-size: 0.521vw;
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-title button {
+    font-size: 0.625vw;
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-header .p-datepicker-title {
+    font-size: 0.638vw;
+    line-height: 0.956vw;
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar tbody tr td .p-highlight {
+    border-radius: 1.275vw;
+    width: 1.042vw;
+    height: 1.042vw;
+  }
+  .custm_Calendar.p-calendar .p-datepicker .p-datepicker-group-container .p-datepicker-group .p-datepicker-calendar-container .p-datepicker-calendar tbody > tr > td {
+    padding: 0.521vw;
+  }
+}
+
+@media (max-width:1280px) { 
+  .calendar_events::after {
+    top: -18.229vw;
+    left: 1.875vw;
+  }
+}
+
+@media (max-width:1030px) {
+  .change_pass_tabview {
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ }
+
+@media (max-width:991px) {  }
+
+@media (max-width:780px) {
+  .inner_banner_wrap {
+    background-size: cover;
+    background-position: center;
+}
+}
+
+@media (max-width:575px) {
+  .summer_institute::after {
+    background: rgb(6, 51, 71);
+    background: linear-gradient(180deg, rgba(6, 51, 71, 1) 57%, rgba(6, 51, 71, 0) 100%);
+}
+.tile_hover_effect.bg_gray_gradiant::after {
+
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(224,233,237,1) 20%);
+  
+}
+
+.change_pass_tabview {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ }
+
+ .custtile_hover_effect {
+  height: 76px;
+}
+/* .tile_hover_effect:hover {
+  height: 100px;
+} */
+.custtile_hover_effect.bg_gray_gradiant::after {
+  content: '';
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(224,233,237,1) 15%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* .custtile_hover_effect:hover.bg_gray_gradiant::after {
+  background: rgb(224,233,237);
+  background: linear-gradient(90deg, rgba(224,233,237,0) 0%, rgba(5,50,71,1) 15%);
+} */
+
+.custtile_hover_effect:hover .text_white_h {
+  color: #fff;
+}
+.custtile_hover_effect:hover .tile_icon.clock::after {
+  background: url('/images/svg/clock-over.svg') no-repeat;
+  background-size: 100%;
+}
+
+.custtile_hover_effect:hover .tile_icon.location::after {
+  background: url('/images/svg/location-over.svg') no-repeat;
+  background-size: 100%;
+}

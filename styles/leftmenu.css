@@ -1,0 +1,186 @@
+/* left menu */
+.left-menu-h { height: calc(100vh); transition: width 0.4s; }
+.left-menu-h.active { width: 320px; }
+.logo { display: none; }
+.left-menu-h:hover .logo { display: block; }
+.left-menu-h:hover .logo_icon { display: none; }
+.left-menu-h:hover .lock_icon { display: none; }
+.leftmenu-lock{
+    background: no-repeat url("/assets/images/left-menu-icons/lock-border.png") center;
+    min-width:19px;
+    min-height: 23px;
+    display: block;
+}
+/* .dark .ligththeme{
+    display: none;
+}
+.dark .darkththeme{
+    display: block;
+} */
+.darkththeme {
+display: none;
+}
+.leftmenu-unlock{
+    background: no-repeat url("/assets/images/left-menu-icons/unlock.svg") right center;
+    min-width:19px;
+    min-height: 18px;
+    display: block;
+}
+
+/* .left-menu-sec [data-simplebar="init"]{
+    height: calc(100% - 340px);
+} */
+.left-menu-sec .simplebar-track.simplebar-vertical{
+    right: -26px;
+}
+/* .left-menu-sec .simplebar-track.simplebar-vertical .simplebar-scrollbar{
+    background-color: rgba(201, 79, 84, 1);
+    width: 5px;
+} */
+
+ul.left-menu li { position: relative;margin-bottom: 0.625vw; }
+ul.left-menu li a{ color: #424242; font-size: 14px; padding: 0.625vw 0; display: block; }
+ul.left-menu li.p-l-15 a{ padding-left: 15px; }
+
+.left-menu-h ul.left-menu>li:hover>a{ background-color: #FEF2F3; border-radius: 10px; }
+.left-menu-h ul.left-menu li a span  { min-width: 180px; display: inline-flex; white-space: nowrap;}
+.left-menu-h ul.left-menu li a span, .left-menu-h ul.left-menu li a span i { font-size: 0; padding-left: 60px; }
+
+.left-menu-h:hover ul.left-menu li a span, .left-menu-h:hover ul.left-menu li a span i { font-size: 14px; }
+.sub-menu { position: fixed; top: 24px; left: 280px; z-index: 99999; display: none; background-color: #F0F4F5; min-width: 234px; height: calc(100vh - 47px); padding: 24px 16px; overflow-y: auto; }
+.left-menu li:hover .sub-menu { display: block; }
+.left-menu-h .sub-menu li a { padding-left: 15px; }
+.left-menu-h ul.left-menu .sub-menu li a:hover{ background-color: white; border-radius: 8px; }
+
+ul.left-menu li ul.sub-menu li a{ padding:0; }
+/* ul.left-menu li.active a { color: #D73F09; } */
+ul.left-menu li:not(:first-child) { display: block; } /* margin-top: 12px; */
+.left-menu-h:hover .sub-menu li:not(:first-child) { margin-top: 0px; }
+ul.left-menu li:before { content: ""; position: absolute; left: 16px; top: 45%; transform: translateY(-50%); width: 24px; height: 24px; pointer-events: none;}
+.divide { border-top: 1px solid #eeeeee; }
+ul.left-menu li.lock:before {  background: no-repeat url("/images/left-menu-icons/lock.svg"); }
+ul.left-menu li.ico-dashboard:before {  background: no-repeat url("/images/svg/dashboard_icon.svg")}
+ul.left-menu li.active.ico-dashboard:before {  background: no-repeat url("/images/left-menu-icons/active_dashboard_icon.svg")}
+
+ul.left-menu li.ico-eLibrary:before {  background: no-repeat url("/images/left-menu-icons/calendar_edit.svg"); }
+ul.left-menu li.ico-eLibraryaction:before {  background: no-repeat url("/images/left-menu-icons/elibraryaction.svg"); }
+ul.left-menu li.ico-messageboard:before {  background: no-repeat url("/images/left-menu-icons/messageboard.svg"); }
+ul.left-menu li.ico-Support:before {  background: no-repeat url("/images/left-menu-icons/Support_module.svg"); }
+ul.left-menu li.ico-pages:before {  background: no-repeat url("/images/left-menu-icons/pages.svg"); }
+
+ul.left-menu li.ico-calendar-full:before {  background: no-repeat url("/images/left-menu-icons/calendar.svg"); }
+ul.left-menu li.active.ico-calendar-full:before {  background: no-repeat url("/images/left-menu-icons/activecalendar.svg"); }
+ul.left-menu li.active.ico-buildings-2:before {  background: no-repeat url("/images/left-menu-icons/activebuildings-2.svg"); }
+
+ul.left-menu li.ico-buildings-2:before {  background: no-repeat url("/images/left-menu-icons/buildings-2.svg"); }
+ul.left-menu li.ico-usersmanagement:before {  background: no-repeat url("/images/left-menu-icons/usersmanagement.svg"); }
+ul.left-menu li.active.ico-usersmanagement:before {  background: no-repeat url("/images/left-menu-icons/usersmanagement_active.svg"); }
+ul.left-menu li.ico-reports:before {  background: no-repeat url("/images/left-menu-icons/reports_icon.svg"); }
+ul.left-menu li.active.ico-reports:before {  background: no-repeat url("/images/left-menu-icons/reports_icon_active.svg"); }
+ul.left-menu li.ico-solutionprovidermanagement:before {  background: no-repeat url("/images/left-menu-icons/solution_provider_icon.svg"); }
+ul.left-menu li.active.ico-solutionprovidermanagement:before {  background: no-repeat url("/images/left-menu-icons/solution_provider_activeicon.svg"); }
+ul.left-menu li.ico-expertnetworkmanagement:before {  background: no-repeat url("/images/left-menu-icons/expert_network_management_icon.svg "); }
+ul.left-menu li.active.ico-expertnetworkmanagement:before {  background: no-repeat url("/images/left-menu-icons/expert_network_activeicon.svg"); }
+ul.left-menu li.ico-teamManegment:before {  background: no-repeat url("/images/left-menu-icons/teamManegment.svg "); }
+ul.left-menu li.active.ico-teamManegment:before {  background: no-repeat url("/images/left-menu-icons/activeteammanagment.svg"); }
+
+
+ul.left-menu li.ico-educationleadermanagement:before { background: no-repeat url("/images/left-menu-icons/education_leader_icon.svg");}
+ul.left-menu li.active.ico-educationleadermanagement:before { background: no-repeat url("/images/left-menu-icons/education_leader_activeicon.svg");}
+ul.left-menu li.ico-ticket:before {  background: no-repeat url("/images/left-menu-icons/ticket.svg"); }
+ul.left-menu li.ico-eventsmanagement:before {  background: no-repeat url("/images/left-menu-icons/eventsmanagement.svg"); }
+ul.left-menu li.ico-contentmanagement:before {  background: no-repeat url("/images/left-menu-icons/contentmanagement.svg"); }
+
+
+ul.left-menu li.active.ico-dashboard:before {  color: #A93439; }
+ul.left-menu li.active.ico-eLibrary:before
+{
+    background: no-repeat url("/images/left-menu-icons/calendar_edit_active.svg");
+
+}
+ul.left-menu li.active.ico-eLibraryaction:before
+{
+    background: no-repeat url("/images/left-menu-icons/elibraryaction-active.svg");
+
+}
+
+/* Yash Changes */
+
+ul.left-menu li.ico-myfolder:before {  background: no-repeat url("/images/left-menu-icons/folder_icon.svg"); }
+ul.left-menu li.active.ico-myfolder:before
+{
+    background: no-repeat url("/images/left-menu-icons/folder_icon_active.svg");
+
+}
+
+
+
+/* Yash changes complete */
+
+ul.left-menu li.active.ico-messageboard:before
+{
+    background: no-repeat url("/images/left-menu-icons/message_admin_active.svg");
+
+}
+
+
+ul.left-menu li.active.ico-Support:before
+{
+    background: no-repeat url("/images/left-menu-icons/Support_module.svg");
+
+}
+
+ul.left-menu li.active.ico-pages:before
+{
+    background: no-repeat url("/images/left-menu-icons/page_admin_icon.svg");
+
+}
+ul.left-menu li.active.ico-ticket:before
+{
+    background: no-repeat url("/images/left-menu-icons/ticket-discount.svg");
+
+}
+ul.left-menu li.active.ico-eventsmanagement:before
+{
+    background: no-repeat url("/images/left-menu-icons/calendar-edit.svg");
+
+}
+ul.left-menu li.settings:before {  background: no-repeat url("/images/left-menu-icons/settings.svg"); }
+ul.left-menu li.active.settings:before {  background: no-repeat url("/images/left-menu-icons/settings_active.svg"); }
+ul.left-menu li.returntoportal:before {  background: no-repeat url("/images/left-menu-icons/return_to_portal.svg"); }
+ul.left-menu li.active.returntoportal:before {  background: no-repeat url("/images/left-menu-icons/return_to_portal_active.svg"); }
+
+ul.left-menu li.support:before {  background: no-repeat url("/images/left-menu-icons/support-tickets.svg"); }
+
+ul.left-menu li a.supportBg { background-color: #AF1E27; color: #FFF; border-radius: 8px; }
+ul.left-menu li a.supportBg span { color: #FFF; }
+.left-menu-h ul.left-menu.hoverNone>li:hover>a.supportBg { background-color: #1F2A37; }
+.left-menu-h.active .simplebar-track.simplebar-vertical .simplebar-scrollbar:before, .left-menu-h.active .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before { width: 2px; }
+.left-menu-h .simplebar-track.simplebar-vertical .simplebar-scrollbar:before, .left-menu-h .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before { width: 0; }
+.profile img { min-width: 48px; }
+.left-menu-h ul.left-menu.hoverNone li.userProfile span { padding-left: 10px; }
+.left-menu-h .userprofileIcon { display: none; }
+.left-menu-h:hover .userprofileIcon { display: block; }
+.left-menu-h ul.left-menu.hoverNone li.userProfile .userPic img  { min-width: 45px; height: 45px; border-radius: 100%; }
+.shadow1 { box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.03), 0px 4px 6px -1px rgba(0, 0, 0, 0.02); }
+/* left menu End*/
+
+.theme-cust{ display: flex !important; align-items: center; margin-left: 0px;padding-left: 10px !important;}
+ ul.left-menu li.theme-cust:before{ display: none;}
+
+.left-menu-h ul.left-menu li a.theme-cust span{ padding-left: 0px !important; min-width: 50px;}
+ul.left-menu li .theme-cust a{ padding-top: 0; padding-bottom: 0;}
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1279px) {
+    .left-menu-sec [data-simplebar="init"]{
+        height: calc(100% - 340px);
+    }
+    ul.left-menu li:before { left: 16px;}
+    ul.left-menu li a{
+        padding: 9px 0;
+    }
+}
