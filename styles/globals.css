@@ -112,7 +112,19 @@ body {
   touch-action: manipulation; /* Disables pinch-to-zoom */
   font-size: 14px; background-color: #F0F2F6;}
 
+  /* landing page start */
+.font-archivo {
+  font-family: var(--font-archivo-black);
+}
 
+.launchpad-bg{
+  background: linear-gradient(90deg, #F2980E 0%, #59B557 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* font-family: "Archivo Black"; */
+}
+/* landing page end */
 
 
 /* End Site Preloader */

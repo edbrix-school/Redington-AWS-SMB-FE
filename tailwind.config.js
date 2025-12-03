@@ -1,12 +1,18 @@
+// /** @type {import('tailwindcss').Config} */
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
+export const darkMode = ['class'];
+// export const content = [
+//   './src/**/*.{js,ts,jsx,tsx}',
+//   './node_modules/@redington-gulf-fze/cloudquarks-component-library/**/*.{js,ts,jsx,tsx}',
+// ];
+
+export const content = [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
+  ];
+  export const theme= {
     screens: {
       'xs': '575px',
       // => @media (min-width: 575px) { ... }
@@ -40,6 +46,6 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-  },
-  plugins: [],
-};
+  };
+  export const plugins= [];
+// };
