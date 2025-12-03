@@ -1,5 +1,5 @@
+import "tailwindcss";
 import "../styles/globals.css";
-
 import { Inter } from "next/font/google";
 // import ReduxWrapper from "./reduxWrapper";
 
@@ -10,8 +10,8 @@ const Myinter = Inter({
 });
 
 export const metadata = {
-  title: "CSIUOBPP Portal",
-  description: "Welcome to CSIUOBPP Portal",
+  title: "Redington AWS SMB Portal",
+  description: "Welcome to Redington AWS SMB Portal",
   name: "viewport",
   content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
   icons: {
