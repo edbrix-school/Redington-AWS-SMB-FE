@@ -1,11 +1,10 @@
 "use client";
-// import { loginApi } from "@actions/loginApi";
 import Image from "next/image";
 import Link from "next/link";
 import { InputText } from "primereact/inputtext";
 
 const Login = () => {
-  
+
   return (
     <>
       <div className="bg-[#F0F2F6]">
@@ -42,18 +41,11 @@ const Login = () => {
                         </div>
                         <InputText
                           tabIndex={1}
-                          // value={credintial["email"]}
-                          // onChange={(e) =>
-                          //   onChangeHandler(e.target.value, "email")
-                          // }
+
                           placeholder="Enter Email"
                           className="w-full loginInput"
                         />
-                        {/* {errors.email ? (
-                          <div className="text-[12px] mt-[3px] text-[#FF0000]">
-                            Email is required
-                          </div>
-                        ) : null} */}
+
                       </div>
                       <div className="eyeiconalgin">
                         <div className="text-[14px] xl:text-[14px] 3xl:text-[0.729vw] font-normal text-[#374151] mb-[6px]">
@@ -62,18 +54,10 @@ const Login = () => {
                         <div className="relative">
                           <InputText
                             tabIndex={1}
-                            // value={credintial["password"]}
-                            // onChange={(e) =>
-                            //   onChangeHandler(e.target.value, "password")
-                            // }
-                            // type={hidePass ? "password" : ""}
                             placeholder="*******"
                             className="w-full loginInput custompasswordlogin"
-                            // feedback={false}
                           />
-                          
                         </div>
-                       
                       </div>
 
                       <div className="flex justify-end items-center mt-[2px]">
@@ -98,7 +82,7 @@ const Login = () => {
                   <button
                     // onClick={handleManualLogin}
                     className="w-full text-white font-medium text-[17px] xl:text-[17px] lg:text-[15px] 3xl:text-[0.938vw] px-[10px] 3xl:px-[0.833vw] py-[10px] lg:py-[10px] xl:py-[9px] 3xl:py-[0.442vw] rounded-[8px] 3xl:rounded-[0.417vw] flex justify-center items-center gap-[16px] bg-[#077397]"
-                    // disabled={loader == true}
+                  // disabled={loader == true}
                   >
                     {/* {loader ? "Redirecting..." : "Login"} */}
                   </button>
