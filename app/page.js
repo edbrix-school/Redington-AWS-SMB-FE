@@ -4,7 +4,8 @@ const App = () => {
   return (
     <>
       <div className='bg-[#F0F2F6]'>
-        <h1> Welcome to CSIU OBPP</h1>
+        <h1> Welcome to Redington AWS SMB Portal
+</h1>
       </div>
     </>
   );
