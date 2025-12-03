@@ -29,7 +29,7 @@ const Login = () => {
 
                 <div>
                   <div className="text-[24px] xl:text-[22px] 3xl:text-[1.25vw] text-[#374151] font-semibold leading-[28px]">Welcome </div>
-                  <div className='text-[18px] xl:text-[16px] 3xl:text-[0.938vw] text-[#4B586E] font-normal leading-[-0.36px]'>Please log in to access the CSIU OBPP Portal</div>
+                  <div className='text-[18px] xl:text-[16px] 3xl:text-[0.938vw] text-[#4B586E] font-normal leading-[-0.36px]'>Please log in to access AWs Portal</div>
                 </div>
 
 

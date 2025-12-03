@@ -1,14 +1,4 @@
-
 import "../styles/globals.css";
-// import "../styles/systyle.css";
-// import "../styles/skstyle.css";
-// import "../styles/nnstyle.css";
-// import "../styles/pstyle.css";
-// import "../styles/ykstyles.css";
-import "../styles/leftmenu.css";
-// import "../styles/sgstyle.css";
-// import "../styles/nstyle.css";
-// import "../styles/ppstyle.css";
 
 import { Inter } from "next/font/google";
 // import ReduxWrapper from "./reduxWrapper";
