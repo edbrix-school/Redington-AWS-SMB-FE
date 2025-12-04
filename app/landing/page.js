@@ -1,7 +1,8 @@
 "use client";
-import Announcements from "@/components/announcements/announcements";
-import Launchpad from "@/components/launchpad/launchpad";
 import Top from "../layout/top";
+import Launchpad from "@/components/launchpad/launchpad";
+import Announcements from "@/components/announcements/announcements";
+// import HotSolutions from "@/components/hot-solutions/hot-solutions";
 
 
 const Landing = () => {
@@ -12,7 +13,7 @@ const Landing = () => {
         <Top/>
         <Launchpad />
         <Announcements />
-
+        {/* <HotSolutions /> */}
       </div>
     </>
   );

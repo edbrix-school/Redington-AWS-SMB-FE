@@ -36,6 +36,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Global font size */
+
+.font10 {
+  @apply text-[8px] lg:text-[8px] xl:text-[10px] 2xl:text-[10px] 3xl:text-[0.521vw];
+}
+.font12 {
+  @apply text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-[12px] 3xl:text-[0.625vw];
+}
+.font14 {
+  @apply text-[13px] lg:text-[13px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[0.729vw];
+}
+.font16 {
+  @apply text-[14px] lg:text-[14px] xl:text-[16px] 2xl:text-[16px] 3xl:text-[0.833vw];
+}
+.font18 {
+  @apply text-[15px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[0.938vw];
+}
+.font20 {
+  @apply text-[16px] lg:text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[1.042vw];
+}
+.font24 {
+  @apply text-[20px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[1.25vw];
+}
+.font32 {
+  @apply text-[24px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[1.667vw];
+}
+.font36 {
+  @apply text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[1.875vw];
+}
+
 /* landing page start */
 .launchpad-bg{
   background: linear-gradient(90deg, #F2980E 0%, #59B557 100%);
@@ -43,5 +73,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 95%;
+}
+.solution-bg{
+  border-radius: var(--Border-Radius-rounded-lg, 8px);
+  border: 1px solid rgba(66, 83, 109, 0.15);
+  background: linear-gradient(91deg, rgba(255, 233, 67, 0.12) 5.05%, rgba(66, 219, 62, 0.12) 97.08%);
+  backdrop-filter: blur(27px);
+}
+.twinthread-bg {
+  background-image: url('/images/twinthread-bg.svg');
+  background-size: cover;
+  background-position: center;
 }
 /* landing page end */

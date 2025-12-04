@@ -19,7 +19,7 @@ const Announcements = () => {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-12 xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw]">
+        <div className="grid grid-cols-12 mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw]">
           <div className="col-span-2 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black">
 
             <div
