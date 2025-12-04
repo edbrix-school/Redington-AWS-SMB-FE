@@ -18,23 +18,11 @@ export default function CatalogPopup({ open, onClose }) {
   const handleBackToAll = () => setSelectedSector(null);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-start bg-black/40 ">
+    <div className="fixed inset-0 z-50 flex items-center justify-start gap-4 bg-black/40 ">
       {/* Popup panel */}
-      <div className="relative flex h-full w-full max-w-[1250px] overflow-hidden rounded-r-[32px] ">
-        {/* Floating close button */}
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute -right-10 top-1/2 hidden -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-xl lg:flex"
-        >
-          <Image
-            src="/assets/icons/closecircle.svg"
-            alt="Close"
-            width={40}
-            height={40}
-          />
-        </button>
-
+      <div
+        className={`relative flex h-full w-full max-w-[1550px] overflow-hidden rounded-r-[32px] popup-enter`} // Add animation class here
+      >
         {/* Inner layout */}
         <div className="flex h-full w-full flex-col lg:flex-row">
           {/* Sidebar */}
@@ -72,6 +60,19 @@ export default function CatalogPopup({ open, onClose }) {
           />
         </button>
       </div>
+      {/* Floating close button */}
+      <button
+        type="button"
+        onClick={onClose}
+        className="flex items-center justify-center cursor-pointer rounded-full bg-transparent p-2 lg:flex popup-enter "
+      >
+        <Image
+          src="/assets/icons/closecircle.svg"
+          alt="Close"
+          width={100}
+          height={100}
+        />
+      </button>
     </div>
   );
 }

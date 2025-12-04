@@ -122,43 +122,95 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
           ))}
         </div>
 
-        {/* same bottom banners as AllSectors */}
-        <div className="mt-5 grid gap-4 md:grid-cols-[minmax(0,2fr),minmax(0,1.5fr)]">
-          <div className="relative overflow-hidden rounded-2xl bg-slate-900 p-4 text-white">
+        {/* Bottom promoted banners */}
+        <div className="mt-5 grid gap-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+          {/* TonAI banner */}
+          <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(180deg,#1C273D_0%,#304570_100%)] p-4 text-white">
             <Image
-              src="/assets/images/catalog-banner-tonai.png"
-              alt="TonAI"
+              src="/images/catalog-bottom-tonai-bg-vector.svg"
+              alt="vector"
               fill
-              className="object-cover opacity-70"
+              className="object-cover opacity-90"
             />
-            <div className="relative z-10 max-w-sm">
-              <p className="text-[11px] font-semibold uppercase tracking-wide">
-                TonAI
-              </p>
-              <h4 className="mt-2 text-[16px] font-semibold leading-snug">
-                Not Sure Which AWS Hub to Use for Your Business?
-              </h4>
-              <p className="mt-2 text-[12px] leading-[18px] text-slate-100/90">
-                Just ask our chatbot! It will ask you a few simple questions and
-                guide you step-by-step to the AWS hub that best fits your
-                business needs.
-              </p>
-              <button
-                type="button"
-                className="mt-3 inline-flex items-center rounded-full bg-white px-4 py-1.5 text-[12px] font-medium text-slate-900"
-              >
-                Start Chat Now
-              </button>
+            <div className="flex items-center justify-cener gap-2">
+              <div className="relative z-10 max-w-sm">
+                <Image
+                  src="/images/tonai.svg"
+                  alt="TonAI"
+                  width={100}
+                  height={100}
+                />
+                <h4 className="mt-2 text-[16px] font-semibold leading-snug">
+                  Not Sure Which AWS Hub to Use for Your Business?
+                </h4>
+                <p className="mt-2 text-[12px] leading-[18px] text-slate-100/90">
+                  Just ask our chatbot! It will ask you a few simple questions
+                  and guide you step-by-step to the AWS hub that best fits your
+                  business size, goals, and technical needs.
+                </p>
+                <button
+                  type="button"
+                  className="mt-3 w-full inline-flex items-center justify-between rounded-lg bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] px-4 py-1.5 text-[12px] font-medium text-white relative"
+                >
+                  <span>Start Chat Now</span>
+
+                  {/* Catalog search logo in the top-right corner */}
+                  <Image
+                    src="/images/catalog-bottom-search-logo.svg"
+                    alt="Search Logo"
+                    width={24}
+                    height={24}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2"
+                  />
+                </button>
+              </div>
+              <Image
+                src="/images/catalog-tonai-girl.svg"
+                alt="vector"
+                width={230}
+                height={230}
+                className=" opacity-90"
+              />
             </div>
           </div>
 
+          {/* TwinThread banner */}
           <div className="relative overflow-hidden rounded-2xl bg-white p-4">
             <Image
-              src="/assets/images/catalog-banner-twinthread.png"
+              src="/images/twinthread-bg-img.svg"
               alt="TwinThread"
               fill
-              className="object-cover opacity-80"
+              // width={500}
+              // height={500}
+              className="opacity-90"
             />
+            <div className="relative z-10 max-w-sm">
+              <Image
+                src="/images/catalog-bottom-twinthread-logo.svg"
+                alt="TwinThread"
+                width={120}
+                height={50}
+              />
+              <h4 className="mt-2 text-[16px] text-[#0A291A] font-medium leading-snug">
+                TwinThread Industrial AI
+              </h4>
+              <p className="mt-2 text-[12px] leading-[18px] text-[#4C525F99]">
+                TwinThread accelerates digital transformation for industrial
+                companies by integrating AI and machine learning into existing
+                workflows, enabling continuous operational improvements with
+                minimal disruption. It guides the creation of a sustainable,
+                customized Virtual Operations Center, enhancing productivity and
+                paving the way for smarter future operations.
+              </p>
+            </div>
+            <div className="absolute bottom-5 left-30">
+              <Image
+                src="/images/twinthread-carosel.svg"
+                alt="TwinThread"
+                width={120}
+                height={50}
+              />
+            </div>
           </div>
         </div>
       </div>

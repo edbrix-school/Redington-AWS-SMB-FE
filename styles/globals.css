@@ -44,3 +44,21 @@
   }
   /* landing page end */
 }
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  60% {
+    transform: translateX(30px); /* Bounce to the right */
+  }
+  80% {
+    transform: translateX(-10px); /* Slight back movement */
+  }
+  100% {
+    transform: translateX(0); /* End up at normal position */
+  }
+}
+
+.popup-enter {
+  animation: slideInFromLeft 0.7s ease-out; /* Apply the animation */
+}
