@@ -9,7 +9,7 @@ const Landing = () => {
     <>
       <div className="bg-[linear-gradient(180deg,#F4FEFD_5.38%,#FDFCF6_62.88%,#FFF_96.7%)]">
         <Launchpad />
-        {/* <Announcements /> */}
+        <Announcements />
       </div>
     </>
   );
