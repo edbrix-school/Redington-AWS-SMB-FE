@@ -35,6 +35,134 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: 'redington';
+  src:  url('/fonts/redington.eot?5kxb3k');
+  src:  url('/fonts/redington.eot?5kxb3k#iefix') format('embedded-opentype'),
+    url('/fonts/redington.ttf?5kxb3k') format('truetype'),
+    url('/fonts/redington.woff?5kxb3k') format('woff'),
+    url('/fonts/redington.svg?5kxb3k#redington') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="smb-"], [class*=" smb-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'redington' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.smb-arrow-down:before {
+  content: "\e903";
+}
+.smb-arrowup:before {
+  content: "\e904";
+}
+.smb-audio:before {
+  content: "\e905";
+}
+.smb-book:before {
+  content: "\e906";
+}
+.smb-calendar:before {
+  content: "\e907";
+}
+.smb-call:before {
+  content: "\e908";
+}
+.smb-check-circle:before {
+  content: "\e909";
+}
+.smb-circle-close:before {
+  content: "\e90a";
+}
+.smb-circle-square:before {
+  content: "\e90b";
+}
+.smb-danger:before {
+  content: "\e90c";
+}
+
+.smb-edit:before {
+  content: "\e913";
+}
+.smb-edu:before {
+  content: "\e914";
+}
+
+.smb-filter:before {
+  content: "\e917";
+}
+.smb-flash-light:before {
+  content: "\e918";
+}
+.smb-g7:before {
+  content: "\e919";
+}
+.smb-global:before {
+  content: "\e91a";
+}
+.smb-key-square:before {
+  content: "\e91b";
+}
+.smb-location:before {
+  content: "\e91c";
+}
+.smb-menu:before {
+  content: "\e91d";
+}
+.smb-more:before {
+  content: "\e91e";
+}
+.smb-oct-user:before {
+  content: "\e91f";
+}
+.smb-pdf:before {
+  content: "\e920";
+}
+.smb-search:before {
+  content: "\e921";
+}
+.smb-setting:before {
+  content: "\e922";
+}
+.smb-simple-search:before {
+  content: "\e923";
+}
+.smb-slash:before {
+  content: "\e924";
+}
+.smb-sms:before {
+  content: "\e925";
+}
+.smb-square-more:before {
+  content: "\e926";
+}
+.smb-ticket:before {
+  content: "\e927";
+}
+.smb-video:before {
+  content: "\e928";
+}
+.smb-down-arrow:before {
+  content: "\e901";
+}
+.smb-watch:before {
+  content: "\e902";
+}
+.smb-logout:before {
+  content: "\e900";
+}
 
 /* Global font size */
 
