@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import CatalogPopup from "@/components/catalog/CatalogPopup";
 import React, { useState } from "react";
+import { Sidebar } from "primereact/sidebar";
+import CatalogPopup from "@/components/catalog/CatalogPopup";
 import { Dropdown } from "primereact/dropdown";
 
 export default function Top() {
@@ -66,11 +67,20 @@ export default function Top() {
                 Catalog{" "}
               </div>
             </div>
+          </div>
+          {/* PrimeReact Sidebar */}
+          <Sidebar
+            visible={showCatalog}
+            onHide={() => setShowCatalog(false)} // Close the sidebar
+            className="p-0" // Remove default padding for PrimeReact Sidebar to maintain custom padding
+            style={{ width: "1550px" }} // Set the width of the sidebar
+          >
+            {/* CatalogPopup Content Inside Sidebar */}
             <CatalogPopup
               open={showCatalog}
-              onClose={() => setShowCatalog(false)}
+              onClose={() => setShowCatalog(false)} // Close the sidebar when the popup is closed
             />
-          </div>
+          </Sidebar>
         </div>
 
         {/* RIGHT SECTION */}

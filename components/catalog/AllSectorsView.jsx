@@ -75,7 +75,7 @@ export default function AllSectorsView({ onSectorClick }) {
             }
 
             return (
-              <button
+              <div
                 key={name}
                 type="button"
                 onClick={isClickable ? onSectorClick : undefined}
@@ -118,7 +118,7 @@ export default function AllSectorsView({ onSectorClick }) {
                     </span> */}
                   </button>
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>
