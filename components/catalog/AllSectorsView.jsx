@@ -98,13 +98,24 @@ export default function AllSectorsView({ onSectorClick }) {
                   </p>
                 </div>
 
-                {/* Play button (token 13) */}
+                {/* Play button with hover effect */}
                 <div className="flex justify-end">
                   <button
                     type="button"
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-neutral-900 text-[11px] text-white"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg cursor-pointer bg-[#42536D]  text-[11px] text-white"
                   >
-                    {/* You can swap this with an actual play icon */}▶
+                    {/* Arrow icon */}
+                    <Image
+                      src="/assets/icons/arrow-right.svg"
+                      alt="arrow right"
+                      width={20}
+                      height={20}
+                    />
+
+                    {/* View Solution text */}
+                    {/* <span className="hidden text-[11px] font-medium text-white group-hover:inline-block">
+                      View Solution
+                    </span> */}
                   </button>
                 </div>
               </button>

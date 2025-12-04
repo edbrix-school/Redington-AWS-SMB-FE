@@ -5,24 +5,28 @@ import Image from "next/image";
 import CatalogSidebar from "./CatalogSidebar";
 import AllSectorsView from "./AllSectorsView";
 import AdvertisingView from "./AdvertisingView";
-
 const SECTOR_KEY = "Advertising & Marketing";
 
 export default function CatalogPopup({ open, onClose }) {
-  const [selectedSector, setSelectedSector] = useState(null);
+  const [selectedSector, setSelectedSector] = useState(null); // Default to null (no sector selected)
 
+  // Log to check state
+  console.log("selectedSector:", selectedSector);
+
+  // If not open, return null to hide the component
   if (!open) return null;
 
-  const showAllSectors = !selectedSector;
-  const handleSectorSelect = (sector) => setSelectedSector(sector);
-  const handleBackToAll = () => setSelectedSector(null);
+  const showAllSectors = !selectedSector; // If no sector is selected, show All Sectors view
+
+  console.log("CatalogPopup render - selectedSector:", selectedSector);
+
+  const handleSectorSelect = (sector) => setSelectedSector(sector); // When a sector is selected, set it
+  const handleBackToAll = () => setSelectedSector(null); // Go back to the all sectors view
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-start gap-4 bg-black/40 ">
+    <div className="fixed inset-0 z-50 flex items-center justify-start gap-4 bg-black/40">
       {/* Popup panel */}
-      <div
-        className={`relative flex h-full w-full max-w-[1550px] overflow-hidden rounded-r-[32px] popup-enter`} // Add animation class here
-      >
+      <div className="relative flex h-full w-full max-w-[1550px] overflow-hidden rounded-r-[32px] popup-enter">
         {/* Inner layout */}
         <div className="flex h-full w-full flex-col lg:flex-row">
           {/* Sidebar */}
@@ -60,11 +64,12 @@ export default function CatalogPopup({ open, onClose }) {
           />
         </button>
       </div>
+
       {/* Floating close button */}
       <button
         type="button"
         onClick={onClose}
-        className="flex items-center justify-center cursor-pointer rounded-full bg-transparent p-2 lg:flex popup-enter "
+        className="flex items-center justify-center cursor-pointer rounded-full bg-transparent p-2 lg:flex popup-enter"
       >
         <Image
           src="/assets/icons/closecircle.svg"

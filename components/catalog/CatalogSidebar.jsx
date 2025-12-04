@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
+// import { Sidebar } from "primereact/sidebar";
+// import { Button } from "primereact/button";
 
 const INDUSTRY_SECTORS = [
   "Advertising & Marketing",
@@ -19,9 +21,22 @@ const TABS = ["By Industry", "By Use Case", "By Organization Type"];
 
 export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   const [activeTab, setActiveTab] = useState("By Industry");
+  // const [visible, setVisible] = useState(false);
 
   return (
-    <aside className="w-full shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:w-[400px] lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
+    // <div className="card flex justify-content-center">
+    //   <Sidebar visible={visible} onHide={() => setVisible(false)}>
+    //     <h2>Sidebar</h2>
+    //     <p>
+    //       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    //       eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+    //       minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    //       aliquip ex ea commodo consequat.
+    //     </p>
+    //   </Sidebar>
+    //   <Button icon="pi pi-arrow-right" onClick={() => setVisible(true)} />
+    // </div>
+    <div className="w-1/2 shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:w-[400px] lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
       {/* Logos row (placeholder – plug your actual brand logos here) */}
       <div className="flex items-center gap-2">
         {/* Replace with Image components for Redington / AWS logos as needed */}
@@ -143,6 +158,6 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           View More
         </button>
       </div>
-    </aside>
+    </div>
   );
 }

@@ -1,10 +1,13 @@
 "use client";
 import Image from "next/image";
+import CatalogPopup from "@/components/catalog/CatalogPopup";
 import React, { useState } from "react";
 import { Dropdown } from "primereact/dropdown";
 
 export default function Top() {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [showCatalog, setShowCatalog] = useState(false);
+
   const cities = [
     { name: "New York", code: "NY" },
     { name: "Rome", code: "RM" },
@@ -56,10 +59,17 @@ export default function Top() {
                 alt="book"
                 className="w-[16px] lg:w-[18px] xl:w-[20px] 3xl:w-[1.031vw] h-auto  "
               />
-              <div className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]">
+              <div
+                onClick={() => setShowCatalog(true)}
+                className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]"
+              >
                 Catalog{" "}
               </div>
             </div>
+            <CatalogPopup
+              open={showCatalog}
+              onClose={() => setShowCatalog(false)}
+            />
           </div>
         </div>
 

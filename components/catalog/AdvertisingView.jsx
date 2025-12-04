@@ -40,19 +40,19 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
           {/* Order by */}
           <button
             type="button"
-            className="flex items-center gap-2 rounded-lg border border-interface-stroke-soft bg-white px-3 py-2 text-[12px] text-interface-text-default"
+            className="flex items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-default"
           >
             <span>Order By: Relevance</span>
             <Image
-              src="/assets/icons/Icon (1).svg"
+              src="/assets/icons/arrowright2.svg"
               alt="Chevron down"
               width={14}
               height={14}
             />
           </button>
 
-          {/* Right search */}
-          <div className="hidden items-center gap-2 rounded-lg border border-interface-stroke-soft bg-white px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
+          {/* Right search (in-header) */}
+          <div className="hidden items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
             <Image
               src="/assets/icons/search-outline.svg"
               alt="Search"
@@ -113,9 +113,14 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
                 </button>
                 <button
                   type="button"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-neutral-900 text-[11px] text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#42536D] text-[11px] text-white"
                 >
-                  ▶
+                  <Image
+                    src="/assets/icons/arrow-right.svg"
+                    alt="arrow right"
+                    width={20}
+                    height={20}
+                  />
                 </button>
               </div>
             </article>
