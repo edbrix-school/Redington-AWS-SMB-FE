@@ -15,9 +15,7 @@ export default function Top() {
 
   return (
     <div className="w-full bg-[#232823] relative">
-      {/* NAV BAR */}
       <div className="flex items-center justify-between px-[20px] xl:px-[20px] 3xl:px-[1.875vw]  py-[7px] lg:py-[8px] xl:py-[10px] 3xl:py-[0.733vw] relative">
-        {/* LEFT SECTION */}
         <div className="flex items-center gap-x-[12px]">
           <div className="flex divide-x divide-[#494949] items-center">
             <div className="pr-[10px] xl:pr-[10px] 2xl:pr-[12px] 3xl:pr-[0.729vw]">

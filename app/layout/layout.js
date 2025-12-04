@@ -16,6 +16,7 @@ export default function Layout({ children, ...pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={pageProps.pageClass}>
+        <Top/>
         <div>
           <main>{children}</main>
         </div>
