@@ -1,4 +1,4 @@
-.custom-gradient {
+.custom-gradient.custom-gradient:hover{
   border-radius: var(--Border-Radius-none, 0);
   background: linear-gradient(
     90deg,
@@ -7,10 +7,22 @@
     rgba(78, 220, 63, 0.52) 65.17%,
     rgba(36, 49, 67, 0) 98.75%
     
-  );
+  ) !important;
   backdrop-filter: blur(32px);
   height: auto;
 }
+.custom-gradient {
+  border-radius: var(--Border-Radius-none, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 45, 61, 0.04) 0.37%,
+    rgba(255, 233, 67, 0.42) 38.73%,
+    rgba(78, 220, 63, 0.42) 60.06%,
+    rgba(36, 49, 67, 0.04) 98.75%
+  );
+  backdrop-filter: blur(32px);
+}
+
 .topdropdown.p-dropdown {
   background: transparent;
   border: none;
