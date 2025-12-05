@@ -1,4 +1,4 @@
-.custom-gradient.custom-gradient:hover{
+.custom-gradient.custom-gradient:hover {
   border-radius: var(--Border-Radius-none, 0);
   background: linear-gradient(
     90deg,
@@ -6,7 +6,6 @@
     rgba(255, 233, 67, 0.52) 31.59%,
     rgba(78, 220, 63, 0.52) 65.17%,
     rgba(36, 49, 67, 0) 98.75%
-    
   ) !important;
   backdrop-filter: blur(32px);
   height: auto;
@@ -38,8 +37,8 @@
   border-color: none;
   box-shadow: none;
 }
-.topdropdown.p-dropdown.p-component.p-inputwrapper.p-inputwrapper-focus{
-     border-color: none;
+.topdropdown.p-dropdown.p-component.p-inputwrapper.p-inputwrapper-focus {
+  border-color: none;
   box-shadow: none;
 }
 .topdropdown .p-icon {
@@ -63,54 +62,113 @@
 }
 
 .custominput.p-inputtext {
-    background: rgb(255, 255, 255);
-    border: 1px solid var(--Interface-Stroke-default);
-    border-radius: 6px;
-    outline-color: rgba(0, 0, 0, 0);
-    padding: 0.75rem;
-    font-size: 14px;
+  background: rgb(255, 255, 255);
+  border: 1px solid var(--Interface-Stroke-default);
+  border-radius: 6px;
+  outline-color: rgba(0, 0, 0, 0);
+  padding: 0.75rem;
+  font-size: 14px;
   box-shadow: none;
   padding: 8px 12px;
   color: var(--Interface-Text-title1);
 }
 
 .customcheckox.p-checkbox .p-checkbox-input {
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
 }
 .customcheckox.p-checkbox .p-checkbox-box {
-    color: #4b5563;
-    background: #fff;
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
-    outline-color: #0000;
-    width: 18px;
-    height: 18px;
-    transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+  color: #4b5563;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  outline-color: #0000;
+  width: 18px;
+  height: 18px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
 }
 .customcheckox.p-checkbox.p-highlight .p-checkbox-box {
-    background: #3b82f6;
-    border-color: #3b82f6;
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+.p-sidebar .p-sidebar-header {
+  padding: 0 !important;
+}
+.p-sidebar .p-sidebar-content {
+  padding: 0 !important;
+}
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
+  position: absolute;
+  right: -115px;
+  top: 50%;
+  bottom: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+
+  font-family: "austin" !important;
+  content: "\e80c" !important;
+  background-image: url(/assets/icons/closecircle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+  color: #42536d;
+  content: "";
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
-
-@media (min-width: 1040px)  {
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
+.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+  color: #42536d;
+  border-color: transparent;
+  background: transparent;
+  background-image: url(/assets/icons/closecircle.svg);
+  position: absolute;
+  right: -115px;
+  top: 50%;
+  bottom: 50%;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+}
+.p-sidebar-close-icon {
+  display: none !important;
+}
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close:focus-visible,
+.p-sidebar .p-sidebar-header .p-sidebar-icon:focus-visible {
+  box-shadow: 0 0 0 0 transparent;
+}
+.customsidebar.p-link:focus-visible {
+  outline-offset: 0;
+  outline: 0;
+  box-shadow: 0 0 0 0 transparent;
+}
+.p-accordion-toggle-icon {
+  display: none !important;
+}
+@media (min-width: 1040px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 12px;
   }
 }
-@media (min-width: 1366px)  {
+@media (min-width: 1366px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 13px;
   }
 }
 
-@media (min-width: 1536px)  {
+@media (min-width: 1536px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 14px;
   }
 }
-
 
 @media (min-width: 1900px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
@@ -123,8 +181,8 @@
     outline-color: rgba(0, 0, 0, 0);
     padding: 0.75rem;
     font-size: 14px;
-  box-shadow: none;
-  padding: 8px 12px;
-  color: var(--Interface-Text-title1);
-}
+    box-shadow: none;
+    padding: 8px 12px;
+    color: var(--Interface-Text-title1);
+  }
 }

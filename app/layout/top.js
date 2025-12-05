@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -27,7 +26,9 @@ export default function Top() {
   ];
 
   return (
-    <div className={`${roboto.variable} w-full fixed top-0 left-0 z-[9999] bg-[#232823]`}>
+    <div
+      className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823]`}
+    >
       {/* NAVBAR */}
       <div className="relative flex items-center justify-between px-[20px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
         {/* LEFT SECTION */}
@@ -52,37 +53,39 @@ export default function Top() {
           </div>
 
           {/* MIDDLE BUTTONS */}
-          <div className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw]">
+          <div
+            className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw]"
+            onClick={() => setShowCatalog(true)}
+          >
             <i className="smb-flash-light text-[#5CB456] text-[20px] xl:text-[21px] 2xl:text-[22px] 3xl:text-[1.294vw]"></i>
             <div className="py-[4px] lg:py-[3px] xl:py-[3px] 3xl:py-[0.217vw] flex items-center justify-center gap-[4px] lg:gap-[7px] xl:gap-[8px] 2xl:gap-[9px] 3xl:gap-[0.521vw] text-white px-[12px] lg:px-[14px] xl:px-[18px] 3xl:px-[1.225vw] cursor-pointer rounded-[2px] xl:rounded-[3px] 3xl:rounded-[3px] bg-[#019049]">
               <i className="smb-book text-[#fff] text-[17px] xl:text-[18px] 3xl:text-[1.038vw]"></i>
-              <div
-                onClick={() => setShowCatalog(true)}
-                className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]"
-              >
+              <div className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]">
                 Catalog
               </div>
             </div>
           </div>
-
-          {/* Sidebar */}
-          <Sidebar
-            visible={showCatalog}
-            onHide={() => setShowCatalog(false)}
-            className="p-0"
-            style={{ width: "1550px" }}
-          >
-            <CatalogPopup
-              open={showCatalog}
-              onClose={() => setShowCatalog(false)}
-            />
-          </Sidebar>
         </div>
-
+        {/* Sidebar */}
+        <Sidebar
+          visible={showCatalog}
+          onHide={() => setShowCatalog(false)}
+          className="p-0 z-[9999] customsidebar"
+          style={{ width: "1200px" }}
+        >
+          <CatalogPopup
+            open={showCatalog}
+            onClose={() => setShowCatalog(false)}
+          />
+        </Sidebar>
         {/* RIGHT SECTION */}
         <div className="flex items-center gap-[12px] lg:gap-[10px] xl:gap-[20px] 3xl:gap-[1.563vw] text-white pr-[2px] xl:pr-[12px] 3xl:pr-[1.25vw]">
-          <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">Support</div>
-          <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">Contact Us</div>
+          <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">
+            Support
+          </div>
+          <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">
+            Contact Us
+          </div>
           <div className="flex items-center gap-[6px] text-[14px] font-medium mx-[6px] lg:mx-[4px] xl:mx-[6px] 2xl:mx-[10px] 3xl:mx-[0.625vw]">
             <i className="smb-global text-[#fff] text-[15px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[0.833vw]"></i>
             <Dropdown
@@ -94,13 +97,15 @@ export default function Top() {
               className="w-[90px] xl:w-[100px] 2xl:w-[110px] 3xl:w-[5.471vw] topdropdown"
             />
           </div>
-         
+
           <div className="cursor-pointer flex gap-[16px] lg:gap-[16px] xl:gap-[16px] 3xl:gap-[1.238vw] items-center lg:pl-[2px] xl:pl-[4px] 2xl:pl-[8px] 3xl:pl-[0.521vw]">
-             <Link href={"/sign-in"}>
-            <div className="flex items-center gap-[8px] xl:gap-[8px] 3xl:gap-[0.938vw]">
-              <i className="smb-logout font14"></i>
-              <div className="text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">Sign In</div>
-            </div>
+            <Link href={"/sign-in"}>
+              <div className="flex items-center gap-[8px] xl:gap-[8px] 3xl:gap-[0.938vw]">
+                <i className="smb-logout font14"></i>
+                <div className="text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">
+                  Sign In
+                </div>
+              </div>
             </Link>
             <Image
               src="/images/user-square.svg"
@@ -110,7 +115,6 @@ export default function Top() {
               className="w-[26px] lg:w-[24px] xl:w-[26px] 3xl:w-[1.323vw] h-[26px] lg:h-[24px] xl:h-[26px] 3xl:h-[1.323vw] "
             />
           </div>
-          
         </div>
       </div>
 

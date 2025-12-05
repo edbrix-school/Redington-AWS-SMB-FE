@@ -45,20 +45,6 @@ export default function CatalogPopup({ open, onClose }) {
           )}
         </div>
       </div>
-
-      {/* Mobile close (inside panel) */}
-      <button
-        type="button"
-        onClick={onClose}
-        className="absolute right-3 top-3 flex items-center justify-center rounded-full bg-white/80 p-1 shadow-md lg:hidden"
-      >
-        <Image
-          src="/assets/icons/closecircle.svg"
-          alt="Close"
-          width={24}
-          height={24}
-        />
-      </button>
     </div>
   );
 }

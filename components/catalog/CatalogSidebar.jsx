@@ -1,7 +1,5 @@
-"use client";
-
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 import { Accordion, AccordionTab } from "primereact/accordion";
 
 const industrySector = [
@@ -32,28 +30,20 @@ const industrySector = [
     icon: "/assets/icons/energy-icon.svg",
     count: 12,
   },
-  // {
-  //   name: "Engineering, Construction & Real Estate",
-  //   icon: "/assets/icons/engineering-icon.svg",
-  //   count: 12,
-  // },
   {
     name: "Financial Services",
     icon: "/assets/icons/finance-icon.svg",
     count: 12,
   },
 ];
+
 const byUseCase = [
   {
     name: "Artificial Intelligence",
     icon: "/assets/icons/advertise-icon.svg",
     count: 12,
   },
-  {
-    name: "Archiving",
-    icon: "/assets/icons/aerospace-icon.svg",
-    count: 16,
-  },
+  { name: "Archiving", icon: "/assets/icons/aerospace-icon.svg", count: 16 },
   {
     name: "Backup and Restore",
     icon: "/assets/icons/agriculture-icon.svg",
@@ -70,11 +60,7 @@ const byUseCase = [
     icon: "/assets/icons/education-icon.svg",
     count: 12,
   },
-  {
-    name: "Containers",
-    icon: "/assets/icons/energy-icon.svg",
-    count: 12,
-  },
+  { name: "Containers", icon: "/assets/icons/energy-icon.svg", count: 12 },
   {
     name: "Content Delivery",
     icon: "/assets/icons/engineering-icon.svg",
@@ -86,12 +72,9 @@ const byUseCase = [
     count: 12,
   },
 ];
+
 const byOrganizationType = [
-  {
-    name: "Enterprise",
-    icon: "/assets/icons/advertise-icon.svg",
-    count: 12,
-  },
+  { name: "Enterprise", icon: "/assets/icons/advertise-icon.svg", count: 12 },
   {
     name: "Public Sector",
     icon: "/assets/icons/aerospace-icon.svg",
@@ -109,17 +92,21 @@ const byOrganizationType = [
     count: 12,
   },
 ];
+
 const TABS = ["By Industry", "By Use Case", "By Organization Type"];
 
 export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   const [activeTab, setActiveTab] = useState("By Industry");
   const [activeIndex, setActiveIndex] = useState([-1]);
+
   const sectorDataMap = {
     "By Industry": industrySector,
     "By Use Case": byUseCase,
     "By Organization Type": byOrganizationType,
   };
+
   const selectedData = sectorDataMap[activeTab];
+
   return (
     <div className="w-1/2 shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:w-[400px] lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
       <div className="flex items-center gap-2">
@@ -131,12 +118,10 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         />
       </div>
 
-      {/* Catalog heading */}
       <h2 className="mt-4 font-nunito text-[32px] leading-[1] text-interface-text-default">
         Catalog
       </h2>
 
-      {/* Figma ipsum text */}
       <p className="mt-3 max-w-xs font-inter text-[12px] leading-[18px] tracking-[-0.02em] text-interface-text-subtitle">
         Figma ipsum component variant main layer. Pen line scale layer variant
         export subtract shadow arrange outline. Project.
@@ -147,8 +132,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         <label className="sr-only" htmlFor="catalog-search">
           Search catalog
         </label>
-
-        <div className="flex items-center gap-2 border-[1px solid var(--Interface-Stroke-soft, #E5E7EB)]  bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] p-[1px]">
+        <div className="flex items-center gap-2 border-[1px solid var(--Interface-Stroke-soft, #E5E7EB)] bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] p-[1px]">
           <div className="flex w-full items-center gap-2  px-3 py-1">
             <Image
               src="/assets/icons/search-outline.svg"
@@ -201,9 +185,9 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
       <div className="mt-5 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
         <Accordion
           activeIndex={activeIndex}
-          onTabChange={(e) => setActiveIndex(e.index)}
+          onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
         >
-          {selectedData.map((sector) => {
+          {selectedData.map((sector, index) => {
             return (
               <AccordionTab
                 key={sector.name}
@@ -217,58 +201,19 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                         height={20}
                       />
                       <span className="text-[16px] font-inter text-interface-text-title truncate w-[calc(100%-40px)]">
-                        {" "}
-                        {/* Truncation with dynamic width */}
                         {sector.name}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 text-[12px] text-interface-text-subtitle">
                       <span>({sector.count})</span>
                       <Image
-                        src="/assets/icons/arrow-right.svg"
+                        src="/assets/icons/arrowright2.svg"
                         alt="Accordion Toggle"
                         width={16}
                         height={16}
-                        className="transition-transform duration-300 transform rotate-0 group-open:rotate-180" // Handle rotation on toggle
-                      />
-                    </div>
-                  </div>
-                }
-              >
-                <div className="text-[12px] text-interface-text-subtitle">
-                  {/* Add sector details or other content for each sector here */}
-                  This is the content for {sector.name}.
-                </div>
-              </AccordionTab>
-            );
-          })}
-        </Accordion>
-        {/* <Accordion activeIndex={1}>
-          {byUseCase.map((sector) => {
-            return (
-              <AccordionTab
-                key={sector.name}
-                header={
-                  <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src={sector.icon}
-                        alt={sector.name}
-                        width={20}
-                        height={20}
-                      />
-                      <span className="text-[16px] font-inter text-interface-text-title truncate">
-                        {sector.name}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[12px] text-interface-text-subtitle">
-                      <span>({sector.count})</span>
-                      <Image
-                        src="/assets/icons/arrow-right.svg"
-                        alt="Accordion Toggle"
-                        width={16}
-                        height={16}
-                        className="transition-transform duration-300 transform"
+                        className={`transition-transform duration-300 transform ${
+                          activeIndex === index ? "rotate-180" : "rotate-0"
+                        }`} // Apply rotation to the arrow based on the active state
                       />
                     </div>
                   </div>
@@ -281,44 +226,6 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
             );
           })}
         </Accordion>
-        <Accordion activeIndex={2}>
-          {byOrganizationType.map((sector) => {
-            return (
-              <AccordionTab
-                key={sector.name}
-                header={
-                  <div className="flex items-center justify-between w-full">
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src={sector.icon}
-                        alt={sector.name}
-                        width={20}
-                        height={20}
-                      />
-                      <span className="text-[16px] font-inter text-interface-text-title truncate">
-                        {sector.name}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[12px] text-interface-text-subtitle">
-                      <span>({sector.count})</span>
-                      <Image
-                        src="/assets/icons/arrow-right.svg"
-                        alt="Accordion Toggle"
-                        width={16}
-                        height={16}
-                        className="transition-transform duration-300 transform"
-                      />
-                    </div>
-                  </div>
-                }
-              >
-                <div className="text-[12px] text-interface-text-subtitle">
-                  This is the content for {sector.name}.
-                </div>
-              </AccordionTab>
-            );
-          })}
-        </Accordion> */}
 
         {/* View more */}
         <div className="flex justify-center mt-3">
