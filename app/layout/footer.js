@@ -10,14 +10,14 @@ const roboto = Roboto({
 export default function Footer() {
   return (
     <>
-      <div className={`${roboto.variable} bg-BrandNeutral50 rounded-[14px] xl:rounded-[14px] 3xl:rounded-[0.833vw] mx-40 `}>
+      <div className={`${roboto.variable} bg-BrandNeutral50 rounded-[14px] xl:rounded-[14px] 3xl:rounded-[0.833vw] mx40 `}>
         <div className="px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.042vw]  pb-[30px] xl:pb-[30px] 2xl:pb-[32px] 3xl:pb-[1.771vw] pt-[36px] xl:pt-[36px] 2xl:pt-[36px] 3xl:pt-[1.875vw]">
           <div className="grid grid-cols-4 lg:gap-[14px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[5.208vw] px-[60px] lg:px-[50px] xl:px-[140px] 2xl:px-[250px] 3xl:px-[15.375vw] ">
-            <div className="space-y-20">
+            <div className="spacey20">
               <div className="font16 font-semibold text-InterfaceTexttitle">
                 Site
               </div>
-              <div className="flex flex-col space-y-12">
+              <div className="flex flex-col spacey12">
                 <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
                   About Us
                 </div>
@@ -32,11 +32,11 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="space-y-20">
+            <div className="spacey20">
               <div className="font16 font-semibold text-InterfaceTexttitle">
                 Resources
               </div>
-              <div className="flex flex-col space-y-12">
+              <div className="flex flex-col spacey12">
                 <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
                   Blog
                 </div>
@@ -48,11 +48,11 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="space-y-20">
+            <div className="spacey20">
               <div className="font16 font-semibold text-InterfaceTexttitle">
                 Get to Know Us
               </div>
-              <div className="flex flex-col space-y-12">
+              <div className="flex flex-col spacey12">
                 <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
                   About Company
                 </div>
@@ -64,11 +64,11 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="space-y-20 ">
+            <div className="spacey20 ">
               <div className="font16 font-semibold text-InterfaceTexttitle cursor-pointer">
                 Contact Us
               </div>
-              <div className="flex flex-col space-y-12">
+              <div className="flex flex-col spacey12">
                 <div className="font14 text-interfacetextdefault font-normal gap-[7px] xl:gap-[7px] 3xl:gap-[0.393vw] flex items-start cursor-pointer">
                   <i className="smb-location text14 pt-1"></i>
                   1, Shiekh Zayed Road, H Hotel,
@@ -82,7 +82,7 @@ export default function Footer() {
                   <i className="smb-call text14 pt-1 "></i>
                   +971 4 516 1504
                 </div>
-                <div className=" flex gap-20">
+                <div className=" flex gap20">
                   <Image
                     src="/images/facebook.svg"
                     width={25}

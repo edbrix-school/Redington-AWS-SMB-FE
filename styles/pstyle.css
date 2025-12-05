@@ -54,10 +54,44 @@
   width: 1rem;
   background: none;
 }
+.customsignin-gradient {
+  background: linear-gradient(
+    154deg,
+    rgba(151, 71, 255, 0.21) 8.9%,
+    rgba(255, 194, 0, 0) 79.12%
+  );
+}
 
+.custominput.p-inputtext {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--Interface-Stroke-default);
+    border-radius: 6px;
+    outline-color: rgba(0, 0, 0, 0);
+    padding: 0.75rem;
+    font-size: 14px;
+  box-shadow: none;
+  padding: 8px 12px;
+  color: var(--Interface-Text-title1);
+}
 
-
-
+.customcheckox.p-checkbox .p-checkbox-input {
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+}
+.customcheckox.p-checkbox .p-checkbox-box {
+    color: #4b5563;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    outline-color: #0000;
+    width: 18px;
+    height: 18px;
+    transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+.customcheckox.p-checkbox.p-highlight .p-checkbox-box {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
 
 
 @media (min-width: 1040px)  {
@@ -82,4 +116,15 @@
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 14px;
   }
+  .custominput.p-inputtext {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--Interface-Stroke-default);
+    border-radius: 6px;
+    outline-color: rgba(0, 0, 0, 0);
+    padding: 0.75rem;
+    font-size: 14px;
+  box-shadow: none;
+  padding: 8px 12px;
+  color: var(--Interface-Text-title1);
+}
 }

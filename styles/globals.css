@@ -7,6 +7,12 @@
   --Interface-Text-title: #F2F2F5;
   --Brand-Neutral-50: #263040;
   --Interface-Stroke-soft: #1F2A37;
+   --interface-text-default1: #3C4146;
+  --Interface-Text-title1: #212325;
+  --Interface-feedback-error-700: #D42600;
+   --Interface-Stroke-default : #C9D3DB;
+   --Brand-Primary-900 : #4A4167;
+   
  
 }
 
@@ -16,7 +22,16 @@
   --color-interfacetextdefault: var(--interface-text-default);
   --color-InterfaceTexttitle :var(--Interface-Text-title);
   --color-BrandNeutral50 :var(--Brand-Neutral-50);
-  --color-InterfaceStrokesoft :var( --Interface-Stroke-soft);
+  --color-InterfaceStrokesoft :var(--Interface-Stroke-soft);
+  --color-interfacetextdefault1: var(--interface-text-default1);
+  --color-InterfaceTexttitle1 :var(--Interface-Text-title1);
+  --color-Interfacefeedbackerror700 :var(--Interface-feedback-error-700);
+  --color-InterfaceStrokedefault :var(--Interface-Stroke-default);
+  --color-BrandPrimary900  :var(--Brand-Primary-900 );
+      
+ 
+ 
+  
  
  
   --font-sans: var(--font-geist-sans);
@@ -206,18 +221,36 @@ body {
 .font36 {
   @apply text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[1.875vw];
 }
-.space-y-12 {
+
+
+/* Global spacing  */
+.spacey12 {
   @apply space-y-[12px] xl:space-y-[12px] 3xl:space-y-[0.625vw];
 }
-.space-y-20 {
+.spacey20 {
   @apply space-y-[18px] lg:space-y-[18px] xl:space-y-[18px] 2xl:space-y-[20px] 3xl:space-y-[1.042vw];
 }
-.gap-20 {
+.spacey30 {
+  @apply space-y-[30px] lg:space-y-[30px] xl:space-y-[30px] 3xl:space-y-[1.563vw];
+}
+/* Global spacing  */
+
+
+/* Global Gap */
+.gap20 {
   @apply gap-[20px] xl:gap-[20px] 3xl:gap-[1.042vw];
 }
-.mx-40 {
+/* Global Gap */
+
+/* Global  Margin */
+.mx40 {
   @apply mx-[40px] xl:mx-[40px] 3xl:mx-[2.083vw];
 }
+.mt40 {
+  @apply mt-[40px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.083vw];
+}
+
+/* Global  Margin */
 
 /* landing page start */
 .launchpad-bg{

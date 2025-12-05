@@ -6,6 +6,7 @@ import { Sidebar } from "primereact/sidebar";
 import CatalogPopup from "@/components/catalog/CatalogPopup";
 import { Dropdown } from "primereact/dropdown";
 import { Roboto } from "next/font/google";
+import Link from "next/link";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -93,11 +94,14 @@ export default function Top() {
               className="w-[90px] xl:w-[100px] 2xl:w-[110px] 3xl:w-[5.471vw] topdropdown"
             />
           </div>
+         
           <div className="cursor-pointer flex gap-[16px] lg:gap-[16px] xl:gap-[16px] 3xl:gap-[1.238vw] items-center lg:pl-[2px] xl:pl-[4px] 2xl:pl-[8px] 3xl:pl-[0.521vw]">
+             <Link href={"/sign-in"}>
             <div className="flex items-center gap-[8px] xl:gap-[8px] 3xl:gap-[0.938vw]">
               <i className="smb-logout font14"></i>
               <div className="text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">Sign In</div>
             </div>
+            </Link>
             <Image
               src="/images/user-square.svg"
               width={30}
@@ -106,6 +110,7 @@ export default function Top() {
               className="w-[26px] lg:w-[24px] xl:w-[26px] 3xl:w-[1.323vw] h-[26px] lg:h-[24px] xl:h-[26px] 3xl:h-[1.323vw] "
             />
           </div>
+          
         </div>
       </div>
 
