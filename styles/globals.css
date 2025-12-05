@@ -212,6 +212,12 @@ body {
 .space-y-20 {
   @apply space-y-[18px] lg:space-y-[18px] xl:space-y-[18px] 2xl:space-y-[20px] 3xl:space-y-[1.042vw];
 }
+.gap-20 {
+  @apply gap-[20px] xl:gap-[20px] 3xl:gap-[1.042vw];
+}
+.mx-40 {
+  @apply mx-[40px] xl:mx-[40px] 3xl:mx-[2.083vw];
+}
 
 /* landing page start */
 .launchpad-bg{
