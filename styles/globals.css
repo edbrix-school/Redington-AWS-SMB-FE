@@ -45,7 +45,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 @font-face {
@@ -205,6 +205,12 @@ body {
 }
 .font36 {
   @apply text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[1.875vw];
+}
+.space-y-12 {
+  @apply space-y-[12px] xl:space-y-[12px] 3xl:space-y-[0.625vw];
+}
+.space-y-20 {
+  @apply space-y-[18px] lg:space-y-[18px] xl:space-y-[18px] 2xl:space-y-[20px] 3xl:space-y-[1.042vw];
 }
 
 /* landing page start */

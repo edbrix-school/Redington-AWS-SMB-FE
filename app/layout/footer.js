@@ -1,101 +1,130 @@
-import React from 'react'
+import Image from "next/image";
+import React from "react";
+import { Roboto } from "next/font/google";
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
+});
 export default function Footer() {
   return (
     <>
-    
-    
-    <div className='bg-[#263040] rounded-[6px]'>
-      <div className='px-[100px] py-[20px]'>
-
-      <div className='grid grid-cols-4 gap-[20px] xl:gap-[20px] 3xl:gap-[1.042vw] '>
-<div className='space-y-[20px]'>
-  <div className='text-[16px] xl:text-[15px] 3xl:text-[0.781vw] font-semibold text-[#fff]'>
-    Site
-  </div>
-  <div className='flex flex-col space-y-[14px]'>
- <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    About Us
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Documentation
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Contact Sales
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Find a Partner
-  </div>
-  </div>
- 
-</div>
-<div className='space-y-[20px]'>
-  <div className='text-[16px] xl:text-[15px] 3xl:text-[0.781vw] font-semibold text-[#fff]'>
-    Resources
-  </div>
-  <div className='flex flex-col space-y-[14px]'>
- <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Blog
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Customer Stories
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    News & Stories
-  </div>
- 
-  </div>
- 
-</div>
-<div className='space-y-[20px]'>
-  <div className='text-[16px] xl:text-[15px] 3xl:text-[0.781vw] font-semibold text-[#fff]'>
-    Get to Know Us
-  </div>
-  <div className='flex flex-col space-y-[14px]'>
- <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-   About Company
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Privacy Policy
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Terms of Use
-  </div>
-  
-  </div>
- 
-</div>
-<div className='space-y-[20px]'>
-  <div className='text-[16px] xl:text-[15px] 3xl:text-[0.781vw] font-semibold text-[#fff]'>
-    Site
-  </div>
-  <div className='flex flex-col space-y-[14px]'>
- <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    About Us
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Documentation
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Contact Sales
-  </div>
-   <div className='text-[14px] xl:text-[14px] 3xl:text-[0.729vw] text-[#fff] font-normal'>
-    Find a Partner
-  </div>
-  </div>
- 
-</div>
+      <div className={`${roboto.variable} bg-BrandNeutral50 rounded-[6px] mx-[40px]`}>
+        <div className="px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.042vw]  pb-[30px] xl:pb-[30px] 2xl:pb-[32px] 3xl:pb-[1.771vw] pt-[36px] xl:pt-[36px] 2xl:pt-[36px] 3xl:pt-[1.875vw]">
+          <div className="grid grid-cols-4 lg:gap-[14px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[5.208vw] px-[60px] lg:px-[50px] xl:px-[140px] 2xl:px-[250px] 3xl:px-[15.375vw] ">
+            <div className="space-y-20 xl:space-y-20 3xl:space-y-[1.042vw]">
+              <div className="font16 font-semibold text-InterfaceTexttitle">
+                Site
+              </div>
+              <div className="flex flex-col space-y-12">
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  About Us
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Documentation
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Contact Sales
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Find a Partner
+                </div>
+              </div>
+            </div>
+            <div className="space-y-20">
+              <div className="font16 font-semibold text-InterfaceTexttitle">
+                Resources
+              </div>
+              <div className="flex flex-col space-y-12">
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Blog
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Customer Stories
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  News & Stories
+                </div>
+              </div>
+            </div>
+            <div className="space-y-20">
+              <div className="font16 font-semibold text-InterfaceTexttitle">
+                Get to Know Us
+              </div>
+              <div className="flex flex-col space-y-12">
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  About Company
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Privacy Policy
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal cursor-pointer">
+                  Terms of Use
+                </div>
+              </div>
+            </div>
+            <div className="space-y-20 ">
+              <div className="font16 font-semibold text-InterfaceTexttitle cursor-pointer">
+                Contact Us
+              </div>
+              <div className="flex flex-col space-y-12">
+                <div className="font14 text-interfacetextdefault font-normal gap-[7px] xl:gap-[7px] 3xl:gap-[0.393vw] flex items-start cursor-pointer">
+                  <i className="smb-location text14 pt-1"></i>
+                  1, Shiekh Zayed Road, H Hotel,
+                  <br /> Business Tower - Dubai, UAE
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal flex gap-[7px] xl:gap-[7px] 3xl:gap-[0.393vw] cursor-pointer">
+                  <i className="smb-sms text14 pt-1"></i>
+                  help@cloudquarks.com
+                </div>
+                <div className="font14 text-interfacetextdefault font-normal flex gap-[7px] xl:gap-[7px] 3xl:gap-[0.393vw] cursor-pointer">
+                  <i className="smb-call text14 pt-1 "></i>
+                  +971 4 516 1504
+                </div>
+                <div className=" flex gap-[20px]">
+                  <Image
+                    src="/images/facebook.svg"
+                    width={25}
+                    height={25}
+                    alt="logo"
+                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                  />
+                  <Image
+                    src="/images/twitter.svg"
+                    width={26}
+                    height={26}
+                    alt="logo"
+                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                  />
+                  <Image
+                    src="/images/linkedin.svg"
+                    width={30}
+                    height={30}
+                    alt="logo"
+                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                  />
+                  <Image
+                    src="/images/youtube.svg"
+                    width={30}
+                    height={30}
+                    alt="logo"
+                    className="w-[26px] lg:w-[26px] xl:w-[28px] 3xl:w-[1.523vw] h-[26px] lg:h-[26px] xl:h-[28px] 3xl:h-[1.523vw] cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className=" border-t border-InterfaceStrokesoft mt-[30px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[1.983vw] pt-[30px] xl:pt-[30px] 2xl:pt-[32px] 3xl:pt-[1.771vw] gap-[12px] xl:gap-[12px] 3xl:gap-[0.729vw]  flex justify-center items-center divide-x divide-interfacetextdefault ">
+            <div className="font16 text-interfacetextdefault pr-[12px] xl:pr-[12px] 3xl:pr-[0.729vw] font-normal leading-none">
+              ©2025 Redington Group
+            </div>
+            <div className="text-interfacetextdefault font-normal">
+              All Rights Reserved.
+            </div>
+          </div>
+        </div>
       </div>
-      <div className='pt-[20px] flex justify-center items-center divide-x divide-amber-100'>
-<div className='text-[15px] xl:text-[15px] 3xl:text-[0.781vw] text-[#fff]'>
-  ©2025 Redington Group 
-</div>
-<div className='text-[#fff]'>
-   All Rights Reserved.
-</div>
-      </div>
-      </div>
-    </div>
     </>
-  )
+  );
 }
