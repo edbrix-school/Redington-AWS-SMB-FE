@@ -94,14 +94,8 @@ export default function Top() {
             />
           </div>
           <div className="cursor-pointer flex gap-[16px] lg:gap-[16px] xl:gap-[16px] 3xl:gap-[1.238vw] items-center lg:pl-[2px] xl:pl-[4px] 2xl:pl-[8px] 3xl:pl-[0.521vw]">
-            <div className="flex items-center gap-[8px]">
-              <Image
-                src="/images/login.svg"
-                width={20}
-                height={20}
-                alt="logo"
-                className="w-[15px] lg:w-[15px] xl:w-[15px] 3xl:w-[0.781vw] h-[15px] lg:h-[15px] xl:h-[15px] 3xl:h-[0.781vw]"
-              />
+            <div className="flex items-center gap-[8px] xl:gap-[8px] 3xl:gap-[0.938vw]">
+              <i className="smb-logout font14"></i>
               <div className="text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">Sign In</div>
             </div>
             <Image
