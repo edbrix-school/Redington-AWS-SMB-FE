@@ -236,6 +236,88 @@
   border-radius: 0;
   padding: 0;
 }
+
+.customDropdown.p-dropdown {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.customDropdown.p-dropdown .p-dropdown-label.p-placeholder {
+  color: #7f8488;
+  padding: 6px !important;
+  font-size: 12px;
+}
+.customDropdown.p-dropdown:not(.p-disabled):focus {
+  border-color: none;
+  box-shadow: none;
+}
+.customDropdown.p-dropdown.p-component.p-inputwrapper.p-inputwrapper-focus {
+  border-color: none;
+  box-shadow: none;
+}
+.p-dropdown-panel .p-dropdown-items {
+  padding: 0px !important;
+}
+.customDropdown.p-dropdown .p-dropdown-trigger {
+  color: rgb(107, 114, 128);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  /* width: 1rem; */
+  background: none;
+}
+.customDropdown .p-dropdown-label.p-inputtext {
+  padding: 6px !important;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: #4b5563;
+  background: #eff6ff;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+  background: #d1d5db;
+  outline: transparent;
+}
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  color: #4b5563;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 10px;
+  transition: box-shadow 0.2s;
+}
+.customInputText.p-inputtext {
+  border-left: 0;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  padding: 1px !important;
+}
+
+.customSearchButton.p-button.p-button-warning {
+  color: #7f8488;
+  background: white;
+  border-right: 0;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  padding: 5px !important;
+}
+.customSearchButton.p-button {
+  color: #7f8488;
+  background: white;
+  border-left: 1px solid #d1d5db;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  border-right: 0;
+  padding: 5px !important;
+  .pi {
+    font-size: 12px;
+  }
+}
+
 @media (min-width: 1040px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 12px;

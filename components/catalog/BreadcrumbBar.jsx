@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { BreadCrumb } from "primereact/breadcrumb";
-import Image from "next/image";
+import { Dropdown } from "primereact/dropdown";
+import { InputText } from "primereact/inputtext";
+import { Button } from "primereact/button";
 
 export default function BreadcrumbBar({ selectedSector, count, onBack }) {
   // When no sector selected → show only "All Sectors"
@@ -38,39 +40,33 @@ export default function BreadcrumbBar({ selectedSector, count, onBack }) {
         },
       ]
     : [];
-
+  const [selectedOrderBy, setSelectedOrderBy] = useState(null);
+  const orderBy = [
+    { name: "Relevance", code: "123" },
+    { name: "Item2", code: "345" },
+  ];
   return (
     <div className="flex items-center justify-between pb-4">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <BreadCrumb className="customBreadcrumbs" model={items} home={home} />
       </div>
-      <div className="flex flex-1 items-center justify-end gap-3">
+      <div className="flex  items-center justify-end gap-3">
         {/* Order by */}
-        <button
-          type="button"
-          className="flex items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-default"
-        >
-          <span>Order By: Relevance</span>
-          <Image
-            src="/assets/icons/arrowright2.svg"
-            alt="Chevron down"
-            width={14}
-            height={14}
-          />
-        </button>
+        <Dropdown
+          value={selectedOrderBy}
+          onChange={(e) => setSelectedOrderBy(e.value)}
+          options={orderBy}
+          optionLabel="name"
+          placeholder="Order By: Relevance"
+          className="customDropdown w-[177px] xl:w-[180px] 2xl:w-[180px] 3xl:w-[9.471vw] border border-[#E4E4E4] text-interface-text-default font12 font-normal"
+        />
 
         {/* Right search (in-header) */}
-        <div className="hidden items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
-          <Image
-            src="/assets/icons/search-outline.svg"
-            alt="Search"
-            width={14}
-            height={14}
-          />
-          <input
-            type="text"
-            placeholder="search..."
-            className="w-32 border-none bg-transparent text-[12px] text-interface-text-title placeholder:text-interface-text-subtitle focus:outline-none"
+        <div className="p-inputgroup flex-1 hidden items-center rounded-lg px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
+          <Button icon="pi pi-search" className="customSearchButton" />
+          <InputText
+            placeholder="Search..."
+            className="customInputText text-interface-text-default font12 font-normal"
           />
         </div>
       </div>
