@@ -108,7 +108,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   const selectedData = sectorDataMap[activeTab];
 
   return (
-    <div className="w-1/2 shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:w-[400px] lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
+    <div className="shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
       <div className="flex items-center gap-2">
         <Image
           src="/assets/icons/catalog-img.svg"
@@ -186,6 +186,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         <Accordion
           activeIndex={activeIndex}
           onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
+          className="customAccordian"
         >
           {selectedData.map((sector, index) => {
             return (

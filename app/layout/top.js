@@ -71,7 +71,6 @@ export default function Top() {
           visible={showCatalog}
           onHide={() => setShowCatalog(false)}
           className="p-0 z-[9999] customsidebar"
-          style={{ width: "1200px" }}
         >
           <CatalogPopup
             open={showCatalog}
