@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Accordion, AccordionTab } from "primereact/accordion";
+import { InputText } from "primereact/inputtext";
+import { Button } from "primereact/button";
 
 const industrySector = [
   {
@@ -98,7 +100,7 @@ const TABS = ["By Industry", "By Use Case", "By Organization Type"];
 export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   const [activeTab, setActiveTab] = useState("By Industry");
   const [activeIndex, setActiveIndex] = useState([-1]);
-
+  const [value, setValue] = useState("");
   const sectorDataMap = {
     "By Industry": industrySector,
     "By Use Case": byUseCase,
@@ -133,19 +135,20 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           Search catalog
         </label>
         <div className="flex items-center gap-2 border-[1px solid var(--Interface-Stroke-soft, #E5E7EB)] bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] p-[1px]">
-          <div className="flex w-full items-center gap-2  px-3 py-1">
+          <div className="flex w-full items-center gap-2  px-3 py-1 cursor-pointer">
             <Image
               src="/assets/icons/search-outline.svg"
               alt="Search"
               width={25}
               height={25}
             />
-            <input
-              id="catalog-search"
-              type="text"
+            <InputText
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="customSearchInput w-full font16 "
               placeholder="Search"
-              className="w-full border-none bg-transparent text-[15px] text-interface-text-title placeholder:text-interface-text-subtitle focus:outline-none"
             />
+
             <Image
               src="/assets/icons/i24support.svg"
               alt="Search"
@@ -161,7 +164,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         {TABS.map((tab) => {
           const isActive = tab === activeTab;
           return (
-            <button
+            <Button
               key={tab}
               type="button"
               onClick={() => {
@@ -169,14 +172,12 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                 setActiveIndex([-1]); // Reset accordion when changing tabs
               }}
               className={[
-                "rounded-lg cursor-pointer px-2 py-3 text-[11px] leading-none font-semibold font-opensans transition-colors",
-                isActive
-                  ? "bg-[#8078B9] text-white"
-                  : "bg-[#F5F6F7] text-[#7f8488]",
+                "customCatalogButton cursor-pointer px-2 py-3 font10 font-semibold",
+                isActive ? "active" : "",
               ].join(" ")}
             >
               {tab}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -201,18 +202,20 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                         width={20}
                         height={20}
                       />
-                      <span className="text-[16px] font-inter text-interface-text-title truncate w-[calc(100%-40px)]">
+                      <span className="font16 text-InterfaceTexttitle1 truncate w-[calc(100%-40px)]">
                         {sector.name}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 text-[12px] text-interface-text-subtitle">
-                      <span>({sector.count})</span>
+                    <div className="flex items-center gap-2 ">
+                      <span className="font16 text-interface-text-default1">
+                        ({sector.count})
+                      </span>
                       <Image
                         src="/assets/icons/arrowright2.svg"
                         alt="Accordion Toggle"
                         width={16}
                         height={16}
-                        className={`transition-transform duration-300 transform ${
+                        className={`font16 text-interface-text-default1 transition-transform duration-300 transform ${
                           activeIndex === index ? "rotate-180" : "rotate-0"
                         }`} // Apply rotation to the arrow based on the active state
                       />
@@ -220,8 +223,19 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                   </div>
                 }
               >
-                <div className="text-[12px] text-interface-text-subtitle">
-                  This is the content for {sector.name}.
+                <div className="flex flex-col gap-4">
+                  <p className="font12 text-interface-text-subtitle">
+                    Public Cloud
+                  </p>
+
+                  <div className="flex items-center gap-2">
+                    <p className="font12 text-interface-text-subtitle">
+                      Azure Reservation
+                    </p>
+                    <span className="font12 text-interface-text-subtitle">
+                      (18)
+                    </span>
+                  </div>
                 </div>
               </AccordionTab>
             );
@@ -232,7 +246,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         <div className="flex justify-center mt-3">
           <button
             type="button"
-            className="text-[13px] font-medium text-interface-text-default"
+            className="font14 font-medium text-interface-text-default"
           >
             View More
           </button>
