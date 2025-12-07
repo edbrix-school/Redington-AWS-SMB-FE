@@ -1,73 +1,58 @@
 import Image from "next/image";
-
-const SECTOR_CARDS = [
-  "Advertising & Marketing",
-  "Aerospace & Satellite",
-  "Agriculture",
-  "Automotive",
-  "Consumer Packaged Goods",
-  "Education",
-  "Energy & Utilities",
-  "Financial Services",
-  "Telecom",
-  "Games",
+const industrySector = [
+  {
+    name: "Advertising & Marketing",
+    count: 12,
+  },
+  {
+    name: "Aerospace & Satellite",
+    count: 16,
+  },
+  {
+    name: "Agriculture",
+    count: 10,
+  },
+  { name: "Automotive", count: 8 },
+  {
+    name: "Consumer Packaged Goods",
+    count: 12,
+  },
+  { name: "Education", count: 12 },
+  {
+    name: "Energy & Utilities",
+    count: 12,
+  },
+  {
+    name: "Financial Services",
+    count: 12,
+  },
+  {
+    name: "Telecom",
+    count: 12,
+  },
+  {
+    name: "Games",
+    count: 12,
+  },
 ];
 
 export default function AllSectorsView({ onSectorClick }) {
   return (
     <div className="flex h-full flex-col">
-      {/* Top row: title + sort + search */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h3 className="font-inter text-[18px] font-semibold leading-[24px] tracking-[-0.02em] text-interface-text-title">
-          All Sectors
-        </h3>
-
-        <div className="flex flex-1 items-center justify-end gap-3">
-          {/* Order by */}
-          <button
-            type="button"
-            className="flex items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-default"
-          >
-            <span>Order By: Relevance</span>
-            <Image
-              src="/assets/icons/arrowright2.svg"
-              alt="Chevron down"
-              width={14}
-              height={14}
-            />
-          </button>
-
-          {/* Right search (in-header) */}
-          <div className="hidden items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
-            <Image
-              src="/assets/icons/search-outline.svg"
-              alt="Search"
-              width={14}
-              height={14}
-            />
-            <input
-              type="text"
-              placeholder="search..."
-              className="w-32 border-none bg-transparent text-[12px] text-interface-text-title placeholder:text-interface-text-subtitle focus:outline-none"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Grid */}
       <div className="mt-4 flex-1 overflow-y-auto pb-4">
         <div className="grid gap-4 xs:grid-cols-2 md:grid-cols-3">
-          {SECTOR_CARDS.map((name, idx) => {
-            const isClickable = name === "Advertising & Marketing";
+          {industrySector.map((sector, idx) => {
+            const isClickable = sector.name === "Advertising & Marketing";
             const isViewMore =
-              name === "Games" && idx === SECTOR_CARDS.length - 1;
+              sector.name === "Games" && idx === industrySector.length - 1;
 
             if (isViewMore) {
               // last "View more" tile
               return (
                 <div
-                  key={name}
-                  className="flex items-center justify-center rounded-2xl bg-white/70 p-4 text-[14px] font-medium text-interface-text-default shadow-sm"
+                  key={sector.name}
+                  className="flex items-center justify-center max-w-xs rounded-2xl bg-white/70 p-4 text-[14px] font-medium text-interface-text-default shadow-sm"
                 >
                   View More
                 </div>
@@ -76,9 +61,13 @@ export default function AllSectorsView({ onSectorClick }) {
 
             return (
               <div
-                key={name}
+                key={sector.name}
                 type="button"
-                onClick={isClickable ? onSectorClick : undefined}
+                onClick={
+                  isClickable
+                    ? () => onSectorClick(sector.name, sector.count) // pass name + count properly
+                    : undefined
+                }
                 className={[
                   "relative flex h-48 flex-col justify-between rounded-2xl bg-white/90 bg-catalog-sector bg-cover bg-no-repeat p-4 text-left shadow-sm transition-transform",
                   isClickable ? "hover:-translate-y-[2px]" : "",
@@ -89,9 +78,9 @@ export default function AllSectorsView({ onSectorClick }) {
                     Sector
                   </p>
                   <h4 className="mt-2 max-w-xs font-inter text-[18px] font-semibold leading-[24px] tracking-[-0.02em] text-interface-text-title">
-                    {name}
+                    {sector.name}
                   </h4>
-                  <p className="mt-2 max-w-xs font-inter text-[12px] leading-[18px] tracking-[-0.02em] text-interface-text-subtitle">
+                  <p className="mt-2 max-w-xs font-inter text-[12px] leading-[18px] tracking-[-0.02em] text-interface-text-subtitle md:truncate md:w-[calc(100%-100px)]">
                     Figma ipsum component variant main layer. Device rectangle
                     outline vector vertical distribute list. Team device link
                     start text. Slice.

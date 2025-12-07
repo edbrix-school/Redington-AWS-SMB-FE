@@ -1,20 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import CatalogSidebar from "./CatalogSidebar";
 import AllSectorsView from "./AllSectorsView";
 import AdvertisingView from "./AdvertisingView";
-const SECTOR_KEY = "Advertising & Marketing";
+import BreadcrumbBar from "./BreadcrumbBar";
 
 export default function CatalogPopup({ open, onClose }) {
-  const [selectedSector, setSelectedSector] = useState(null); // Default to null (no sector selected)
+  const [selectedSector, setSelectedSector] = useState(null);
+  const [sectorCount, setSectorCount] = useState(null);
+
   if (!open) return null;
 
-  const showAllSectors = !selectedSector; // If no sector is selected, show All Sectors view
+  const showAllSectors = !selectedSector;
 
-  const handleSectorSelect = (sector) => setSelectedSector(sector); // When a sector is selected, set it
-  const handleBackToAll = () => setSelectedSector(null); // Go back to the all sectors view
+  const handleSectorSelect = (sectorName, count) => {
+    setSelectedSector(sectorName);
+    setSectorCount(count);
+  };
+
+  const handleBackToAll = () => {
+    setSelectedSector(null);
+    setSectorCount(null);
+  };
 
   return (
     <div className="relative flex h-full w-full overflow-hidden rounded-r-[32px]">
@@ -33,13 +41,16 @@ export default function CatalogPopup({ open, onClose }) {
             open ? "lg:ml-[0px]" : ""
           }`}
         >
+          <BreadcrumbBar
+            selectedSector={selectedSector}
+            count={sectorCount}
+            onBack={handleBackToAll}
+          />
           {showAllSectors ? (
-            <AllSectorsView
-              onSectorClick={() => handleSectorSelect(SECTOR_KEY)}
-            />
+            <AllSectorsView onSectorClick={handleSectorSelect} />
           ) : (
             <AdvertisingView
-              sectorName={SECTOR_KEY}
+              sectorName={selectedSector}
               onBackClick={handleBackToAll}
             />
           )}

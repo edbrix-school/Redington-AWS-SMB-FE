@@ -20,54 +20,6 @@ const TAGS = ["Web Hosting", "Security", "+2"];
 export default function AdvertisingView({ sectorName, onBackClick }) {
   return (
     <div className="flex h-full flex-col">
-      {/* Breadcrumb + controls */}
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-2 text-[13px] text-interface-text-subtitle">
-          <button
-            type="button"
-            onClick={onBackClick}
-            className="text-interface-text-subtitle hover:text-interface-text-title"
-          >
-            All Sector
-          </button>
-          <span className="text-interface-text-subtitle">{">"}</span>
-          <span className="font-inter text-[14px] font-medium text-interface-text-title">
-            {sectorName} (18)
-          </span>
-        </div>
-
-        <div className="flex flex-1 items-center justify-end gap-3">
-          {/* Order by */}
-          <button
-            type="button"
-            className="flex items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-default"
-          >
-            <span>Order By: Relevance</span>
-            <Image
-              src="/assets/icons/arrowright2.svg"
-              alt="Chevron down"
-              width={14}
-              height={14}
-            />
-          </button>
-
-          {/* Right search (in-header) */}
-          <div className="hidden items-center gap-2 rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
-            <Image
-              src="/assets/icons/search-outline.svg"
-              alt="Search"
-              width={14}
-              height={14}
-            />
-            <input
-              type="text"
-              placeholder="search..."
-              className="w-32 border-none bg-transparent text-[12px] text-interface-text-title placeholder:text-interface-text-subtitle focus:outline-none"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Solutions grid */}
       <div className="mt-4 flex-1 overflow-y-auto pb-4">
         <div className="grid gap-4 xs:grid-cols-2 lg:grid-cols-3">
