@@ -74,13 +74,13 @@ export default function AllSectorsView({ onSectorClick }) {
                 ].join(" ")}
               >
                 <div>
-                  <p className="font-inter text-[10px] uppercase leading-none tracking-[-0.02em] text-interface-text-default">
+                  <p className="font-inter font10 uppercase leading-none tracking-[-0.02em] text-interface-text-default">
                     Sector
                   </p>
-                  <h4 className="mt-2 max-w-xs font-inter text-[18px] font-semibold leading-[24px] tracking-[-0.02em] text-interface-text-title">
+                  <h4 className="mt-2 max-w-xs font-inter font18 font-semibold leading-[24px] tracking-[-0.02em] text-interface-text-title">
                     {sector.name}
                   </h4>
-                  <p className="mt-2 max-w-xs font-inter text-[12px] leading-[18px] tracking-[-0.02em] text-interface-text-subtitle md:truncate md:w-[calc(100%-100px)]">
+                  <p className="mt-2 max-w-xs font-inter font12 leading-[18px] tracking-[-0.02em] text-interface-text-subtitle">
                     Figma ipsum component variant main layer. Device rectangle
                     outline vector vertical distribute list. Team device link
                     start text. Slice.
