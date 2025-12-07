@@ -3,37 +3,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --interface-text-default: #E0E3E9;
-  --Interface-Text-title: #F2F2F5;
+  --interface-text-default: #e0e3e9;
+  --Interface-Text-title: #f2f2f5;
   --Brand-Neutral-50: #263040;
-  --Interface-Stroke-soft: #1F2A37;
-   --interface-text-default1: #3C4146;
+  --Interface-Stroke-soft: #1f2a37;
+  --interface-text-default1: #3c4146;
   --Interface-Text-title1: #212325;
-  --Interface-feedback-error-700: #D42600;
-   --Interface-Stroke-default : #C9D3DB;
-   --Brand-Primary-900 : #4A4167;
-   
- 
+  --Interface-feedback-error-700: #d42600;
+  --Interface-Stroke-default: #c9d3db;
+  --Brand-Primary-900: #4a4167;
+  --Interface-Text-subtitle: #7f8488;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-interfacetextdefault: var(--interface-text-default);
-  --color-InterfaceTexttitle :var(--Interface-Text-title);
-  --color-BrandNeutral50 :var(--Brand-Neutral-50);
-  --color-InterfaceStrokesoft :var(--Interface-Stroke-soft);
+  --color-InterfaceTexttitle: var(--Interface-Text-title);
+  --color-BrandNeutral50: var(--Brand-Neutral-50);
+  --color-InterfaceStrokesoft: var(--Interface-Stroke-soft);
   --color-interfacetextdefault1: var(--interface-text-default1);
-  --color-InterfaceTexttitle1 :var(--Interface-Text-title1);
-  --color-Interfacefeedbackerror700 :var(--Interface-feedback-error-700);
-  --color-InterfaceStrokedefault :var(--Interface-Stroke-default);
-  --color-BrandPrimary900  :var(--Brand-Primary-900 );
-      
- 
- 
-  
- 
- 
+  --color-InterfaceTexttitle1: var(--Interface-Text-title1);
+  --color-Interfacefeedbackerror700: var(--Interface-feedback-error-700);
+  --color-InterfaceStrokedefault: var(--Interface-Stroke-default);
+  --color-BrandPrimary900: var(--Brand-Primary-900);
+  --color-InterfaceTextsubtitle: var(--Interface-Text-subtitle);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -55,29 +50,27 @@
   }
 }
 
-
-
 body {
   background: var(--background);
   color: var(--foreground);
-
 }
 
 @font-face {
-  font-family: 'redington';
-  src:  url('/fonts/redington.eot?5kxb3k');
-  src:  url('/fonts/redington.eot?5kxb3k#iefix') format('embedded-opentype'),
-    url('/fonts/redington.ttf?5kxb3k') format('truetype'),
-    url('/fonts/redington.woff?5kxb3k') format('woff'),
-    url('/fonts/redington.svg?5kxb3k#redington') format('svg');
+  font-family: "redington";
+  src: url("/fonts/redington.eot?5kxb3k");
+  src: url("/fonts/redington.eot?5kxb3k#iefix") format("embedded-opentype"),
+    url("/fonts/redington.ttf?5kxb3k") format("truetype"),
+    url("/fonts/redington.woff?5kxb3k") format("woff"),
+    url("/fonts/redington.svg?5kxb3k#redington") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="smb-"], [class*=" smb-"] {
+[class^="smb-"],
+[class*=" smb-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'redington' !important;
+  font-family: "redington" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -222,7 +215,6 @@ body {
   @apply text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[1.875vw];
 }
 
-
 /* Global spacing  */
 .spacey12 {
   @apply space-y-[12px] xl:space-y-[12px] 3xl:space-y-[0.625vw];
@@ -234,7 +226,6 @@ body {
   @apply space-y-[30px] lg:space-y-[30px] xl:space-y-[30px] 3xl:space-y-[1.563vw];
 }
 /* Global spacing  */
-
 
 /* Global Gap */
 .gap20 {
@@ -253,22 +244,44 @@ body {
 /* Global  Margin */
 
 /* landing page start */
-.launchpad-bg{
-  background: linear-gradient(90deg, #F2980E 0%, #59B557 100%);
+.launchpad-bg {
+  background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 95%;
 }
-.solution-bg{
+.solution-bg {
   border-radius: var(--Border-Radius-rounded-lg, 8px);
   border: 1px solid rgba(66, 83, 109, 0.15);
-  background: linear-gradient(91deg, rgba(255, 233, 67, 0.12) 5.05%, rgba(66, 219, 62, 0.12) 97.08%);
+  background: linear-gradient(
+    91deg,
+    rgba(255, 233, 67, 0.12) 5.05%,
+    rgba(66, 219, 62, 0.12) 97.08%
+  );
   backdrop-filter: blur(27px);
 }
 .twinthread-bg {
-  background-image: url('/images/twinthread-bg.svg');
+  background-image: url("/images/twinthread-bg.svg");
   background-size: cover;
   background-position: center;
 }
 /* landing page end */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  60% {
+    transform: translateX(30px); /* Bounce to the right */
+  }
+  80% {
+    transform: translateX(-10px); /* Slight back movement */
+  }
+  100% {
+    transform: translateX(0); /* End up at normal position */
+  }
+}
+
+.popup-enter {
+  animation: slideInFromLeft 0.5s ease-out; /* Apply the animation */
+}

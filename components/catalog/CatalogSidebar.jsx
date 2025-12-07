@@ -118,11 +118,11 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
         />
       </div>
 
-      <h2 className="mt-4 font-nunito text-[32px] leading-[1] text-interface-text-default">
+      <h2 className="mt-4 font32 font-normal leading-[1] text-interface-text-default1">
         Catalog
       </h2>
 
-      <p className="mt-3 max-w-xs font-inter text-[12px] leading-[18px] tracking-[-0.02em] text-interface-text-subtitle">
+      <p className="mt-3 font12 text-InterfaceTextsubtitle">
         Figma ipsum component variant main layer. Pen line scale layer variant
         export subtract shadow arrange outline. Project.
       </p>

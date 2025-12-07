@@ -70,7 +70,8 @@ export default function Top() {
         <Sidebar
           visible={showCatalog}
           onHide={() => setShowCatalog(false)}
-          className="p-0 z-[9999] customsidebar"
+          className="p-0 z-[9999] customsidebar popup-enter"
+          blockScroll
         >
           <CatalogPopup
             open={showCatalog}

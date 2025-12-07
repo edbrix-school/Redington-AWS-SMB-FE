@@ -17,11 +17,11 @@ export default function CatalogPopup({ open, onClose }) {
   const handleBackToAll = () => setSelectedSector(null); // Go back to the all sectors view
 
   return (
-    <div className="relative flex h-full w-full max-w-[1550px] overflow-hidden rounded-r-[32px] popup-enter">
+    <div className="relative flex h-full w-full overflow-hidden rounded-r-[32px]">
       {/* Inner layout */}
       <div className="flex h-full w-full flex-col lg:flex-row">
         {/* left side */}
-        <div className={` ${open ? "block" : "hidden"}`}>
+        <div className="catalog-left">
           <CatalogSidebar
             selectedSector={selectedSector}
             onSectorSelect={handleSectorSelect}
