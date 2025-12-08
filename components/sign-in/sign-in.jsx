@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { Inter } from "next/font/google";
 import Image from "next/image";
@@ -13,13 +15,13 @@ const inter = Inter({
 export default function SigninTemplate() {
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
-  
+
   return (
     <>
-      <div className="customsignin-gradient">
-        <div
-          className={`${inter.variable} w-full bg-InterfaceTexttitle `}
-        >
+      {/* MAIN WRAPPER - SCROLL FIX ADDED */}
+      <div className="customsignin-gradient min-h-screen overflow-y-auto" style={{ overflowY: "scroll", WebkitOverflowScrolling: "touch" }}>
+        {/* HEADER */}
+        <div className={`${inter.variable} w-full bg-InterfaceTexttitle `}>
           <div className="relative flex items-center justify-between px-[90px] lg:px-[90px] xl:px-[100px] 3xl:px-[5.99vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
             <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw] justify-between">
               <div className="flex divide-x divide-[#494949] items-center">
@@ -46,7 +48,7 @@ export default function SigninTemplate() {
               </div>
             </div>
             <div className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw]">
-              <div  className="py-[4px] lg:py-[3px] xl:py-[3px] 3xl:py-[0.217vw] flex items-center justify-center gap-[4px] lg:gap-[7px] xl:gap-[8px] 2xl:gap-[9px] 3xl:gap-[0.521vw] text-white px-[12px] lg:px-[14px] xl:px-[18px] 3xl:px-[1.225vw] cursor-pointer rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.521vw] bg-InterfaceStrokesoft">
+              <div className="py-[4px] lg:py-[3px] xl:py-[3px] 3xl:py-[0.217vw] flex items-center justify-center gap-[4px] lg:gap-[7px] xl:gap-[8px] 2xl:gap-[9px] 3xl:gap-[0.521vw] text-white px-[12px] lg:px-[14px] xl:px-[18px] 3xl:px-[1.225vw] cursor-pointer rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.521vw] bg-InterfaceStrokesoft">
                 <div className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]">
                   Contact Us
                 </div>
@@ -54,14 +56,20 @@ export default function SigninTemplate() {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-2 gap20 items-center h-screen  px100 py50">
-          <div className="mr160 py120">
+
+        {/* MAIN CONTENT */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap20 items-center min-h-screen px100 py100">
+
+          {/* LEFT SECTION */}
+          <div className="mr160">
             <div className="text-InterfaceTexttitle1 font-semibold font24 ">
               Sign In
             </div>
+
             <div className="font18 text-interfacetextdefault1">
               Sign In to continue with Redington AWS SMB Portal .
             </div>
+
             <div className="py24 ">
               <div className="mb30">
                 <label className="pb6 block font14 font-medium text-InterfaceTexttitle1 ">
@@ -76,7 +84,8 @@ export default function SigninTemplate() {
                   placeholder="olivia@untitledui.com"
                 />
               </div>
-              <div className=" ">
+
+              <div>
                 <label className="pb6 block font14 font-medium text-InterfaceTexttitle1 ">
                   Password{" "}
                   <span className="text-Interfacefeedbackerror700">*</span>
@@ -90,24 +99,28 @@ export default function SigninTemplate() {
                   placeholder="**********"
                 />
               </div>
+
               <div className="pt-[6px] flex justify-between items-center">
                 <div className="flex items-center">
                   <Checkbox
                     onChange={(e) => setChecked(e.checked)}
                     checked={checked}
                     className="customcheckox"
-                  ></Checkbox>
+                  />
                   <div className="inline-block ml-[4px] xl:ml-[4px] 3xl:ml-[0.313vw] text-interfacetextdefault1 font14 font-medium">
                     Remember me
                   </div>
                 </div>
+
                 <div className="font12 text-BrandPrimary900 cursor-pointer font-medium ">
                   Forgot Password?
                 </div>
               </div>
+
               <button className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
-                sign
+                Sign In
               </button>
+
               <div className="flex items-center justify-center w-full gap-[6px] xl:gap-[6px] 3xl:gap-[0.417vw] my24 px-20">
                 <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
 
@@ -117,38 +130,42 @@ export default function SigninTemplate() {
 
                 <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
               </div>
-              <div className="grid grid-cols-3 gap20">
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap20">
                 <button className="rounded8 font-medium font14 cursor-pointer text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
                   <Image
-                    src="images\microsoft-copilot.svg"
+                    src="/images/microsoft-copilot.svg"
                     width={20}
                     height={20}
                     alt="icon"
-                    className="w20 h-auto mr-[8px] "
+                    className="w20 h-auto mr-[8px]"
                   />
                   Microsoft
                 </button>
+
                 <button className="rounded8 font-medium cursor-pointer font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
                   <Image
                     src="/images/Google-icon.svg"
                     width={20}
                     height={20}
                     alt="icon"
-                    className="w20 h-auto mr-[8px] "
+                    className="w20 h-auto mr-[8px]"
                   />
                   Google
                 </button>
-                <button className=" cursor-pointer rounded8 font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault font-medium">
+
+                <button className="cursor-pointer rounded8 font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault font-medium">
                   <Image
                     src="/images/linkedin-img.svg"
                     width={20}
                     height={20}
                     alt="icon"
-                    className="w20 h-auto mr-[8px] "
+                    className="w20 h-auto mr-[8px]"
                   />
                   LinkedIn
                 </button>
               </div>
+
               <div className="flex py24 justify-center items-center cursor-pointer">
                 <div className="font16 text-InterfaceTextsubtitle font-normal">
                   Not Registered Yet?{" "}
@@ -159,9 +176,52 @@ export default function SigninTemplate() {
               </div>
             </div>
           </div>
+
+          {/* RIGHT IMAGE SECTION */}
+          <div className="hidden lg:block relative w-full max-w-[620px] xl:max-w-[700px] h-[640px]">
+
+           <svg
+  className="absolute -right-2 -top-2 w-[100%] h-[100%] z-30 pointer-events-none"
+  viewBox="0 0 700 800"
+  fill="none"
+>
+  <path
+    d="M70 210 L580 50 L650 610 L140 760 Z"
+    stroke="#c1ffb2"
+    strokeWidth="2"
+    fill="none"
+    strokeLinejoin="round"
+  />
+</svg>
+            <div
+              className="absolute inset-0 z-[99]"
+              style={{
+                clipPath: "polygon(0% -65%, 80% 50%, 80% 50%, 35% 50%, 0% 100%)",
+                borderRadius: "10px",
+              }}
+            >
+              <Image
+                src="/images/login-side.webp"
+                fill
+                className="object-cover rounded-lg"
+                alt="Login Cover"
+                priority
+              />
+            </div>
+
+            <div className="absolute right-[15%] lg:right-[18%] bottom-[14%] lg:bottom-[16%] z-40 w-[260px] lg:w-[300px] xl:w-[350px] p-4 lg:p-6">
+              <p className="text-gray-600 text-[13px] lg:text-[14px] xl:text-[16px] leading-relaxed font-light">
+                <span className="font-medium text-gray-900">Welcome!</span>{" "}
+                You're one step closer to finding the ideal AWS tools for your
+                business. Our platform helps you explore, compare, and test
+                drive AWS products before making a decision — so you can build
+                with confidence.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
-    
     </>
   );
 }
