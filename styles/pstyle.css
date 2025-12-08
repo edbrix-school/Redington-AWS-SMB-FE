@@ -269,6 +269,7 @@
 }
 .customDropdown .p-dropdown-label.p-inputtext {
   padding: 6px !important;
+  font-size: 14px;
 }
 
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
@@ -316,6 +317,22 @@
   .pi {
     font-size: 12px;
   }
+  .p-button:focus {
+    outline: none !important;
+    outline-offset: none;
+    box-shadow: transparent !important;
+  }
+}
+
+.p-button:focus {
+  box-shadow: 0 0 0 2px transparent, 0 0 0 4px transparent,
+    0 1px 2px transparent !important;
+}
+.p-inputtext:enabled:focus {
+  outline-offset: 0;
+  border-color: #d1d5db;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem transparent;
 }
 
 @media (min-width: 1040px) {
@@ -339,6 +356,7 @@
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 14px;
   }
+
   .custominput.p-inputtext {
     background: rgb(255, 255, 255);
     border: 1px solid var(--Interface-Stroke-default);
