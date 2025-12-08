@@ -236,6 +236,9 @@ body {
 .py8 {
   @apply py-[8px] lg:py-[8px] xl:py-[8px] 3xl:py-[0.417vw];
 }
+.py6 {
+  @apply py-[6px] lg:py-[6px] xl:py-[6px] 3xl:py-[0.313vw];
+}
 .py10 {
   @apply py-[8px] lg:py-[8px] xl:py-[8px] 2xl:py-[10px] 3xl:py-[0.521vw];
 }
@@ -259,6 +262,9 @@ body {
 }
 .py120 {
   @apply py-[70px] lg:py-[70px] xl:py-[90px] 2xl:py-[120px] 3xl:py-[6.25vw];
+}
+.px14 {
+  @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
 }
 
 /* Global Padding End */

@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
+import ContactUs from "./components/contact-us";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,14 +16,15 @@ const inter = Inter({
 export default function SigninTemplate() {
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
-
+  const [openpopup, setOpenPopup] = useState(false);
+  
   return (
     <>
-      {/* MAIN WRAPPER - SCROLL FIX ADDED */}
-      <div className="customsignin-gradient min-h-screen overflow-y-auto" style={{ overflowY: "scroll", WebkitOverflowScrolling: "touch" }}>
-        {/* HEADER */}
-        <div className={`${inter.variable} w-full bg-InterfaceTexttitle `}>
-          <div className="relative flex items-center justify-between px-[90px] lg:px-[90px] xl:px-[100px] 3xl:px-[5.99vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
+      <div className="customsignin-gradient h-screen">
+        <div
+          className={`${inter.variable} w-full bg-InterfaceTexttitle z-10 `}
+        >
+          <div className="relative flex items-center justify-between px-[90px] lg:px-[90px] xl:px-[100px] 3xl:px-[5.99vw] py-[7px] lg:py-[8px] xl:py-[12px] 2xl:py-[12px] 3xl:py-[0.625vw]">
             <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw] justify-between">
               <div className="flex divide-x divide-[#494949] items-center">
                 <div className="pr-[10px] xl:pr-[10px] 2xl:pr-[12px] 3xl:pr-[0.729vw]">
@@ -47,13 +49,13 @@ export default function SigninTemplate() {
                 <i className="smb-flash-light text-[#5CB456] text-[20px] xl:text-[21px] 2xl:text-[22px] 3xl:text-[1.294vw]"></i>
               </div>
             </div>
-            <div className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw]">
-              <div className="py-[4px] lg:py-[3px] xl:py-[3px] 3xl:py-[0.217vw] flex items-center justify-center gap-[4px] lg:gap-[7px] xl:gap-[8px] 2xl:gap-[9px] 3xl:gap-[0.521vw] text-white px-[12px] lg:px-[14px] xl:px-[18px] 3xl:px-[1.225vw] cursor-pointer rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.521vw] bg-InterfaceStrokesoft">
-                <div className="text-[13px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium py-[3px] xl:py-[3px] 3xl:py-[0.217vw]">
+
+              <button onClick={()=>setOpenPopup(true)}  className="text-InterfaceSurfacecomponent  cursor-pointer rounded8 bg-InterfaceStrokesoft py6 px14">
+                <div className="font14 font-medium ">
                   Contact Us
                 </div>
-              </div>
-            </div>
+             
+            </button>
           </div>
         </div>
 
@@ -221,6 +223,10 @@ export default function SigninTemplate() {
 
         </div>
       </div>
+    <ContactUs  visible={openpopup}
+                 onHide={() => {
+                   setOpenPopup(false);
+                 }} />
     </>
   );
 }
