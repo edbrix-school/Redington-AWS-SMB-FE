@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Card } from "primereact/card";
 
 const SOLUTIONS = [
   "Multi-Agent Employee Virtual Assistant on AWS",
@@ -21,65 +22,127 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
   return (
     <div className="flex h-full flex-col">
       {/* Solutions grid */}
-      <div className="mt-4 flex-1 overflow-y-auto pb-4">
-        <div className="grid gap-4 xs:grid-cols-2 lg:grid-cols-3">
-          {SOLUTIONS.map((title) => (
-            <article
-              key={title}
-              className="flex flex-col rounded-2xl bg-white/90 bg-catalog-solution bg-cover bg-no-repeat p-4 shadow-sm"
+      <div className="mt-4 flex-1 overflow-y-auto pb-4 custom-scroll ">
+        <div className="responsive-grid">
+          {SOLUTIONS.map((title, idx) => (
+            <Card
+              key={idx}
+              className="advertising-card flex flex-col
+    group rounded-2xl p-4 bg-white shadow-sm cursor-pointer
+    transition-all duration-300
+    hover:-translate-y-[2px]
+    hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+  "
             >
-              {/* Tags */}
-              <div className="flex flex-wrap gap-1">
-                {TAGS.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-neutral-100 px-2 py-[4px] text-[10px] font-semibold uppercase tracking-wide text-interface-text-default"
+              <div className="flex-1">
+                {/* ---------- TAGS ---------- */}
+                <div className="flex flex-wrap gap-2">
+                  {TAGS.map((tag) => (
+                    <span
+                      key={tag}
+                      className="
+          rounded-sm px-2 py-[3px] text-[10px] uppercase font-semibold
+          bg-transparent border border-transparent text-interface-text-default
+          transition-all duration-200
+          hover:border-[#d1d5db] hover:bg-[#d1d5db]
+        "
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* ---------- TITLE ---------- */}
+                <h4 className="mt-3 font-inter text-[16px] font-semibold leading-[22px] text-interface-text-title">
+                  {title}
+                </h4>
+
+                {/* ---------- META (2 Weeks) ---------- */}
+                <div className="flex items-center gap-2">
+                  <i className="smb-watch text14 pt-1"></i>
+                  <p
+                    className="
+      mt-1 flex items-center gap-1 font-inter text-[12px] text-interface-text-subtitle
+      transition-all duration-300
+      hover:underline
+    "
                   >
-                    {tag}
-                  </span>
-                ))}
+                    2 Weeks
+                  </p>
+                </div>
+
+                {/* ---------- DESCRIPTION ---------- */}
+                <p className="mt-2 line-clamp-3 font-inter text-[12px] leading-[18px] text-interface-text-subtitle">
+                  Redington&apos;s AI-powered solution on AWS that automates and
+                  personalizes teaching, assessment, and feedback-enabling
+                  scalable, efficient and student-centric education for schools
+                  and universities.
+                </p>
               </div>
-
-              {/* Title + meta */}
-              <h4 className="mt-3 font-inter text-[16px] font-semibold leading-[22px] text-interface-text-title">
-                {title}
-              </h4>
-              <p className="mt-1 font-inter text-[12px] text-interface-text-subtitle">
-                2 Weeks
-              </p>
-
-              <p className="mt-2 line-clamp-3 font-inter text-[12px] leading-[18px] text-interface-text-subtitle">
-                Redington&apos;s AI-powered solution on AWS that automates and
-                personalizes teaching, assessment, and feedback-enabling
-                scalable, efficient and student-centric education for schools
-                and universities.
-              </p>
-
-              {/* Footer actions */}
-              <div className="mt-3 flex items-center justify-between">
+              <div className="mt-8 flex items-center justify-between ">
+                {/* SUPPORT ICON — hidden by default, visible on hover */}
                 <button
                   type="button"
-                  className="rounded-full border border-brand-neutral-900 bg-white px-3 py-1.5 text-[11px] font-medium text-brand-neutral-900"
-                >
-                  Test Drive
-                </button>
-                <button
-                  type="button"
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#42536D] text-[11px] text-white"
+                  className="
+      hidden group-hover:flex transition-all duration-300
+      rounded-md bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)]
+      px-2 py-1
+    "
                 >
                   <Image
-                    src="/assets/icons/arrow-right.svg"
-                    alt="arrow right"
-                    width={20}
-                    height={20}
+                    src="/assets/icons/i24support.svg"
+                    alt="Support"
+                    width={25}
+                    height={25}
                   />
                 </button>
+
+                {/* RIGHT SIDE ACTIONS */}
+                <div className="ml-auto flex items-center">
+                  {/* PLAY ICON — right aligned (default only) */}
+                  <button
+                    type="button"
+                    className="
+        flex h-8 w-8 items-center justify-center rounded-md bg-[#42536D]
+        text-white transition-all duration-300
+        group-hover:hidden
+      "
+                  >
+                    <Image
+                      src="/assets/icons/arrow-right.svg"
+                      alt="arrow"
+                      width={20}
+                      height={20}
+                    />
+                  </button>
+
+                  {/* TEST DRIVE BUTTON — shown only when hovered */}
+                  <button
+                    type="button"
+                    className="
+        hidden group-hover:flex
+        items-center gap-1 rounded-md bg-[#42536D] text-white
+        px-3 py-1 text-[12px] font-medium ml-2
+        transition-all duration-300 ease-out
+      "
+                  >
+                    Test Drive
+                    <Image
+                      src="/assets/icons/arrow-right.svg"
+                      alt="Test Drive Arrow"
+                      width={18}
+                      height={18}
+                    />
+                  </button>
+                </div>
               </div>
-            </article>
+            </Card>
           ))}
         </div>
 
         {/* Bottom promoted banners */}
+      </div>
+      <div className="shrink-0 mb-4">
         <div className="mt-5 grid gap-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
           {/* TonAI banner */}
           <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(180deg,#1C273D_0%,#304570_100%)] p-4 text-white">

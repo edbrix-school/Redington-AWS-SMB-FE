@@ -58,6 +58,7 @@ export default function BreadcrumbBar({ selectedSector, count, onBack }) {
           options={orderBy}
           optionLabel="name"
           placeholder="Order By: Relevance"
+          panelClassName="customDropdownPanel"
           className="customDropdown w-[177px] xl:w-[180px] 2xl:w-[180px] 3xl:w-[9.471vw] border border-[#E4E4E4] text-interface-text-default font12 font-normal"
         />
 
