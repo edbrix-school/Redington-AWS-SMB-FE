@@ -116,9 +116,8 @@ export default function SigninTemplate() {
                   Forgot Password?
                 </div>
               </div>
-
               <button className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
-                Sign In
+                sign
               </button>
 
               <div className="flex items-center justify-center w-full gap-[6px] xl:gap-[6px] 3xl:gap-[0.417vw] my24 px-20">
