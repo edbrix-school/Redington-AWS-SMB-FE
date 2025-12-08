@@ -15,7 +15,7 @@ export default function SigninTemplate() {
   const [checked, setChecked] = useState(false);
   return (
     <>
-      <div className=" bg-[#fff] mt40">
+      <div className=" bg-[#F0F2F6] mt40 customsignin-gradient min-h-screen">
         <div
           className={`${inter.variable} w-full fixed top-0 left-0 z-[9999] bg-InterfaceTexttitle `}
         >
@@ -53,106 +53,110 @@ export default function SigninTemplate() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap20 items-center h-screen customsignin-gradient px-[80px] lg:px-[80px] xl:px-[80px] 3xl:px-[4.688vw] py-[80px] lg:py-[80px] xl:py-[80px] 3xl:py-[4.688vw]">
-          <div className="mr100 py20">
-         
-            
-                <div className="text-InterfaceTexttitle1 font-semibold font24 ">
-                  Sign In
-                </div>
-                <div className="font18 text-interfacetextdefault1">
-                  Sign In to continue with Redington AWS SMB Portal .
-                </div>
-                <div className="py26 ">
-                  <div className=" mb-[30px]">
-                    <label className="pb-[6px] block font14 font-medium text-InterfaceTexttitle1 ">
-                      Email Address{" "}
-                      <span className="text-Interfacefeedbackerror700">*</span>
-                    </label>
+        <div className=" grid grid-cols-2 gap20 items-center h-screen  px100 py50">
+          <div className="mr160 py120">
+            <div className="text-InterfaceTexttitle1 font-semibold font24 ">
+              Sign In
+            </div>
+            <div className="font18 text-interfacetextdefault1">
+              Sign In to continue with Redington AWS SMB Portal .
+            </div>
+            <div className="py24 ">
+              <div className="mb30">
+                <label className="pb6 block font14 font-medium text-InterfaceTexttitle1 ">
+                  Email Address{" "}
+                  <span className="text-Interfacefeedbackerror700">*</span>
+                </label>
 
-                    <InputText
-                      value={value}
-                      onChange={(e) => setValue(e.target.value)}
-                      className="w-full custominput"
-                      placeholder="olivia@untitledui.com"
-                    />
-                  </div>
-                  <div className=" ">
-                    <label className="pb-[6px] block font14 font-medium text-InterfaceTexttitle1 ">
-                      Password{" "}
-                      <span className="text-Interfacefeedbackerror700">*</span>
-                    </label>
+                <InputText
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  className="w-full custominput"
+                  placeholder="olivia@untitledui.com"
+                />
+              </div>
+              <div className=" ">
+                <label className="pb6 block font14 font-medium text-InterfaceTexttitle1 ">
+                  Password{" "}
+                  <span className="text-Interfacefeedbackerror700">*</span>
+                </label>
 
-                    <InputText
-                      value={value}
-                      onChange={(e) => setValue(e.target.value)}
-                      className="w-full custominput"
-                      type="password"
-                      placeholder="**********"
-                    />
-                  </div>
-                  <div className="pt-[6px] flex justify-between items-center">
-                    <div className="flex items-center">
-                      <Checkbox
-                        onChange={(e) => setChecked(e.checked)}
-                        checked={checked}
-                        className="customcheckox"
-                      ></Checkbox>
-                      <div className="inline-block ml-[4px] xl:ml-[4px] 3xl:ml-[0.313vw] text-interfacetextdefault1 font14 font-medium">
-                        Remember me
-                      </div>
-                    </div>
-                    <div className="font12 text-BrandPrimary900 cursor-pointer font-medium ">
-                      Forgot Password?
-                    </div>
-                  </div>
-                  <button className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
-                    sign
-                  </button>
-                  <div className="flex items-center justify-center w-full gap-[6px] xl:gap-[6px] 3xl:gap-[0.417vw] my24 px-20">
-                    <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
-
-                    <div className="text-InterfaceTextsubtitle font14 whitespace-nowrap">
-                      Or Continue with
-                    </div>
-
-                    <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
-                  </div>
-                  <div className="grid grid-cols-3 gap20">
-                    <button className="rounded8 font-medium font14 cursor-pointer text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
-                      <Image
-                        src="images\microsoft-copilot.svg"
-                        width={20}
-                        height={20}
-                        alt="icon"
-                        className="w20 h-auto mr-[8px] "
-                      />
-                      Microsoft
-                    </button>
-                    <button className="rounded8 font-medium cursor-pointer font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
-                      <Image
-                        src="/images/Google-icon.svg"
-                        width={20}
-                        height={20}
-                        alt="icon"
-                        className="w20 h-auto mr-[8px] "
-                      />
-                      Google
-                    </button>
-                    <button className=" cursor-pointer rounded8 font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault font-medium">
-                      <Image
-                        src="/images/linkedin-img.svg"
-                        width={20}
-                        height={20}
-                        alt="icon"
-                        className="w20 h-auto mr-[8px] "
-                      />
-                      LinkedIn
-                    </button>
+                <InputText
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  className="w-full custominput"
+                  type="password"
+                  placeholder="**********"
+                />
+              </div>
+              <div className="pt-[6px] flex justify-between items-center">
+                <div className="flex items-center">
+                  <Checkbox
+                    onChange={(e) => setChecked(e.checked)}
+                    checked={checked}
+                    className="customcheckox"
+                  ></Checkbox>
+                  <div className="inline-block ml-[4px] xl:ml-[4px] 3xl:ml-[0.313vw] text-interfacetextdefault1 font14 font-medium">
+                    Remember me
                   </div>
                 </div>
-              
-           
+                <div className="font12 text-BrandPrimary900 cursor-pointer font-medium ">
+                  Forgot Password?
+                </div>
+              </div>
+              <button className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
+                sign
+              </button>
+              <div className="flex items-center justify-center w-full gap-[6px] xl:gap-[6px] 3xl:gap-[0.417vw] my24 px-20">
+                <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
+
+                <div className="text-InterfaceTextsubtitle font14 whitespace-nowrap">
+                  Or Continue with
+                </div>
+
+                <div className="flex-1 border-t border-InterfaceStrokedefault"></div>
+              </div>
+              <div className="grid grid-cols-3 gap20">
+                <button className="rounded8 font-medium font14 cursor-pointer text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
+                  <Image
+                    src="images\microsoft-copilot.svg"
+                    width={20}
+                    height={20}
+                    alt="icon"
+                    className="w20 h-auto mr-[8px] "
+                  />
+                  Microsoft
+                </button>
+                <button className="rounded8 font-medium cursor-pointer font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault">
+                  <Image
+                    src="/images/Google-icon.svg"
+                    width={20}
+                    height={20}
+                    alt="icon"
+                    className="w20 h-auto mr-[8px] "
+                  />
+                  Google
+                </button>
+                <button className=" cursor-pointer rounded8 font14 text-interfacetextdefault1 py10 w-full bg-InterfaceSurfacecomponent flex justify-center items-center border border-InterfaceStrokedefault font-medium">
+                  <Image
+                    src="/images/linkedin-img.svg"
+                    width={20}
+                    height={20}
+                    alt="icon"
+                    className="w20 h-auto mr-[8px] "
+                  />
+                  LinkedIn
+                </button>
+              </div>
+              <div className="flex py24 justify-center items-center cursor-pointer">
+                <div className="font16 text-InterfaceTextsubtitle font-normal">
+                  Not Registered Yet?{" "}
+                </div>
+                <span className="text-BrandPrimary900 font-medium pl-[2px] xl:pl-[2px] 3xl:p-[0.156vw]">
+                  Create account.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

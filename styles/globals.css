@@ -242,12 +242,25 @@ body {
 .py20 {
   @apply py-[18px] lg:py-[18px] xl:py-[18px] 2xl:py-[20px] 3xl:py-[1.042vw];
 }
-.py26 {
-  @apply py-[20px] lg:py-[22px] xl:py-[26px] 2xl:py-[26px] 3xl:py-[1.354vw];
+.py24 {
+  @apply py-[20px] lg:py-[22px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
 }
 .px24 {
   @apply py-[12px] lg:py-[16px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
 }
+.pb6 {
+  @apply pb-[6px] xl:pb-[6px] 3xl:pb-[0.313vw];
+}
+.px100 {
+  @apply px-[80px] lg:px-[80px] xl:px-[80px] 2xl:px-[90px] 3xl:px-[5.208vw];
+}
+.py50 {
+  @apply py-[40px] lg:py-[40px] xl:py-[50px] 2xl:py-[50px] 3xl:py-[2.604vw];
+}
+.py120 {
+  @apply py-[70px] lg:py-[70px] xl:py-[90px] 2xl:py-[120px] 3xl:py-[6.25vw];
+}
+
 /* Global Padding End */
 
 /* Global width */
@@ -273,11 +286,11 @@ body {
 .my24 {
   @apply my-[18px] lg:my-[20px] xl:my-[20px] 2xl:my-[24px] 3xl:my-[1.25vw];
 }
-.mr100 {
-  @apply mr-[40px] lg:mr-[40px] xl:mr-[100px] 2xl:mr-[150px] 3xl:mr-[7.813vw];
+.mr160 {
+  @apply mr-[40px] lg:mr-[40px] xl:mr-[120px] 2xl:mr-[150px] 3xl:mr-[8.333vw];
 }
 .mb30 {
-  @apply mb-[30px] lg:mb-[30px] xl:mb-[30px] 3xl:mb-[1.563vw];
+  @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
 }
 /* Global  Margin */
 
