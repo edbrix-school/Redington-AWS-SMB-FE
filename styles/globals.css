@@ -13,6 +13,8 @@
   --Interface-Stroke-default: #c9d3db;
   --Brand-Primary-900: #4a4167;
   --Interface-Text-subtitle: #7f8488;
+  --Interface-Surface-hc-primary: #645592;
+  --Interface-Surface-component : #fff;
 }
 
 @theme {
@@ -28,6 +30,9 @@
   --color-InterfaceStrokedefault: var(--Interface-Stroke-default);
   --color-BrandPrimary900: var(--Brand-Primary-900);
   --color-InterfaceTextsubtitle: var(--Interface-Text-subtitle);
+  --color-InterfaceSurfacehcprimary: var(--Interface-Surface-hc-primary);
+  --color-InterfaceSurfacecomponent: var(--Interface-Surface-component);
+
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -227,10 +232,32 @@ body {
 }
 /* Global spacing  */
 
+/* Global Padding */
+.py8 {
+  @apply py-[8px] lg:py-[8px] xl:py-[8px] 3xl:py-[0.417vw];
+}
+.py10 {
+  @apply py-[8px] lg:py-[8px] xl:py-[8px] 2xl:py-[10px] 3xl:py-[0.521vw];
+}
+.py20 {
+  @apply py-[18px] lg:py-[18px] xl:py-[18px] 2xl:py-[20px] 3xl:py-[1.042vw];
+}
+.py26 {
+  @apply py-[20px] lg:py-[22px] xl:py-[26px] 2xl:py-[26px] 3xl:py-[1.354vw];
+}
+.px24 {
+  @apply py-[12px] lg:py-[16px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
+}
+/* Global Padding End */
+
+/* Global width */
+.w18 {
+  @apply w-[15px] lg:w-[16px] xl:w-[18px] 2xl:w-[18px] 3xl:w-[0.938vw];
+}
+/* Global width End */
 /* Global Gap */
 .gap20 {
-  @apply gap-[20px] xl:gap-[20px] 3xl:gap-[1.042vw];
-}
+  @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];}
 /* Global Gap */
 
 /* Global  Margin */
@@ -240,9 +267,27 @@ body {
 .mt40 {
   @apply mt-[40px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.083vw];
 }
-
+.mt24 {
+  @apply mt-[18px] lg:mt-[20px] xl:mt-[22px] 2xl:mt-[24px] 3xl:mt-[1.25vw];
+}
+.my24 {
+  @apply my-[18px] lg:my-[20px] xl:my-[20px] 2xl:my-[24px] 3xl:my-[1.25vw];
+}
+.mr100 {
+  @apply mr-[40px] lg:mr-[40px] xl:mr-[100px] 2xl:mr-[150px] 3xl:mr-[7.813vw];
+}
+.mb30 {
+  @apply mb-[30px] lg:mb-[30px] xl:mb-[30px] 3xl:mb-[1.563vw];
+}
 /* Global  Margin */
 
+
+/* Rounded  Start*/
+.rounded8 {
+  @apply rounded-[8px] lg:rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw];
+}
+
+/* Rounded  End*/
 /* landing page start */
 .launchpad-bg {
   background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);

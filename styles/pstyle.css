@@ -56,7 +56,7 @@
 .customsignin-gradient {
   background: linear-gradient(
     154deg,
-    rgba(151, 71, 255, 0.21) 8.9%,
+    rgba(151, 71, 255, 0.21) 2.9%,
     rgba(255, 194, 0, 0) 79.12%
   );
 }
@@ -69,7 +69,7 @@
   padding: 0.75rem;
   font-size: 14px;
   box-shadow: none;
-  padding: 8px 12px;
+  padding: 10px 12px;
   color: var(--Interface-Text-title1);
 }
 
@@ -365,7 +365,7 @@
     padding: 0.75rem;
     font-size: 14px;
     box-shadow: none;
-    padding: 8px 12px;
+    padding: 12px 12px;
     color: var(--Interface-Text-title1);
   }
 }
@@ -380,6 +380,17 @@
 @media (min-width: 1435px) and (max-width: 1680px) {
   .customsidebar .p-sidebar {
     width: 82rem !important;
+  }
+   .custominput.p-inputtext {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--Interface-Stroke-default);
+    border-radius: 6px;
+    outline-color: rgba(0, 0, 0, 0);
+    padding: 0.75rem;
+    font-size: 14px;
+    box-shadow: none;
+    padding: 12px 12px;
+    color: var(--Interface-Text-title1);
   }
 }
 
