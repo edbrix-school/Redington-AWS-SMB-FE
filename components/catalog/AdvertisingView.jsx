@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Sidebar } from "primereact/sidebar";
 import Image from "next/image";
 import { Card } from "primereact/card";
@@ -23,6 +23,27 @@ const TAGS = ["Web Hosting", "Security", "+2"];
 
 export default function AdvertisingView({ sectorName, onBackClick }) {
   const [visible, setVisible] = useState(false);
+  const calculateRightPosition = useCallback(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 2560) {
+      return 257;
+    } else if (screenWidth >= 1440 && screenWidth < 1880) {
+      return 145;
+    } else if (screenWidth >= 1440 && screenWidth < 2560) {
+      return 187;
+    } else if (screenWidth >= 1024 && screenWidth < 1440) {
+      return 102;
+    } else {
+      return 70;
+    }
+  }, []);
+
+  const [rightPosition, setRightPosition] = useState(() => {
+    if (typeof window !== "undefined") {
+      return calculateRightPosition();
+    }
+    return 257;
+  });
 
   const showSidebar = () => {
     setVisible(true);
@@ -31,6 +52,18 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
   const hideSidebar = () => {
     setVisible(false);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setRightPosition(calculateRightPosition());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [calculateRightPosition]);
   return (
     <>
       <div className="flex h-full flex-col">
@@ -258,41 +291,22 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
           onHide={hideSidebar}
           position="right"
           className="p-4 !w-[50rem]"
-          style={{
-            position: "fixed",
-            height: "100%",
-            width: "100%",
-            right: "190px",
-            top: "0px",
-          }}
+          style={{ right: `${rightPosition + 0}px` }} // Adjust 'right' based on sidebar width
         >
           <div className="flex flex-col">
-            {/* Title */}
             <h4 className="font-semibold text-[18px] text-[#293141]">
               Multi-Agent Employee Virtual Assistant on AWS
             </h4>
-
-            {/* Small Description */}
             <p className="mt-2 font-medium text-[18px] text-[#4C525F]">
               Small and medium businesses looking for a hassle-free, secure, and
               robust web hosting solution.
             </p>
 
-            {/* Large Description */}
             <p className="mt-4 text-[14px] text-[#4C525F] font-normal">
               This Guidance demonstrates how TeamLink AI, an employee virtual
-              assistant, centralizes access to cross-functional knowledge
-              through a unified, intelligent chat interface. Leveraging advanced
-              language models hosted on Amazon Bedrock, this virtual assistant
-              helps break down departmental information silos by providing
-              employees with instant access to critical organizational
-              knowledge. This Guidance streamlines workplace efficiency by
-              helping employees quickly find and retrieve the information they
-              need, when they need it, eliminating the traditional barriers
-              between different departmental knowledge bases.
+              assistant, centralizes access to cross-functional knowledge...
             </p>
 
-            {/* Key Features */}
             <h5 className="mt-4 font-semibold text-[18px] text-[#3C4146]">
               Key Features
             </h5>
@@ -303,7 +317,6 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
               <li>Real-time performance monitoring and alerts</li>
             </ul>
 
-            {/* Pricing */}
             <h5 className="mt-4 font-semibold text-[18px] text-[#3C4146]">
               Pricing
             </h5>
@@ -311,32 +324,18 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
               Pay-as-you-go, with a free test drive option
             </p>
 
-            {/* Buttons */}
             <div className="mt-4 flex items-center gap-4">
-              {/* Test Drive Button */}
               <Button
                 label="Start Test Drive"
                 icon="pi pi-play"
                 className="bg-[#5D9D4A] text-white font-semibold"
               />
-
-              {/* AWS Website Button */}
               <Button
                 label="AWS Website"
                 icon="pi pi-link"
                 className="bg-[#F5F6F8] text-[#7F8488] font-normal"
               />
             </div>
-
-            {/* Bottom - People Also Buy */}
-            <h5 className="mt-6 font-semibold text-[18px] text-[#3C4146]">
-              People Usually Buy Together
-            </h5>
-            <ul className="mt-2 pl-4 list-disc text-[14px] text-[#4C525F]">
-              <li>Amazon WorkDocs</li>
-              <li>Amazon RDS for SQL Server</li>
-              <li>AWS Outposts</li>
-            </ul>
           </div>
         </Sidebar>
       </div>
