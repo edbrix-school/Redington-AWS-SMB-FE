@@ -7,6 +7,7 @@ import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import ContactUs from "./components/contact-us";
 import Link from "next/link";
+import SignUp from "./components/sign-up";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function SigninTemplate() {
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [openpopup, setOpenPopup] = useState(false);
+   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
 
   return (
     <>
@@ -169,7 +171,7 @@ export default function SigninTemplate() {
                 </button>
               </div>
 
-              <div className="flex py24 justify-center items-center cursor-pointer">
+              <div onClick={()=> setOpenPopupSignUp(true)} className="flex py24 justify-center items-center cursor-pointer">
                 <div className="font16 text-InterfaceTextsubtitle font-normal">
                   Not Registered Yet?{" "}
                 </div>
@@ -224,12 +226,21 @@ export default function SigninTemplate() {
           </div>
         </div>
       </div>
+      <SignUp
+  visible={openpopupsignup}
+  onHide={() => {
+    setOpenPopupSignUp(false);
+  }}
+/>
+
       <ContactUs
         visible={openpopup}
         onHide={() => {
           setOpenPopup(false);
         }}
       />
+     
+     
     </>
   );
 }

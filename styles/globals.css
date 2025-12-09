@@ -22,6 +22,8 @@
   --Interface-Surface-component: #fff;
   --Interface-Surface-component1: #141314;
   --Brand-Neutral-900: #42536D;
+  --Brand-Primary-800: #067532;
+  --Brand-Primary-pure: #00953A;
 }
 
 @theme {
@@ -46,6 +48,11 @@
   --color-InterfaceSurfacecomponent: var(--Interface-Surface-component);
   --color-InterfaceSurfacecomponent1: var(--Interface-Surface-component1);
   --color-BrandNeutral900: var(--Brand-Neutral-900);
+   --color-BrandPrimary800: var(--Brand-Primary-800);
+   --color-BrandPrimarypure: var(--Brand-Primary-pure);
+
+
+
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -336,6 +343,9 @@ body {
 .mx40 {
   @apply mx-[40px] xl:mx-[40px] 3xl:mx-[2.083vw];
 }
+.mx60 {
+  @apply mx-[40px] lg:mx-[40px] xl:mx-[50px] 2xl:mx-[60px] 3xl:mx-[3.125vw];
+}
 .mt40 {
   @apply mt-[40px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.083vw];
 }
@@ -351,6 +361,10 @@ body {
 .mb30 {
   @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
 }
+.mt10 {
+  @apply mt-[8px] lg:mt-[9px] xl:mt-[10px] 2xl:mt-[10px] 3xl:mt-[0.521vw];
+}
+
 /* Global  Margin */
 
 /* Rounded  Start*/
