@@ -198,13 +198,16 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
                     />
                   </button>
                 </div>
-                <Image
-                  src="/images/catalog-tonai-girl.svg"
-                  alt="vector"
-                  width={230}
-                  height={230}
-                  className=" opacity-90"
-                />
+                <div className="relative w-42 h-42 xl:w-52 xl:h-52 md:absolute md:right-[10rem] md:top-[4rem] xl:absolute xl:right-[5rem] xl:top-[4rem] 2xl:absolute 2xl:right-[4rem] 2xl:top-[4rem] hidden md:block">
+                  <Image
+                    src="/images/catalog-tonai-girl.svg"
+                    alt="vector"
+                    fill
+                    // width={230}
+                    // height={230}
+                    className=" opacity-90"
+                  />
+                </div>
               </div>
             </div>
 
