@@ -18,7 +18,7 @@ const roboto = Roboto({
 export default function SignIn() {
 
   return (
-    <div className={`${roboto.variable} w-full fixed bg-SigninTopbg h-screen`}>
+    <div className={`${roboto.variable} w-full min-h-screen `}>
      <SigninTemplate/>
 
     </div>

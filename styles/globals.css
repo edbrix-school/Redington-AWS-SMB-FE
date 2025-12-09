@@ -327,6 +327,9 @@ body {
 .gap20 {
   @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];
 }
+.gap40 {
+  @apply gap-[30px] xl:gap-[40px] 2xl:gap-[40px] 3xl:gap-[2.083vw];
+}
 /* Global Gap */
 
 /* Global  Margin */
@@ -342,8 +345,8 @@ body {
 .my24 {
   @apply my-[18px] lg:my-[20px] xl:my-[20px] 2xl:my-[24px] 3xl:my-[1.25vw];
 }
-.mr160 {
-  @apply mr-[40px] lg:mr-[40px] xl:mr-[120px] 2xl:mr-[150px] 3xl:mr-[8.333vw];
+.mr120 {
+  @apply mr-[40px] lg:mr-[40px] xl:mr-[90px] 2xl:mr-[120px] 3xl:mr-[6.25vw];
 }
 .mb30 {
   @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
