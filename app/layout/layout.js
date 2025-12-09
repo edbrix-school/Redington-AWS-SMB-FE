@@ -1,6 +1,4 @@
 "use client";
-import Footer from "./footer";
-import Top from "./top";
 import Head from "next/head";
 
 export default function Layout({ children, ...pageProps }) {
@@ -16,11 +14,9 @@ export default function Layout({ children, ...pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={pageProps.pageClass}>
-        <Top/>
-        <div>
-          <main>{children}</main>
+        <div className="">
+          <main className="">{children}</main>
         </div>
-        <Footer />
       </div>
     </>
   );

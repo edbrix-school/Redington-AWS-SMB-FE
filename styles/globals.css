@@ -5,9 +5,14 @@
   --foreground: #171717;
   --interface-text-default: #e0e3e9;
   --Interface-Text-title: #f2f2f5;
+  --interface-text-default: #E0E3E9;
+  --Interface-Text-title: #F2F2F5;
+  --Interface-Text-title1: #19212A;
+  --Interface-Text-subtitle: #9EA3AA;
   --Brand-Neutral-50: #263040;
   --Interface-Stroke-soft: #1f2a37;
   --interface-text-default1: #3c4146;
+  --interface-text-default2: #2C363F;
   --Interface-Text-title1: #212325;
   --Interface-feedback-error-700: #d42600;
   --Interface-Stroke-default: #c9d3db;
@@ -15,6 +20,8 @@
   --Interface-Text-subtitle: #7f8488;
   --Interface-Surface-hc-primary: #645592;
   --Interface-Surface-component: #fff;
+  --Interface-Surface-component1: #141314;
+  --Brand-Neutral-900: #42536D;
 }
 
 @theme {
@@ -24,7 +31,12 @@
   --color-InterfaceTexttitle: var(--Interface-Text-title);
   --color-BrandNeutral50: var(--Brand-Neutral-50);
   --color-InterfaceStrokesoft: var(--Interface-Stroke-soft);
-  --color-interfacetextdefault1: var(--interface-text-default1);
+  --color-InterfaceTexttitle :var(--Interface-Text-title);
+  --color-InterfaceTexttitle1 :var(--Interface-Text-title1);
+  --color-InterfaceTextsubtitle :var(--Interface-Text-subtitle);
+  --color-BrandNeutral50 :var(--Brand-Neutral-50);
+  --color-InterfaceStrokesoft :var(--Interface-Stroke-soft);
+  --color-interfacetextdefault2: var(--interface-text-default2);
   --color-InterfaceTexttitle1: var(--Interface-Text-title1);
   --color-Interfacefeedbackerror700: var(--Interface-feedback-error-700);
   --color-InterfaceStrokedefault: var(--Interface-Stroke-default);
@@ -32,6 +44,8 @@
   --color-InterfaceTextsubtitle: var(--Interface-Text-subtitle);
   --color-InterfaceSurfacehcprimary: var(--Interface-Surface-hc-primary);
   --color-InterfaceSurfacecomponent: var(--Interface-Surface-component);
+  --color-InterfaceSurfacecomponent1: var(--Interface-Surface-component1);
+  --color-BrandNeutral900: var(--Brand-Neutral-900);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -212,6 +226,9 @@ body {
 .font24 {
   @apply text-[20px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[1.25vw];
 }
+.font26 {
+  @apply text-[22px] lg:text-[22px] xl:text-[24px] 2xl:text-[26px] 3xl:text-[1.354vw];
+}
 .font32 {
   @apply text-[24px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px] 3xl:text-[1.667vw];
 }
@@ -306,30 +323,7 @@ body {
 }
 
 /* Rounded  End*/
-/* landing page start */
-.launchpad-bg {
-  background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 95%;
-}
-.solution-bg {
-  border-radius: var(--Border-Radius-rounded-lg, 8px);
-  border: 1px solid rgba(66, 83, 109, 0.15);
-  background: linear-gradient(
-    91deg,
-    rgba(255, 233, 67, 0.12) 5.05%,
-    rgba(66, 219, 62, 0.12) 97.08%
-  );
-  backdrop-filter: blur(27px);
-}
-.twinthread-bg {
-  background-image: url("/images/twinthread-bg.svg");
-  background-size: cover;
-  background-position: center;
-}
-/* landing page end */
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%); /* Start off-screen to the left */
@@ -426,3 +420,4 @@ body {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
+
