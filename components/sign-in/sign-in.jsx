@@ -23,7 +23,7 @@ export default function SigninTemplate() {
     <>
       <div className="customsignin-gradient min-h-screen ">
         <div
-          className={`${inter.variable} w-full bg-InterfaceTexttitle z-[999999] fixed top-0`}
+          className={`${inter.variable} w-full bg-InterfaceTexttitle z-[999] fixed top-0`}
         >
           <div className="relative flex items-center justify-between px-[90px] lg:px-[90px] xl:px-[100px] 3xl:px-[5.99vw] py-[7px] lg:py-[8px] xl:py-[12px] 2xl:py-[12px] 3xl:py-[0.625vw]">
             <Link href={"/"}>
