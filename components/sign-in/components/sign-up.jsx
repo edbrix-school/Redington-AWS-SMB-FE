@@ -34,7 +34,7 @@ export default function SignUp({ visible, onHide }) {
                     Welcome! to Redington AWS <br />
                     SMB Platform
                   </div>
-                  <div className="text-InterfaceTextsubtitle font20 mx60 leading-[140%] ">
+                  <div className="text-InterfaceTextsubtitle font20 mx60 leading-[140%] mt10">
                     {" "}
                     Join Redington AWS SMB Platform to explore our diverse
                     catalog with 25,000+ solutions from AWS and 2,500+ partners
