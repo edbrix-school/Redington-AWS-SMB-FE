@@ -10,6 +10,7 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import Top from "./layout/top";
 import Footer from "./layout/footer";
+import LayoutClient from "./layout/layout";
 
 
 const inter = Inter({
@@ -38,13 +39,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${archivoBlack.variable} antialiased`} >
-        <Top />
-        <div className="mt-[40px] xl:mt-[50px] 2xl:mt-[56px] 3xl:mt-[3.021vw]">
-          <main className="">{children}</main>
-        </div>
-        <Footer />
+    // <html lang="en">
+    //   <body className={`${inter.variable} ${archivoBlack.variable} antialiased`} >
+    //     <Top />
+    //     <div className="mt-[40px] xl:mt-[50px] 2xl:mt-[56px] 3xl:mt-[3.021vw]">
+    //       <main className="">{children}</main>
+    //     </div>
+    //     <Footer />
+    //   </body>
+    // </html>
+     <html lang="en">
+      <body className={`${inter.variable} ${archivoBlack.variable} antialiased`}>
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );
