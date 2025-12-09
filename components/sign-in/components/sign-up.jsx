@@ -19,16 +19,16 @@ export default function SignUp({ visible, onHide }) {
       >
         <div className="flex flex-col h-full">
           <div className="border-top-left-radius: 1rem flex-none">
-            <div className=" bg-InterfaceSurfacecomponent p-[24px] xl:p-[24px] 3xl:p-[1.25vw] rounded-tl-[10px] border-b-[2px] border-InterfaceStrokedefault">
-              <div className=" text-InterfaceTexttitle1  text-[22px] xl:text-[22px] 3xl:text-[1.146vw] font-semibold">
+            <div className=" bg-InterfaceSurfacecomponent p24 rounded-tl-[10px] border-b-[2px] border-InterfaceStrokedefault">
+              <div className=" text-InterfaceTexttitle1  font24 font-semibold">
                 Sign Up
               </div>
             </div>
           </div>
           <div className="bg-InterfaceSurfacecomponent  flex-1 overflow-y-auto">
             <div className=" text-center">
-              <div className="p-[24px] xl:p-[24px] 3xl:p-[1.25vw] space-y-[22px]">
-                <div className="mx-[30px] mt-[80px] text-center ">
+              <div className="p24">
+                <div className="mx30 mt80 text-center ">
                   <div className="font36 text-InterfaceTexttitle1 font-normal">
                     {" "}
                     Welcome! to Redington AWS <br />
@@ -40,7 +40,7 @@ export default function SignUp({ visible, onHide }) {
                     catalog with 25,000+ solutions from AWS and 2,500+ partners
                   </div>
                 </div>
-                <div className="text-center flex justify-center ">
+                <div className="text-center flex justify-center mt24 ">
                   <button className="flex items-center justify-center gap-[2px] xl:gap-[2px] 2xl:gap-[3px] cursor-pointer text-InterfaceSurfacecomponent bg-BrandPrimarypure border border-BrandPrimary800 hover:bg-BrandPrimary800 font16 font-medium py6  px14">
                     <Image
                       src="/images/profile-add.svg"

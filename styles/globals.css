@@ -322,6 +322,9 @@ body {
 .px14 {
   @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
 }
+.p24 {
+  @apply p-[20px] lg:p-[20px] xl:p-[24px] 3xl:p-[1.25vw] ;
+}
 
 /* Global Padding End */
 
@@ -343,6 +346,9 @@ body {
 .mx40 {
   @apply mx-[40px] xl:mx-[40px] 3xl:mx-[2.083vw];
 }
+.mx30 {
+  @apply mx-[25px] lg:mx-[25px] xl:mx-[30px] 3xl:mx-[1.563vw];
+}
 .mx60 {
   @apply mx-[40px] lg:mx-[40px] xl:mx-[50px] 2xl:mx-[60px] 3xl:mx-[3.125vw];
 }
@@ -363,6 +369,9 @@ body {
 }
 .mt10 {
   @apply mt-[8px] lg:mt-[9px] xl:mt-[10px] 2xl:mt-[10px] 3xl:mt-[0.521vw];
+}
+.mt80 {
+  @apply mt-[60px] lg:mt-[70px] xl:mt-[80px] 3xl:mt-[4.167vw];
 }
 
 /* Global  Margin */
