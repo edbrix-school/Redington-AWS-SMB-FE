@@ -27,7 +27,7 @@ export default function Top() {
 
   return (
     <div
-      className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw]`}
+      className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw] z-[999999]`}
     >
       {/* NAVBAR */}
       <div className="relative flex items-center justify-between px-[20px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">

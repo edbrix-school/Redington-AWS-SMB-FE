@@ -364,6 +364,150 @@
   padding: 0;
 }
 
+.customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  bottom: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+
+  font-family: "austin" !important;
+  content: "\e80c" !important;
+  background-image: url(/images/Close-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+  /* color: #687885; */
+  color: #42536d;
+  content: "";
+  width: 62px;
+  height: 55px;
+  display: block;
+}
+
+.customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
+.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+  color: #42536d;
+  border-color: transparent;
+  background: transparent;
+  background-image: url(/images/Close-button.png);
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  bottom: 50%;
+  width: 62px;
+  height: 55px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+}
+.customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close,
+.customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-icon {
+  border-radius: 0px;
+}
+
+.customsidebar2.p-sidebar .p-sidebar-header{
+  padding: 0px;
+  
+}
+.customsidebar2.p-sidebar .p-sidebar-right .p-sidebar{
+  width: 100%;
+  border-radius: 6px 0px 12px 10px;
+}
+
+.customsidebar2.p-sidebar .p-sidebar-header + .p-sidebar-content{
+  padding: 0% !important;
+  background-color: #fff;
+  border-radius: 10px 0px 0px 10px !important;
+}
+.customsidebar2.p-sidebar .p-sidebar-content {
+  padding: 0% !important;
+  background-color: #fff;
+}
+.custTable.p-datatable .p-sortable-column-icon.pi-sort-alt {
+  color: #424242;
+  font-size: 14px;
+  font-weight: 400;
+}
+.custTable.p-datatable-tbody .p-checkbox.p-component {
+  width: 16px;
+  height: 16px;
+}
+.custTable.p-datatable-tbody .p-checkbox.p-component {
+  width: 16px;
+  height: 16px;
+}
+.custTable.p-datatable-tbody .p-checkbox .p-checkbox-box {
+  border: 1px solid #9ca3af;
+  /* background: #ffffff; */
+  width: 16px !important;
+  height: 16px !important;
+  color: #495057;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+}
+.custTable.p-datatable-tbody .p-checkbox .p-checkbox-box .p-checkbox-icon {
+  transition-duration: 0.2s;
+  color: #ffffff;
+  font-size: 8px;
+}
+.custTable.p-datatable .p-datatable-thead > tr > th {
+  font-weight: 600;
+   color: #2C363F;
+}
+.custTable.p-datatable .p-datatable-tbody > tr > td {
+  color: #2C363F;
+  font-size: 14px !important;
+  font-weight: 400;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f2eeee;
+}
+
+.custTable.p-datatable.p-datatable-selectable
+  .p-datatable-tbody
+  > tr.p-selectable-row:not(.p-highlight):not(.p-datatable-emptymessage):hover {
+  background: #f9f9fc;
+  color: #2C363F;
+}
+.custTable.p-datatable .pi-filter-icon.pi-filter,
+.custTable.p-datatable .p-sortable-column-icon.pi-sort-alt {
+  color: #424242;
+  font-size: 12px;
+  font-weight: 500;
+}
+.custTable.p-datatable .p-sortable-column-icon {
+  width: 10px;
+  height: 10px;
+}
+.custTable.p-datatable .p-datatable-tbody > tr > td
+ {
+    text-align: left;
+    border: 0 solid #e9ecef;
+    border-bottom-width: 1px;
+    padding: 0.8rem 0.8rem;
+}
+.custTable.p-datatable .p-datatable-thead > tr > th {
+  border-bottom: 1px solid #e4e7ec;
+  background: #f5f6f7;
+  color: #2C363F;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 14px;
+}
+.custTable.p-datatable .p-datatable-odd {
+  background-color: #F6F7F8 !important;
+}
+
+.custTable.p-datatable .p-datatable-even {
+  background-color: #ffffff !important;
+}
+
+
 .start-test-drive.p-button {
     color: #fff;
     background: #5D9D4A;

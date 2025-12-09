@@ -6,6 +6,8 @@ import Image from "next/image";
 import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import ContactUs from "./components/contact-us";
+import Link from "next/link";
+import SignUp from "./components/sign-up";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,53 +19,55 @@ export default function SigninTemplate() {
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [openpopup, setOpenPopup] = useState(false);
-  
+   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
+
   return (
     <>
-      <div className="customsignin-gradient h-screen">
+      <div className="customsignin-gradient min-h-screen ">
         <div
-          className={`${inter.variable} w-full bg-InterfaceTexttitle z-10 `}
+          className={`${inter.variable} w-full bg-InterfaceTexttitle z-[999] fixed top-0`}
         >
           <div className="relative flex items-center justify-between px-[90px] lg:px-[90px] xl:px-[100px] 3xl:px-[5.99vw] py-[7px] lg:py-[8px] xl:py-[12px] 2xl:py-[12px] 3xl:py-[0.625vw]">
-            <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw] justify-between">
-              <div className="flex divide-x divide-[#494949] items-center">
-                <div className="pr-[10px] xl:pr-[10px] 2xl:pr-[12px] 3xl:pr-[0.729vw]">
+            <Link href={"/"}>
+              <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw] justify-between">
+                <div className="flex divide-x divide-[#494949] items-center">
+                  <div className="pr-[10px] xl:pr-[10px] 2xl:pr-[12px] 3xl:pr-[0.729vw]">
+                    <Image
+                      src="/images/redington-black.svg"
+                      width={100}
+                      height={22}
+                      alt="logo"
+                      className="w-[90px] lg:w-[90px] xl:w-[90px] 3xl:w-[5.99vw] h-auto"
+                    />
+                  </div>
                   <Image
-                    src="/images/redington-black.svg"
+                    src="/images/aws-black.svg"
                     width={100}
-                    height={22}
-                    alt="logo"
-                    className="w-[90px] lg:w-[90px] xl:w-[90px] 3xl:w-[5.99vw] h-auto"
+                    height={20}
+                    alt="aws"
+                    className="w-[36px] lg:w-[36px] xl:w-[40px] 3xl:w-[2.292vw] h-auto ml-[10px]"
                   />
                 </div>
-                <Image
-                  src="/images/aws-black.svg"
-                  width={100}
-                  height={20}
-                  alt="aws"
-                  className="w-[36px] lg:w-[36px] xl:w-[40px] 3xl:w-[2.292vw] h-auto ml-[10px]"
-                />
-              </div>
 
-              <div>
-                <i className="smb-flash-light text-[#5CB456] text-[20px] xl:text-[21px] 2xl:text-[22px] 3xl:text-[1.294vw]"></i>
-              </div>
-            </div>
-
-              <button onClick={()=>setOpenPopup(true)}  className="text-InterfaceSurfacecomponent  cursor-pointer rounded8 bg-InterfaceStrokesoft py6 px14">
-                <div className="font14 font-medium ">
-                  Contact Us
+                <div>
+                  <i className="smb-flash-light text-[#5CB456] text-[20px] xl:text-[21px] 2xl:text-[22px] 3xl:text-[1.294vw]"></i>
                 </div>
-             
+              </div>
+            </Link>
+
+            <button
+              onClick={() => setOpenPopup(true)}
+              className="text-InterfaceSurfacecomponent  cursor-pointer rounded8 bg-InterfaceStrokesoft py6 px14"
+            >
+              <div className="font14 font-medium ">Contact Us</div>
             </button>
           </div>
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap20 items-center min-h-screen px100 py100">
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] lg:gap-[80px] xl:gap-[120px] 3xl:gap-[6.25vw] items-center min-h-screen px100  overflow-y-auto scroll-auto ">
           {/* LEFT SECTION */}
-          <div className="mr160">
+          <div className="mr120 mt-[100px] lg:mt-[120px] xl:mt-[150px] 2xl:mt-[170px] 3xl:mt-[8.854vw]">
             <div className="text-InterfaceTexttitle1 font-semibold font24 ">
               Sign In
             </div>
@@ -118,7 +122,7 @@ export default function SigninTemplate() {
                   Forgot Password?
                 </div>
               </div>
-              <button className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
+              <button className="mt24 font20 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
                 sign
               </button>
 
@@ -167,7 +171,7 @@ export default function SigninTemplate() {
                 </button>
               </div>
 
-              <div className="flex py24 justify-center items-center cursor-pointer">
+              <div onClick={()=> setOpenPopupSignUp(true)} className="flex py24 justify-center items-center cursor-pointer">
                 <div className="font16 text-InterfaceTextsubtitle font-normal">
                   Not Registered Yet?{" "}
                 </div>
@@ -179,25 +183,25 @@ export default function SigninTemplate() {
           </div>
 
           {/* RIGHT IMAGE SECTION */}
-          <div className="hidden lg:block relative w-full max-w-[620px] xl:max-w-[700px] h-[640px]">
-
-           <svg
-  className="absolute -right-2 -top-2 w-[100%] h-[100%] z-30 pointer-events-none"
-  viewBox="0 0 700 800"
-  fill="none"
->
-  <path
-    d="M70 210 L580 50 L650 610 L140 760 Z"
-    stroke="#c1ffb2"
-    strokeWidth="2"
-    fill="none"
-    strokeLinejoin="round"
-  />
-</svg>
+          <div className="hidden lg:block relative w-full max-w-[620px] 2xl:max-w-[750px] xl:max-w-[700px] h-[640px] xl:h-[640px] 2xl:xl:h-[640px] 3xl:xl:h-[35.854vw] mt-[100px] mb-[50px] xl:mb-[50px] 3xl:mb-[2.604vw]">
+            <svg
+              className="absolute -right-2 -top-2 w-[100%] h-[100%] z-30 pointer-events-none"
+              viewBox="0 0 700 800"
+              fill="none"
+            >
+              <path
+                d="M70 210 L580 50 L650 610 L140 760 Z"
+                stroke="#c1ffb2"
+                strokeWidth="2"
+                fill="none"
+                strokeLinejoin="round"
+              />
+            </svg>
             <div
               className="absolute inset-0 z-[99]"
               style={{
-                clipPath: "polygon(0% -65%, 80% 50%, 80% 50%, 35% 50%, 0% 100%)",
+                clipPath:
+                  "polygon(0% -65%, 80% 50%, 80% 50%, 35% 50%, 0% 100%)",
                 borderRadius: "10px",
               }}
             >
@@ -210,9 +214,9 @@ export default function SigninTemplate() {
               />
             </div>
 
-            <div className="absolute right-[15%] lg:right-[18%] bottom-[14%] lg:bottom-[16%] z-40 w-[260px] lg:w-[300px] xl:w-[350px] p-4 lg:p-6">
-              <p className="text-gray-600 text-[13px] lg:text-[14px] xl:text-[16px] leading-relaxed font-light">
-                <span className="font-medium text-gray-900">Welcome!</span>{" "}
+            <div className="absolute right-[8%] lg:right-[0%] xl:right-[5%] 2xl:right-[17%] 3xl:right-[11%] bottom-[14%] lg:bottom-[22%] xl:bottom-[18%] 2xl:bottom-[10%] 3xl:bottom-[7%] z-40 w-[260px] lg:w-[300px] xl:w-[350px] 2xl:w-[21.438vw] p-4 lg:p-6">
+              <p className="text-gray-400 text-[13px] lg:text-[14px] xl:text-[17px] 2xl:text-[19px] 3xl:text-[1.163vw]  leading-relaxed font-[400]">
+                Welcome!
                 You're one step closer to finding the ideal AWS tools for your
                 business. Our platform helps you explore, compare, and test
                 drive AWS products before making a decision — so you can build
@@ -220,13 +224,23 @@ export default function SigninTemplate() {
               </p>
             </div>
           </div>
-
         </div>
       </div>
-    <ContactUs  visible={openpopup}
-                 onHide={() => {
-                   setOpenPopup(false);
-                 }} />
+      <SignUp
+  visible={openpopupsignup}
+  onHide={() => {
+    setOpenPopupSignUp(false);
+  }}
+/>
+
+      <ContactUs
+        visible={openpopup}
+        onHide={() => {
+          setOpenPopup(false);
+        }}
+      />
+     
+     
     </>
   );
 }
