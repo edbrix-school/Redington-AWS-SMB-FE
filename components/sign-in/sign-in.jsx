@@ -63,9 +63,9 @@ export default function SigninTemplate() {
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[120px] xl:gap-[120px] 3xl:gap-[6.25vw] items-center min-h-screen px100  overflow-y-auto scroll-auto ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] lg:gap-[80px] xl:gap-[120px] 3xl:gap-[6.25vw] items-center min-h-screen px100  overflow-y-auto scroll-auto ">
           {/* LEFT SECTION */}
-          <div className="mr120 mt-[160px] xl:mt-[150px] 2xl:mt-[170px] 3xl:mt-[8.854vw]">
+          <div className="mr120 mt-[100px] lg:mt-[120px] xl:mt-[150px] 2xl:mt-[170px] 3xl:mt-[8.854vw]">
             <div className="text-InterfaceTexttitle1 font-semibold font24 ">
               Sign In
             </div>
@@ -212,7 +212,7 @@ export default function SigninTemplate() {
               />
             </div>
 
-            <div className="absolute right-[8%] lg:right-[10%] xl:right-[5%] 2xl:right-[16%] 3xl:right-[11%] bottom-[14%] lg:bottom-[16%] xl:bottom-[18%] 2xl:bottom-[10%] 3xl:bottom-[7%] z-40 w-[260px] lg:w-[300px] xl:w-[350px] 2xl:w-[21.438vw] p-4 lg:p-6">
+            <div className="absolute right-[8%] lg:right-[0%] xl:right-[5%] 2xl:right-[17%] 3xl:right-[11%] bottom-[14%] lg:bottom-[22%] xl:bottom-[18%] 2xl:bottom-[10%] 3xl:bottom-[7%] z-40 w-[260px] lg:w-[300px] xl:w-[350px] 2xl:w-[21.438vw] p-4 lg:p-6">
               <p className="text-gray-400 text-[13px] lg:text-[14px] xl:text-[17px] 2xl:text-[19px] 3xl:text-[1.163vw]  leading-relaxed font-[400]">
                 Welcome!
                 You're one step closer to finding the ideal AWS tools for your
