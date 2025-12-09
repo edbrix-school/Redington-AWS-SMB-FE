@@ -1,0 +1,68 @@
+/* landing page start */
+
+.launchpad-bg{
+  background: linear-gradient(90deg, #F2980E 0%, #59B557 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 95%;
+}
+.solution-bg {
+  border-radius: var(--Border-Radius-rounded-lg, 8px);
+  border: 1px solid rgba(66, 83, 109, 0.15);
+  background: linear-gradient(
+    91deg,
+    rgba(255, 233, 67, 0.12) 5.05%,
+    rgba(66, 219, 62, 0.12) 97.08%
+  );
+  backdrop-filter: blur(27px);
+}
+.sector-bg {
+  background-image: url('/images/sector-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
+.twinthread-bg {
+  background-image: url("/images/twinthread-bg.svg");
+  background-size: cover;
+  background-position: center;
+}
+.see-all-bg {
+  background-image: url('/images/svg/see-all.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hot-solution-carousel .p-carousel-indicators{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.hot-solution-carousel .p-carousel .p-carousel-indicators .p-carousel-indicator button{
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+/* landing page end */
+
+/* about us start */
+.dark-sector-bg {
+  background-image: url('/images/dark-sector.svg');
+  background-size: cover;
+  background-position: center;
+}
+.help-bg {
+  background-image: url('/images/help-bg.png') ;
+  background-size: 80% 70%;
+  background-position: 95% 0;
+  /* background-repeat: no-repeat; */
+  /* position: absolute; */
+  height:100%
+}
+
+.open-ai-btn{
+  border-radius: 130px;
+  background: linear-gradient(94deg, rgba(255, 241, 196, 0.43) 4.84%, rgba(182, 255, 161, 0.60) 96.15%);
+}
+/* about us end */

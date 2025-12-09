@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Roboto } from "next/font/google";
 import ContactUs from "@/components/sign-in/components/contact-us";
 
@@ -8,15 +8,18 @@ const roboto = Roboto({
   weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-roboto",
 });
+
 export default function Footer() {
-    const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   return (
     <>
       <div className={`${roboto.variable} bg-BrandNeutral50 rounded-[14px] xl:rounded-[14px] 3xl:rounded-[0.833vw] mx40 `}>
         <div className="px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.042vw]  pb-[30px] xl:pb-[30px] 2xl:pb-[32px] 3xl:pb-[1.771vw] pt-[36px] xl:pt-[36px] 2xl:pt-[36px] 3xl:pt-[1.875vw]">
           <div className="grid grid-cols-4 lg:gap-[14px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[5.208vw] px-[60px] lg:px-[50px] xl:px-[140px] 2xl:px-[250px] 3xl:px-[15.375vw] ">
             <div className="spacey20">
-              <div  onClick={() => setOpen(true)} className="font16 font-semibold text-InterfaceTexttitle">
+              <div 
+              // onClick={() => setOpen(true)} 
+              className="font16 font-semibold text-InterfaceTexttitle">
                 Site
               </div>
               <div className="flex flex-col spacey12">
@@ -127,10 +130,10 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <ContactUs  visible={open}
-                 onHide={() => {
-                   setOpen(false);
-                 }} />
+      {/* <ContactUs visible={open}
+        onHide={() => {
+          setOpen(false);
+        }} /> */}
     </>
   );
 }
