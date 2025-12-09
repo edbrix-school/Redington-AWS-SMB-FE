@@ -103,7 +103,7 @@
   width: 90vw !important;
   height: 100%;
 }
-.customsidebar .p-sidebar-close {
+/* .customsidebar .p-sidebar-close {
   position: absolute;
   right: -100px;
   top: 50%;
@@ -116,8 +116,11 @@
   .p-icon {
     display: none;
   }
-}
+} */
 
+/* .customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon {
+  border-radius: 0px;
+} */
 .customMultipopupsidebar.p-sidebar .p-sidebar-header {
   display:none !important;
   padding: 0 !important;
@@ -155,10 +158,71 @@
 .customsidebar .catalog-left {
   width: 350px;
 }
-.customsidebar.p-sidebar-close-icon {
-  display: none !important;
+
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  bottom: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+
+  font-family: "austin" !important;
+  content: "\e80c" !important;
+  background-image: url(/images/Close-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+  /* color: #687885; */
+  color: #42536d;
+  content: "";
+  width: 62px;
+  height: 55px;
+  display: block;
 }
 
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
+.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+  color: #42536d;
+  border-color: transparent;
+  background: transparent;
+  background-image: url(/images/Close-button.png);
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  bottom: 50%;
+  width: 62px;
+  height: 55px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+}
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close,
+.customsidebar.p-sidebar .p-sidebar-header .p-sidebar-icon {
+  border-radius: 0px;
+}
+
+.customsidebar.p-sidebar .p-sidebar-header{
+  padding: 0px;
+  
+}
+.customsidebar.p-sidebar .p-sidebar-right .p-sidebar{
+  width: 100%;
+  border-radius: 6px 0px 12px 10px;
+}
+
+.customsidebar.p-sidebar .p-sidebar-header + .p-sidebar-content{
+  padding: 0% !important;
+  background-color: #fff;
+  border-radius: 10px 0px 0px 10px !important;
+}
+.customsidebar.p-sidebar .p-sidebar-content {
+  padding: 0% !important;
+  background-color: #fff;
+}
 .customSearchInput.p-inputtext {
   font-family: var(--font-family);
   font-feature-settings: var(--font-feature-settings, normal);

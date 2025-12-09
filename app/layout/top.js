@@ -27,7 +27,7 @@ export default function Top() {
 
   return (
     <div
-      className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw] z-[999999]`}
+      className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw] `}
     >
       {/* NAVBAR */}
       <div className="relative flex items-center justify-between px-[20px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
@@ -66,18 +66,6 @@ export default function Top() {
             </div>
           </div>
         </div>
-        {/* Sidebar */}
-        <Sidebar
-          visible={showCatalog}
-          onHide={() => setShowCatalog(false)}
-          className="p-0 z-[9999] customsidebar popup-enter"
-          blockScroll
-        >
-          <CatalogPopup
-            open={showCatalog}
-            onClose={() => setShowCatalog(false)}
-          />
-        </Sidebar>
         {/* RIGHT SECTION */}
         <div className="flex items-center gap-[12px] lg:gap-[10px] xl:gap-[20px] 3xl:gap-[1.563vw] text-white pr-[2px] xl:pr-[12px] 3xl:pr-[1.25vw]">
           <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">
@@ -133,6 +121,18 @@ export default function Top() {
           />
         </div>
       </div>
+      {/* Sidebar */}
+      <Sidebar
+        visible={showCatalog}
+        onHide={() => setShowCatalog(false)}
+        className="p-0 z-[9999] customsidebar popup-enter"
+        blockScroll
+      >
+        <CatalogPopup
+          open={showCatalog}
+          onClose={() => setShowCatalog(false)}
+        />
+      </Sidebar>
     </div>
   );
 }
