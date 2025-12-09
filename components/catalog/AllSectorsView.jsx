@@ -176,17 +176,17 @@ export default function AllSectorsView({ onSectorClick }) {
                     width={100}
                     height={100}
                   />
-                  <h4 className="mt-2 text-[16px] font-semibold leading-snug">
+                  <h4 className="mt-2 font16 font-semibold leading-snug">
                     Not Sure Which AWS Hub to Use for Your Business?
                   </h4>
-                  <p className="mt-2 text-[12px] leading-[18px] text-slate-100/90">
+                  <p className="mt-2 font12 leading-[18px] text-slate-100/90">
                     Just ask our chatbot! It will ask you a few simple questions
                     and guide you step-by-step to the AWS hub that best fits
                     your business size, goals, and technical needs.
                   </p>
                   <button
                     type="button"
-                    className="mt-3 w-full inline-flex items-center justify-between rounded-lg bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] px-4 py-1.5 text-[12px] font-medium text-white relative"
+                    className="mt-3 w-full inline-flex items-center justify-between rounded-lg bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] px-4 py-1.5 font12 font-medium text-white relative"
                   >
                     <span>Start Chat Now</span>
 
@@ -200,13 +200,16 @@ export default function AllSectorsView({ onSectorClick }) {
                     />
                   </button>
                 </div>
-                <Image
-                  src="/images/catalog-tonai-girl.svg"
-                  alt="vector"
-                  width={230}
-                  height={230}
-                  className=" opacity-90"
-                />
+                <div className="relative w-42 h-42 xl:w-52 xl:h-52 md:absolute md:right-[10rem] md:top-[4rem] xl:absolute xl:right-[5rem] xl:top-[4rem] 2xl:absolute 2xl:right-[4rem] 2xl:top-[4rem] hidden md:block">
+                  <Image
+                    src="/images/catalog-tonai-girl.svg"
+                    alt="vector"
+                    fill
+                    // width={230}
+                    // height={230}
+                    className=" opacity-90"
+                  />
+                </div>
               </div>
             </div>
 

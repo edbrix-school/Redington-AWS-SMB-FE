@@ -203,7 +203,8 @@
   border-bottom: 1px solid #e5e7eb !important;
   border-radius: 6px;
   padding: 0.75rem;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 16px;
   transition: box-shadow 0.2s, color 0.2s;
 }
 .customAccordian.p-accordion .p-accordion-content {
@@ -224,7 +225,7 @@
   .p-accordion-header-link {
   box-shadow: 2px 0px 4px #e5e7eb, 0px 2px 4px #e5e7eb;
   background: transparent;
-  color: #4a4a75;
+  color: #8078b9 !important;
 }
 .customAccordian.p-accordion .p-accordion-tab {
   margin-bottom: 10px;
@@ -381,20 +382,33 @@
     padding: 12px 12px;
     color: var(--Interface-Text-title1);
   }
+  .customAccordian.p-accordion .p-accordion-header .p-accordion-header-link {
+    color: #6b7280;
+    background: #f9fafb;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb !important;
+    border-radius: 6px;
+    padding: 1rem !important;
+    font-weight: 400;
+    font-size: 16px;
+    transition: box-shadow 0.2s, color 0.2s;
+  }
 }
 @media (min-width: 1230px) and (max-width: 1435px) {
   .customsidebar .p-sidebar {
     width: 74rem !important;
   }
   .customAccordian.p-accordion .p-accordion-tab {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1435px) and (max-width: 1680px) {
   .customsidebar .p-sidebar {
     width: 82rem !important;
   }
-   .custominput.p-inputtext {
+  .custominput.p-inputtext {
     background: rgb(255, 255, 255);
     border: 1px solid var(--Interface-Stroke-default);
     border-radius: 6px;

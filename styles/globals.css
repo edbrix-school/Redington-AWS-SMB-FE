@@ -14,7 +14,7 @@
   --Brand-Primary-900: #4a4167;
   --Interface-Text-subtitle: #7f8488;
   --Interface-Surface-hc-primary: #645592;
-  --Interface-Surface-component : #fff;
+  --Interface-Surface-component: #fff;
 }
 
 @theme {
@@ -32,7 +32,6 @@
   --color-InterfaceTextsubtitle: var(--Interface-Text-subtitle);
   --color-InterfaceSurfacehcprimary: var(--Interface-Surface-hc-primary);
   --color-InterfaceSurfacecomponent: var(--Interface-Surface-component);
-
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -276,7 +275,8 @@ body {
 /* Global width End */
 /* Global Gap */
 .gap20 {
-  @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];}
+  @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];
+}
 /* Global Gap */
 
 /* Global  Margin */
@@ -299,7 +299,6 @@ body {
   @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
 }
 /* Global  Margin */
-
 
 /* Rounded  Start*/
 .rounded8 {
@@ -384,17 +383,17 @@ body {
 
 /* subtitle */
 .sector-subtitle {
-  @apply uppercase text-[10px] font-medium tracking-[-0.02em] text-[#6B7280];
+  @apply uppercase text-[8px] lg:text-[8px] xl:text-[10px] 2xl:text-[10px] 3xl:text-[0.521vw] font-medium tracking-[-0.02em] text-[#6B7280];
 }
 
 /* title */
 .sector-title {
-  @apply mt-2 text-[18px] font-semibold leading-[24px] text-[#1E293B];
+  @apply mt-2 text-[15px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[0.938vw] font-semibold leading-[24px] text-[#1E293B];
 }
 
 /* description */
 .sector-description {
-  @apply mt-2 text-[12px] leading-[18px] text-[#475569];
+  @apply mt-2 text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-[12px] 3xl:text-[0.625vw] leading-[18px] text-[#475569];
 }
 .sector-card {
   transition: all 0.2s ease;

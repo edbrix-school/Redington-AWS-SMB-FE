@@ -183,7 +183,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
       </div>
 
       {/* Accordion list */}
-      <div className="mt-5 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
+      <div className="mt-1 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
         <Accordion
           activeIndex={activeIndex}
           onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
@@ -202,7 +202,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                         width={20}
                         height={20}
                       />
-                      <span className="font16 text-InterfaceTexttitle1 truncate w-[calc(100%-40px)]">
+                      <span className="font16 truncate w-[calc(100%-40px)]">
                         {sector.name}
                       </span>
                     </div>
