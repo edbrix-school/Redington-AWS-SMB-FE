@@ -261,6 +261,9 @@ body {
 .py20 {
   @apply py-[18px] lg:py-[18px] xl:py-[18px] 2xl:py-[20px] 3xl:py-[1.042vw];
 }
+.px20 {
+  @apply px-[20px] lg:px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.39vw];
+}
 .py24 {
   @apply py-[20px] lg:py-[22px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
 }
@@ -282,7 +285,18 @@ body {
 .px14 {
   @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
 }
-
+.px15 {
+  @apply px-[15px] lg:px-[15px] xl:px-[15px] 2xl:px-[15px] 3xl:px-[1.04vw];
+}
+.pl15 {
+  @apply pl-[15px] lg:pl-[15px] xl:pl-[15px] 2xl:pl-[15px] 3xl:pl-[1.04vw];
+}
+.p15 {
+  @apply p-[15px] lg:p-[15px] xl:p-[15px] 2xl:p-[15px] 3xl:p-[1.04vw];
+}
+.p10 {
+  @apply p-[10px] lg:p-[10px] xl:p-[10px] 2xl:p-[10px] 3xl:p-[1vw];
+}
 /* Global Padding End */
 
 /* Global width */
@@ -315,6 +329,15 @@ body {
 .mb30 {
   @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
 }
+.mx26 {
+  @apply mx-[27px] lg:mx-[26px] xl:mx-[26px] 3xl:mx-[1.354vw];
+}
+.mt15 {
+  @apply mt-[15px] lg:mt-[15px] xl:mt-[15px] 3xl:mt-[0.781vw];
+}
+.mt10 {
+  @apply mt-[10px] lg:mt-[10px] xl:mt-[10px] 3xl:mt-[0.521vw];
+}
 /* Global  Margin */
 
 /* Rounded  Start*/
@@ -343,7 +366,7 @@ body {
   animation: slideInFromLeft 0.5s ease-out; /* Apply the animation */
 }
 .custom-scroll {
-  scrollbar-width: thin;
+  scrollbar-width: thin !important;
   scrollbar-color: #645592 #e5e7eb;
 }
 
@@ -402,6 +425,71 @@ body {
 }
 .advertising-card {
   @apply rounded-2xl bg-white/90 shadow-sm p-4 flex flex-col justify-between h-70 transition-transform hover:-translate-y-[2px];
+}
+
+.go-back{
+    position: absolute;
+    left: 15px;
+}
+.multi-agent-title {
+    @apply mx-[27px] lg:mx-[26px] xl:mx-[26px] 3xl:mx-[1.354vw] font-semibold text-[18px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] 3xl:text-[0.938vw] text-[#293141];
+}
+.key-features{
+  border-radius: 6px;
+  border: 1px solid #E0E3E9;
+  background-color: #E0E3E9;
+}
+.key-features-title{
+  border-top: 3px solid #8C55FD;
+  width: 50px;
+}
+.pricing-support {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f6f8; /* Light background color for the section */
+  border-radius: 8px;
+}
+
+.pricing,
+.support {
+  flex: 1; /* Flexbox will divide this space evenly */
+  padding-right: 15px;
+}
+
+.chat-now {
+  display: block;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background: linear-gradient(90.85deg, rgba(255, 233, 67, 0.12) 5.05%, rgba(66, 219, 62, 0.12) 97.08%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  flex: 1;
+  /* margin-left: 20px; */
+}
+.tonai-chatnow-logo{
+  position: relative;
+  top: 0;
+  left:90px;
+}
+.section-header-hr{
+  border-top: 3px solid #8C55FD;
+  width: 50px;
+}
+.document-download-int{
+   position: relative;
+  top: 0;
+  left: 128px;
+}
+.document-download-train{
+   position: relative;
+  top: 0;
+  left:98px;
+}
+.document-download-multi{
+   position: relative;
+  top: 0;
+  left:128px;
 }
 @media (min-width: 1400px) {
   .responsive-grid {

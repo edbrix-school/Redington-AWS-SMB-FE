@@ -63,7 +63,7 @@ export default function BreadcrumbBar({ selectedSector, count, onBack }) {
         />
 
         {/* Right search (in-header) */}
-        <div className="p-inputgroup flex-1 hidden items-center rounded-lg px-3 py-2 text-[12px] text-interface-text-subtitle md:flex">
+        <div className="p-inputgroup flex-1 hidden items-center rounded-lg px-3 py-2 font12 text-interface-text-subtitle md:flex">
           <Button icon="pi pi-search" className="customSearchButton" />
           <InputText
             placeholder="Search..."
