@@ -21,9 +21,9 @@ export const Hero = () => {
                 </p>
 
                 {/* Search Bar Section */}
-                <div className="max-w-3xl relative corsor-pointer">
+                <div className="xl:max-w-xl  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer">
                     {/* Search Input Container - Updated Background Color */}
-                    <div className="relative h-[50px] xl:h-[80px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
+                    <div className="relative h-[50px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
                         {/* <input
                             type="text"
                             placeholder="Search"

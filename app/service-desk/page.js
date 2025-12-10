@@ -3,10 +3,9 @@
 import React from 'react';
 import TopBar from '../layout/top';
 import { NavBar } from '../layout/NavBar';
-
-// import { FilesTable } from '@/components/Knowledge-Hub/FilesTable';
-import Footer from '../layout/footer';
 import { Hero } from '@/components/service-desk/banner';
+import { ServicesDeskList } from '@/components/service-desk/listting';
+
 
 export default function ServiceDesk() {
   return (
@@ -16,9 +15,9 @@ export default function ServiceDesk() {
         <NavBar />
         <div className=''>
         <Hero />
-        {/* <main className="flex-grow -mt-8 relative z-20 px-4 md:px-8 pb-10"> 
-          <FilesTable />
-        </main> */}
+        <main className="flex-grow -mt-8 relative z-20 px-[20px] lg:px-[60px] xl:px-[70px] 3xl:px-[4.167vw] pb-10"> 
+          <ServicesDeskList />
+        </main>
         </div>
       </div>
     </div>
