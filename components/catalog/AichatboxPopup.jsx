@@ -7,16 +7,31 @@ import { InputText } from "primereact/inputtext";
 export default function AiChatboxPopup({ open, onClose }) {
   const [isChatboxVisible, setIsChatboxVisible] = useState(false);
   const [userMessage, setUserMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
   const handleSuggestClick = () => {
     setIsChatboxVisible(true);
   };
-  const handleSend = async () => {
-    const trimmed = userMessage.trim();
-    if (!trimmed) return;
+  const handleSend = () => {
+    if (userMessage.trim()) {
+      // Add the user's message
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: userMessage, type: "user" },
+      ]);
 
-    const userChat = { role: "user", text: trimmed };
-    setChatHistory((prev) => [...prev, userChat]);
-    setUserMessage("");
+      setUserMessage(""); // Clear the input field
+
+      // Simulate TonAI's reply after 2 seconds
+      setLoading(true);
+      setTimeout(() => {
+        setMessages((prevMessages) => [
+          ...prevMessages,
+          { text: "This is TonAI's response!", type: "reply" },
+        ]);
+        setLoading(false); // Stop the loading after reply
+      }, 2000);
+    }
   };
   if (!open) return null;
   return (
@@ -66,7 +81,7 @@ export default function AiChatboxPopup({ open, onClose }) {
                   value={userMessage}
                   onChange={(e) => setUserMessage(e.target.value)}
                   placeholder="Hey, I’m looking for cloud services software to manage my company’s infrastructure. Can you help?"
-                  className="w-full bg-transparent text-[18px] text-gray-300 outline-none min-h-[100px] max-h-[240px]  overflow-auto resize-none pr-2 scrollbar-chat"
+                  className="w-full bg-transparent text-[18px] text-[#3C4146] outline-none min-h-[100px] max-h-[240px]  overflow-auto resize-none pr-2 scrollbar-chat"
                   rows={1}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" && !e.shiftKey) {
@@ -138,7 +153,7 @@ export default function AiChatboxPopup({ open, onClose }) {
           <div className="flex-1 overflow-y-auto px-4 py-2 custom-scroll">
             {/* Replace this with dynamically generated messages */}
 
-            <div className="flex justify-end mb-4">
+            {/* <div className="flex justify-end mb-4">
               <div className="bg-transparent p-3 rounded-lg max-w-[70%] font14">
                 <p className="text-[#3C4146]">
                   Hey, I&apos;m looking for cloud services software to manage my
@@ -154,7 +169,25 @@ export default function AiChatboxPopup({ open, onClose }) {
                   building, if you already use cloud services...)
                 </p>
               </div>
-            </div>
+            </div> */}
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`flex mb-4 ${
+                  msg.type === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                <div
+                  className={`p-3 rounded-lg max-w-[70%] font14 ${
+                    msg.type === "user"
+                      ? ""
+                      : "bg-gradient-to-r from-[#F7E4EF] to-[#B5D7F8]"
+                  }`}
+                >
+                  <p className="text-[#3C4146]">{msg.text}</p>
+                </div>
+              </div>
+            ))}
 
             {/* Add more messages here */}
           </div>
@@ -165,7 +198,7 @@ export default function AiChatboxPopup({ open, onClose }) {
                 value={userMessage}
                 onChange={(e) => setUserMessage(e.target.value)}
                 placeholder="We’re a 10-person company building a SaaS tool for small retailers."
-                className="w-full bg-transparent text-[18px] text-gray-300 outline-none min-h-[100px] max-h-[240px]  overflow-auto resize-none pr-2 scrollbar-chat"
+                className="w-full bg-transparent text-[18px] text-[#3C4146] outline-none min-h-[100px] max-h-[240px]  overflow-auto resize-none pr-2 scrollbar-chat"
                 rows={1}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {
@@ -190,7 +223,7 @@ export default function AiChatboxPopup({ open, onClose }) {
                 <span className="text-[#7F8488] px-2">Suggest me</span>
               </button>
               <button
-                onClick={handleSuggestClick}
+                onClick={handleSend}
                 className="absolute right-[23px] bottom-[20px] w-10 h-10 flex items-center justify-center rounded-full hover:scale-105 transition-transform  bg-[#645592] cursor-pointer"
               >
                 <Image
