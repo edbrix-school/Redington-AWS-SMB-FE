@@ -58,7 +58,7 @@ export default function Tabel() {
       MobileNumber: "+971 50 111 11111",
       Email: "will.s@outlook.com",
       Role: "Admin",
-      Status: "Active",
+      Status: "Inactive",
       AuthorizedSignatory: "Yes",
     },
     {
@@ -76,10 +76,31 @@ export default function Tabel() {
       MobileNumber: "+971 50 111 11111",
       Email: "will.s@outlook.com",
       Role: "Admin",
-      Status: "Active",
+      Status: "Inactive",
       AuthorizedSignatory: "Yes",
     },
   ];
+
+  const statusBodyTemplate = (rowData) => {
+  const status = rowData.Status;
+
+ const statusColors = {
+  Active:
+    "text-[#07743E] bg-[#D6FFEA] border-[#04E373]",
+  Inactive:
+    "text-[#903D10] bg-[#FDF2C8] border-[#FCE38B]",
+};
+
+  const colorClass = statusColors[status] || "text-gray-600 bg-gray-100 border-gray-300";
+
+  return (
+    <span
+      className={`py6 px12 rounded8 text12 border ${colorClass}`}
+    >
+      {status}
+    </span>
+  );
+};
 
   const actionBodyTemplate = (rowData) => {
     return (
@@ -232,6 +253,7 @@ export default function Tabel() {
           field="Status"
           header={<HeaderWithMenu title="Status" />}
           style={{ minWidth: "10rem" }}
+            body={statusBodyTemplate}
           filter
           filterElement={filterInput}
         />
