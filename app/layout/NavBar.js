@@ -25,32 +25,6 @@ export const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
-    const NavItem = ({ item, mobile = false, onClick }) => {
-        const normalizedPath = pathname.toLowerCase();
-        const normalizedHref = item.href.toLowerCase();
-        const isActive = normalizedPath === normalizedHref || normalizedPath.startsWith(`${normalizedHref}/`);
-
-        const desktopClasses = `px-3 py-2 rounded-[6px] text-[13px] font-medium whitespace-nowrap transition-all ${isActive
-            ? 'bg-[#4A4167] text-white shadow-md'
-            : 'text-gray-300 hover:text-white'
-            }`;
-
-        const mobileClasses = `px-4 py-3 rounded-md text-sm font-medium text-left ${isActive
-            ? 'bg-[#5B5494] text-white'
-            : 'hover:bg-white/10 hover:text-white'
-            }`;
-
-        return (
-            <Link
-                href={item.href}
-                className={mobile ? mobileClasses : desktopClasses}
-                onClick={onClick}
-            >
-                {item.label}
-            </Link>
-        );
-    };
-
     return (
         // 1. Removed 'fixed top-[45px]' to stop sticky behavior. 
         // 2. Added relative/w-full to flow naturally.
@@ -70,13 +44,27 @@ export const NavBar = () => {
 
                 {/* Desktop Nav */}
                 <div className="hidden lg:flex items-center justify-between flex-1 pr-8 overflow-x-auto no-scrollbar h-full">
-                    {NAV_ITEMS.map((item) => (
-                        <NavItem key={item.label} item={item} />
-                    ))}
+                    {NAV_ITEMS.map((item) => {
+                        const normalizedPath = pathname.toLowerCase();
+                        const normalizedHref = item.href.toLowerCase();
+                        const isActive = normalizedPath === normalizedHref || normalizedPath.startsWith(`${normalizedHref}/`);
+                        return (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className={`px-3 py-2 rounded-[6px] text-[13px] font-medium whitespace-nowrap transition-all ${isActive
+                                    ? 'bg-[#4A4167] text-white shadow-md'
+                                    : 'text-gray-300 hover:text-white'
+                                    }`}
+                            >
+                                {item.label}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* CTA Button */}
-                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-[50px] text-[13px] font-semibold whitespace-nowrap shadow-md transition-colors flex-shrink-0 cursor-pointer">
+                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-[50px] text-[13px] font-semibold whitespace-nowrap shadow-md transition-colors flex-shrink-0">
                     Schedule a Session
                 </button>
             </div>
@@ -85,14 +73,24 @@ export const NavBar = () => {
             {isOpen && (
                 <div className="lg:hidden absolute top-full left-0 w-full bg-[#23282E] border-b border-gray-700 z-50 py-2 shadow-xl max-h-[80vh] overflow-y-auto">
                     <div className="flex flex-col px-4 gap-2">
-                        {NAV_ITEMS.map((item) => (
-                            <NavItem
-                                key={item.label}
-                                item={item}
-                                mobile={true}
-                                onClick={() => setIsOpen(false)}
-                            />
-                        ))}
+                        {NAV_ITEMS.map((item) => {
+                            const normalizedPath = pathname.toLowerCase();
+                            const normalizedHref = item.href.toLowerCase();
+                            const isActive = normalizedPath === normalizedHref || normalizedPath.startsWith(`${normalizedHref}/`);
+                            return (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    className={`px-4 py-3 rounded-md text-sm font-medium text-left ${isActive
+                                        ? 'bg-[#5B5494] text-white'
+                                        : 'hover:bg-white/10 hover:text-white'
+                                        }`}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {item.label}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             )}

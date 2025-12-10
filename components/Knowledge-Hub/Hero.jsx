@@ -3,10 +3,20 @@ import { ChevronRight, Search } from 'lucide-react';
 
 export const Hero = () => {
     return (
-        <div className="relative overflow-hidden text-white min-h-[500px] flex flex-col justify-center knowledge-base-banner-bg">
-            <div className="mx-auto w-full relative z-10 px-[4.167vw]">
+        <div className="relative overflow-hidden text-white py-12 px-4 md:px-8 min-h-[340px] flex flex-col justify-center">
+            {/* Background Image from Figma */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="images/knowledge-hub/Knowledge-Hub.webp"
+                    alt="Background"
+                    className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-dark-900/30"></div>
+            </div>
+
+            <div className="max-w-8xl mx-auto w-full relative z-10">
                 {/* Breadcrumb */}
-                <div className="flex items-center gap-2 text-xs text-gray-300 ">
+                <div className="flex items-center gap-2 text-xs text-gray-300 mb-6">
                     <span>Home</span>
                     <ChevronRight size={12} />
                     <span className="text-white font-medium">Knowledge Hub</span>
@@ -16,28 +26,36 @@ export const Hero = () => {
                 <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Knowledge Hub</h1>
 
                 {/* Description */}
-                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
-                    Find all official announcements, alerts, and campaigns in one place — your source for what’s happening across the organization.
+                <p className="text-gray-200 max-w-2xl mb-10 text-base font-normal leading-relaxed">
+                    Discover curated insights, articles, and resources that keep you informed and inspired across every aspect of our business.
                 </p>
 
                 {/* Search Bar Section */}
-                <div className="max-w-3xl relative corsor-pointer">
+                <div className="max-w-2xl relative">
                     {/* Search Input Container - Updated Background Color */}
-                    <div className="relative h-[50px] xl:h-[80px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
-                        {/* <input
+                    <div className="relative h-18 bg-[#435C45] rounded-lg flex items-center overflow-hidden border border-[#435C45]/50 shadow-sm">
+                        <input
                             type="text"
                             placeholder="Search"
                             className="flex-1 bg-transparent border-none outline-none text-white placeholder-white/90 px-6 text-lg font-medium"
-                        /> */}
-                        <div className='font18 text-white font-medium'>Search</div>
-                        <div className="h-full flex items-center justify-center cursor-pointer hover:opacity-100 transition-opacity">
-                            {/* <Search size={24} className="text-white" /> */}
-                            <i className='smb-simple-search text-[30px]'></i>
+                        />
+                        <div className="px-6 h-full flex items-center justify-center cursor-pointer hover:opacity-100 transition-opacity">
+                            <Search size={24} className="text-white" />
                         </div>
                     </div>
 
                     {/* Decorative element - Added cursor-pointer */}
+                    <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block opacity-90 rotate-180 cursor-pointer hover:opacity-100 transition-opacity">
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            {/* Purple Chevron */}
+                            <path d="M20 20 L55 20 L75 40 L40 40 Z" fill="#59B557" />
+                            <path d="M20 20 L20 55 L40 75 L40 40 Z" fill="#4A9C49" />
 
+                            {/* Green Chevron */}
+                            <path d="M40 40 L75 40 L95 60 L60 60 Z" fill="#8078B9" />
+                            <path d="M40 40 L40 75 L60 95 L60 60 Z" fill="#6A629A" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
