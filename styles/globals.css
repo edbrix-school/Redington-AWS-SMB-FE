@@ -386,6 +386,19 @@ body {
    ========================================= */
 
 /* Landing Page / Gradients */
+.banner-bg {
+  background-image: url("/images/service-desk.png");
+  background-size: cover;
+    background-position: 100% 50%;
+}
+.search-box 
+{
+  border-radius: var(--Border-Radius-rounded-lg, 8px);
+border: 1px solid rgba(66, 83, 109, 0.15);
+background: linear-gradient(91deg, rgba(255, 233, 67, 0.22) 5.05%, rgba(66, 219, 62, 0.22) 97.08%);
+box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
+backdrop-filter: blur(27px);
+}
 .launchpad-bg {
   background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);
   background-clip: text;
