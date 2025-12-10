@@ -15,11 +15,22 @@ const inter = Inter({
   variable: "--font-roboto",
 });
 
+// ✅ IMPORT useRouter (already correct)
+import { useRouter } from "next/navigation";
+
 export default function SigninTemplate() {
+  // ✅ FIX ADDED HERE — we must CREATE router instance
+  const router = useRouter(); // <-- ADDED LINE
+
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [openpopup, setOpenPopup] = useState(false);
    const [openpopupsignup, setOpenPopupSignUp] = useState(false);
+
+   const handleSignIn = () => {
+    // ⚠️ This was failing earlier because router was NOT defined
+    router.push("/Knowledge-Hub"); // ✅ Now works
+  };
 
   return (
     <>
@@ -122,7 +133,10 @@ export default function SigninTemplate() {
                   Forgot Password?
                 </div>
               </div>
-              <button className="mt24 font20 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal">
+            <button
+                onClick={handleSignIn}
+                className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal cursor-pointer hover:opacity-90 transition-opacity"
+              >
                 sign
               </button>
 
