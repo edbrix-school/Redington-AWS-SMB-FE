@@ -25,11 +25,11 @@ export default function SigninTemplate() {
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [openpopup, setOpenPopup] = useState(false);
-   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
+  const [openpopupsignup, setOpenPopupSignUp] = useState(false);
 
-   const handleSignIn = () => {
+  const handleSignIn = () => {
     // ⚠️ This was failing earlier because router was NOT defined
-    router.push("/Knowledge-Hub"); // ✅ Now works
+    router.push("/knowledge-hub"); // ✅ Now works
   };
 
   return (
@@ -133,7 +133,7 @@ export default function SigninTemplate() {
                   Forgot Password?
                 </div>
               </div>
-            <button
+              <button
                 onClick={handleSignIn}
                 className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal cursor-pointer hover:opacity-90 transition-opacity"
               >
@@ -185,7 +185,7 @@ export default function SigninTemplate() {
                 </button>
               </div>
 
-              <div onClick={()=> setOpenPopupSignUp(true)} className="flex py24 justify-center items-center cursor-pointer">
+              <div onClick={() => setOpenPopupSignUp(true)} className="flex py24 justify-center items-center cursor-pointer">
                 <div className="font16 text-InterfaceTextsubtitle font-normal">
                   Not Registered Yet?{" "}
                 </div>
@@ -241,11 +241,11 @@ export default function SigninTemplate() {
         </div>
       </div>
       <SignUp
-  visible={openpopupsignup}
-  onHide={() => {
-    setOpenPopupSignUp(false);
-  }}
-/>
+        visible={openpopupsignup}
+        onHide={() => {
+          setOpenPopupSignUp(false);
+        }}
+      />
 
       <ContactUs
         visible={openpopup}
@@ -253,8 +253,8 @@ export default function SigninTemplate() {
           setOpenPopup(false);
         }}
       />
-     
-     
+
+
     </>
   );
 }
