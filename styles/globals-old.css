@@ -1,11 +1,9 @@
 @import "tailwindcss";
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-/* =========================================
-   Variables & Theme
-   ========================================= */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -37,8 +35,9 @@
   --brand-primary-100: #DAEEFF;
   --Brand-Neutral-pure: #768FB5;
   --interface-surface-component-muted: #F5F6F7;
-}
 
+  
+}
 
 @theme {
   --color-background: var(--background);
@@ -349,6 +348,9 @@ body {
 .spacey12 {
   @apply space-y-[12px] xl:space-y-[12px] 3xl:space-y-[0.625vw];
 }
+.spacey24 {
+  @apply space-y-[22px] xl:space-y-[24px] 3xl:space-y-[1.25vw];
+}
 .spacey20 {
   @apply space-y-[18px] lg:space-y-[18px] xl:space-y-[18px] 2xl:space-y-[20px] 3xl:space-y-[1.042vw];
 }
@@ -608,23 +610,29 @@ body {
    ========================================= */
 
 /* Landing Page / Gradients */
-.knowledge-base-banner-bg {
-  background-image: url("/images/Knowledge-Hub/Knowledge-Hub.png");
-  background-size: cover;
-  background-position: 100% 50%;
-}
-
 .banner-bg {
   background-image: url("/images/service-desk.png");
   background-size: cover;
-  background-position: 100% 50%;
+    background-position: 100% 50%;
 }
-.search-box {
+.search-box 
+{
   border-radius: var(--Border-Radius-rounded-lg, 8px);
-  border: 1px solid rgba(66, 83, 109, 0.15);
-  background: linear-gradient(91deg, rgba(255, 233, 67, 0.22) 5.05%, rgba(66, 219, 62, 0.22) 97.08%);
-  box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(27px);
+border: 1px solid rgba(66, 83, 109, 0.15);
+background: linear-gradient(91deg, rgba(255, 233, 67, 0.22) 5.05%, rgba(66, 219, 62, 0.22) 97.08%);
+box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
+backdrop-filter: blur(27px);
+}
+
+.shaow1 
+{
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+  border-radius: var(--Border-Radius-rounded-lg, 8px);
+}
+.shaow2
+{
+   box-shadow: 0 0 15px 4px rgba(140, 85, 253, 0.00);
+  border-radius: var(--Border-Radius-rounded-lg, 8px);
 }
 .launchpad-bg {
   background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);
@@ -811,14 +819,13 @@ body {
 }
 
 .find-aws.p-button{
-  width: -moz-fit-content;
+width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
-  background-size: cover;  
-  padding: 10px 20px;
+  background-size: cover;  padding: 10px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
