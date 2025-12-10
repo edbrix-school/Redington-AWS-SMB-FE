@@ -104,14 +104,14 @@ export default function Tabel() {
 
   const actionBodyTemplate = (rowData) => {
     return (
-      <div className="flex justify-center items-center gap-[16px] xl:gap-[0.833vw] w-full">
-        <Link
-          href={`/common/supportgroup/edit`}
+      <div className="flex justify-center items-center  w-full">
+        {/* <Link
+          href={``}
           title="Edit"
           className="cursor-pointer"
-        >
-          <Image src={"/images/more.svg"} width={20} height={20} alt="edit" />
-        </Link>
+        > */}
+          <Image src={"/images/more.svg"} width={20} height={20} alt="edit"  className="w18 h-auto cursor-pointer"/>
+        {/* </Link> */}
       </div>
     );
   };
@@ -147,7 +147,7 @@ export default function Tabel() {
   return (
     <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4">
       <div className="p15">
-        <div className="flex gap-[4px] items-center pb-6">
+        <div className="flex gap8 items-center pb22">
           <div className="font16 text-InterfaceTexttitle1 font-semibold">
             All Announcements
           </div>
@@ -163,7 +163,7 @@ export default function Tabel() {
                 width={16}
                 height={16}
                 alt="adduser"
-                className="inline-block "
+                className="inline-block w14 h-auto "
               />
               Add New User
             </button>
@@ -200,7 +200,7 @@ export default function Tabel() {
         value={workspacelist}
         stripedRows
         rows={10}
-        className="custTable tableCustRed custCheckBox custicon custTablegroup "
+        className="custTable "
         responsiveLayout="scroll"
         style={{ width: "100%" }}
         filters={filters}

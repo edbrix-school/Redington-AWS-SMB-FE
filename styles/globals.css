@@ -308,6 +308,11 @@ body {
   @apply pt-[15px] lg:pt-[15px] xl:pt-[15px] 2xl:pt-[15px] 3xl:pt-[0.625vw];
 
 }
+.pb22 {
+  @apply pb-[18px] lg:pb-[20px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[1.146vw];
+
+}
+
 /* Global Padding End */
 
 .px12 {
@@ -322,6 +327,10 @@ body {
 }
 .w300 {
   @apply w-[200px] lg:w-[250px] xl:w-[300px] 3xl:w-[15.625vw]
+}
+
+.w15 {
+  @apply w-[14px] xl:w-[14px] 2xl:w-[15px] 3xl:w-[0.829vw];
 }
 
 
