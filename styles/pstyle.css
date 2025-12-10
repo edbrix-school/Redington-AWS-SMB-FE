@@ -288,8 +288,9 @@
 }
 .customCatalogButton.p-button {
   color: #7f8488;
-  background: #f5f6f7;
-  border: 1px solid transparent;
+  background: #F5F6F7;
+  border: 1px solid #E5E7EB;
+  /* border-bottom: 1px solid #E5E7EB; */
   border-radius: 6px;
   border-right: 0px;
   padding: 0.53rem 0.55rem;

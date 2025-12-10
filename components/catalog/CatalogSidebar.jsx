@@ -173,7 +173,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
       </div>
 
       {/* Tabs */}
-      <div className="mt-4 flex flex-wrap gap-1 bg-[#F5F6F7] border-[#E5E7EB]">
+      <div className="mt-4 flex flex-wrap border-[#E5E7EB]">
         {TABS.map((tab) => {
           const isActive = tab === activeTab;
           return (
@@ -186,7 +186,14 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
               }}
               className={[
                 "customCatalogButton cursor-pointer px-2 py-3 font10 font-semibold",
-                isActive ? "active" : "",
+                isActive ? "active" : "", // Active state
+                tab === "By Use Case" ? "!border-l-0 !border-r-0" : "", // No border on "By Use Case"
+                tab === "By Industry"
+                  ? "border-l-[1px #E5E7EB] border-r-0"
+                  : "", // Left border for "By Industry"
+                tab === "By Organization Type"
+                  ? "!border-l-0 !border-r-[1px #E5E7EB]"
+                  : "", // Right border for "By Organization Type"
               ].join(" ")}
             >
               {tab}
