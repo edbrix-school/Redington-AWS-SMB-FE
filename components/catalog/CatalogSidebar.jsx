@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Accordion, AccordionTab } from "primereact/accordion";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
+import AiChatboxPopup from "./AichatboxPopup";
+import { Sidebar } from "primereact/sidebar";
 
 const industrySector = [
   {
@@ -101,6 +103,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   const [activeTab, setActiveTab] = useState("By Industry");
   const [activeIndex, setActiveIndex] = useState([-1]);
   const [value, setValue] = useState("");
+  const [visible, setVisible] = useState(false);
   const sectorDataMap = {
     "By Industry": industrySector,
     "By Use Case": byUseCase,
@@ -108,6 +111,13 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
   };
 
   const selectedData = sectorDataMap[activeTab];
+  const showSidebar = () => {
+    setVisible(true);
+  };
+
+  const hideSidebar = () => {
+    setVisible(false);
+  };
 
   return (
     <div className="shrink-0 border-b border-neutral-200 bg-white px-4 pb-4 pt-4 xs:px-5 lg:h-full lg:border-b-0 lg:border-r lg:px-6 lg:pb-6 lg:pt-6">
@@ -135,7 +145,10 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           Search catalog
         </label>
         <div className="flex items-center gap-2 border-[1px solid var(--Interface-Stroke-soft, #E5E7EB)] bg-[linear-gradient(90.85deg,rgba(255,233,67,0.22)_5.05%,rgba(67,219,62,0.22)_97.08%)] p-[1px]">
-          <div className="flex w-full items-center gap-2  px-3 py-1 cursor-pointer">
+          <div
+            className="flex w-full items-center gap-2  px-3 py-1 cursor-pointer "
+            onClick={showSidebar}
+          >
             <Image
               src="/assets/icons/search-outline.svg"
               alt="Search"
@@ -252,6 +265,14 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           </button>
         </div>
       </div>
+      <Sidebar
+        visible={visible}
+        onHide={() => hideSidebar()}
+        className="p-0 z-[9999] customAichatboxsidebar !w-[60rem] lg:!w-[60rem] md:!w-[50rem] sm:!w-[100%] "
+        position="right"
+      >
+        <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />
+      </Sidebar>
     </div>
   );
 }
