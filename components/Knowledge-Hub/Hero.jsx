@@ -7,14 +7,14 @@ export const Hero = () => {
             {/* Background Image from Figma */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="images/Knowledge-Hub/Knowledge-Hub.webp"
+                    src="images/knowledge-hub/Knowledge-Hub.webp"
                     alt="Background"
                     className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-dark-900/30"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto w-full relative z-10">
+            <div className="max-w-8xl mx-auto w-full relative z-10">
                 {/* Breadcrumb */}
                 <div className="flex items-center gap-2 text-xs text-gray-300 mb-6">
                     <span>Home</span>
@@ -33,7 +33,7 @@ export const Hero = () => {
                 {/* Search Bar Section */}
                 <div className="max-w-2xl relative">
                     {/* Search Input Container - Updated Background Color */}
-                    <div className="relative h-14 bg-[#435C45] rounded-lg flex items-center overflow-hidden border border-[#435C45]/50 shadow-sm">
+                    <div className="relative h-18 bg-[#435C45] rounded-lg flex items-center overflow-hidden border border-[#435C45]/50 shadow-sm">
                         <input
                             type="text"
                             placeholder="Search"
@@ -45,7 +45,7 @@ export const Hero = () => {
                     </div>
 
                     {/* Decorative element - Added cursor-pointer */}
-                    <div className="absolute -right-16 top-1/2 -translate-y-1/2 hidden lg:block opacity-90 rotate-180 cursor-pointer hover:opacity-100 transition-opacity">
+                    <div className="absolute -right-20 top-1/2 -translate-y-1/2 hidden lg:block opacity-90 rotate-180 cursor-pointer hover:opacity-100 transition-opacity">
                         <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             {/* Purple Chevron */}
                             <path d="M20 20 L55 20 L75 40 L40 40 Z" fill="#59B557" />
