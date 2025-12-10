@@ -253,6 +253,39 @@
   color: #111827;
   background: #fff;
 }
+.supportSearchInput{
+  color: white !important;
+  appearance: none;
+  border-color: rgba(66, 83, 109, 0.15);
+  /* backdrop-filter: blur(27px); */
+  background: transparent;
+  outline-color: #0000;
+  padding: 1rem !important;
+  font-size: 18px;
+  font-family: 'Inter';
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+}
+.search-input {
+  border: 1px solid rgba(66, 83, 109, 0.15);
+  background: linear-gradient(91deg, rgba(255, 233, 67, 0.22) 5.05%, rgba(66, 219, 62, 0.22) 97.08%);
+  box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(27px);
+  color:white;
+}
+.supportSearchInput.p-inputtext:enabled:hover {
+    border-color: rgba(66, 83, 109, 0.15);
+}
+.supportSearchInput::placeholder {
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 1 !important;
+}
+.supportSearchInput.p-inputtext:enabled:focus {
+    outline-offset: 0;
+    border-color: rgba(66, 83, 109, 0.15);
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #0000;
+}
 .customCatalogButton.p-button {
   color: #7f8488;
   background: #f5f6f7;
@@ -385,7 +418,6 @@
 .customDropdownPanel .p-dropdown-item{
   font-size: 13px !important;
 }
-
 .customInputText.p-inputtext {
   border-left: 0;
   border-top: 1px solid #d1d5db;
@@ -704,6 +736,75 @@
   background-color: #fff;
 }
 
+.customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  bottom: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+
+  font-family: "austin" !important;
+  content: "\e80c" !important;
+  background-image: url(/images/Close-button.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+  /* color: #687885; */
+  color: #42536d;
+  content: "";
+  width: 62px;
+  height: 55px;
+  display: block;
+}
+
+.customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
+.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+  color: #42536d;
+  border-color: transparent;
+  background: transparent;
+  background-image: url(/images/Close-button.png);
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  bottom: 50%;
+  width: 62px;
+  height: 55px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 5.427vw;
+}
+.customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-close,
+.customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-icon {
+  border-radius: 0px;
+}
+
+.customSchedulesidebar.p-sidebar .p-sidebar-header{
+  padding: 0px;
+  
+}
+.customSchedulesidebar.p-sidebar .p-sidebar-right .p-sidebar{
+  width: 100%;
+  border-radius: 6px 0px 12px 10px;
+}
+
+.customSchedulesidebar.p-sidebar .p-sidebar-header + .p-sidebar-content{
+  padding: 20px !important;
+  background-color: #fff;
+  border-radius: 10px 0px 0px 10px !important;
+}
+.customSchedulesidebar.p-sidebar .p-sidebar-content {
+  padding: 0% !important;
+  background-color: #fff;
+}
+.scheduleSession {
+color: #212325;
+font-size: 24px;
+font-weight: 600;
+}
 
 
 
@@ -986,6 +1087,76 @@
     background: #e3f2fd;
      font-size: 13px !important;
     padding: 4px 16px;
+}
+.schedule-status-btn{
+border-radius: 4px;
+border: 1px solid #E8F4E4;
+background:  #E8F4E4;
+color:  #3B662F;
+text-align: center;
+font-family: 'Roboto';
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 16.8px */
+}
+.support-session-label{
+  font-weight: 500;
+  font-size: 15px;
+}
+.dropdown-support-session.p-dropdown {
+    background: #fff;
+    border: 1px solid #BBC1C7 !important;
+    border-radius: 6px !important;
+    outline-color: #0000;
+    transition: background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+.dropdown-support-session.p-dropdown:not(.p-disabled):hover {
+    border-color: #BBC1C7 !important;
+}
+.dropdown-support-session.p-dropdown:not(.p-disabled).p-focus {
+    border-color: #BBC1C7 !important;
+    box-shadow: 0 0 0 0.2rem transparent !important;
+}
+.datepicker.p-calendar:not(.p-calendar-disabled).p-focus > .p-inputtext {
+    outline-offset: 0;
+    border-color: #BBC1C7 !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem transparent;
+}
+.datepicker{
+  .p-inputtext{
+ border-radius: 6px !important;
+  }
+  .p-inputtext:enabled:hover {
+    border-color: #BBC1C7;
+}
+}
+.description-textarea.p-inputtext{
+  border-radius: 6px !important;
+}
+.description-textarea.p-inputtext:enabled:hover {
+    border-color: #BBC1C7;
+}
+.submit-btn {
+color: #FFF;
+border-radius: 6px;
+background: #645592;
+border: #645592;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+}
+.cancel-btn {
+color: #3C4146;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 16px */
+border-radius: 6px;
+border: 1px solid #E5E7EB;
+background: linear-gradient(180deg, var(--Overlays-primary-overlay-8, rgba(100, 85, 146, 0.08)) 0%, var(--Overlays-primary-overlay-12, rgba(100, 85, 146, 0.12)) 100%);
 }
 @media (min-width: 1040px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
