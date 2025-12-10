@@ -1,7 +1,7 @@
 @import "tailwindcss";
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --background: #ffffff;
@@ -12,6 +12,7 @@
   --Interface-Text-subtitle: #9EA3AA;
   --Brand-Neutral-50: #263040;
   --Interface-Stroke-soft: #1f2a37;
+  --Interface-Stroke-soft1: #E5E7EB;
   --interface-text-default1: #3c4146;
   --interface-text-default2: #2C363F;
   --Interface-feedback-error-700: #d42600;
@@ -23,18 +24,27 @@
   --Brand-Neutral-900: #42536D;
   --Brand-Primary-800: #067532;
   --Brand-Primary-pure: #00953A;
+
+
+  --Interface-Surface-page: #FAF9FB;
+  --Brand-Highlight-pure: #72B35F;
+  --Brand-Highlight-500: #5D9D4A;
+  --Brand-Neutral-501: #F5F6F8;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-interfacetextdefault: var(--interface-text-default);
+  --color-interfacetextdefault1: var(--interface-text-default1);
   --color-InterfaceTexttitle: var(--Interface-Text-title);
   --color-BrandNeutral50: var(--Brand-Neutral-50);
   --color-InterfaceStrokesoft: var(--Interface-Stroke-soft);
   --color-InterfaceTexttitle :var(--Interface-Text-title);
   --color-InterfaceTexttitle1 :var(--Interface-Text-title1);
   --color-InterfaceTextsubtitle :var(--Interface-Text-subtitle);
+  --color-BrandNeutral501 :var(--Brand-Neutral-501);
+  --color-InterfaceStrokesoft1 :var(--Interface-Stroke-soft1);
   --color-interfacetextdefault2: var(--interface-text-default2);
   --color-Interfacefeedbackerror700: var(--Interface-feedback-error-700);
   --color-InterfaceStrokedefault: var(--Interface-Stroke-default);
@@ -45,6 +55,12 @@
   --color-BrandNeutral900: var(--Brand-Neutral-900);
   --color-BrandPrimary800: var(--Brand-Primary-800);
   --color-BrandPrimarypure: var(--Brand-Primary-pure);
+
+
+
+  --color-InterfaceSurfacepage: var(--Interface-Surface-page);
+  --color-BrandHighlightpure: var(--Brand-Highlight-pure);
+  --color-BrandHighlight500: var(--Brand-Highlight-500);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -163,6 +179,9 @@ body {
 .font10 {
   @apply text-[8px] lg:text-[8px] xl:text-[10px] 2xl:text-[10px] 3xl:text-[0.521vw];
 }
+.font11 {
+  @apply text-[9px] lg:text-[9px] xl:text-[11px] 2xl:text-[11px] 3xl:text-[0.573vw];
+}
 .font12 {
   @apply text-[11px] sm:text-[11px] md:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-[12px] 3xl:text-[0.625vw];
 }
@@ -203,8 +222,15 @@ body {
 }
 
 /* Global Padding */
+.p16 {
+  @apply p-[14px] lg:p-[14px] xl:p-[16px] 2xl:p-[16px] 3xl:p-[0.833vw];
+}
+
 .py8 {
   @apply py-[8px] lg:py-[8px] xl:py-[8px] 3xl:py-[0.417vw];
+}
+.py4 {
+  @apply py-[4px] lg:py-[4px] xl:py-[4px] 3xl:py-[0.202vw];
 }
 .py6 {
   @apply py-[6px] lg:py-[6px] xl:py-[6px] 3xl:py-[0.313vw];
@@ -222,7 +248,7 @@ body {
   @apply py-[20px] lg:py-[22px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
 }
 .px24 {
-  @apply py-[12px] lg:py-[16px] xl:py-[24px] 2xl:py-[24px] 3xl:py-[1.25vw];
+  @apply px-[20px] lg:px-[22px] xl:px-[24px] 2xl:px-[24px] 3xl:px-[1.25vw];
 }
 .pb6 {
   @apply pb-[6px] xl:pb-[6px] 3xl:pb-[0.313vw];
@@ -236,8 +262,14 @@ body {
 .py120 {
   @apply py-[70px] lg:py-[70px] xl:py-[90px] 2xl:py-[120px] 3xl:py-[6.25vw];
 }
+.px12 {
+  @apply px-[10px] lg:px-[10px] xl:px-[12px] 2xl:px-[12px] 3xl:px-[0.625vw];
+}
 .px14 {
   @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
+}
+.p20 {
+  @apply px-[16px] lg:px-[18px] xl:px-[18px] 2xl:px-[20px] 3xl:px-[1.39vw];
 }
 .p24 {
   @apply p-[20px] lg:p-[20px] xl:p-[24px] 3xl:p-[1.25vw] ;
@@ -269,8 +301,17 @@ body {
 }
 
 /* Global Gap */
+.gap8 {
+  @apply gap-[6px] xl:gap-[8px] 2xl:gap-[8px] 3xl:gap-[0.417vw];
+}
+.gap10 {
+  @apply gap-[8px] xl:gap-[10px] 2xl:gap-[10px] 3xl:gap-[0.521vw];
+}
 .gap20 {
   @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];
+}
+.gap24 {
+  @apply gap-[20px] xl:gap-[22px] 2xl:gap-[24px] 3xl:gap-[1.25vw];
 }
 .gap40 {
   @apply gap-[30px] xl:gap-[40px] 2xl:gap-[40px] 3xl:gap-[2.083vw];
@@ -304,11 +345,29 @@ body {
 .mr120 {
   @apply mr-[40px] lg:mr-[40px] xl:mr-[90px] 2xl:mr-[120px] 3xl:mr-[6.25vw];
 }
+.mb8 {
+  @apply mb-[8px] lg:mb-[8px] xl:mb-[8px] 3xl:mb-[0.417vw];
+}
+.mb12 {
+  @apply mb-[10px] lg:mb-[10px] xl:mb-[12px] 2xl:mb-[12px] 3xl:mb-[0.625vw];
+}
+.pb14 {
+  @apply pb-[12px] lg:pb-[14px] xl:pb-[14px] 2xl:pb-[14px] 3xl:pb-[0.729vw];
+}
+.mb20 {
+  @apply mb-[18px] lg:mb-[18px] xl:mb-[20px] 2xl:mb-[20px] 3xl:mb-[1.042vw];
+}
 .mb30 {
   @apply mb-[22px] lg:mb-[25px] xl:mb-[25px] 2xl:mb-[30px] 3xl:mb-[1.563vw];
 }
 .mt10 {
   @apply mt-[8px] lg:mt-[9px] xl:mt-[10px] 2xl:mt-[10px] 3xl:mt-[0.521vw];
+}
+.mt12 {
+  @apply mt-[10px] lg:mt-[10px] xl:mt-[12px] 2xl:mt-[12px] 3xl:mt-[0.625vw];
+}
+.mt16 {
+  @apply mt-[14px] lg:mt-[14px] xl:mt-[16px] 2xl:mt-[16px] 3xl:mt-[0.833vw];
 }
 .mt80 {
   @apply mt-[60px] lg:mt-[70px] xl:mt-[80px] 3xl:mt-[4.167vw];
@@ -325,6 +384,9 @@ body {
 /* Global  Margin */
 
 /* Rounded  Start*/
+.rounded4 {
+  @apply rounded-[4px] lg:rounded-[4px] xl:rounded-[4px] 3xl:rounded-[0.208vw];
+}
 .rounded8 {
   @apply rounded-[8px] lg:rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw];
 }

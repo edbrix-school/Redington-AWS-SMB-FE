@@ -8,8 +8,6 @@ import "../styles/nstyle.css";
 import 'primereact/resources/themes/lara-light-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import Top from "./layout/top";
-import Footer from "./layout/footer";
 import LayoutClient from "./layout/layout";
 
 

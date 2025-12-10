@@ -52,6 +52,11 @@
   background-size: cover;
   background-position: center;
 }
+.bg-tryout {
+  background-image: url('/images/svg/tryout-bg.svg');
+  background-size: cover;
+  background-position: center;
+}
 .help-bg {
   background-image: url('/images/help-bg.png') ;
   background-size: 80% 70%;
@@ -66,3 +71,10 @@
   background: linear-gradient(94deg, rgba(255, 241, 196, 0.43) 4.84%, rgba(182, 255, 161, 0.60) 96.15%);
 }
 /* about us end */
+
+.generate-text{
+  background: linear-gradient(90deg, #F2980E 0%, #59B557 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
