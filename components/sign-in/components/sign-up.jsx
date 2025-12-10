@@ -3,8 +3,6 @@ import React from "react";
 import { Sidebar } from "primereact/sidebar";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
 import Image from "next/image";
 
 export default function SignUp({ visible, onHide }) {
