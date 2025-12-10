@@ -278,7 +278,7 @@ export default function Tabel() {
       <div className="relative custTablePaginator">
         <Paginator
           template="CurrentPageReport RowsPerPageDropdown FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
-          currentPageReportTemplate={`Row per page of 100`}
+          currentPageReportTemplate={`Showing 1-10 of 1000`}
           first={first}
           rows={rows}
           onPageChange={onPageChange}
