@@ -75,7 +75,7 @@ export default function Top() {
             <div className="cursor-pointer text-[12px] lg:text-[12px] xl:text-[13px] 3xl:text-[0.729vw] font-medium">
               Contact Us
             </div>
-            <div className="flex items-center gap-[6px] text-[14px] font-medium mx-[6px] lg:mx-[4px] xl:mx-[6px] 2xl:mx-[10px] 3xl:mx-[0.625vw]">
+            <div className="flex items-center gap-[4px] xl:gap-[4px] 2xl:gap-[6px] text-[14px] font-medium mx-[6px] lg:mx-[4px] xl:mx-[6px] 2xl:mx-[10px] 3xl:mx-[0.625vw]">
               <i className="smb-global text-[#fff] text-[15px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[0.833vw]"></i>
               <Dropdown
                 value={selectedCity}
@@ -83,7 +83,8 @@ export default function Top() {
                 options={cities}
                 optionLabel="name"
                 placeholder="English - EN"
-                className="w-[90px] xl:w-[100px] 2xl:w-[110px] 3xl:w-[5.471vw] topdropdown"
+                panelClassName="custDropdown1panel"
+                className="w-[95px] xl:w-[105px] 2xl:w-[110px] 3xl:w-[5.471vw] topdropdown"
               />
             </div>
 

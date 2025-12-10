@@ -135,9 +135,9 @@ export default function SigninTemplate() {
               </div>
               <button
                 onClick={handleSignIn}
-                className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary w-full rounded8 text-background font-normal cursor-pointer hover:opacity-90 transition-opacity"
+                className="mt24 font16 flex justify-center items-center py8 bg-InterfaceSurfacehcprimary hover:bg-[#5a498d] w-full rounded8 text-background font-normal cursor-pointer "
               >
-                sign
+                Sign In
               </button>
 
               <div className="flex items-center justify-center w-full gap-[6px] xl:gap-[6px] 3xl:gap-[0.417vw] my24 px-20">

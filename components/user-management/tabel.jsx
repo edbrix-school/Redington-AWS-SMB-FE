@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import { Dropdown } from "primereact/dropdown";
@@ -146,7 +145,7 @@ export default function Tabel() {
 
   return (
     <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4">
-      <div className="p15">
+      <div className="p15 bg-background rounded-tl rounded-tr rounded8">
         <div className="flex gap8 items-center pb22">
           <div className="font16 text-InterfaceTexttitle1 font-semibold">
             All Announcements
