@@ -9,11 +9,11 @@ export const Hero = () => {
                 <div className="flex items-center gap-2 text-xs text-gray-300 ">
                     <span>Home</span>
                     <ChevronRight size={12} />
-                    <span className="text-white font-medium">Knowledge Hub</span>
+                    <span className="text-white font-medium">Announcements</span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Knowledge Hub</h1>
+                <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Announcements</h1>
 
                 {/* Description */}
                 <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
