@@ -1,9 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import { Dropdown } from "primereact/dropdown";
+import { OverlayPanel } from "primereact/overlaypanel";
+import Link from "next/link";
 
 const AllData = [
   {
@@ -186,9 +188,10 @@ export const ServicesDeskList = () => {
       { name: "Year", code: "RM" },
     
     ];
+    const op = useRef(null);
 
   return (
-    <div className="bg-white shaow1 relative z-20 p24 spacey24">
+    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
         <div className="flex flex-wrap gap-1 bg-[#F5F6F7] border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
           {TABS.map((tab) => {
@@ -268,7 +271,16 @@ export const ServicesDeskList = () => {
                           
                         In review
                         </div>
-                       <div>  <i className="text-[#3C4146] smb-square-more font20 "></i></div>
+                       <div>  <i className="text-[#3C4146] smb-square-more font20 cursor-pointer" onClick={(e) => op.current.toggle(e)}></i>
+                       
+                       <OverlayPanel ref={op} className="w-[160px] custom-op rounded8">
+                           <div className="flex flex-col text-[#3C4146] font14 font-[400]">
+                            <Link href="#" className=" leading-[140%] py4 px4">View</Link>
+                            <Link href="#" className=" leading-[140%] py4 px4">Cancel</Link>
+                           
+                           </div>
+                        </OverlayPanel>
+                       </div>
                     </div>
 
                     
@@ -292,7 +304,7 @@ export const ServicesDeskList = () => {
                     <div className="flex gap14 ">
                         <button className="bg-BrandNeutralpure cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                               View Ticket
-                          <div>  <i className="text-white smb-square-more font20 "></i></div>
+                          <div> <Image src="/images/eye-icon.svg" width="14" height="14" alt="icon"/></div>
                       
                         </button>
                       
@@ -300,7 +312,8 @@ export const ServicesDeskList = () => {
                       <div className="flex gap14 ">
                         <button className="bg-[#FFB5A5] cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                             Cancel
-                          <div>  <i className="text-white smb-square-more font20 "></i></div>
+                            <div> <Image src="/images/close-circle.svg" width="14" height="14" alt="icon"/></div>
+                          
                       
                         </button>
                       

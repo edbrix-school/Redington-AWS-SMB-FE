@@ -398,6 +398,9 @@ body {
 .py120 {
   @apply py-[70px] lg:py-[70px] xl:py-[90px] 2xl:py-[120px] 3xl:py-[6.25vw];
 }
+.px4 {
+  @apply px-[4px] lg:px-[4px] xl:px-[4px] 2xl:px-[4px] 3xl:px-[0.208vw];
+}
 .px12 {
   @apply px-[10px] lg:px-[10px] xl:px-[12px] 2xl:px-[12px] 3xl:px-[0.625vw];
 }
@@ -626,6 +629,11 @@ body {
   background: linear-gradient(91deg, rgba(255, 233, 67, 0.22) 5.05%, rgba(66, 219, 62, 0.22) 97.08%);
   box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(27px);
+}
+.custom-op 
+{
+   transform: translateX(-130px) !important; /* move to left */
+
 }
 .launchpad-bg {
   background: linear-gradient(90deg, #f2980e 0%, #59b557 100%);
