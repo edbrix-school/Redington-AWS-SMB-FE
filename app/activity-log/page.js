@@ -3,10 +3,10 @@
 import React from 'react';
 import TopBar from '../layout/top';
 import { NavBar } from '../layout/NavBar';
-import { Hero } from '@/components/announcements/Hero';
-import { FilesTable } from '@/components/announcements/FilesTable';
+import { Hero } from '@/components/activity-log/Hero';
+import { FilesTable } from '@/components/activity-log/FilesTable';
 
-export default function Announcements() {
+export default function ActivityLog() {
     return (
         <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
             <TopBar />

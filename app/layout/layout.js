@@ -39,7 +39,7 @@ export default function LayoutClient({ children }) {
     <>
       {!hideLayout && <Top />}
 
-      <div className={!hideLayout ? "mt-[40px] xl:mt-[50px] 2xl:mt-[56px]" : ""}>
+      <div className={!hideLayout ? "mt-[40px] xl:mt-[50px] 2xl:mt-[50px]" : ""}>
         <main>{children}</main>
       </div>
 

@@ -14,7 +14,6 @@ export default function Filter({ visible, onHide }) {
     const [date, setDate] = React.useState(null);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedUser, setSelectedUser] = useState(null);
-    const [selectedStatus, setSelectedStatus] = useState(null);
 
     const category = [
         { name: 'Activity Type1', code: 'AT1' },
@@ -32,13 +31,6 @@ export default function Filter({ visible, onHide }) {
         { name: 'User 4', code: 'U4' },
         { name: 'User 5', code: 'U5' },
         { name: 'User 6', code: 'U6' }
-    ];
-
-    const statuses = [
-        { name: 'Active', code: 'ACT' },
-        { name: 'Inactive', code: 'INA' },
-        { name: 'Pending', code: 'PEN' },
-        { name: 'Completed', code: 'COM' }
     ];
     return (
         <div>
@@ -62,7 +54,7 @@ export default function Filter({ visible, onHide }) {
                             <div className="p24 spacey24">
                                 <div className="flex flex-col gap6">
                                     <label className="font14 font-medium text-InterfaceTexttitle1">
-                                        Date Created
+                                        Activity Date Range
                                     </label>
 
                                     <div className="grid grid-cols-2 gap10">
@@ -92,7 +84,7 @@ export default function Filter({ visible, onHide }) {
                                 </div>
                                 <div className="flex flex-col gap6">
                                     <label className="font14 font-medium text-InterfaceTexttitle1">
-                                        Ticket Category
+                                        Activity Type
                                     </label>
 
                                     <div className="grid grid-cols-1">
@@ -104,24 +96,12 @@ export default function Filter({ visible, onHide }) {
                                 </div>
                                 <div className="flex flex-col gap6">
                                     <label className="font14 font-medium text-InterfaceTexttitle1">
-                                        Created by
+                                        User
                                     </label>
 
                                     <div className="grid grid-cols-1">
                                         <div className="custom-dropdown">
                                             <Dropdown value={selectedUser} onChange={(e) => setSelectedUser(e.value)} options={users} optionLabel="name" placeholder="Select a User"
-                                                filterDelay={400} filter className="w-full" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col gap6">
-                                    <label className="font14 font-medium text-InterfaceTexttitle1">
-                                        Status
-                                    </label>
-
-                                    <div className="grid grid-cols-1">
-                                        <div className="custom-dropdown">
-                                            <Dropdown value={selectedStatus} onChange={(e) => setSelectedStatus(e.value)} options={statuses} optionLabel="name" placeholder="Select a Status"
                                                 filterDelay={400} filter className="w-full" />
                                         </div>
                                     </div>

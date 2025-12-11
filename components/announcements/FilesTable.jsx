@@ -8,7 +8,7 @@ import { Paginator } from "primereact/paginator";
 import { Menu } from "primereact/menu"; // 1. Import Menu
 import React, { useState, useRef } from "react";
 import { ViewAnnouncements } from './popup/ViewAnnouncements';
-import { Filter as FilterComponent } from './popup/Filter';
+import Filter from './popup/Filter';
 
 export const FilesTable = () => {
     const [first, setFirst] = useState(0);
@@ -185,7 +185,7 @@ export const FilesTable = () => {
 
     return (
         <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4 bg-white relative">
-            
+
             {/* 5. The Popup Menu Component */}
             <Menu model={menuItems} popup ref={menu} id="popup_menu" />
 
@@ -216,7 +216,7 @@ export const FilesTable = () => {
                         />
                     </div>
                     <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-full p-2 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-white rounded-md hover:bg-gray-50 ml-2">
-                        <i className="pi pi-filter text-gray-500"></i>
+                        <i className="smb-filter text-InterfaceTextsubtitle font12"></i>
                     </div>
                 </div>
             </div>
@@ -301,7 +301,7 @@ export const FilesTable = () => {
                 data={selectedProduct}
             />
             {/* Filter Popup */}
-            <FilterComponent
+            <Filter
                 visible={openFilter}
                 onHide={() => setOpenFilter(false)}
             />

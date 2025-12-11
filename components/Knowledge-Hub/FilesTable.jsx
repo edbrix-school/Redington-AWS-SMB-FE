@@ -8,7 +8,7 @@ import { Paginator } from "primereact/paginator";
 import { Menu } from "primereact/menu";
 import React, { useState, useRef } from "react";
 // Ensure these components exist in your project or comment them out if testing
-import { ViewFileDetails } from './popup/ViewFileDetails';
+import ViewFileDetails from './popup/ViewFileDetails';
 
 export const FilesTable = () => {
     const [first, setFirst] = useState(0);
@@ -185,7 +185,7 @@ export const FilesTable = () => {
                     className="p-inputtext-sm w-full border border-gray-300 rounded-md px-2 py-1 text-sm focus:outline-none focus:border-blue-500"
                     placeholder=""
                 />
-                <i className="pi pi-filter ml-2 text-gray-400 text-xs"></i>
+                <i className="smb-filter text-InterfaceTextsubtitle font12 ml-2"></i>
             </div>
         );
     };

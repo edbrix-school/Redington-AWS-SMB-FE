@@ -12,7 +12,7 @@ export default function KnowledgeHub() {
       <TopBar />
       <NavBar />
       <Hero />
-      <main className="flex-grow -mt-8 relative z-20 px-4 md:px-8 pb-10"> {/* Negative margin to overlap Hero */}
+      <main className="flex-grow -mt-20 relative z-20 px-4 md:px-8 pb-10"> {/* Negative margin to overlap Hero */}
         <FilesTable />
       </main>
     </div>
