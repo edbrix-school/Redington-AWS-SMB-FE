@@ -905,7 +905,7 @@ width: -moz-fit-content;
  margin-bottom:20px
 
 }
- .p-inputtext {
+ .custom-input .p-inputtext {
   /* Default for very large screens */
   padding: 0.417vw 0.625vw;
   height: 1.875vw;
@@ -913,15 +913,17 @@ width: -moz-fit-content;
   border-radius: 0.417vw;
   border-color: #BBC1C7;
 }
-.p-dropdown
+.custom-dropdown .p-inputtext,
+.custom-dropdown .p-dropdown
 {
+  font-size: 0.729vw;
   border-color: #BBC1C7;
   border-radius: 0.417vw;
 }
 
 /* MOBILE (SM) — 360px to 640px */
 @media (max-width: 640px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 6px 10px;
     height: 32px;
     font-size: 12px;
@@ -931,7 +933,7 @@ width: -moz-fit-content;
 
 /* TABLET (MD) — 641px to 768px */
 @media (min-width: 641px) and (max-width: 768px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 8px 12px;
     height: 36px;
     font-size: 14px;
@@ -941,7 +943,7 @@ width: -moz-fit-content;
 
 /* SMALL LAPTOP (LG) — 769px to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 9px 14px;
     height: 38px;
     font-size: 15px;
@@ -951,7 +953,7 @@ width: -moz-fit-content;
 
 /* DESKTOP (XL) — 1025px to 1280px */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 10px 16px;
     height: 40px;
     font-size: 16px;
@@ -961,7 +963,7 @@ width: -moz-fit-content;
 
 /* LARGE DESKTOP (2XL) — 1281px to 1536px */
 @media (min-width: 1281px) and (max-width: 1536px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 0.5vw 0.7vw;
     height: 2vw;
     font-size: 0.8vw;
@@ -971,7 +973,7 @@ width: -moz-fit-content;
 
 /* ULTRA DESKTOP (3XL) — 1537px+ */
 @media (min-width: 1537px) {
-  .p-inputtext {
+  .custom-input .p-inputtext {
     padding: 0.417vw 0.625vw;
     height: 1.875vw;
     font-size: 0.729vw;

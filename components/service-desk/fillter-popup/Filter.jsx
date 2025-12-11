@@ -12,18 +12,18 @@ import { Dropdown } from "primereact/dropdown";
 
 export default function Filter({ visible, onHide }) {
   const [date, setDate] = React.useState(null);
-   const [selectedCountry, setSelectedCountry] = useState(null);
-    const countries = [
-        { name: 'Australia', code: 'AU' },
-        { name: 'Brazil', code: 'BR' },
-        { name: 'China', code: 'CN' },
-        { name: 'Egypt', code: 'EG' },
-        { name: 'France', code: 'FR' },
-        { name: 'Germany', code: 'DE' },
-        { name: 'India', code: 'IN' },
-        { name: 'Japan', code: 'JP' },
-        { name: 'Spain', code: 'ES' },
-        { name: 'United States', code: 'US' }
+   const [selectedCategory, setSelectedCategory] = useState(null);
+    const category = [
+       { name: 'Hardware Issue', code: 'HW' },
+  { name: 'Software Issue', code: 'SW' },
+  { name: 'Network Issue', code: 'NW' },
+  { name: 'Access Request', code: 'AR' },
+  { name: 'Email Issue', code: 'EM' },
+  { name: 'Account Locked', code: 'AL' },
+  { name: 'Password Reset', code: 'PR' },
+  { name: 'System Outage', code: 'SO' },
+  { name: 'Bug Report', code: 'BR' },
+  { name: 'Other', code: 'OT' }
     ];
   return (
     <div>
@@ -51,7 +51,7 @@ export default function Filter({ visible, onHide }) {
                   </label>
 
                   <div className="grid grid-cols-2 gap10">
-                    <div className="relative ">
+                    <div className="relative  custom-input">
                       <Calendar
                         id="date"
                         value={date}
@@ -62,7 +62,7 @@ export default function Filter({ visible, onHide }) {
                       />
                        <div className="absolute right-3 top-[30%]"> <Image src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon"/></div>
                     </div>
-                    <div className="relative ">
+                    <div className="relative custom-input">
                       <Calendar
                         id="date"
                         value={date}
@@ -82,9 +82,9 @@ export default function Filter({ visible, onHide }) {
 
                   <div className="grid grid-cols-1">
                    
-                   <div className="card flex justify-content-center">
-            <Dropdown value={selectedCountry} onChange={(e) => setSelectedCountry(e.value)} options={countries} optionLabel="name" placeholder="Select a Country" 
-                 filterDelay={400} filter className="w-full md:w-14rem" />
+                   <div className="custom-dropdown">
+            <Dropdown value={selectedCategory} onChange={(e) => setSelectedCategory(e.value)} options={category} optionLabel="name" placeholder="Select a Category" 
+                 filterDelay={400} filter className="w-full" />
         </div>  
                   </div>
                 </div>
