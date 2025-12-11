@@ -5,7 +5,7 @@ import { Sidebar } from "primereact/sidebar"; // Import Sidebar
 import SchedulePopup from "./schedulePopup";
 import { TabView, TabPanel } from "primereact/tabview";
 import Image from "next/image";
-
+import EventCalenderFilter from "../support-sessions/eventscalendar";
 export default function ScheduleCalendarTable() {
   const [visible, setVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -84,8 +84,14 @@ export default function ScheduleCalendarTable() {
   }, []);
   return (
     <>
-      <div>
-        <h3 className="your-sessions">Your Sessions</h3>
+      <div className="flex items-center justify-between mb20">
+        <h3 className="font20 text-[#fff] font-[700] mb20">Your Sessions</h3>
+        <div
+          onClick={showSidebar}
+          className="font16 font-[500] py10 px20 mb20 border-[#5D9D4A] rounded-full bg-[#5D9D4A]  cursor-pointer text-[#fff]"
+        >
+          Schedule a Session
+        </div>
       </div>
       <div className="flex flex-col">
         {/* Main Content */}
@@ -419,8 +425,7 @@ export default function ScheduleCalendarTable() {
             <div className="w-2/3 p-4 bg-white">
               {/* Calendar placeholder (we'll add functionality later) */}
               <div className="text-center">
-                <h3 className="text-xl font-semibold">Calendar</h3>
-                <p>Calendar content will go here.</p>
+                <EventCalenderFilter />
               </div>
             </div>
           </div>
