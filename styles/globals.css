@@ -327,6 +327,9 @@ body {
 .font16 {
   @apply text-[14px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] 3xl:text-[0.833vw];
 }
+.font17 {
+  @apply text-[16.8px] lg:text-[16.8px] xl:text-[16.8px] 2xl:text-[16.8px] 3xl:text-[1.033vw];
+}
 .font18 {
   @apply text-[15px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[0.938vw];
 }
@@ -345,6 +348,7 @@ body {
 .font36 {
   @apply text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[36px] 3xl:text-[1.875vw];
 }
+
 
 /* Global spacing */
 .spacey12 {
@@ -441,6 +445,9 @@ body {
 .pb22 {
   @apply pb-[18px] lg:pb-[20px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[1.146vw];
 
+}
+.p7 {
+  @apply p-[7.22px] lg:p-[7.22px] xl:p-[7.22px] 2xl:p-[7.22px] 3xl:p-[0.354vw];
 }
 
 /* Global Padding End */
@@ -861,11 +868,15 @@ width: -moz-fit-content;
   border: 0px
 
 }
-.chat-box-input-footer{
-  height: 150px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: rebeccapurple;
+
+.your-sessions{
+ color: #FFF;
+ font-family: Montserrat;
+ font-size: 20px;
+ font-style: normal;
+ font-weight: 700;
+ margin-bottom:20px
+
 }
  .p-inputtext {
   /* Default for very large screens */
@@ -942,6 +953,42 @@ width: -moz-fit-content;
 }
 
 
+.active-day {
+  color: #3C4146;
+  text-align: center;
+  font-size: 16.8px;
+  font-style: normal;
+  font-weight: 800;
+}
+.inactive-day {
+  font-size: 14px;
+  font-weight: 400;
+}
+.active-date {
+  color:  #3C4146;
+  text-align: center;
+  font-size: 22.4px;
+  font-style: normal;
+  font-weight: 800;
+}
+.inactive-date {
+  font-size: 18px;
+  font-weight: 700;
+}
+.calendar-legend-Personal-btns {
+  color: #046C4E; 
+  background: #DEF7EC;
+  border: 1px solid transparent;
+  border-radius:5.415px;
+  font-weight:400;
+  font-size: 11px;
+}
+.font700{
+  font-weight: 700;
+}
+.font500{
+   font-weight: 500;
+}
 @media (min-width: 1400px) {
   .responsive-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

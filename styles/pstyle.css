@@ -669,7 +669,6 @@
   position: absolute;
   left: 15px;
   top: 15px;
-  /* bottom: 50%; */
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -681,7 +680,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 5.427vw;
-  /* color: #687885; */
   color: #42536d;
   content: "";
   width: 20px;
@@ -698,7 +696,6 @@
   position: absolute;
   left: 15px;
   top: 15px;
-  /* bottom: 50%; */
   width: 20px;
   height: 20px;
   display: block;
@@ -706,6 +703,7 @@
   background-size: cover;
   font-size: 5.427vw;
 }
+
 .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-close,
 .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-icon {
   border-radius: 0px;
@@ -1150,7 +1148,42 @@ font-weight: 500;
 line-height: 100%; /* 16px */
 border-radius: 6px;
 border: 1px solid #E5E7EB;
-background: linear-gradient(180deg, var(--Overlays-primary-overlay-8, rgba(100, 85, 146, 0.08)) 0%, var(--Overlays-primary-overlay-12, rgba(100, 85, 146, 0.12)) 100%);
+background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 146, 0.12) 100%);
+}
+
+.tabview.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  color: white;
+  background: #645592;
+  border-color: transparent;
+}
+.tabview.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  color: #6c757d;
+  background: #F7F1F6;
+  border: 0 solid #0000;
+  border-bottom: 0px solid transparent;
+  border-radius: 6px !important;
+  margin: 0 0 -2px;
+  padding: 0.75rem;
+  font-weight: 600;
+  transition: box-shadow .2s;
+}
+.tabview.p-tabview .p-tabview-nav li {
+  margin-right: 15px;
+}
+.tabview.p-tabview .p-tabview-nav {
+  background: #fff;
+  border: 0 solid transparent;
+  border-bottom-width: 0px !important;
+  border-radius: 6px !important;
+  margin-bottom: 12px;
+}
+.tabview.p-tabview .p-tabview-panels {
+    color: #4b5563;
+    background: #fff;
+    border: 0;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 1.25rem 0 !important;
 }
 @media (min-width: 1040px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
