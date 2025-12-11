@@ -398,6 +398,9 @@ body {
 .py120 {
   @apply py-[70px] lg:py-[70px] xl:py-[90px] 2xl:py-[120px] 3xl:py-[6.25vw];
 }
+.py12 {
+  @apply py-[12px] lg:py-[12px] xl:py-[12px] 2xl:py-[12px] 3xl:py-[0.625vw];
+}
 .px4 {
   @apply px-[4px] lg:px-[4px] xl:px-[4px] 2xl:px-[4px] 3xl:px-[0.208vw];
 }
@@ -622,6 +625,10 @@ body {
   background-image: url("/images/service-desk.png");
   background-size: cover;
   background-position: 100% 50%;
+}
+.cancel-btn-bg 
+{
+  background: linear-gradient(180deg, var(--Overlays-primary-overlay-8, rgba(100, 85, 146, 0.08)) 0%, var(--Overlays-primary-overlay-12, rgba(100, 85, 146, 0.12)) 100%);
 }
 .search-box {
   border-radius: var(--Border-Radius-rounded-lg, 8px);

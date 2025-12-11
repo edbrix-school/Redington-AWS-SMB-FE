@@ -476,30 +476,23 @@
 }
 
 .customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
-  position: absolute;
-  left: -75px;
-  top: 50%;
-  bottom: 50%;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-
-  font-family: "austin" !important;
-  content: "\e80c" !important;
-  background-image: url(/images/Close-button.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-size: 5.427vw;
-  /* color: #687885; */
-  color: #42536d;
-  content: "";
-  width: 62px;
-  height: 55px;
-  display: block;
+      color: rgb(66, 83, 109);
+    background-image: url(/images/Close-button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 68px;
+    height: 68px;
+    font-size: 6.427vw;
+    display: block;
+    position: absolute;
+    top: 53%;
+    bottom: 57%;
+    left: -113px;
+    content: "" !important;
+    font-family: austin !important;
 }
 
-.customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
+/* .customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
 .p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
   color: #42536d;
   border-color: transparent;
@@ -515,7 +508,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 5.427vw;
-}
+} */
 .customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close,
 .customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-icon {
   border-radius: 0px;
@@ -697,7 +690,7 @@
 }
 
 .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
-.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+.customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
   color: #42536d;
   border-color: transparent;
   background: transparent;
@@ -762,7 +755,7 @@
 }
 
 .customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
-.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
+.customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
   color: #42536d;
   border-color: transparent;
   background: transparent;

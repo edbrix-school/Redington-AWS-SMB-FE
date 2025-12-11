@@ -6,6 +6,8 @@ import { Button } from "primereact/button";
 import { Dropdown } from "primereact/dropdown";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
+import Filter from "./fillter-popup/Filter";
+
 
 const AllData = [
   {
@@ -190,6 +192,7 @@ export const ServicesDeskList = () => {
     ];
     const op = useRef(null);
 
+    const [openpopup, setOpenPopup] = useState(false);
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
@@ -244,7 +247,7 @@ export const ServicesDeskList = () => {
                             panelClassName="custDropdown1panel"
                           />
                         </div>
-                        <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8">
+                        <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
                           <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
                         </div>
                       </div>
@@ -331,6 +334,11 @@ export const ServicesDeskList = () => {
          
         </div>
       </div>
+
+       <Filter
+                      visible={openpopup}
+                      onHide={() => setOpenPopup(false)}
+                  />
     </div>
   );
 };

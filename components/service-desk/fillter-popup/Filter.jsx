@@ -1,126 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar as CalendarIcon, ChevronDown, X } from 'lucide-react';
-import { Calendar } from 'primereact/calendar';
 
-export const Filter = ({ visible, onHide }) => {
-    const [show, setShow] = useState(visible);
-    const [fromDate, setFromDate] = useState(null);
-    const [toDate, setToDate] = useState(null);
+"use client";
+import React from "react";
+import { Sidebar } from "primereact/sidebar";
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import Link from "next/link";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
 
-    // Handle animation state
-    useEffect(() => {
-        if (visible) setShow(true);
-        else {
-            const timer = setTimeout(() => setShow(false), 300); // Wait for slide out
-            return () => clearTimeout(timer);
-        }
-    }, [visible]);
 
-    if (!show && !visible) return null;
+export default function Filter({ visible, onHide }) {
+ 
 
-    return (
-        <div className={`fixed inset-0 z-[9999] overflow-hidden ${visible ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+  return (
+    <div>
+      <Sidebar
+        visible={visible}
+        position="right"
+        className="!w-full lg:!w-[450px] xl:!w-[450px] 2xl:!w-[27.5vw] 3xl:!w-[27.5vw]  customsidebar2 bg-[#F6F7F8] rounded8"
+        onHide={onHide}
+        blockScroll={true}
+        
+      >
+        <div className="flex flex-col h-full"> 
 
-            {/* Backdrop (Dark Overlay) */}
-            <div
-                className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'
-                    }`}
-                onClick={onHide}
-            />
-
-            {/* Sidebar Container */}
-            <div
-                className={`absolute right-0 top-0 h-full w-[400px] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col rounded-l-3xl ${visible ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-            >
-                {/* --- CUSTOM CLOSE BUTTON (Floating Left) --- */}
-                <button
-                    onClick={onHide}
-                    className="absolute left-[-70px] top-[40%] flex flex-col items-center justify-center w-[70px] h-[70px] bg-[#7e69d7] text-white rounded-l-lg shadow-lg hover:bg-[#6a55c2] transition-colors focus:outline-none"
-                >
-                    <div className="p-0.5 rounded-full border border-white/50 mb-1">
-                        <X size={16} className="text-white" />
-                    </div>
-                    <span className="text-[11px] font-medium tracking-wide">Close</span>
-                </button>
-
-                {/* --- Header --- */}
-                <div className="px-6 py-5 border-b border-gray-100">
-                    <h2 className="text-xl font-bold text-gray-900">Apply Filter</h2>
-                </div>
-
-                {/* --- Body (Scrollable) --- */}
-                <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6 bg-[#FAFAFA]">
-
-                    {/* Date Created */}
-                    <div className="flex flex-col gap-1.5">
-                        <label className="text-xs font-bold text-gray-700">Date Created</label>
-                        <div className="flex gap-3">
-                            <div className="relative w-full">
-                                <Calendar
-                                    value={fromDate}
-                                    onChange={(e) => setFromDate(e.value)}
-                                    placeholder="From date"
-                                    className="w-full"
-                                    inputClassName="w-full h-[42px] px-3 py-2 text-sm text-gray-700 border border-gray-200 bg-white rounded-lg focus:outline-none focus:border-purple-500 placeholder-gray-400"
-                                />
-                                <CalendarIcon size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                            </div>
-                            <div className="relative w-full">
-                                <Calendar
-                                    value={toDate}
-                                    onChange={(e) => setToDate(e.value)}
-                                    placeholder="To Date"
-                                    className="w-full"
-                                    inputClassName="w-full h-[42px] px-3 py-2 text-sm text-gray-700 border border-gray-200 bg-white rounded-lg focus:outline-none focus:border-purple-500 placeholder-gray-400"
-                                />
-                                <CalendarIcon size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Dropdowns */}
-                    <FilterSelect label="Ticket Category" placeholder="All" />
-                    <FilterSelect label="Created by" placeholder="All" />
-                    <FilterSelect label="Status" placeholder="All" />
-
-                </div>
-
-                {/* --- Footer --- */}
-                <div className="p-6 border-t border-gray-100 flex justify-end gap-3 bg-white">
-                    <button
-                        onClick={onHide}
-                        className="px-6 py-2.5 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-                    >
-                        Cancel
-                    </button>
-                    <button
-                        onClick={onHide}
-                        className="px-6 py-2.5 text-sm font-semibold text-white bg-[#6b50d6] rounded-lg hover:bg-[#5a42b8] transition-colors shadow-sm"
-                    >
-                        Apply Filter
-                    </button>
-                </div>
+        <div className="border-top-left-radius: 1rem flex-none">
+          <div className=" bg-[#fff] p24 rounded-tl-[10px]">
+            <div className=" text-[#212325]  font24 font-bold">
+                  Apply Filter
             </div>
+          </div>
         </div>
-    );
-};
+        <div className="bg-[#F6F7F8] dark:bg-[#1F2A37] flex-1 overflow-y-auto">
+          <div className="">
+            <div className="p-[24px] xl:p-[24px] 3xl:p-[1.25vw] space-y-[22px]">
+             
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 right-0 left-0 flex-none">
+          <div className="bg-[#fff] dark:bg-[#111928] p-[16px] xl:p-[16px] 3xl:p-[0.833vw] flex justify-end gap-4 rounded-bl-[10px]">
+            <div className=" text-[#3C4146] font16 font-[500] py10 px20  border-solid border border-[#E5E7EB] rounded-lg   cursor-pointer cancel-btn-bg hover:bg-[#f6f6f7]">
+              <Link onClick={onHide} href={""}>
+                Cancel
+              </Link>
+            </div>
 
-// Helper Component for Dropdowns
-const FilterSelect = ({ label, placeholder }) => (
-    <div className="flex flex-col gap-1.5">
-        <label className="text-xs font-bold text-gray-700">{label}</label>
-        <div className="relative w-full">
-            <select
-                className="w-full h-[42px] px-3 py-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-lg appearance-none focus:outline-none focus:border-purple-500 cursor-pointer"
-                defaultValue=""
+            <div
+              onClick={() => setShow(true)}
+              className="font16 font-[500] py10 px20  border-[#645592] rounded-lg bg-[#645592]  cursor-pointer hover:bg-[#455fb4] text-[#fff]"
             >
-                <option value="" disabled hidden>{placeholder}</option>
-                <option value="all">All</option>
-                <option value="opt1">Option 1</option>
-                <option value="opt2">Option 2</option>
-            </select>
-            <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+              Apply Filter
+            </div>
+          </div>
         </div>
+        </div>
+      </Sidebar>
     </div>
-);
+  );
+}
