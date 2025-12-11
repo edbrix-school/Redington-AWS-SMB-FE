@@ -12,19 +12,19 @@ import { Dropdown } from "primereact/dropdown";
 
 export default function Filter({ visible, onHide }) {
   const [date, setDate] = React.useState(null);
-   const [selectedCategory, setSelectedCategory] = useState(null);
-    const category = [
-       { name: 'Hardware Issue', code: 'HW' },
-  { name: 'Software Issue', code: 'SW' },
-  { name: 'Network Issue', code: 'NW' },
-  { name: 'Access Request', code: 'AR' },
-  { name: 'Email Issue', code: 'EM' },
-  { name: 'Account Locked', code: 'AL' },
-  { name: 'Password Reset', code: 'PR' },
-  { name: 'System Outage', code: 'SO' },
-  { name: 'Bug Report', code: 'BR' },
-  { name: 'Other', code: 'OT' }
-    ];
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const category = [
+    { name: "Hardware Issue", code: "HW" },
+    { name: "Software Issue", code: "SW" },
+    { name: "Network Issue", code: "NW" },
+    { name: "Access Request", code: "AR" },
+    { name: "Email Issue", code: "EM" },
+    { name: "Account Locked", code: "AL" },
+    { name: "Password Reset", code: "PR" },
+    { name: "System Outage", code: "SO" },
+    { name: "Bug Report", code: "BR" },
+    { name: "Other", code: "OT" },
+  ];
   return (
     <div>
       <Sidebar
@@ -60,7 +60,16 @@ export default function Filter({ visible, onHide }) {
                         placeholder="Select Date"
                         className="w-full p-inputtext-custom"
                       />
-                       <div className="absolute right-3 top-[30%]"> <Image src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon"/></div>
+                      <div className="absolute right-3 top-[30%]">
+                        {" "}
+                        <Image
+                          src="/images/calendar-icon.svg"
+                          width="16"
+                          height="16"
+                          className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]"
+                          alt="icon"
+                        />
+                      </div>
                     </div>
                     <div className="relative custom-input">
                       <Calendar
@@ -71,7 +80,16 @@ export default function Filter({ visible, onHide }) {
                         placeholder="Select Date"
                         className="w-full p-inputtext-custom"
                       />
-                     <div className="absolute right-3 top-[30%]"> <Image src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon"/></div>
+                      <div className="absolute right-3 top-[30%]">
+                        {" "}
+                        <Image
+                          src="/images/calendar-icon.svg"
+                          width="16"
+                          height="16"
+                          className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]"
+                          alt="icon"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -81,11 +99,58 @@ export default function Filter({ visible, onHide }) {
                   </label>
 
                   <div className="grid grid-cols-1">
-                   
-                   <div className="custom-dropdown">
-            <Dropdown value={selectedCategory} onChange={(e) => setSelectedCategory(e.value)} options={category} optionLabel="name" placeholder="Select a Category" 
-                 filterDelay={400} filter className="w-full" />
-        </div>  
+                    <div className="custom-dropdown">
+                      <Dropdown
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.value)}
+                        options={category}
+                        optionLabel="name"
+                        placeholder="Select a Category"
+                        filterDelay={400}
+                        filter
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+                 <div className="flex flex-col gap6">
+                  <label className="font14 font-medium text-InterfaceTexttitle1">
+                    Created By
+                  </label>
+
+                  <div className="grid grid-cols-1">
+                    <div className="custom-dropdown">
+                      <Dropdown
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.value)}
+                        options={category}
+                        optionLabel="name"
+                        placeholder="Select Created By"
+                        filterDelay={400}
+                        filter
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+                 <div className="flex flex-col gap6">
+                  <label className="font14 font-medium text-InterfaceTexttitle1">
+                    Created By
+                  </label>
+
+                  <div className="grid grid-cols-1">
+                    <div className="custom-dropdown">
+                      <Dropdown
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.value)}
+                        options={category}
+                        optionLabel="name"
+                        placeholder="Select Created By"
+                        filterDelay={400}
+                        filter
+                        className="w-full"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

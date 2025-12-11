@@ -485,9 +485,9 @@
     font-size: 6.427vw;
     display: block;
     position: absolute;
-    top: 53%;
+    top: 50%;
     bottom: 57%;
-    left: -113px;
+    left: -100px;
     content: "" !important;
     font-family: austin !important;
 }
