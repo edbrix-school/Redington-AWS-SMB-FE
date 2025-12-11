@@ -7,7 +7,8 @@ import { Dropdown } from "primereact/dropdown";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import Filter from "./fillter-popup/Filter";
-import NewTicket from "./new-ticket/add";
+import NewTicket from "./new-ticket/view";
+import ViewTicket from "./new-ticket/view";
 
 
 const AllData = [
@@ -195,6 +196,7 @@ export const ServicesDeskList = () => {
 
     const [openpopup, setOpenPopup] = useState(false);
     const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
+    const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
@@ -280,7 +282,7 @@ export const ServicesDeskList = () => {
                        
                        <OverlayPanel ref={op} className="w-[160px] custom-op rounded8">
                            <div className="flex flex-col text-[#3C4146] font14 font-[400]">
-                            <Link href="#" className=" leading-[140%] py4 px4">View</Link>
+                            <Link href="#" onClick={() => setOpenPopupViewTicket(true)} className=" leading-[140%] py4 px4">View</Link>
                             <Link href="#" className=" leading-[140%] py4 px4">Cancel</Link>
                            
                            </div>
@@ -339,7 +341,7 @@ export const ServicesDeskList = () => {
 
 
             <NewTicket visible={openpopupnewticket}  onHide={() => setOpenPopupNewTicket(false)}/>
-
+<ViewTicket visible={openpopupviewticket} onHide={() => setOpenPopupViewTicket(false)} />
 
        <Filter
                       visible={openpopup}

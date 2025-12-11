@@ -17,7 +17,7 @@ const showSidebar = () => {
 
   return (
     <>
-         <div className="xl:max-w-xl  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer" onClick={showSidebar}>
+         <div className="lg:max-w-lg xl:max-w-xl   2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer" onClick={showSidebar}>
                     {/* Search Input Container - Updated Background Color */}
                     <div className="relative h-[50px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
                         {/* <input

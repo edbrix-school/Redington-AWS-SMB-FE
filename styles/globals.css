@@ -506,6 +506,9 @@ body {
 .gap40 {
   @apply gap-[30px] xl:gap-[40px] 2xl:gap-[40px] 3xl:gap-[2.083vw];
 }
+.gap4 {
+  @apply gap-[4px] xl:gap-[4px] 2xl:gap-[4px] 3xl:gap-[0.208vw];
+}
 
 /* Global Margin */
 .mx40 {
