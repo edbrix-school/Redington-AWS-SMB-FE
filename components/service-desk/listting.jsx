@@ -7,8 +7,8 @@ import { Dropdown } from "primereact/dropdown";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import Filter from "./fillter-popup/Filter";
-import NewTicket from "./new-ticket/view";
-import ViewTicket from "./new-ticket/view";
+import NewTicket from "./new-ticket/add";
+import ViewTicket from "./ticket-view/view";
 
 
 const AllData = [
@@ -341,7 +341,8 @@ export const ServicesDeskList = () => {
 
 
             <NewTicket visible={openpopupnewticket}  onHide={() => setOpenPopupNewTicket(false)}/>
-<ViewTicket visible={openpopupviewticket} onHide={() => setOpenPopupViewTicket(false)} />
+              <ViewTicket visible={openpopupviewticket} onHide={() => setOpenPopupViewTicket(false)}  />
+
 
        <Filter
                       visible={openpopup}

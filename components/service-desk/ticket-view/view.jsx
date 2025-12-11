@@ -1,16 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar } from "primereact/sidebar";
-import "primereact/resources/themes/saga-blue/theme.css";
-import "primereact/resources/primereact.min.css";
-import Link from "next/link";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Calendar } from "primereact/calendar";
-import Image from "next/image";
-import { Dropdown } from "primereact/dropdown";
-import { InputText } from "primereact/inputtext";
-import { InputTextarea } from "primereact/inputtextarea";
 
 export default function ViewTicket({ visible, onHide }) {
   const [date, setDate] = React.useState(null);
