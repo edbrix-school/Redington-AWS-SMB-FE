@@ -5,7 +5,11 @@ import { DataTable } from "primereact/datatable";
 import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
 import { Paginator } from "primereact/paginator";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import BlockUser from "./components/block-user";
+import { OverlayPanel } from "primereact/overlaypanel";
+import Link from "next/link";
+import PermissionTable from "./components/userpermission";
 
 export default function Tabel() {
   const [first, setFirst] = useState(0);
@@ -15,6 +19,9 @@ export default function Tabel() {
     setFirst(event.first);
     setRows(event.rows);
   };
+  const op = useRef(null);
+  const [openpopup, setOpenpopup] = useState(false);
+  const [openPermissionPopup, setOpenPermissionPopup] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
     { name: "New York", code: "NY" },
@@ -81,37 +88,69 @@ export default function Tabel() {
   ];
 
   const statusBodyTemplate = (rowData) => {
-  const status = rowData.Status;
+    const status = rowData.Status;
 
- const statusColors = {
-  Active:
-    "text-[#07743E] bg-[#D6FFEA] border-[#04E373]",
-  Inactive:
-    "text-[#903D10] bg-[#FDF2C8] border-[#FCE38B]",
-};
+    const statusColors = {
+      Active: "text-[#07743E] bg-[#D6FFEA] border-[#04E373]",
+      Inactive: "text-[#903D10] bg-[#FDF2C8] border-[#FCE38B]",
+    };
 
-  const colorClass = statusColors[status] || "text-gray-600 bg-gray-100 border-gray-300";
+    const colorClass =
+      statusColors[status] || "text-gray-600 bg-gray-100 border-gray-300";
 
-  return (
-    <span
-      className={`py6 px12 rounded8 text12 border ${colorClass}`}
-    >
-      {status}
-    </span>
-  );
-};
+    return (
+      <span className={`py6 px12 rounded8 text12 border ${colorClass}`}>
+        {status}
+      </span>
+    );
+  };
 
   const actionBodyTemplate = (rowData) => {
     return (
-      <div className="flex justify-center items-center  w-full">
-        {/* <Link
+      <>
+        <div className="flex justify-center items-center  w-full">
+          {/* <Link
           href={``}
           title="Edit"
           className="cursor-pointer"
         > */}
-          <Image src={"/images/more.svg"} width={20} height={20} alt="edit"  className="w18 h-auto cursor-pointer"/>
-        {/* </Link> */}
-      </div>
+          <div onClick={(e) => op.current.toggle(e)}>
+            <Image
+              src={"/images/more.svg"}
+              width={20}
+              height={20}
+              alt="edit"
+              className="w18 h-auto cursor-pointer"
+            />
+          </div>
+          {/* </Link> */}
+        </div>
+        <OverlayPanel ref={op} className="w220 custom-overlaypanel  py8">
+          <div className="flex flex-col text-[#3C4146] font14 font-[400] ">
+            <div className=" cursor-pointer flex items-center leading-[140%]   py6 px4 border-b border-InterfaceStrokesoft1">
+              <i className="smb-edit px12 font16"> </i>
+              Edit User
+            </div>
+            <div
+              onClick={() => {
+                op.current.hide();
+                setTimeout(() => setOpenpopup(true), 0);
+              }}
+              className="cursor-pointer flex items-center leading-[140%]  py8 px4 border-b border-InterfaceStrokesoft1"
+            >
+              <i className="smb-slash px12 font16"> </i>
+              Block
+            </div>
+            <div  onClick={() => {
+                op.current.hide();
+                setTimeout(() => setOpenPermissionPopup(true), 0);
+              }} className=" cursor-pointer flex items-center leading-[140%]  py6 px4 ">
+              <i className="smb-oct-user px12 font18"> </i>
+              User Access and Permission
+            </div>
+          </div>
+        </OverlayPanel>
+      </>
     );
   };
 
@@ -144,147 +183,151 @@ export default function Tabel() {
   };
 
   return (
-    <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4">
-      <div className="p15 bg-background rounded-tl rounded-tr rounded8">
-        <div className="flex gap8 items-center pb22">
-          <div className="font16 text-InterfaceTexttitle1 font-semibold">
-            All Announcements
-          </div>
-          <div className="text-InterfaceTextsubtitle font12">
-            (Showing 10/100 Records)
-          </div>
-        </div>
-        <div className="flex justify-between py10">
-          <div className="flex gap14 ">
-            <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
-              <Image
-                src="/images/user-add.svg"
-                width={16}
-                height={16}
-                alt="adduser"
-                className="inline-block w14 h-auto "
-              />
-              Add New User
-            </button>
-            <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
-              <Image
-                src="/images/import.svg"
-                width={16}
-                height={16}
-                alt="adduser"
-                className="inline-block "
-              />
-              Download
-            </button>
-          </div>
-          <div className="flex gap20">
-            <div>
-              <Dropdown
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.value)}
-                options={cities}
-                optionLabel="name"
-                placeholder="Select Year/Month"
-                className="w300 custDropdown1 "
-                panelClassName="custDropdown1panel"
-              />
+    <>
+      <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4">
+        <div className="p15 bg-background rounded-tl rounded-tr rounded8">
+          <div className="flex gap8 items-center pb22">
+            <div className="font16 text-InterfaceTexttitle1 font-semibold">
+              All Announcements
             </div>
-            <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8">
-              <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
+            <div className="text-InterfaceTextsubtitle font12">
+              (Showing 10/100 Records)
             </div>
           </div>
+          <div className="flex justify-between py10">
+            <div className="flex gap14 ">
+              <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+                <Image
+                  src="/images/user-add.svg"
+                  width={16}
+                  height={16}
+                  alt="adduser"
+                  className="inline-block w14 h-auto "
+                />
+                Add New User
+              </button>
+              <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+                <Image
+                  src="/images/import.svg"
+                  width={16}
+                  height={16}
+                  alt="adduser"
+                  className="inline-block "
+                />
+                Download
+              </button>
+            </div>
+            <div className="flex gap20">
+              <div>
+                <Dropdown
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.value)}
+                  options={cities}
+                  optionLabel="name"
+                  placeholder="Select Year/Month"
+                  className="w300 custDropdown1 "
+                  panelClassName="custDropdown1panel"
+                />
+              </div>
+              <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8">
+                <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <DataTable
-        value={workspacelist}
-        stripedRows
-        rows={10}
-        className="custTable "
-        responsiveLayout="scroll"
-        style={{ width: "100%" }}
-        filters={filters}
-        scrollable
-        onFilter={(e) => setFilters(e.filters)}
-        filterDisplay="row"
-        emptyMessage={
-          <div className="flex justify-center">No Data Available.</div>
-        }
-      >
-        <Column
-          field="FirstName"
-          header={<HeaderWithMenu title="First Name" />}
-          style={{ minWidth: "11rem" }}
-          filter
-          filterElement={filterInput}
-        />
+        <DataTable
+          value={workspacelist}
+          stripedRows
+          rows={10}
+          className="custTable "
+          responsiveLayout="scroll"
+          style={{ width: "100%" }}
+          filters={filters}
+          scrollable
+          onFilter={(e) => setFilters(e.filters)}
+          filterDisplay="row"
+          emptyMessage={
+            <div className="flex justify-center">No Data Available.</div>
+          }
+        >
+          <Column
+            field="FirstName"
+            header={<HeaderWithMenu title="First Name" />}
+            style={{ minWidth: "11rem" }}
+            filter
+            filterElement={filterInput}
+          />
 
-        <Column
-          field="LastName"
-          header={<HeaderWithMenu title="Last Name" />}
-          style={{ minWidth: "10rem" }}
-          filter
-          filterElement={filterInput}
-        />
+          <Column
+            field="LastName"
+            header={<HeaderWithMenu title="Last Name" />}
+            style={{ minWidth: "10rem" }}
+            filter
+            filterElement={filterInput}
+          />
 
-        <Column
-          field="MobileNumber"
-          header={<HeaderWithMenu title="Mobile Number" />}
-          style={{ minWidth: "12rem" }}
-          filter
-          filterElement={filterInput}
-        />
+          <Column
+            field="MobileNumber"
+            header={<HeaderWithMenu title="Mobile Number" />}
+            style={{ minWidth: "12rem" }}
+            filter
+            filterElement={filterInput}
+          />
 
-        <Column
-          field="Email"
-          header={<HeaderWithMenu title="Email" />}
-          style={{ minWidth: "10rem" }}
-          filter
-          filterElement={filterInput}
-        />
-        <Column
-          field="Role"
-          header={<HeaderWithMenu title="Role" />}
-          style={{ minWidth: "10rem" }}
-          filter
-          filterElement={filterInput}
-        />
-        <Column
-          field="Status"
-          header={<HeaderWithMenu title="Status" />}
-          style={{ minWidth: "10rem" }}
+          <Column
+            field="Email"
+            header={<HeaderWithMenu title="Email" />}
+            style={{ minWidth: "10rem" }}
+            filter
+            filterElement={filterInput}
+          />
+          <Column
+            field="Role"
+            header={<HeaderWithMenu title="Role" />}
+            style={{ minWidth: "10rem" }}
+            filter
+            filterElement={filterInput}
+          />
+          <Column
+            field="Status"
+            header={<HeaderWithMenu title="Status" />}
+            style={{ minWidth: "10rem" }}
             body={statusBodyTemplate}
-          filter
-          filterElement={filterInput}
-        />
-        <Column
-          field="AuthorizedSignatory"
-          header={<HeaderWithMenu title="Authorized Signatory" />}
-          style={{ minWidth: "13rem" }}
-          filter
-          filterElement={filterInput}
-        />
-        <Column
-          field="Action"
-          header="Action"
-          style={{ minWidth: "3rem" }}
-          className="action-shadow-table"
-          alignFrozen="right"
-          align="center"
-          frozen
-          body={actionBodyTemplate}
-          filterElement={filterInput}
-        />
-      </DataTable>
-      <div className="relative custTablePaginator">
-        <Paginator
-          template="CurrentPageReport RowsPerPageDropdown FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
-          currentPageReportTemplate={`Showing 1-10 of 1000`}
-          first={first}
-          rows={rows}
-          onPageChange={onPageChange}
-          totalRecords={100}
-        />
+            filter
+            filterElement={filterInput}
+          />
+          <Column
+            field="AuthorizedSignatory"
+            header={<HeaderWithMenu title="Authorized Signatory" />}
+            style={{ minWidth: "13rem" }}
+            filter
+            filterElement={filterInput}
+          />
+          <Column
+            field="Action"
+            header="Action"
+            style={{ minWidth: "3rem" }}
+            className="action-shadow-table"
+            alignFrozen="right"
+            align="center"
+            frozen
+            body={actionBodyTemplate}
+            filterElement={filterInput}
+          />
+        </DataTable>
+        <div className="relative custTablePaginator">
+          <Paginator
+            template="CurrentPageReport RowsPerPageDropdown FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+            currentPageReportTemplate={`Showing 1-10 of 1000`}
+            first={first}
+            rows={rows}
+            onPageChange={onPageChange}
+            totalRecords={100}
+          />
+        </div>
       </div>
-    </div>
+      <BlockUser visible={openpopup} onHide={() => setOpenpopup(false)} />
+        <PermissionTable visible={openPermissionPopup} onHide={() => setOpenPermissionPopup(false)} />
+    </>
   );
 }

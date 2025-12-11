@@ -3,8 +3,8 @@
 import Tabel from '@/components/user-management/tabel'
 import React from 'react'
 import { NavBar } from '../layout/NavBar'
-import { Hero } from '@/components/Knowledge-Hub/Hero'
-import { UserManagementHero } from '@/components/user-management/user-management-hero'
+import { UserManagementHero } from '@/components/user-management/components/user-management-hero'
+// import { UserManagementHero } from '@/components/user-management/components/user-management-hero'
 
 export default function page() {
   return (

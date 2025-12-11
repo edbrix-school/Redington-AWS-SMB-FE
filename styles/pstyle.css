@@ -98,8 +98,8 @@
     box-shadow 0.2s;
 }
 .customcheckox.p-checkbox.p-highlight .p-checkbox-box {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #645592;
+  border-color: #645592;
 }
 .customsidebar.p-sidebar .p-sidebar-header {
   padding: 0 !important;
@@ -1135,14 +1135,14 @@ color: #FFF;
 border-radius: 6px;
 background: #645592;
 border: #645592;
-font-size: 16px;
+font-size: 14px;
 font-style: normal;
 font-weight: 500;
 }
 .cancel-btn {
 color: #3C4146;
 font-family: Roboto;
-font-size: 16px;
+font-size: 14px;
 font-style: normal;
 font-weight: 500;
 line-height: 100%; /* 16px */
@@ -1185,6 +1185,33 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
     border-bottom-left-radius: 6px;
     padding: 1.25rem 0 !important;
 }
+
+.custom-button {
+ 
+  background: linear-gradient(
+    180deg,
+    var(--Button-Base-Default---1, #FEFEFE) 0%,
+    var(--button-base-default-hover-2, #F6F8FA) 100%
+  );
+}
+
+/* Change checked background */
+.p-checkbox-box.p-highlight {
+  background-color: #6366f1 !important;   /* indigo-500 */
+  border-color: #6366f1 !important;
+}
+
+/* Change hover color while checked */
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+  background-color: #4f46e5 !important;   /* indigo-600 */
+  border-color: #4f46e5 !important;
+}
+
+/* Change checkmark color */
+.p-checkbox-box.p-highlight svg {
+  stroke: white !important;
+}
+
 @media (min-width: 1040px) {
   .topdropdown.p-dropdown .p-dropdown-label.p-placeholder {
     font-size: 12px;
