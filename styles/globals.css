@@ -350,6 +350,9 @@ body {
 .spacey12 {
   @apply space-y-[12px] xl:space-y-[12px] 3xl:space-y-[0.625vw];
 }
+.spacey24 {
+  @apply space-y-[20px] lg:space-y-[22px] xl:space-y-[22px] 3xl:space-y-[1.25vw];
+}
 .spacey20 {
   @apply space-y-[18px] lg:space-y-[18px] xl:space-y-[18px] 2xl:space-y-[20px] 3xl:space-y-[1.042vw];
 }
@@ -463,6 +466,9 @@ body {
 
 
 /* Global Gap */
+.gap6 {
+  @apply gap-[4px] xl:gap-[6px] 2xl:gap-[6px] 3xl:gap-[0.313vw];
+}
 .gap8 {
   @apply gap-[6px] xl:gap-[8px] 2xl:gap-[8px] 3xl:gap-[0.417vw];
 }
@@ -861,6 +867,80 @@ width: -moz-fit-content;
   border-radius: 10px;
   background-color: rebeccapurple;
 }
+ .p-inputtext {
+  /* Default for very large screens */
+  padding: 0.417vw 0.625vw;
+  height: 1.875vw;
+  font-size: 0.729vw;
+  border-radius: 0.417vw;
+  border-color: #BBC1C7;
+}
+.p-dropdown
+{
+  border-color: #BBC1C7;
+  border-radius: 0.417vw;
+}
+
+/* MOBILE (SM) — 360px to 640px */
+@media (max-width: 640px) {
+  .p-inputtext {
+    padding: 6px 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+}
+
+/* TABLET (MD) — 641px to 768px */
+@media (min-width: 641px) and (max-width: 768px) {
+  .p-inputtext {
+    padding: 8px 12px;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}
+
+/* SMALL LAPTOP (LG) — 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .p-inputtext {
+    padding: 9px 14px;
+    height: 38px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+}
+
+/* DESKTOP (XL) — 1025px to 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .p-inputtext {
+    padding: 10px 16px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* LARGE DESKTOP (2XL) — 1281px to 1536px */
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .p-inputtext {
+    padding: 0.5vw 0.7vw;
+    height: 2vw;
+    font-size: 0.8vw;
+    border-radius: 0.45vw;
+  }
+}
+
+/* ULTRA DESKTOP (3XL) — 1537px+ */
+@media (min-width: 1537px) {
+  .p-inputtext {
+    padding: 0.417vw 0.625vw;
+    height: 1.875vw;
+    font-size: 0.729vw;
+    border-radius: 0.417vw;
+  }
+}
+
 
 @media (min-width: 1400px) {
   .responsive-grid {
