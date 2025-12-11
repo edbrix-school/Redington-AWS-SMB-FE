@@ -925,7 +925,7 @@ font-weight: 600;
 .custTable .p-column-filter-icon {
   display: none !important;
 }
-.custom-input.p-inputtext {
+.custom-input1.p-inputtext {
   background: rgb(255, 255, 255);
   border: 1px solid #BECDE3;
   border-radius: 6px;
@@ -936,7 +936,7 @@ font-weight: 600;
   padding: 8px 12px;
  
 }
-.custom-input.p-inputtext:enabled:focus {
+.custom-input1.p-inputtext:enabled:focus {
     outline-offset: 0;
     border-color: #BECDE3;
     outline: 0;

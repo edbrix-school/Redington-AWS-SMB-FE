@@ -10,6 +10,7 @@ import BlockUser from "./components/block-user";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import PermissionTable from "./components/userpermission";
+import AddUser from "./components/add-user";
 
 export default function Tabel() {
   const [first, setFirst] = useState(0);
@@ -22,6 +23,7 @@ export default function Tabel() {
   const op = useRef(null);
   const [openpopup, setOpenpopup] = useState(false);
   const [openPermissionPopup, setOpenPermissionPopup] = useState(false);
+  const [addUserpopup, setAddUser] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
     { name: "New York", code: "NY" },
@@ -127,7 +129,10 @@ export default function Tabel() {
         </div>
         <OverlayPanel ref={op} className="w220 custom-overlaypanel  py8">
           <div className="flex flex-col text-[#3C4146] font14 font-[400] ">
-            <div className=" cursor-pointer flex items-center leading-[140%]   py6 px4 border-b border-InterfaceStrokesoft1">
+            <div  onClick={() => {
+                op.current.hide();
+                setTimeout(() => setAddUser(true), 0);
+              }}  className=" cursor-pointer flex items-center leading-[140%]   py6 px4 border-b border-InterfaceStrokesoft1">
               <i className="smb-edit px12 font16"> </i>
               Edit User
             </div>
@@ -177,7 +182,7 @@ export default function Tabel() {
         value={options.value || ""}
         onChange={(e) => options.filterApplyCallback(e.target.value)}
         placeholder="Search"
-        className="p-inputtext-sm w-full custom-input"
+        className="p-inputtext-sm w-full custom-input1"
       />
     );
   };
@@ -328,6 +333,7 @@ export default function Tabel() {
       </div>
       <BlockUser visible={openpopup} onHide={() => setOpenpopup(false)} />
         <PermissionTable visible={openPermissionPopup} onHide={() => setOpenPermissionPopup(false)} />
+          <AddUser visible={addUserpopup} onHide={() => setAddUser(false)}/>
     </>
   );
 }

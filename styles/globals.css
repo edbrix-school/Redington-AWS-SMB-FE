@@ -417,9 +417,7 @@ body {
 .px14 {
   @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
 }
-.p20 {
-  @apply px-[16px] lg:px-[18px] xl:px-[18px] 2xl:px-[20px] 3xl:px-[1.39vw];
-}
+
 .p24 {
   @apply p-[20px] lg:p-[20px] xl:p-[24px] 3xl:p-[1.25vw] ;
 }
@@ -908,7 +906,6 @@ width: -moz-fit-content;
  .custom-input .p-inputtext {
   /* Default for very large screens */
   padding: 0.417vw 0.625vw;
-  height: 1.875vw;
   font-size: 0.729vw;
   border-radius: 0.417vw;
   border-color: #BBC1C7;
@@ -916,7 +913,16 @@ width: -moz-fit-content;
 .custom-dropdown .p-inputtext,
 .custom-dropdown .p-dropdown
 {
-  font-size: 0.729vw;
+   
+  font-size: 14px;
+  border-color: #BBC1C7;
+  border-radius: 0.417vw;
+}
+
+.custom-dropdown .p-inputtext
+{
+   padding: 6px 10px;
+  font-size: 14px;
   border-color: #BBC1C7;
   border-radius: 0.417vw;
 }
@@ -927,48 +933,73 @@ width: -moz-fit-content;
     padding: 6px 10px;
     height: 32px;
     font-size: 12px;
-    border-radius: 6px;
+    border-radius: 7px;
   }
 }
 
 /* TABLET (MD) — 641px to 768px */
 @media (min-width: 641px) and (max-width: 768px) {
   .custom-input .p-inputtext {
-    padding: 8px 12px;
-    height: 36px;
+    padding: 6px 12px;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 7px;
+    
   }
+  .custom-dropdown .p-inputtext
+{
+   padding: 6px 10px;
+  font-size: 14px;
+  border-color: #BBC1C7;
+  border-radius: 0.417vw;
+}
 }
 
 /* SMALL LAPTOP (LG) — 769px to 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
   .custom-input .p-inputtext {
-    padding: 9px 14px;
-    height: 38px;
-    font-size: 15px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 7px;
   }
+  .custom-dropdown .p-inputtext
+{
+   padding: 6px 10px;
+  font-size: 13px;
+  border-color: #BBC1C7;
+  border-radius: 0.417vw;
+}
 }
 
 /* DESKTOP (XL) — 1025px to 1280px */
 @media (min-width: 1025px) and (max-width: 1280px) {
   .custom-input .p-inputtext {
-    padding: 10px 16px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 7px;
   }
+  .custom-dropdown .p-inputtext
+{
+   padding: 6px 10px;
+  font-size: 13px;
+  border-color: #BBC1C7;
+  border-radius: 7px;
+}
 }
 
 /* LARGE DESKTOP (2XL) — 1281px to 1536px */
 @media (min-width: 1281px) and (max-width: 1536px) {
   .custom-input .p-inputtext {
-    padding: 0.5vw 0.7vw;
-    height: 2vw;
-    font-size: 0.8vw;
-    border-radius: 0.45vw;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 0.417vw;
   }
+  .custom-dropdown .p-inputtext
+{
+   padding: 6px 10px;
+  font-size: 13px;
+  border-color: #BBC1C7;
+  border-radius: 7px;
+}
 }
 
 /* ULTRA DESKTOP (3XL) — 1537px+ */
@@ -979,6 +1010,13 @@ width: -moz-fit-content;
     font-size: 0.729vw;
     border-radius: 0.417vw;
   }
+  .custom-dropdown .p-inputtext
+{
+   padding: 8px 10px;
+  font-size: 14px;
+  border-color: #BBC1C7;
+  border-radius: 0.417vw;
+}
 }
 
 
