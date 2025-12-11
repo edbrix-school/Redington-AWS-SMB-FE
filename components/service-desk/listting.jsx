@@ -200,7 +200,7 @@ export const ServicesDeskList = () => {
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
-        <div className="flex flex-wrap gap-1 bg-[#F5F6F7] border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
+        <div className="flex flex-wrap bg-[#F5F6F7] border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
           {TABS.map((tab) => {
             const isActive = tab === activeTab;
             return (
@@ -251,8 +251,8 @@ export const ServicesDeskList = () => {
                             panelClassName="custDropdown1panel"
                           />
                         </div>
-                        <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
-                          <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
+                        <div className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
+                          <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
                         </div>
                       </div>
                     </div>
