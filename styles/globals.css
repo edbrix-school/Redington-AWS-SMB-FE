@@ -642,7 +642,19 @@ body {
 
 /* Landing Page / Gradients */
 .knowledge-base-banner-bg {
-  background-image: url("/images/Knowledge-Hub/Knowledge-Hub.png");
+  background-image: url("/images/knowledge-hub-bg.png");
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+.faq-base-banner-bg {
+  background-image: url("/images/faq-bg.png");
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+.support-base-banner-bg {
+  background-image: url("/images/support-bg.png");
   background-size: cover;
   background-position: 100% 50%;
 }

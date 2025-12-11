@@ -5,7 +5,7 @@ import Searchbox from '../common/searchbox';
 
 export const Hero = () => {
     return (
-        <div className="relative overflow-hidden text-white min-h-[500px] flex flex-col justify-center banner-bg">
+        <div className="relative overflow-hidden text-white min-h-[500px] flex flex-col justify-center knowledge-base-banner-bg">
             <div className="mx-auto w-full relative z-10 px-[4.167vw]">
                 {/* Breadcrumb */}
                 <div className="flex items-center gap-2 text-xs text-gray-300 ">
