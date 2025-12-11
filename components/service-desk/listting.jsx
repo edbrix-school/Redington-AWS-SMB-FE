@@ -7,6 +7,7 @@ import { Dropdown } from "primereact/dropdown";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import Filter from "./fillter-popup/Filter";
+import NewTicket from "./new-ticket/add";
 
 
 const AllData = [
@@ -193,6 +194,7 @@ export const ServicesDeskList = () => {
     const op = useRef(null);
 
     const [openpopup, setOpenPopup] = useState(false);
+    const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
@@ -223,9 +225,9 @@ export const ServicesDeskList = () => {
 
             <div className="flex justify-between my24">
                       <div className="flex gap14 ">
-                        <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+                        <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]" onClick={() => setOpenPopupNewTicket(true)}>
                           <Image
-                            src="/images/user-add.svg"
+                            src="/images/add-icon.svg"
                             width={16}
                             height={16}
                             alt="adduser"
@@ -334,6 +336,10 @@ export const ServicesDeskList = () => {
          
         </div>
       </div>
+
+
+            <NewTicket visible={openpopupnewticket}  onHide={() => setOpenPopupNewTicket(false)}/>
+
 
        <Filter
                       visible={openpopup}
