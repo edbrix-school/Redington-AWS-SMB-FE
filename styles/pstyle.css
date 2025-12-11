@@ -771,7 +771,7 @@
 }
 .customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-close,
 .customSchedulesidebar.p-sidebar .p-sidebar-header .p-sidebar-icon {
-  border-radius: 0px;
+  border-radius: 10px !important;
 }
 
 .customSchedulesidebar.p-sidebar .p-sidebar-header{
@@ -785,12 +785,12 @@
 
 .customSchedulesidebar.p-sidebar .p-sidebar-header + .p-sidebar-content{
   padding: 20px !important;
-  background-color: #fff;
+  background-color: #F5F6F7;
   border-radius: 10px 0px 0px 10px !important;
 }
 .customSchedulesidebar.p-sidebar .p-sidebar-content {
   padding: 0% !important;
-  background-color: #fff;
+  background-color: #F5F6F7;;
 }
 .scheduleSession {
 color: #212325;

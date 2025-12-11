@@ -428,9 +428,10 @@ export default function ScheduleCalendarTable() {
         {/* Side Drawer Component */}
         <Sidebar
           visible={visible}
-          onHide={() => hideSidebar()}
-          className="p-0 z-[9999] customSchedulesidebar !w-[30rem] lg:!w-[40rem] md:!w-[30rem] sm:!w-[100%] "
           position="right"
+          className="!w-full lg:!w-[450px] xl:!w-[450px] 2xl:!w-[27.5vw] 3xl:!w-[27.5vw]  customsidebar2 bg-[#F6F7F8] rounded8"
+          onHide={hideSidebar}
+          blockScroll={true}
         >
           <SchedulePopup open={visible} onClose={() => hideSidebar()} />
         </Sidebar>
