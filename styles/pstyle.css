@@ -919,7 +919,7 @@ font-weight: 600;
    content: "\e917";
    font-family: "redington" !important;
   display: block;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--Interface-Text-subtitle);
 }
 .custTable .p-column-filter-icon {
@@ -1080,6 +1080,12 @@ font-weight: 600;
      font-size: 13px !important;
     padding: 4px 16px;
 }
+
+.customicon .p-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: var(--Interface-Text-subtitle);
+}
 .schedule-status-btn{
 border-radius: 4px;
 border: 1px solid #E8F4E4;
@@ -1210,6 +1216,89 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
 /* Change checkmark color */
 .p-checkbox-box.p-highlight svg {
   stroke: white !important;
+}
+
+
+.phone-input-container {
+    width: 100%;
+}
+
+/* Outer wrapper */
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #BBC1C7; /* light gray border */
+    border-radius: 7px;
+    background: #fff;
+    overflow: hidden;
+   
+    
+}
+.phone-input-field.p-inputtext.p-component{
+  padding: 7px 12px !important  ;
+}
+.phone-input-field.p-dropdown-label.p-inputtext{
+   padding: 0px 12px !important  ;
+}
+
+/* Country Dropdown container */
+.phone-dropdown {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+/* Remove all borders, focus rings, shadows from PrimeReact dropdown */
+.phone-dropdown-field,
+.phone-dropdown-field .p-inputtext,
+.phone-dropdown-field .p-dropdown-label,
+.phone-dropdown-field.p-dropdown,
+.phone-dropdown-field:focus,
+.phone-dropdown-field .p-dropdown-trigger,
+.phone-dropdown-field .p-dropdown-trigger:focus {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+   padding: 0px !important ;
+}
+
+/* Divider */
+.phone-divider {
+    width: 1px;
+    height: 60%;
+    background-color: #E5E7EB;
+    margin: 0 10px;
+}
+
+
+/* Input text field */
+.phone-input-field {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    flex: 1;
+
+    font-size: 14px;
+}
+
+/* Remove browser focus outline */
+.phone-input-field:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Fix PrimeReact input internal border */
+.phone-input-field.p-inputtext {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.phone-input-field.p-inputtext:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 @media (min-width: 1040px) {

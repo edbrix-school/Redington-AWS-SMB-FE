@@ -642,7 +642,19 @@ body {
 
 /* Landing Page / Gradients */
 .knowledge-base-banner-bg {
-  background-image: url("/images/Knowledge-Hub/Knowledge-Hub.png");
+  background-image: url("/images/knowledge-hub-bg.png");
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+.faq-base-banner-bg {
+  background-image: url("/images/faq-bg.png");
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+.support-base-banner-bg {
+  background-image: url("/images/support-bg.png");
   background-size: cover;
   background-position: 100% 50%;
 }
@@ -909,6 +921,15 @@ width: -moz-fit-content;
   font-size: 0.729vw;
   border-radius: 0.417vw;
   border-color: #BBC1C7;
+}
+
+.custominputDisabled.p-inputtext {
+  /* Default for very large screens */
+  padding: 0.417vw 0.625vw;
+  font-size: 0.729vw;
+  border-radius: 0.417vw;
+  border-color: #BBC1C7;
+  background-color: #E5E7EB;
 }
 .custom-dropdown .p-inputtext,
 .custom-dropdown .p-dropdown

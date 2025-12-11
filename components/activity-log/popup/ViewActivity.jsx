@@ -32,68 +32,56 @@ export default function ViewActivity({ visible, onHide }) {
                         </div>
                     </div>
 
-                    <div className="bg-[#F6F7F8] dark:bg-[#1F2A37] flex-1 overflow-y-auto">
-                        <div className="p-6 space-y-4">
-
+                    <div className=" overflow-y-auto h-full border-t border-[#E5E7EB]">
+                        <div className="p24">
                             {/* Row 1: Full Timestamp & Activity */}
-                            <div className="grid grid-cols-2 gap-4 pb-4 ">
-                                {/* Full Timestamp */}
-                                <div>
-                                    <label className="block text-[12px] font-normal text-[#98A2B3] mb-1">
+                            <div className="grid grid-cols-2 gap14 pb-2">
+                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
+                                    <label className="font12 font-normal text-[#7F8488]">
                                         Full Timestamp
                                     </label>
-                                    <div className="text-[14px] font-semibold text-[#344054] border-b border-[#E5E7EB]">
-                                        20/05/2025, 11:00 hrs
-                                    </div>
+                                    <div className="font14 font-semibold text-[#3C4146]">20/05/2025, 11:00 hrs</div>
                                 </div>
-
-                                {/* Activity */}
-                                <div>
-                                    <label className="block text-[12px] font-normal text-[#98A2B3] mb-1">
+                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
+                                    <label className="font12 font-normal text-[#7F8488]">
                                         Activity
                                     </label>
-                                    <div className="text-[14px] font-semibold text-[#344054] border-b border-[#E5E7EB]">
-                                        Order Placed
-                                    </div>
+                                    <div className="font14 font-semibold text-[#3C4146]">Order Placed</div>
                                 </div>
                             </div>
 
                             {/* Row 2: Event Specific Data Fields & Performed by */}
-                            <div className="grid grid-cols-2 gap-4 pb-4">
-                                {/* Event Specific Data Fields */}
-                                <div>
-                                    <label className="block text-[12px] font-normal text-[#98A2B3] mb-1">
+                            <div className="grid grid-cols-2 gap14 pb-2">
+                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
+                                    <label className="font12 font-normal text-[#7F8488]">
                                         Event Specific Data Fields
                                     </label>
-                                    <div className="text-[14px] font-semibold text-[#344054] border-b border-[#E5E7EB]">
+                                    <div className="font14 font-semibold text-[#3C4146]">
                                         Order ID : #12345
                                     </div>
                                 </div>
 
-                                {/* Performed by (User, System, API) */}
-                                <div>
-                                    <label className="block text-[12px] font-normal text-[#98A2B3] mb-1">
+                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
+                                    <label className="font12 font-normal text-[#7F8488]">
                                         Performed by (User, System, API)
                                     </label>
-                                    <div className="text-[14px] font-semibold text-[#344054] border-b border-[#E5E7EB]">
+                                    <div className="font14 font-semibold text-[#3C4146]">
                                         Robert Fox
                                     </div>
                                 </div>
                             </div>
 
                             {/* Row 3: IP Address */}
-                              <div className="grid grid-cols-2 gap-4 pb-4">
-                                {/* IP Address Data Fields */}
-                                <div>
-                                    <label className="block text-[12px] font-normal text-[#98A2B3] mb-1">
+                            <div className="grid grid-cols-2 gap14">
+                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
+                                    <label className="font12 font-normal text-[#7F8488]">
                                         IP Address
                                     </label>
-                                    <div className="text-[14px] font-semibold text-[#344054] border-b border-[#E5E7EB]">
-                                         120.4.199.254
+                                    <div className="font14 font-semibold text-[#3C4146]">
+                                        120.4.199.254
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div className="absolute bottom-0 right-0 left-0 flex-none">

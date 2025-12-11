@@ -8,6 +8,7 @@ import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import Filter from "./fillter-popup/Filter";
 import NewTicket from "./new-ticket/add";
+import ViewTicket from "./ticket-view/view";
 
 
 const AllData = [
@@ -195,10 +196,11 @@ export const ServicesDeskList = () => {
 
     const [openpopup, setOpenPopup] = useState(false);
     const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
+    const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
-        <div className="flex flex-wrap gap-1 bg-[#F5F6F7] border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
+        <div className="flex flex-wrap bg-[#F5F6F7] border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
           {TABS.map((tab) => {
             const isActive = tab === activeTab;
             return (
@@ -249,8 +251,8 @@ export const ServicesDeskList = () => {
                             panelClassName="custDropdown1panel"
                           />
                         </div>
-                        <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
-                          <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
+                        <div className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
+                          <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
                         </div>
                       </div>
                     </div>
@@ -280,7 +282,7 @@ export const ServicesDeskList = () => {
                        
                        <OverlayPanel ref={op} className="w-[160px] custom-op rounded8">
                            <div className="flex flex-col text-[#3C4146] font14 font-[400]">
-                            <Link href="#" className=" leading-[140%] py4 px4">View</Link>
+                            <Link href="#" onClick={() => setOpenPopupViewTicket(true)} className=" leading-[140%] py4 px4">View</Link>
                             <Link href="#" className=" leading-[140%] py4 px4">Cancel</Link>
                            
                            </div>
@@ -339,6 +341,7 @@ export const ServicesDeskList = () => {
 
 
             <NewTicket visible={openpopupnewticket}  onHide={() => setOpenPopupNewTicket(false)}/>
+              <ViewTicket visible={openpopupviewticket} onHide={() => setOpenPopupViewTicket(false)}  />
 
 
        <Filter
