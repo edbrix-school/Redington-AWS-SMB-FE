@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Checkbox } from "primereact/checkbox";
 import { Sidebar } from "primereact/sidebar";
 import { Roboto } from "next/font/google";
+import Image from "next/image";
 // import { FiPlus, FiMinus } from "react-icons/fi";
 
 
@@ -114,9 +115,9 @@ export default function PermissionTable({ visible, onHide }) {
 
 
  <div className="border-top-left-radius: 1rem flex-none">
-          <div className=" bg-[#fff] dark:bg-[#111928] p-[24px] xl:p-[24px] 3xl:p-[1.25vw] rounded-tl-[10px]">
+          <div className=" bg-[#fff] dark:bg-[#111928] p24 rounded-tl rounded8">
             <div className=" text-InterfaceTexttitle1  text-[22px] xl:text-[22px] 3xl:text-[1.146vw] font-semibold">
-              Redington Sales Contacts
+             User Access and Permission
             </div>
           </div>
         </div>
@@ -145,7 +146,21 @@ export default function PermissionTable({ visible, onHide }) {
                   onClick={() => toggleExpand(row.id)}
                   className="cursor-pointer text-gray-600"
                 >
-                  {/* {row.expanded ? <FiMinus /> : <FiPlus />} */}
+                  {row.expanded ?  <Image
+                                            src={"/images/add.svg"}
+                                            width={20}
+                                            height={20}
+                                            alt="edit"
+                                            className="w18 h-auto cursor-pointer"
+                                          /> :  <Image
+                                            src={"/images/add.svg"}
+                                            width={20}
+                                            height={20}
+                                            alt="edit"
+                                            className="w18 h-auto cursor-pointer"
+                                          />
+                                          
+                                          }
                 </span>
                 {row.title}
               </td>
@@ -163,7 +178,7 @@ export default function PermissionTable({ visible, onHide }) {
 
             {/* Expanded Row Content */}
             {row.expanded && (
-              <tr className="bg-[#FAFAFA] border-b">
+              <tr className="bg-[#FAFAFA] border-b border-InterfaceStrokesoft1">
                 <td colSpan={6} className="p-4 text-gray-600 text-sm">
                   Additional details for <strong>{row.title}</strong> can be shown here.
                 </td>
