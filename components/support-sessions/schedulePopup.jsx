@@ -88,7 +88,7 @@ export default function SchedulePopup({ open, onClose }) {
               </div>
               <div className="flex flex-col gap6">
                 <label className="font14 font-medium text-InterfaceTexttitle1">
-                  Date Created
+                  Date
                 </label>
 
                 <div className="grid grid-cols-1">
