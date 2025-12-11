@@ -9,7 +9,7 @@ import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import PhoneInput from "@/components/common/phone-input";
 
-export default function AddUser({ visible, onHide }) {
+export default function EditUser({ visible, onHide }) {
   const [date, setDate] = React.useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const category = [
@@ -37,41 +37,24 @@ export default function AddUser({ visible, onHide }) {
         <div className="flex flex-col h-full">
           <div className="border-top-left-radius: 1rem flex-none">
             <div className=" bg-[#fff] p24 rounded-tl-[10px]">
-              <div className=" text-[#212325]  font24 font-bold">Add New User</div>
+              <div className=" text-[#212325]  font24 font-bold">Edit User</div>
             </div>
           </div>
           <div className="bg-[#F6F7F8] dark:bg-[#1F2A37] flex-1 overflow-y-auto">
             <div className="">
               <div className="p24 spacey20">
-            
-                  <label className="font14 font-medium text-InterfaceTexttitle1 mb-8">
+                <div className="flex flex-col gap6">
+                  <label className="font14 font-medium text-InterfaceTexttitle1">
                     Email <span className="text-red-500">*</span>
                   </label>
-                 
-                      <div className=" flex gap6 ">
-                    
-                        
 
-                  <div className="relative  custom-input w-full">
+                  <div className="relative  custom-input">
                     <InputText
                       type="text"
                       className="w-full"
-                      placeholder="Enter Email"
+                      placeholder="wil.s@outlook.com"
                     />
                   </div>
-                        
-                         <div className=" flex justify-end items-center"> 
-                              <div
-                onClick={() => setShow(true)}
-                className="font16 font-[500] py6 px20 flex items-center justify-center w-[100px] xl:w-[110px] 3xl:w-[6.113vw] border-[#ae9be7] rounded-lg bg-[#EDE8FF]  cursor-pointer  text-[#645592]"
-              >
-               Search
-              </div>
-                         </div>
-                         <div> 
-                            
-                            
-                             </div>
                 </div>
                 <div className="flex flex-col gap6">
                   <label className="font14 font-medium text-InterfaceTexttitle1">
@@ -82,7 +65,7 @@ export default function AddUser({ visible, onHide }) {
                     <InputText
                       type="text"
                       className="w-full"
-                      placeholder="Enter First Name"
+                      placeholder="Will"
                     />
                   </div>
                 </div>
@@ -95,7 +78,7 @@ export default function AddUser({ visible, onHide }) {
                     <InputText
                       type="text"
                       className="w-full"
-                      placeholder="Enter First Name"
+                      placeholder="Smith"
                     />
                   </div>
                 </div>
@@ -109,7 +92,7 @@ export default function AddUser({ visible, onHide }) {
                       onChange={(e) => setSelectedCategory(e.value)}
                       options={category}
                       optionLabel="name"
-                      placeholder="Select Designation"
+                      placeholder="Admin"
                       filterDelay={400}
                       filter
                       className="w-full customicon"
@@ -121,8 +104,7 @@ export default function AddUser({ visible, onHide }) {
                     Mobile Number <span className="text-red-500">*</span>
                   </label>
 
-                  <PhoneInput 
-                  placeholder='Enter Phone Number'/>
+                  <PhoneInput />
                 </div>
                 <div className="flex flex-col gap6">
                   <label className="font14 font-medium text-InterfaceTexttitle1">
@@ -178,7 +160,7 @@ export default function AddUser({ visible, onHide }) {
                       onChange={(e) => setSelectedCategory(e.value)}
                       options={category}
                       optionLabel="name"
-                      placeholder="Select Role"
+                      placeholder="Admin"
                       filterDelay={400}
                       filter
                       className="w-full customicon"

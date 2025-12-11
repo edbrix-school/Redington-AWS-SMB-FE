@@ -922,6 +922,15 @@ width: -moz-fit-content;
   border-radius: 0.417vw;
   border-color: #BBC1C7;
 }
+
+.custominputDisabled.p-inputtext {
+  /* Default for very large screens */
+  padding: 0.417vw 0.625vw;
+  font-size: 0.729vw;
+  border-radius: 0.417vw;
+  border-color: #BBC1C7;
+  background-color: #E5E7EB;
+}
 .custom-dropdown .p-inputtext,
 .custom-dropdown .p-dropdown
 {

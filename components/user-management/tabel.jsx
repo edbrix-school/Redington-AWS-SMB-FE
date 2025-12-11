@@ -10,6 +10,7 @@ import BlockUser from "./components/block-user";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import PermissionTable from "./components/userpermission";
+import EditUser from "./components/edit-user";
 import AddUser from "./components/add-user";
 
 export default function Tabel() {
@@ -24,6 +25,7 @@ export default function Tabel() {
   const [openpopup, setOpenpopup] = useState(false);
   const [openPermissionPopup, setOpenPermissionPopup] = useState(false);
   const [addUserpopup, setAddUser] = useState(false);
+  const [editUserpopup, setEditUser] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
     { name: "New York", code: "NY" },
@@ -129,10 +131,13 @@ export default function Tabel() {
         </div>
         <OverlayPanel ref={op} className="w220 custom-overlaypanel  py8">
           <div className="flex flex-col text-[#3C4146] font14 font-[400] ">
-            <div  onClick={() => {
+            <div
+              onClick={() => {
                 op.current.hide();
                 setTimeout(() => setAddUser(true), 0);
-              }}  className=" cursor-pointer flex items-center leading-[140%]   py6 px4 border-b border-InterfaceStrokesoft1">
+              }}
+              className=" cursor-pointer flex items-center leading-[140%]   py6 px4 border-b border-InterfaceStrokesoft1"
+            >
               <i className="smb-edit px12 font16"> </i>
               Edit User
             </div>
@@ -146,10 +151,13 @@ export default function Tabel() {
               <i className="smb-slash px12 font16"> </i>
               Block
             </div>
-            <div  onClick={() => {
+            <div
+              onClick={() => {
                 op.current.hide();
                 setTimeout(() => setOpenPermissionPopup(true), 0);
-              }} className=" cursor-pointer flex items-center leading-[140%]  py6 px4 ">
+              }}
+              className=" cursor-pointer flex items-center leading-[140%]  py6 px4 "
+            >
               <i className="smb-oct-user px12 font18"> </i>
               User Access and Permission
             </div>
@@ -201,7 +209,10 @@ export default function Tabel() {
           </div>
           <div className="flex justify-between py10">
             <div className="flex gap14 ">
-              <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+              <button  onClick={() => {
+               
+                setTimeout(() => setEditUser(true), 0);
+              }} className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                 <Image
                   src="/images/user-add.svg"
                   width={16}
@@ -234,7 +245,7 @@ export default function Tabel() {
                   panelClassName="custDropdown1panel"
                 />
               </div>
-              <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8">
+              <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8 hover:bg-[#ebeff3]">
                 <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
               </div>
             </div>
@@ -332,8 +343,12 @@ export default function Tabel() {
         </div>
       </div>
       <BlockUser visible={openpopup} onHide={() => setOpenpopup(false)} />
-        <PermissionTable visible={openPermissionPopup} onHide={() => setOpenPermissionPopup(false)} />
-          <AddUser visible={addUserpopup} onHide={() => setAddUser(false)}/>
+      <PermissionTable
+        visible={openPermissionPopup}
+        onHide={() => setOpenPermissionPopup(false)}
+      />
+      <EditUser visible={addUserpopup} onHide={() => setAddUser(false)} />
+        <AddUser visible={editUserpopup} onHide={() => setEditUser(false)} />
     </>
   );
 }
