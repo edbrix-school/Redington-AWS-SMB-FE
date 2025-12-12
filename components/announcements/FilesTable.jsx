@@ -139,7 +139,7 @@ export const FilesTable = () => {
                         width={20}
                         height={20}
                         alt="options"
-                        className="w18 h-auto cursor-pointer hover:opacity-100"
+                        className="w18 h-auto cursor-pointer"
                     />
                 </button>
             </div>
@@ -271,8 +271,7 @@ export const FilesTable = () => {
                     alignFrozen="right"
                     align="center"
                     frozen
-                    body={actionBodyTemplate}
-                    filter
+                    body={actionBodyTemplate}                   
                     filterElement={() => <div className="w-full"></div>}
                 />
             </DataTable>
