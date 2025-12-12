@@ -20,7 +20,7 @@ export const Hero = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
+        <p className="text-[#EEEEF0]  font-normal my24 leading-[120%] max-w-2xl">
           Centralize your organization’s information — manage addresses, contact
           details, and business settings from one place.
         </p>

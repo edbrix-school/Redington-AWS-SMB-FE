@@ -21,7 +21,7 @@ export default function Searchbox() {
         onClick={showSidebar}
       >
         {/* Search Input Container - Updated Background Color */}
-        <div className="relative h-[50px] lg:h-[50px] xl:h-[55px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
+        <div className="relative h-[50px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
           {/* <input
                             type="text"
                             placeholder="Search"
