@@ -49,7 +49,7 @@ const GroupSolution = () => {
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
                 <div className="font16 text-interfacetextdefault1 font-medium">Group of Products by Sector</div>
                 <div className="flex gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
-                    <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt-[22px] xl:mt-[24px] 3xl:mt-[1.25vw]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt24">
                         {cardData.map((item, i) => (
                             <div key={i} className="sector-bg p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
@@ -98,7 +98,7 @@ const GroupSolution = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="see-all-bg flex items-center justify-center p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
+                    <div className="see-all-bg flex items-center justify-center p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 mt16">
                         <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
                             <i className="smb-arrowup text-center"></i>
                             <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>

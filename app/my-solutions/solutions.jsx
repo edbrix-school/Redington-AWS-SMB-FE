@@ -53,8 +53,7 @@ const Solutions = () => {
 
     return (
         <>
-            <div className="grid grid-cols-12 bg-InterfaceSurfacecomponent p24 rounded8 mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw]">
-
+            <div className="grid grid-cols-12 bg-InterfaceSurfacecomponent p24 rounded8 mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[40px] xl:mt-[44px] 2xl:mt-[48px] 3xl:mt-[2.5vw]">
                 <div className="col-span-12">
                     <div className="">
                         <div className="mb20 ">
@@ -84,7 +83,7 @@ const Solutions = () => {
                                 })}
                             </div>
                         </div>
-                        <div className="grid grid-cols-4 gap24 mt24 h-[480px] xl:h-[520px] 2xl:h-[550px] 3xl:h-[29.427vw] overflow-y-auto p20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap24 mt24 p20">
                             {cardData.map((item, i) => (
                                 <div key={i} className="col-span-1 bg-BrandNeutral501 shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12">
                                     <div className="flex justify-between items-center">
@@ -95,14 +94,16 @@ const Solutions = () => {
                                         </div>
                                         <i className="smb-square-more font24"></i>
                                     </div>
-                                    <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8`}>{item.title}</div>
+                                    <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8 leading-[120%]`}>{item.title}</div>
                                     <div className="flex gap-2 items-center">
-                                        <i className="smb-watch text-[#D42600] font16"></i>
+                                        <i className="smb-watch text-[#7F8488] font16"></i>
                                         <div className="font14 text-interfacetextdefault1">{item.left}</div>
                                     </div>
                                     <div className="mt12">
-                                         <div className="text-InterfaceTextsubtitle font12">Redington’s AI-powered solution on AWS that automates and personalizes teaching, assessment, and feedback-enabling scalable, efficient and student-centric education for schools and universities
+                                        <div className="text-InterfaceTextsubtitle font12 leading-[116%] min-h-[80px] xl:min-h-[90px] 2xl:min-h-[99px] 3xl:min-[5.156vw]">Redington’s AI-powered solution on AWS that automates and personalizes teaching, assessment, and feedback-enabling scalable, efficient and student-centric education for schools and universities</div>
                                     </div>
+                                    <div className="flex justify-end mt4">
+                                        <i className="smb-arrow-right font14 text-white bg-BrandNeutralpure rounded6 px8 py4"></i>
                                     </div>
                                 </div>
                             ))}
