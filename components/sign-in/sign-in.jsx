@@ -29,7 +29,7 @@ export default function SigninTemplate() {
 
   const handleSignIn = () => {
     // ⚠️ This was failing earlier because router was NOT defined
-    router.push("/knowledge-hub"); // ✅ Now works
+    router.push("/my-solutions"); // ✅ Now works
   };
 
   return (
