@@ -30,8 +30,8 @@ export const NavBar = () => {
         const normalizedHref = item.href.toLowerCase();
         const isActive = normalizedPath === normalizedHref || normalizedPath.startsWith(`${normalizedHref}/`);
 
-        const desktopClasses = `px-3 py-[3px] md:py-[5px] xl:py-[6px] 2xl:py-[0.313vw] 3xl:py-[0.313vw] rounded-[6px] 
-        text-[14px] md:text-[12px] xl:text-[13px] 2xl:text-[0.729vw] 3xl:text-[0.729vw]
+        const desktopClasses = `px-[3px] md:px-[5px] xl:px-[6px] 2xl:px-[0.513vw] 3xl:px-[0.513vw] py-[3px] md:py-[5px] xl:py-[4px] 2xl:py-[0.313vw] 3xl:py-[0.313vw] rounded-[6px] 
+        text-[14px] md:text-[12px] xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw]
         font-medium whitespace-nowrap transition-all ${isActive
             ? 'bg-[#4A4167] text-white shadow-md'
             : 'text-[#C9D0DB] hover:text-white'
@@ -58,7 +58,7 @@ export const NavBar = () => {
         // 2. Added relative/w-full to flow naturally.
         <div className="bg-[#263040] text-gray-300 w-full shadow-md border-t border-gray-700/50 relative">
 
-            <div className="px-[20px] xl:px-[20px] 3xl:px-[1.875vw] h-[55px] flex items-center justify-between">
+            <div className="px-[20px] xl:px-[20px] 3xl:px-[1.875vw]  h-[55px] md:h-[55px] xl:h-[50px] 2xl:h-[2.865vw] 3xl:h-[2.865vw] flex items-center justify-between">
 
                 {/* Mobile Menu Button */}
                 <div className="lg:hidden">
@@ -78,7 +78,11 @@ export const NavBar = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white px-4 py-2 rounded-[50px] text-[13px] font-semibold whitespace-nowrap shadow-md transition-colors flex-shrink-0 cursor-pointer">
+                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white 
+                px-[15px] md:px-[15px] xl:px-[15px] 2xl:px-[0.938vw] 3xl:px-[0.938vw] 
+                py-[3px] md:py-[5px] xl:py-[5px] 2xl:py-[0.365vw] 3xl:py-[0.365vw]
+                
+                rounded-[50px]  text-[14px] md:text-[12px] xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-normal whitespace-nowrap shadow-md transition-colors flex-shrink-0 cursor-pointer">
                     Schedule a Session
                 </button>
             </div>
