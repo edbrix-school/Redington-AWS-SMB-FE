@@ -8,13 +8,12 @@ import { UserManagementHero } from '@/components/user-management/components/user
 
 export default function page() {
   return (
-     <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
-       
-          <NavBar/>
-        <UserManagementHero/>
-          <main className="flex-grow -mt-12 relative  px-4 md:px-8 pb-10"> {/* Negative margin to overlap Hero */}
-         <Tabel/>
-          </main>
-        </div>
+    <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
+      <NavBar />
+      <UserManagementHero />
+      <main className="flex-grow -mt-20 relative px-4 md:px-8 pb-10"> {/* Negative margin to overlap Hero */}
+        <Tabel />
+      </main>
+    </div>
   )
 }

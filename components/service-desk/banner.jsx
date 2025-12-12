@@ -18,7 +18,7 @@ export const Hero = () => {
                 <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Service Desk</h1>
 
                 {/* Description */}
-                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
+                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%] max-w-2xl">
                     Our Service Desk is your dedicated support channel - here to assist, resolve, and ensure your experience remains effortless <br/> and exceptional.
                 </p>
 
