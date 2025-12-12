@@ -60,7 +60,7 @@ export default function AiChatboxPopup({ open, onClose }) {
               </p>
             </div>
             {/* Buttons */}
-            <div className="flex-1 flex gap-4 justify-center mt24 px15">
+            <div className="flex-1 flex gap-[24px] justify-center mt24 px15">
               <Button
                 type="button"
                 className="find-aws cursor-pointer px-2 py-3 font16 font-semibold"

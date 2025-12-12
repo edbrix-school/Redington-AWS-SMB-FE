@@ -877,10 +877,8 @@ body {
 }
 
 .find-aws.p-button{
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 87px;
+  padding: 16px;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
   background-size: cover;  
@@ -892,10 +890,8 @@ body {
 
 }
 .find-help.p-button{
-width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 87px;
+  padding: 16px;
   background-image: url(/images/ai-chatbox-pink.svg);
   background-repeat: no-repeat;
   background-size: cover;  padding: 10px 20px;
@@ -1074,6 +1070,35 @@ width: -moz-fit-content;
   border-color: #BBC1C7;
   border-radius: 7px;
 }
+.find-aws.p-button{
+   height: 90px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-blue.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
+}
+.find-help.p-button{
+  height: 90px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-pink.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
+}
 }
 
 /* LARGE DESKTOP (2XL) — 1281px to 1536px */
@@ -1096,6 +1121,35 @@ width: -moz-fit-content;
   font-size: 13px;
   border-color: #BBC1C7;
   border-radius: 7px;
+}
+.find-aws.p-button{
+   height: 90px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-blue.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
+}
+.find-help.p-button{
+  height: 90px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-pink.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
 }
 }
 
@@ -1120,6 +1174,35 @@ width: -moz-fit-content;
   font-size: 14px;
   border-color: #BBC1C7;
   border-radius: 0.417vw;
+}
+.find-aws.p-button{
+   height: 87px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-blue.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
+}
+.find-help.p-button{
+  height: 87px;
+  display: flex;
+  justify-content:center;
+  padding: 16px;
+  background-image: url(/images/ai-chatbox-pink.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
 }
 }
 
