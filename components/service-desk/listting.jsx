@@ -10,7 +10,6 @@ import Filter from "./fillter-popup/Filter";
 import NewTicket from "./new-ticket/add";
 import ViewTicket from "./ticket-view/view";
 
-
 const AllData = [
   {
     name: "Ticket Name  #32135",
@@ -167,54 +166,50 @@ const Closed = [
   },
 ];
 
-
-const TABS = ["All", "Open", "In-review","Closed"];
+const TABS = ["All", "Open", "In-review", "Closed"];
 export const ServicesDeskList = () => {
-
-
   const [activeTab, setActiveTab] = useState("All");
   const [activeIndex, setActiveIndex] = useState([-1]);
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const sectorDataMap = {
-    "All": AllData,
-    "Open": Open,
+    All: AllData,
+    Open: Open,
     "In-review": InReview,
-    "Closed": Closed,
+    Closed: Closed,
   };
-   const selectedData = sectorDataMap[activeTab];
+  const selectedData = sectorDataMap[activeTab];
   const showSidebar = () => {
     setVisible(true);
   };
-   const getTitle = () => {
-        switch (activetab) {
-            case 0:
-                return 'Human Resource';
-            case 1:
-                return 'Current Staff View';
-            case 2:
-                return 'Employee Directory';
-            case 3:
-                return 'Employee Comparison';
-            case 4:
-                 if (isAttrition == true){
-                    return 'Attrition'
-                }else{
-                    return 'Employee Movement'
-                }; // Add for Attrition if needed
-            default:
-                return 'Human Resource';
-        }
-    };
-const [activetab, setactivetab] = useState(0);
-   const [selectedSort, setSelectedSort] = useState(null);
-    const Sort = [
-      { name: "Month", code: "NY" },
-      { name: "Year", code: "RM" },
-    
-    ];
+  const getTitle = () => {
+    switch (activetab) {
+      case 0:
+        return "Human Resource";
+      case 1:
+        return "Current Staff View";
+      case 2:
+        return "Employee Directory";
+      case 3:
+        return "Employee Comparison";
+      case 4:
+        if (isAttrition == true) {
+          return "Attrition";
+        } else {
+          return "Employee Movement";
+        } // Add for Attrition if needed
+      default:
+        return "Human Resource";
+    }
+  };
+  const [activetab, setactivetab] = useState(0);
+  const [selectedSort, setSelectedSort] = useState(null);
+  const Sort = [
+    { name: "Month", code: "NY" },
+    { name: "Year", code: "RM" },
+  ];
 
-    const TABS = ["All", "Open", "In-review", "Closed"];
+  const TABS = ["All", "Open", "In-review", "Closed"];
 
   const DATA_MAP = {
     All: AllData,
@@ -224,161 +219,202 @@ const [activetab, setactivetab] = useState(0);
   };
 
   const filteredData = DATA_MAP[activeTab] || [];
-    const op = useRef(null);
+  const op = useRef(null);
 
-    const [openpopup, setOpenPopup] = useState(false);
-    const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
-    const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
+  const [openpopup, setOpenPopup] = useState(false);
+  const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
+  const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
   return (
-    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
+    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8">
       <div>
-        
-<div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
-
-      {TABS.map((tab, index) => (
-        <button
-          key={tab}
-          onClick={() => setActiveTab(tab)}
-          className={`
+        <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+          {TABS.map((tab, index) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`
             ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]"}
             text-center font-semibold text-[14px] py6 px12
             ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]" : ""}
           `}
-        >
-          {tab}
-        </button>
-      ))}
-
-    </div>
-
-
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
         {/* Accordion list */}
         <div className="mt-1 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
-
-            <div className="flex justify-between my24">
-                      <div className="flex gap14 ">
-                        <button className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]" onClick={() => setOpenPopupNewTicket(true)}>
-                          <Image
-                            src="/images/add-icon.svg"
-                            width={16}
-                            height={16}
-                            alt="adduser"
-                            className="inline-block w14 h-auto "
-                          />
-                         New Ticket
-                        </button>
-                      
-                      </div>
-                      <div className="flex gap20">
-                        <div>
-                          <Dropdown
-                            value={selectedSort}
-                            onChange={(e) => setSelectedSort(e.value)}
-                            options={Sort}
-                            optionLabel="name"
-                            placeholder="Select Year/Month"
-                            className="w300 custDropdown1 "
-                            panelClassName="custDropdown1panel"
-                          />
-                        </div>
-                        <div className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"  onClick={() => setOpenPopup(true)} >
-                          <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
-                        </div>
-                      </div>
-                    </div>
-          <div className="h-[800px]  3xl:h-[36.458vw] overflow-auto"
+          <div className="flex justify-between my24">
+            <div className="flex gap14 ">
+              <button
+                className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]"
+                onClick={() => setOpenPopupNewTicket(true)}
+              >
+                <Image
+                  src="/images/add-icon.svg"
+                  width={16}
+                  height={16}
+                  alt="adduser"
+                  className="inline-block w14 h-auto "
+                />
+                New Ticket
+              </button>
+            </div>
+            <div className="flex gap20">
+              <div>
+                <Dropdown
+                  value={selectedSort}
+                  onChange={(e) => setSelectedSort(e.value)}
+                  options={Sort}
+                  optionLabel="name"
+                  placeholder="Select Year/Month"
+                  className="w300 custDropdown1 "
+                  panelClassName="custDropdown1panel"
+                />
+              </div>
+              <div
+                className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"
+                onClick={() => setOpenPopup(true)}
+              >
+                <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
+              </div>
+            </div>
+          </div>
+          <div
+            className="h-[800px]  3xl:h-[36.458vw] overflow-auto"
             activeIndex={activeIndex}
             onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
-           
           >
             {selectedData.map((sector, index) => {
               return (
-                <div
-                  key={sector.name}
-                  
-                >
-                    <div className="spacey24 shaow2 p16 border-b border-[#E5E7EB] mb-[12px]">
-                  <div className="flex justify-between gap-4">
-                   <div className="flex gap8">
-                        <div>  <i className="text-[#3C4146] smb-ticket1 text16 "></i></div>
-                        <h3 className="text-[#3C4146] font18 font-semibold leading-[120%]"> {sector.name}</h3>
-                    </div>
-                   <div className="flex gap24 items-center">
-                          <div className="bg-[#EEFFF5] font-[400] cursor-pointer py6 px14 font14 text-[#306538] rounded4 uppercase">
-                          
-                        In review
+                <div key={sector.name}>
+                  <div className="spacey24 shaow2 p16 border-b border-[#E5E7EB] mb-[12px]">
+                    <div className="flex justify-between gap-4">
+                      <div className="flex gap8">
+                        <div>
+                          {" "}
+                          <i className="text-[#3C4146] smb-ticket1 text16 "></i>
                         </div>
-                       <div>  <i className="text-[#3C4146] smb-square-more font20 cursor-pointer" onClick={(e) => op.current.toggle(e)}></i>
-                       
-                       <OverlayPanel ref={op} className="w-[160px] custom-op rounded8">
-                           <div className="flex flex-col text-[#3C4146] font14 font-[400]">
-                            <Link href="#" onClick={() => setOpenPopupViewTicket(true)} className=" leading-[140%] py4 px4">View</Link>
-                            <Link href="#" className=" leading-[140%] py4 px4">Cancel</Link>
-                           
-                           </div>
-                        </OverlayPanel>
-                       </div>
+                        <h3 className="text-[#3C4146] font18 font-semibold leading-[120%]">
+                          {" "}
+                          {sector.name}
+                        </h3>
+                      </div>
+                      <div className="flex gap24 items-center">
+                        <div className="bg-[#EEFFF5] font-[400] cursor-pointer py6 px14 font14 text-[#306538] rounded4 uppercase">
+                          In review
+                        </div>
+                        <div>
+                          {" "}
+                          <i
+                            className="text-[#3C4146] smb-square-more font20 cursor-pointer"
+                            onClick={(e) => op.current.toggle(e)}
+                          ></i>
+                          <OverlayPanel
+                            ref={op}
+                            className="w-[160px] custom-op rounded8"
+                          >
+                            <div className="flex flex-col text-[#3C4146] font14 font-[400]">
+                              <Link
+                                href="#"
+                                onClick={() => setOpenPopupViewTicket(true)}
+                                className=" leading-[140%] py4 px4"
+                              >
+                                View
+                              </Link>
+                              <Link
+                                href="#"
+                                className=" leading-[140%] py4 px4"
+                              >
+                                Cancel
+                              </Link>
+                            </div>
+                          </OverlayPanel>
+                        </div>
+                      </div>
                     </div>
+                    <div>
+                      <h1 className="text-[#3C4146] font24 font-bold leading-[120%]">
+                        {sector.ticketname}
+                      </h1>
+                      <p className="mt12 text-[#7F8488] font16 font-[400] leading-tight">
+                        Figma ipsum component variant main layer. Draft polygon
+                        plugin mask boolean community comment. Mask effect
+                        horizontal image overflow plugin. Boolean union
+                        duplicate vertical polygon asset object main outline.
+                        Polygon outline content arrow plugin distribute polygon
+                        overflow asset auto. Export bold bold invite
+                        strikethrough. Follower rectangle clip figjam layer
+                        pixel.
+                      </p>
+                    </div>
+                    <div className="flex justify-between">
+                      <div className="mt24 flex gap8">
+                        <Image
+                          src="/images/profile-img.png"
+                          width="24"
+                          height="24"
+                          alt="profile"
+                          rounded-full
+                        />
+                        {/* profile-img */}
 
-                    
-                  </div>
-                  <div>
-                     <h1 className="text-[#3C4146] font24 font-bold leading-[120%]">{sector.ticketname}</h1>
-                    <p className="mt12 text-[#7F8488] font16 font-[400] leading-tight">Figma ipsum component variant main layer. Draft polygon plugin mask boolean community comment. Mask effect horizontal image overflow plugin. Boolean union duplicate vertical polygon asset object main outline. Polygon outline content arrow plugin distribute polygon overflow asset auto. Export bold bold invite strikethrough. Follower rectangle clip figjam layer pixel.</p>
-                  </div>
-                <div className="flex justify-between">
-                  <div className="mt24 flex gap8">
-                        <Image src="/images/profile-img.png" width="24" height="24" alt="profile" rounded-full />
-                    {/* profile-img */}
-
-                 <h1 className="text-[#3C4146] font16 font-[500] leading-[120%]">Jhon Doe</h1>    
-                  </div>
-<div>
-
-
-
-                  <div className="flex gap20">
-                    <div className="flex gap14 ">
-                        <button className="bg-BrandNeutralpure cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+                        <h1 className="text-[#3C4146] font16 font-[500] leading-[120%]">
+                          Jhon Doe
+                        </h1>
+                      </div>
+                      <div>
+                        <div className="flex gap20">
+                          <div className="flex gap14 ">
+                            <button className="bg-BrandNeutralpure cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                               View Ticket
-                          <div> <Image src="/images/eye-icon.svg" width="14" height="14" alt="icon"/></div>
-                      
-                        </button>
-                      
+                              <div>
+                                {" "}
+                                <Image
+                                  src="/images/eye-icon.svg"
+                                  width="14"
+                                  height="14"
+                                  alt="icon"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div className="flex gap14 ">
+                            <button className="bg-[#FFB5A5] cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
+                              Cancel
+                              <div>
+                                {" "}
+                                <Image
+                                  src="/images/close-circle.svg"
+                                  width="14"
+                                  height="14"
+                                  alt="icon"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex gap14 ">
-                        <button className="bg-[#FFB5A5] cursor-pointer py4 px-[8px] font14 text-InterfaceSurfacecomponent rounded8 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
-                            Cancel
-                            <div> <Image src="/images/close-circle.svg" width="14" height="14" alt="icon"/></div>
-                          
-                      
-                        </button>
-                      
-                      </div>
-                  </div>
-</div>
-
-                </div>
+                    </div>
                   </div>
                 </div>
               );
             })}
           </div>
-
-         
         </div>
       </div>
 
+      <NewTicket
+        visible={openpopupnewticket}
+        onHide={() => setOpenPopupNewTicket(false)}
+      />
+      <ViewTicket
+        visible={openpopupviewticket}
+        onHide={() => setOpenPopupViewTicket(false)}
+      />
 
-            <NewTicket visible={openpopupnewticket}  onHide={() => setOpenPopupNewTicket(false)}/>
-              <ViewTicket visible={openpopupviewticket} onHide={() => setOpenPopupViewTicket(false)}  />
-
-
-       <Filter
-                      visible={openpopup}
-                      onHide={() => setOpenPopup(false)}
-                  />
+      <Filter visible={openpopup} onHide={() => setOpenPopup(false)} />
     </div>
   );
 };

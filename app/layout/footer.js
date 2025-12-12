@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <>
       <div className={`${roboto.variable} bg-BrandNeutral50 rounded-[14px] xl:rounded-[14px] 3xl:rounded-[0.833vw] mx40 `}>
-        <div className="px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.042vw]  pb-[30px] xl:pb-[30px] 2xl:pb-[32px] 3xl:pb-[1.771vw] pt-[36px] xl:pt-[36px] 2xl:pt-[36px] 3xl:pt-[1.875vw]">
+        <div className="px-[20px] xl:px-[20px] 2xl:px-[20px] 3xl:px-[1.042vw]  pb-[22px] xl:pb-[22px] 2xl:pb-[26px] 3xl:pb-[1.354vw] pt-[36px] xl:pt-[36px] 2xl:pt-[36px] 3xl:pt-[1.875vw]">
           <div className="grid grid-cols-4 lg:gap-[14px] xl:gap-[40px] 2xl:gap-[60px] 3xl:gap-[5.208vw] px-[60px] lg:px-[50px] xl:px-[140px] 2xl:px-[250px] 3xl:px-[15.375vw] ">
             <div className="spacey20">
               <div 
@@ -120,7 +120,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className=" border-t border-InterfaceStrokesoft mt-[30px] xl:mt-[30px] 2xl:mt-[35px] 3xl:mt-[1.983vw] pt-[30px] xl:pt-[30px] 2xl:pt-[32px] 3xl:pt-[1.771vw] gap-[12px] xl:gap-[12px] 3xl:gap-[0.729vw]  flex justify-center items-center divide-x divide-interfacetextdefault ">
+          <div className=" border-t border-InterfaceStrokesoft mt-[22px] xl:mt-[22px] 2xl:mt-[26px] 3xl:mt-[1.354vw]  pt-[30px] xl:pt-[30px] 2xl:pt-[32px] 3xl:pt-[1.771vw] gap-[12px] xl:gap-[12px] 3xl:gap-[0.729vw]  flex justify-center items-center divide-x divide-interfacetextdefault ">
             <div className="font16 text-interfacetextdefault pr-[12px] xl:pr-[12px] 3xl:pr-[0.729vw] font-normal leading-none">
               ©2025 Redington Group
             </div>
