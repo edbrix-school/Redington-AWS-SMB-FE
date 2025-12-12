@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useRef } from "react";
-import Image from "next/image";
 import { Dropdown } from "primereact/dropdown";
-import { OverlayPanel } from "primereact/overlaypanel";
-import Link from "next/link";
 import SimplebarChart from "../common/charts/simplebarchart";
+import RegisterPopup from "./components/register-popup";
+import FilterPopup from "./components/filter";
 
 const AllData = [
   {
@@ -72,7 +71,7 @@ const Closed = [
   },
 ];
 
-const TABS = ["All", "Registered", "Upcoming", "Completed"];
+
 export const Events = () => {
   const [activeTab, setActiveTab] = useState("All");
   const [activeIndex, setActiveIndex] = useState([-1]);
@@ -91,7 +90,7 @@ export const Events = () => {
     { name: "Year", code: "RM" },
   ];
 
-  const TABS = ["All", "Open", "In-review", "Closed"];
+  const TABS = ["All", "Registered", "Upcoming", "Completed"];
 
   const DATA_MAP = {
     All: AllData,
@@ -103,8 +102,11 @@ export const Events = () => {
   const filteredData = DATA_MAP[activeTab] || [];
   const op = useRef(null);
 
-  const [openpopup, setOpenPopup] = useState(false);
+  const [openPopup, setOpenPopup] = useState(false);
+  const [openFilterPopup, setOpenFilterPopup] = useState(false);
   return (
+    <>  
+    
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm">
       <div>
         <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
@@ -137,9 +139,9 @@ export const Events = () => {
                   panelClassName="custDropdown1panel"
                 />
               </div>
-              <div
+              <div onClick={()=> setOpenFilterPopup(true)}
                 className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted hover:bg-[#e9e8f0] rounded8"
-                onClick={() => setOpenPopup(true)}
+                
               >
                 <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
               </div>
@@ -149,10 +151,10 @@ export const Events = () => {
             <div
               className=" col-span-1"
               activeIndex={activeIndex}
-              onTabChange={(e) => setActiveIndex(e.index)} 
+              onTabChange={(e) => setActiveIndex(e.index)}
             >
               <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 mb-[12px]">
-                <div className=" shadow-sm p16 border border-[#f3f5f8]  rounded8 h-full flex flex-col  mb-[12px]">
+                <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">
                   <div className="flex justify-between gap-4">
                     <div className="flex gap8">
                       <div>
@@ -180,10 +182,10 @@ export const Events = () => {
                       machine learning in the cloud.
                     </p>
                   </div>
-                  <div className="flex justify-end items-end mt-auto">
+                  <div className="flex justify-end mt-auto">
                     <div>
                       <div className="flex gap20">
-                        <div className="flex gap14 ">
+                        <div onClick={()=> setOpenPopup(true)} className="flex gap14 ">
                           <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                             Register
                           </button>
@@ -230,7 +232,7 @@ export const Events = () => {
                   <div className="flex justify-end mt-auto">
                     <div>
                       <div className="flex gap20">
-                        <div className="flex gap14 ">
+                        <div onClick={()=> setOpenPopup(true)} className="flex gap14 ">
                           <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                             Register
                           </button>
@@ -277,7 +279,7 @@ export const Events = () => {
                   <div className="flex justify-end mt-auto">
                     <div>
                       <div className="flex gap20">
-                        <div className="flex gap14 ">
+                        <div onClick={()=> setOpenPopup(true)} className="flex gap14 ">
                           <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                             Register
                           </button>
@@ -294,29 +296,23 @@ export const Events = () => {
               </div>
             </div>
 
-           <div
-              className=" col-span-1"
-             
-            >
-
-            <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
-              <SimplebarChart />
+            <div className=" col-span-1">
+              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
+                <SimplebarChart />
+              </div>
+              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
+                <SimplebarChart />
+              </div>
+              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8  flex">
+                <SimplebarChart />
+              </div>
             </div>
-             <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
-              <SimplebarChart />
-            </div>
-             <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8  flex">
-              <SimplebarChart />
-            </div>
-            </div>
-         
           </div>
-        
-           
-
-         
         </div>
       </div>
     </div>
+    <RegisterPopup visible={openPopup} onHide={()=>setOpenPopup (false)}/>
+        <FilterPopup visible={openFilterPopup} onHide={()=>setOpenFilterPopup (false)}/>
+     </>
   );
 };
