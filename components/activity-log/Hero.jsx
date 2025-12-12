@@ -18,7 +18,7 @@ export const Hero = () => {
                 <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Activity Log</h1>
 
                 {/* Description */}
-                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
+                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%] max-w-2xl">
                     Track all your organization’s activities in one place. Stay informed about every update, announcement, and action taken across your system.
                 </p>
 
