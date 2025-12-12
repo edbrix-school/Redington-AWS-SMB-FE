@@ -63,11 +63,7 @@
   background: none;
 }
 .customsignin-gradient {
-  background: linear-gradient(
-    154deg,
-    rgba(151, 71, 255, 0.21) 2.9%,
-    rgba(255, 194, 0, 0) 79.12%
-  );
+ background: linear-gradient(178deg, #9747ff36 8.9%, #ffc20000 79.12%);
 }
 
 .custominput.p-inputtext {
