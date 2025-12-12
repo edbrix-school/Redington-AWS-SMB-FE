@@ -186,12 +186,44 @@ export const ServicesDeskList = () => {
   const showSidebar = () => {
     setVisible(true);
   };
+   const getTitle = () => {
+        switch (activetab) {
+            case 0:
+                return 'Human Resource';
+            case 1:
+                return 'Current Staff View';
+            case 2:
+                return 'Employee Directory';
+            case 3:
+                return 'Employee Comparison';
+            case 4:
+                 if (isAttrition == true){
+                    return 'Attrition'
+                }else{
+                    return 'Employee Movement'
+                }; // Add for Attrition if needed
+            default:
+                return 'Human Resource';
+        }
+    };
+const [activetab, setactivetab] = useState(0);
    const [selectedSort, setSelectedSort] = useState(null);
     const Sort = [
       { name: "Month", code: "NY" },
       { name: "Year", code: "RM" },
     
     ];
+
+    const TABS = ["All", "Open", "In-review", "Closed"];
+
+  const DATA_MAP = {
+    All: AllData,
+    Open: Open,
+    "In-review": InReview,
+    Closed: Closed,
+  };
+
+  const filteredData = DATA_MAP[activeTab] || [];
     const op = useRef(null);
 
     const [openpopup, setOpenPopup] = useState(false);
@@ -200,27 +232,26 @@ export const ServicesDeskList = () => {
   return (
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8"> 
       <div>
-        <div className="flex flex-wrap bg-[#F5F6F7] border-y border-[#E5E7EB] w-[270px] xl:w-[270px] 2xl:w-[270px] 3xl:w-[14.063vw] rounded-[8px]  ">
-          {TABS.map((tab) => {
-            const isActive = tab === activeTab;
-            return (
-              <Button
-                key={tab}
-                type="button"
-                onClick={() => {
-                  setActiveTab(tab);
-                  setActiveIndex([-1]); // Reset accordion when changing tabs
-                }}
-                className={[
-                  "customCatalogButton cursor-pointer px10 !py-1 !text-base !font-semibold",
-                  isActive ? "active" : "",
-                ].join(" ")}
-              >
-                {tab}
-              </Button>
-            );
-          })}
-        </div>
+        
+<div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+
+      {TABS.map((tab, index) => (
+        <button
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]"}
+            text-center font-semibold text-[14px] py6 px12
+            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]" : ""}
+          `}
+        >
+          {tab}
+        </button>
+      ))}
+
+    </div>
+
+
 
         {/* Accordion list */}
         <div className="mt-1 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
