@@ -219,9 +219,7 @@ export default function AllSectorsView({ onSectorClick }) {
                 src="/images/twinthread-bg-img.svg"
                 alt="TwinThread"
                 fill
-                // width={500}
-                // height={500}
-                className="opacity-90"
+                className="opacity-90 object-cover"
               />
               <div className="relative z-10 max-w-sm">
                 <Image
