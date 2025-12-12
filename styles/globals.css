@@ -381,6 +381,9 @@ body {
 .py10 {
   @apply py-[8px] lg:py-[8px] xl:py-[8px] 2xl:py-[10px] 3xl:py-[0.521vw];
 }
+.py16 {
+  @apply py-[12px] lg:py-[14px] xl:py-[16px] 2xl:py-[16px] 3xl:py-[0.833vw];
+}
 .py20 {
   @apply py-[18px] lg:py-[18px] xl:py-[18px] 2xl:py-[20px] 3xl:py-[1.042vw];
 }
@@ -505,6 +508,9 @@ body {
 }
 .gap40 {
   @apply gap-[30px] xl:gap-[40px] 2xl:gap-[40px] 3xl:gap-[2.083vw];
+}
+.gap4 {
+  @apply gap-[4px] xl:gap-[4px] 2xl:gap-[4px] 3xl:gap-[0.208vw];
 }
 
 /* Global Margin */
