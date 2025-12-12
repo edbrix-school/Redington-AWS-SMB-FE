@@ -225,7 +225,7 @@ export const ServicesDeskList = () => {
   const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
   const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
   return (
-    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8">
+    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm">
       <div>
         <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
           {TABS.map((tab, index) => (
@@ -233,9 +233,9 @@ export const ServicesDeskList = () => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]"}
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
             text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]" : ""}
+            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
           `}
             >
               {tab}

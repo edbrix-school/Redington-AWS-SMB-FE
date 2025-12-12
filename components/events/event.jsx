@@ -115,9 +115,9 @@ export const Events = () => {
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]"}
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
             text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]" : ""}
+            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
           `}
             >
               {tab}
