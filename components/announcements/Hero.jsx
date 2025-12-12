@@ -18,7 +18,7 @@ export const Hero = () => {
                 <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Announcements</h1>
 
                 {/* Description */}
-                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%]">
+                <p className="text-[#EEEEF0]  font-normal my24 leading-[120%] max-w-2xl">
                   Find all official announcements, alerts, and campaigns in one place — your source for what’s happening across the organization.
                 </p>
 

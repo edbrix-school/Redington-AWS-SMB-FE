@@ -209,7 +209,7 @@ export default function AddUser({ visible, onHide }) {
 
               <div
                 onClick={() => setShow(true)}
-                className="font16 font-[500] py10 px20  border-[#645592] rounded-lg bg-[#645592]  cursor-pointer hover:bg-[#455fb4] text-[#fff]"
+                className="font16 font-[500] py10 px20  border-[#645592] rounded-lg bg-[#645592]  cursor-pointer hover:bg-[#5c4c8d] text-[#fff]"
               >
                 Add User
               </div>

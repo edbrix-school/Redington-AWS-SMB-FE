@@ -288,7 +288,7 @@ export default function EditProfile({ visible, onHide }) {
                       )}
                     </div>
                   </div>
-                  <button className="font14 font-medium py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#455fb4] text-white whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto sm:self-end">
+                  <button className="font14 font-medium py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-white whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto sm:self-end">
                     <svg
                       width="18"
                       height="18"
@@ -331,7 +331,7 @@ export default function EditProfile({ visible, onHide }) {
               </Link>
             </div>
 
-            <div className="font16 font-medium py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#455fb4] text-white">
+            <div className="font16 font-medium py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-white">
               Save
             </div>
           </div>
