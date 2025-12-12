@@ -37,7 +37,7 @@ export default function SigninTemplate() {
     <div className={inter.className}>
       <div className="customsignin-gradient min-h-screen">
         {/* TOP BAR */}
-        <div className="w-full bg-[rgba(240,242,246,0.9)] z-[999] fixed top-0">
+        <div className="w-full bg-[rgba(240,242,246,0.9)]">
           <div className="relative flex items-center justify-between px-[90px] xl:px-[100px] py16">
             <Link href={"/"}>
               <div className="flex items-center gap-[16px]">
@@ -67,9 +67,9 @@ export default function SigninTemplate() {
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] xl:gap-[120px] items-center min-h-screen px-[5.99vw] overflow-y-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] xl:gap-[120px] items-center px-[5.99vw] overflow-y-auto">
           {/* LEFT SECTION */}
-          <div className="mt-[80px] lg:mt-[80px] xl:mt-[120px] 2xl:mt-[7.813vw] 3xl:mt-[7.813vw] w-full md:w-[400px] lg:w-[480px] xl::w-[500px] 2xl:w-[30.25vw] 3xl:w-[31.25vw]  ">
+          <div className="w-full md:w-[400px] lg:w-[480px] xl::w-[500px] 2xl:w-[30.25vw] 3xl:w-[31.25vw]  ">
             <div className="text-InterfaceTexttitle1 font-semibold font24 leading-[160%]">
               Sign In
             </div>
@@ -197,19 +197,19 @@ export default function SigninTemplate() {
           </div>
 
 
-          <div className="mt-[50px] relative">
+          <div className="relative">
 
             <Image
               src="/images/login-img.svg"
               width={650}
               height={850}
               alt="illustration"
-              className="3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[550px] xl:h-[750px]"
+              className="3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[450px] xl:h-[650px]"
             />
        
-            <div className="absolute right-0 xl:top-[47%] xl:left-[39%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[80px] lg:w-[80px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
+            <div className="absolute right-0 xl:top-[47%] xl:left-[34%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[80px] lg:w-[80px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
               <div className={nunito.className}>
-              <div className="text-[20px] lg:text-[22px] xl:text-[22px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
+              <div className="text-[20px] lg:text-[22px] xl:text-[20px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
                 Welcome! You're one step closer to finding the ideal AWS tools for  your business. Our platform helps you explore, compare, and test  drive AWS products before making a decision — so you  can build with confidence.
               </div>
               </div>
