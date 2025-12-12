@@ -30,12 +30,7 @@ export default function SigninTemplate() {
   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
 
   const handleSignIn = () => {
-<<<<<<< Updated upstream
-    // ⚠️ This was failing earlier because router was NOT defined
-    router.push("/my-solutions"); // ✅ Now works
-=======
     router.push("/knowledge-hub");
->>>>>>> Stashed changes
   };
 
   return (
