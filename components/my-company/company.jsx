@@ -5,6 +5,7 @@ import { Dropdown } from "primereact/dropdown";
 import { MultiSelect } from "primereact/multiselect";
 import { InputText } from "primereact/inputtext";
 import Link from "next/link";
+import AddUser from "../user-management/components/add-user";
 export const MyCompany = () => {
   const [selectedDomains, setSelectedDomains] = useState(null);
   const cities = [
@@ -19,7 +20,11 @@ export const MyCompany = () => {
     { name: "Month", code: "NY" },
     { name: "Year", code: "RM" },
   ];
+  const [addUserpopup, setAddUser] = useState(false);
   return (
+    <>  
+    
+    
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 custom-shadow">
       <div className="flex flex-col  mb30">
         <div className="border-top-left-radius: 1rem flex-none">
@@ -30,7 +35,7 @@ export const MyCompany = () => {
             <div className="flex gap14 ">
               <button
                 className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]"
-                onClick={() => setOpenPopupNewTicket(true)}
+                onClick={() => setAddUser(true)}
               >
                 <Image
                   src="/images/add-icon.svg"
@@ -145,5 +150,7 @@ export const MyCompany = () => {
         </div>
       </div>
     </div>
+   <AddUser visible={addUserpopup} onHide={() => setAddUser(false)} />
+     </>
   );
 };
