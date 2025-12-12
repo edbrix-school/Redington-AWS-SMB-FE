@@ -7,45 +7,45 @@ import AiChatboxPopup from "../catalog/AichatboxPopup";
 
 
 export default function Searchbox() {
-      const [visible, setVisible] = useState(false);
-const showSidebar = () => {
+  const [visible, setVisible] = useState(false);
+  const showSidebar = () => {
     setVisible(true);
   };
-   const hideSidebar = () => {
+  const hideSidebar = () => {
     setVisible(false);
   };
 
   return (
     <>
-         <div className="xl:max-w-lg  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer" onClick={showSidebar}>
-                    {/* Search Input Container - Updated Background Color */}
-                    <div className="relative h-[50px] lg:h-[50px] xl:h-[55px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
-                        {/* <input
+      <div className="xl:max-w-lg  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer" onClick={showSidebar}>
+        {/* Search Input Container - Updated Background Color */}
+        <div className="relative h-[50px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p24 cursor-pointer">
+          {/* <input
                             type="text"
                             placeholder="Search"
                             className="flex-1 bg-transparent border-none outline-none text-white placeholder-white/90 px-6 text-lg font-medium"
                         /> */}
-                        <div className='font18 text-white font-medium'>Search</div>
-                        <div className="h-full flex items-center justify-center cursor-pointer hover:opacity-100 transition-opacity">
-                            <Image src="/images/search-normal.svg"
-                                                       width={32}
-                                                       height={32}
-                                                       alt="search"
-                                                       className=""
-                                                     />
-                          
-                        </div>
-                    </div>
- <Sidebar
-        visible={visible}
-        onHide={() => hideSidebar()}
-        className="p-0 z-[9999] customAichatboxsidebar !w-[60rem] lg:!w-[60rem] md:!w-[50rem] sm:!w-[100%] "
-        position="right"
-      >
-        <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />
-      </Sidebar>
-                  
-                </div>
+          <div className='font18 text-white font-medium'>Search</div>
+          <div className="h-full flex items-center justify-center cursor-pointer hover:opacity-100 transition-opacity">
+            <Image src="/images/search-normal.svg"
+              width={32}
+              height={32}
+              alt="search"
+              className=""
+            />
+
+          </div>
+        </div>
+        <Sidebar
+          visible={visible}
+          onHide={() => hideSidebar()}
+          className="p-0 z-[9999] customAichatboxsidebar !w-[60rem] lg:!w-[60rem] md:!w-[50rem] sm:!w-[100%] "
+          position="right"
+        >
+          <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />
+        </Sidebar>
+
+      </div>
     </>
   );
 }
