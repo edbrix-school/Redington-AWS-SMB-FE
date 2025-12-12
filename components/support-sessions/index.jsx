@@ -90,7 +90,7 @@ export const SupportSessionsHeader = () => {
       <Sidebar
         visible={visible}
         onHide={() => hideSidebar()}
-        className="p-0 z-[9999] customAichatboxsidebar !w-[60rem] lg:!w-[60rem] md:!w-[50rem] sm:!w-[100%] "
+        className="p-0 z-[9999] customAichatboxsidebar !w-[53rem] lg:!w-[53rem] md:!w-[43rem] sm:!w-[100%] "
         position="right"
       >
         <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />

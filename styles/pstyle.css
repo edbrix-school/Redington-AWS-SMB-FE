@@ -187,8 +187,8 @@
   /* color: #687885; */
   color: #42536d;
   content: "";
-  width: 62px;
-  height: 55px;
+  width: 68px;
+  height: 68px;
   display: block;
 }
 
@@ -202,8 +202,8 @@
   right: -100px;
   top: 50%;
   bottom: 50%;
-  width: 62px;
-  height: 55px;
+  width: 68px;
+  height: 68px;
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
@@ -476,7 +476,7 @@
 }
 
 .customsidebar2.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
-      color: rgb(66, 83, 109);
+    color: rgb(66, 83, 109);
     background-image: url(/images/Close-button.png);
     background-repeat: no-repeat;
     background-size: cover;
