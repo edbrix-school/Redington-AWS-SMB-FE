@@ -30,7 +30,7 @@ export default function SigninTemplate() {
   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
 
   const handleSignIn = () => {
-    router.push("/knowledge-hub");
+    router.push("/my-solutions");
   };
 
   return (
