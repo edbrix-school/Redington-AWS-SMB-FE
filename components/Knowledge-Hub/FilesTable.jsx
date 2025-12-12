@@ -126,7 +126,7 @@ export const FilesTable = () => {
         let iconSrc = "/images/document-text-table.svg";
         if (rowData.docType === "Audio") iconSrc = "/images/audio-square.svg";
         else if (rowData.docType === "Video") iconSrc = "/images/video-square.svg";
-        else if (rowData.docType === "Website") iconSrc = "/images/global.svg";
+        else if (rowData.docType === "Website") iconSrc = "/images/global-table.svg";
 
         return (
             <div className="flex items-center gap-2 cursor-pointer">
