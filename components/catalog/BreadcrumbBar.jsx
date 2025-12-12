@@ -11,18 +11,21 @@ export default function BreadcrumbBar({ selectedSector, count, onBack }) {
   const home = {
     label: "All Sectors",
     template: () => (
-      <button
-        onClick={onBack}
-        className={` border-t border-t-[3px] border-[#8078b9] rounded-sm cursor-pointer 
+      <>
+        <hr className="w-[50px] border-t border-t-[3px] border-[#8078b9] border-radius-[2px]" />
+        <button
+          onClick={onBack}
+          className={`  rounded-sm cursor-pointer 
         ${
           selectedSector
             ? "text-interface-text-subtitle font-normal"
             : "text-interface-text-title font-semibold"
         }
       `}
-      >
-        All Sectors
-      </button>
+        >
+          All Sectors
+        </button>
+      </>
     ),
   };
 
