@@ -1592,3 +1592,7 @@ body {
     white-space: normal;
 }
 /* Calendar end */
+
+.verified-text {
+  color: #019049;
+}

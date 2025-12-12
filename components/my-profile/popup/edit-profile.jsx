@@ -12,6 +12,17 @@ import { Password } from "primereact/password";
 export default function EditProfile({ visible, onHide }) {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const [emailVerified, setEmailVerified] = useState(false);
+  const [mobileVerified, setMobileVerified] = useState(false);
+
+  const verifyButtonStyle = (isVerified) => ({
+    borderRadius: 'var(--Border-Radius-rounded-md, 6px)',
+    border: 'none',
+    background: isVerified
+      ? 'linear-gradient(180deg, var(--Overlays-primary-overlay-8, rgba(100, 85, 146, 0.08)) 0%, var(--Overlays-primary-overlay-12, rgba(100, 85, 146, 0.12)) 100%)'
+      : '#645592',
+    color: isVerified ? '#019049' : '#D1D5DB'
+  });
   const countries = [
     { name: "United Arab Emirates", code: "AE" },
     { name: "Saudi Arabia", code: "SA" },
@@ -53,7 +64,7 @@ export default function EditProfile({ visible, onHide }) {
                         type="text"
                         className="w-full"
                         placeholder="First Name"
-                        defaultValue="James"
+                        defaultValue=""
                       />
                     </div>
                   </div>
@@ -66,7 +77,7 @@ export default function EditProfile({ visible, onHide }) {
                         type="text"
                         className="w-full"
                         placeholder="Last Name"
-                        defaultValue="Smith"
+                        defaultValue=""
                       />
                     </div>
                   </div>
@@ -82,7 +93,7 @@ export default function EditProfile({ visible, onHide }) {
                       type="text"
                       className="w-full"
                       placeholder="Company Name"
-                      defaultValue="Customer Name"
+                      defaultValue=""
                     />
                   </div>
                 </div>
@@ -116,41 +127,22 @@ export default function EditProfile({ visible, onHide }) {
                         type="email"
                         className="w-full pr-[90px]"
                         placeholder="Email Address"
-                        defaultValue="testmail01@outlook.com"
+                        defaultValue=""
                       />
-                      <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 text-[#059669] font12 font-medium">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM6.4 12L2.4 8L3.52 6.88L6.4 9.76L12.48 3.68L13.6 4.8L6.4 12Z"
-                            fill="#059669"
-                          />
-                        </svg>
-                        Verified!
-                      </div>
+                      {emailVerified && (
+                        <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 verified-text font12 font-medium">
+                          <Image src="/images/verify.svg" width={16} height={16} alt="Verified" />
+                          Verified!
+                        </div>
+                      )}
                     </div>
-                    <button className="font14 font-medium py10 px20 border-solid border border-[#E5E7EB] rounded-lg cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6] text-[#D1D5DB] whitespace-nowrap flex items-center gap-2">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      Verify
+                    <button
+                      className="font14 font-medium py10 px20 cursor-pointer whitespace-nowrap flex items-center gap-2"
+                      style={verifyButtonStyle(emailVerified)}
+                      onClick={() => setEmailVerified(true)}
+                    >
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" />
+                      {emailVerified ? 'Verified!' : 'Verify'}
                     </button>
                   </div>
                 </div>
@@ -166,41 +158,22 @@ export default function EditProfile({ visible, onHide }) {
                         type="tel"
                         className="w-full pr-[90px]"
                         placeholder="Mobile Number"
-                        defaultValue="+971 50 222 3333"
+                        defaultValue=""
                       />
-                      <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 text-[#059669] font12 font-medium">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8 0C3.6 0 0 3.6 0 8C0 12.4 3.6 16 8 16C12.4 16 16 12.4 16 8C16 3.6 12.4 0 8 0ZM6.4 12L2.4 8L3.52 6.88L6.4 9.76L12.48 3.68L13.6 4.8L6.4 12Z"
-                            fill="#059669"
-                          />
-                        </svg>
-                        Verified!
-                      </div>
+                      {mobileVerified && (
+                        <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 verified-text font12 font-medium">
+                          <Image src="/images/verify.svg" width={16} height={16} alt="Verified" />
+                          Verified!
+                        </div>
+                      )}
                     </div>
-                    <button className="font14 font-medium py10 px20 border-solid border border-[#E5E7EB] rounded-lg cursor-pointer bg-[#F9FAFB] hover:bg-[#F3F4F6] text-[#D1D5DB] whitespace-nowrap flex items-center gap-2">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      Verify
+                    <button
+                      className="font14 font-medium py10 px20 cursor-pointer whitespace-nowrap flex items-center gap-2"
+                      style={verifyButtonStyle(mobileVerified)}
+                      onClick={() => setMobileVerified(true)}
+                    >
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" />
+                      {mobileVerified ? 'Verified!' : 'Verify'}
                     </button>
                   </div>
                 </div>
@@ -229,7 +202,7 @@ export default function EditProfile({ visible, onHide }) {
                       type={showPassword ? "text" : "password"}
                       className="w-full pr-[40px]"
                       placeholder="••••••••"
-                      defaultValue="password123"
+                      defaultValue=""
                     />
                     <div
                       className="absolute right-[12px] top-1/2 -translate-y-1/2 cursor-pointer text-[#9CA3AF] hover:text-[#6B7280] transition-colors"
@@ -288,34 +261,8 @@ export default function EditProfile({ visible, onHide }) {
                       )}
                     </div>
                   </div>
-                  <button className="font14 font-medium py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-white whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto sm:self-end">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="3"
-                        y="11"
-                        width="18"
-                        height="11"
-                        rx="2"
-                        ry="2"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                  <button className="font14 font-medium mt-3 py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-white whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto sm:self-end">
+                    <Image src="/images/key-square.svg" width={18} height={18} alt="Change Password" />
                     Change Password
                   </button>
                 </div>
