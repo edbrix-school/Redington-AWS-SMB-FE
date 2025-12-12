@@ -42,27 +42,18 @@ export default function SigninTemplate() {
             <Link href={"/"}>
               <div className="flex items-center gap-[16px]">
                 <div className="flex divide-x divide-[#494949] items-center">
-                  <div className="pr-[10px]">
+                  <div>
                     <Image
-                      src="/images/redington-black.svg"
+                      src="/images/logo-new.svg"
                       width={100}
                       height={22}
                       alt="logo"
-                      className="w-[90px] h-auto"
+                      className="w-auto lg:w-[260px] xl:w-[260px] 2xl:w-[268px] 3xl:w-[13.958vw] h-auto lg:h-[40px] xl:h-[40px] 2xl:h-[2.292vw] 3xl:h-[2.292vw]"
                     />
                   </div>
-                  <Image
-                    src="/images/aws-black.svg"
-                    width={100}
-                    height={20}
-                    alt="aws"
-                    className="w-[36px] h-auto ml-[10px]"
-                  />
+                 
                 </div>
 
-                <div>
-                  <i className="smb-flash-light text-[#5CB456] text-[20px]"></i>
-                </div>
               </div>
             </Link>
 
@@ -218,7 +209,7 @@ export default function SigninTemplate() {
        
             <div className="absolute right-0 top-[47%] left-[30%]">
               <div className={nunito.className}>
-              <div className="text-[20px] lg:text-[25px] xl:text-[24px] 2xl:text-[1.667vw] 3xl:text-[1.667vw] font-[500] text-[#7F8488] leading-[140%]">
+              <div className="text-[20px] lg:text-[22px] xl:text-[22px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
                 Welcome! You're one step closer <br/>to finding the ideal AWS tools for <br/> your business. Our platform helps <br/> you explore, compare, and test <br/> drive AWS products before making a decision — so you  can build with confidence.
               </div>
               </div>

@@ -681,11 +681,12 @@ body {
   box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(27px);
 }
-.custom-op 
-{
-   transform: translateX(-130px) !important; /* move to left */
 
-}
+/* .custom-op 
+{
+   transform: translateX(-130px) !important;
+
+} */
 
 .custom-overlaypanel 
 {
