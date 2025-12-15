@@ -109,15 +109,15 @@ export const Events = () => {
     
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm">
       <div>
-        <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+        <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
           {TABS.map((tab, index) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
-            text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer "}
+            text-center font-medium font12 py6 px12
+            ${index !== TABS.length - 1 ? " border-[#E5E7EB]  cursor-pointer " : ""}
           `}
             >
               {tab}
