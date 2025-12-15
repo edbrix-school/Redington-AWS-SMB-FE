@@ -135,7 +135,7 @@ export const FilesTable = () => {
                     
                     {/* Search Bar - Replica of Screenshot */}
                     <div className="relative">
-                        <i className="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
+                        <i className="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
                         <InputText
                             value={globalFilter}
                             onChange={(e) => setGlobalFilter(e.target.value)}
@@ -151,7 +151,7 @@ export const FilesTable = () => {
                     </div>
 
                     {/* Filter Button */}
-                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-9 w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded-md hover:bg-[#ebeff3]">
+                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-10 w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded-md hover:bg-[#ebeff3]">
                         <i className="smb-filter text-InterfaceTextsubtitle font14"></i>
                     </div>
                 </div>
