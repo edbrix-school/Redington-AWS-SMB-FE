@@ -1206,7 +1206,7 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
   margin-right: 15px;
 }
 .tabview.p-tabview .p-tabview-nav {
-  background: #fff;
+  background: transparent;
   border: 0 solid transparent;
   border-bottom-width: 0px !important;
   border-radius: 6px !important;
@@ -1214,7 +1214,7 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
 }
 .tabview.p-tabview .p-tabview-panels {
     color: #4b5563;
-    background: #fff;
+    background: transparent;
     border: 0;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;

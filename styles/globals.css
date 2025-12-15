@@ -560,6 +560,9 @@ body {
 .mb12 {
   @apply mb-[10px] lg:mb-[10px] xl:mb-[12px] 2xl:mb-[12px] 3xl:mb-[0.625vw];
 }
+.mb16 {
+  @apply mb-[14px] lg:mb-[14px] xl:mb-[16px] 2xl:mb-[16px] 3xl:mb-[0.833vw];
+}
 .pb14 {
   @apply pb-[12px] lg:pb-[14px] xl:pb-[14px] 2xl:pb-[14px] 3xl:pb-[0.729vw];
 }
@@ -689,6 +692,11 @@ body {
 
 .banner-bg {
   background-image: url("/images/service-desk.png");
+  background-size: cover;
+  background-position: 100% 50%;
+}
+.support-session-banner-bg {
+  background-image: url("/images/freeepik-expand.png");
   background-size: cover;
   background-position: 100% 50%;
 }

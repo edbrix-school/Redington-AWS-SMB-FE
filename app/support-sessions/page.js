@@ -14,7 +14,9 @@ export default function Support() {
         {/* Added padding for fixed TopBar + NavBar */}
         <NavBar />
         <SupportSessionsHeader />
-        <main className="flex-grow -mt-8 relative z-20 px-4 md:px-8 pb-10">
+        <main className="flex-grow -mt-27 relative z-20 px-4 md:px-8 pb-10">
+          {" "}
+          {/* Negative margin to overlap Hero */}
           <ScheduleCalendarTable />
         </main>
       </div>

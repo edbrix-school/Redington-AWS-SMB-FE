@@ -84,11 +84,11 @@ export default function ScheduleCalendarTable() {
   }, []);
   return (
     <>
-      <div className="flex items-center justify-between mb20">
-        <h3 className="font20 text-[#fff] font-[700] mb20">Your Sessions</h3>
+      <div className="flex items-center justify-between mb16">
+        <h3 className="font20 text-[#fff] font-[700]">Your Sessions</h3>
         <div
           onClick={showSidebar}
-          className="font16 font-[500] py10 px20 mb20 border-[#5D9D4A] rounded-full bg-[#5D9D4A]  cursor-pointer text-[#fff]"
+          className="font16 font-[500] py10 px20 border-[#5D9D4A] rounded-full bg-[#5D9D4A]  cursor-pointer text-[#fff]"
         >
           Schedule a Session
         </div>
@@ -96,9 +96,9 @@ export default function ScheduleCalendarTable() {
       <div className="flex flex-col">
         {/* Main Content */}
         <div>
-          <div className="flex">
+          <div className="flex flex-col xl:flex-row w-full">
             {/* Left side: Upcoming and Completed Sessions */}
-            <div className="w-1/3 bg-gray-50">
+            <div className="xl:w-[39.01vw] w-full  shrink-0">
               <TabView
                 className="tabview"
                 activeIndex={activeTab}
@@ -422,7 +422,7 @@ export default function ScheduleCalendarTable() {
             </div>
 
             {/* Right side: Calendar */}
-            <div className="w-2/3 p-4 bg-white">
+            <div className="flex-1 p-4">
               {/* Calendar placeholder (we'll add functionality later) */}
               <div className="text-center">
                 <EventCalenderFilter />
