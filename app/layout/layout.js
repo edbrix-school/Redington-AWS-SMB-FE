@@ -13,7 +13,7 @@ const inter = Inter({
 export default function LayoutClient({ children }) {
   const pathname = usePathname();
 
-  const hideLayout = pathname === "/sign-in";
+  const hideLayout = pathname === "/sign-in" || pathname === "/not-found";
 
   return (
     <div className={inter.className}>

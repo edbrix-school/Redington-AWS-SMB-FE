@@ -626,6 +626,9 @@ body {
 .rounded12 {
   @apply rounded-[10px] lg:rounded-[10px] xl:rounded-[12px] 3xl:rounded-[0.625vw];
 }
+.rounded16 {
+  @apply rounded-[14px] lg:rounded-[14px] xl:rounded-[16px] 3xl:rounded-[0.833vw];
+}
 .rounded20 {
   @apply rounded-[18px] lg:rounded-[18px] xl:rounded-[20px] 2xl:rounded-[20px] 3xl:rounded-[1.042vw];
 }
