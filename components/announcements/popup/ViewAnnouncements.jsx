@@ -22,7 +22,7 @@ export const ViewAnnouncements = ({ visible, onHide, data }) => {
 
                     <button
                         onClick={onHide}
-                        className="text-orange-500 hover:text-orange-600 transition-colors"
+                        className="text-orange-500 hover:text-orange-600 transition-colors cursor-pointer"
                     >
                         <img src="/images/close-circle-2.svg" alt="Close" className="w-[22px] h-[22px]" />
                     </button>
