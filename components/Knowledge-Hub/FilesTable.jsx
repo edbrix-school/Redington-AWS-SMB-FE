@@ -144,7 +144,7 @@ export const FilesTable = () => {
         return (
             <div className="flex items-center gap-2">
                 <Image src={getDocIcon(rowData.docType)} alt={rowData.docType} width={24} height={24} />
-                <span className="text-[#667085] font-medium">
+                <span className="text-[#6480AB] font-medium">
                     {rowData.docType}
                 </span>
             </div>
@@ -160,7 +160,7 @@ export const FilesTable = () => {
                 }}
                 className="bg-transparent border-none cursor-pointer"
             >
-                <i className="pi pi-eye text-xl text-gray-500 hover:text-blue-600"></i>
+                <Image src="/images/eye-white-bg.svg" width={20} height={20} alt="View" className="inline-block" />
             </button>
         </div>
     );
@@ -293,14 +293,14 @@ export const FilesTable = () => {
                         className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
                         title="Grid View"
                     >
-                        <Image src="/images/pi-th-large.svg" alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
+                        <Image src={isGridView ? "/images/pi-th-large-bold.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
                     </button>
                     <button
                         onClick={() => setIsGridView(false)}
                         className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${!isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
                         title="List View"
                     >
-                        <Image src="/images/grid-1.svg" alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
+                        <Image src={!isGridView ? "/images/grid-1-bold.svg" : "/images/grid-1.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
                     </button>
                     {/* List Icon (Mapped to List View) */}
                     {/* <button
