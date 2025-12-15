@@ -78,3 +78,44 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+
+.custom-accordion .p-accordion .p-accordion-header .p-accordion-header-link{
+  border-radius:  6px;
+  border: 1px solid  #E5E7EB;
+  background:  #FFF;
+  padding: 20px;
+}
+
+.custom-accordion .p-accordion-tab{
+  margin-bottom: 10px;
+}
+
+/* global stylesheet: remove bottom border for expanded AccordionTab */
+.custom-accordion .p-accordion .p-accordion-tab.p-accordion-tab-active > .p-accordion-header,
+.custom-accordion .p-accordion .p-accordion-tab.p-accordion-tab-active > .p-accordion-header .p-accordion-header-link {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important; /* optional */
+  border-radius: 6px 6px 0 0 !important;
+}
+
+/* also remove any top border on the content so the look is seamless */
+.custom-accordion .p-accordion .p-accordion-tab.p-accordion-tab-active > .p-accordion-content {
+  border-top: 0 !important;
+  box-shadow: none !important;
+}
+.custom-accordion .p-accordion .p-accordion-content {
+ padding-top: 0px !important;
+  border-radius: 0 0 6px 6px !important;
+}
+
+.custom-accordion .p-icon.p-accordion-toggle-icon{
+display: none;
+}
+
+.custom-accordion .p-accordion-header-link::after {
+  content: '▼';
+}
+.custom-accordion .p-accordion-tab-active .p-accordion-header-link::after {
+  content: '▲';
+}

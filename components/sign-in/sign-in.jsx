@@ -30,39 +30,30 @@ export default function SigninTemplate() {
   const [openpopupsignup, setOpenPopupSignUp] = useState(false);
 
   const handleSignIn = () => {
-    router.push("/knowledge-hub");
+    router.push("/my-solutions");
   };
 
   return (
     <div className={inter.className}>
       <div className="customsignin-gradient min-h-screen">
         {/* TOP BAR */}
-        <div className="w-full bg-[rgba(240,242,246,0.9)] z-[999] fixed top-0">
+        <div className="w-full bg-[rgba(240,242,246,0.9)]">
           <div className="relative flex items-center justify-between px-[90px] xl:px-[100px] py16">
             <Link href={"/"}>
               <div className="flex items-center gap-[16px]">
                 <div className="flex divide-x divide-[#494949] items-center">
-                  <div className="pr-[10px]">
+                  <div>
                     <Image
-                      src="/images/redington-black.svg"
+                      src="/images/logo-new.svg"
                       width={100}
                       height={22}
                       alt="logo"
-                      className="w-[90px] h-auto"
+                      className="w-auto lg:w-[260px] xl:w-[260px] 2xl:w-[268px] 3xl:w-[13.958vw] h-auto lg:h-[40px] xl:h-[40px] 2xl:h-[2.292vw] 3xl:h-[2.292vw]"
                     />
                   </div>
-                  <Image
-                    src="/images/aws-black.svg"
-                    width={100}
-                    height={20}
-                    alt="aws"
-                    className="w-[36px] h-auto ml-[10px]"
-                  />
+                 
                 </div>
 
-                <div>
-                  <i className="smb-flash-light text-[#5CB456] text-[20px]"></i>
-                </div>
               </div>
             </Link>
 
@@ -76,9 +67,9 @@ export default function SigninTemplate() {
         </div>
 
         {/* MAIN CONTENT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] xl:gap-[120px] items-center min-h-screen px-[5.99vw] overflow-y-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[80px] xl:gap-[120px] items-center px-[5.99vw] overflow-y-auto">
           {/* LEFT SECTION */}
-          <div className="mt-[80px] lg:mt-[80px] xl:mt-[120px] 2xl:mt-[7.813vw] 3xl:mt-[7.813vw] w-full md:w-[400px] lg:w-[480px] xl::w-[500px] 2xl:w-[30.25vw] 3xl:w-[31.25vw]  ">
+          <div className="w-full md:w-[400px] lg:w-[480px] xl::w-[500px] 2xl:w-[30.25vw] 3xl:w-[31.25vw]  ">
             <div className="text-InterfaceTexttitle1 font-semibold font24 leading-[160%]">
               Sign In
             </div>
@@ -206,20 +197,20 @@ export default function SigninTemplate() {
           </div>
 
 
-          <div className="mt-[50px] relative">
+          <div className="relative">
 
             <Image
               src="/images/login-img.svg"
               width={650}
               height={850}
               alt="illustration"
-              className="3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[600px] xl:h-[800px]"
+              className="3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[450px] xl:h-[650px]"
             />
        
-            <div className="absolute right-0 top-[47%] left-[30%]">
+            <div className="absolute right-0 xl:top-[47%] xl:left-[34%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[80px] lg:w-[80px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
               <div className={nunito.className}>
-              <div className="text-[20px] lg:text-[25px] xl:text-[28px] 2xl:text-[1.667vw] 3xl:text-[1.667vw] font-[500] text-[#7F8488] leading-[140%]">
-                Welcome! You're one step closer <br/>to finding the ideal AWS tools for <br/> your business. Our platform helps <br/> you explore, compare, and test <br/> drive AWS products before making a decision — so you  can build with confidence.
+              <div className="text-[20px] lg:text-[22px] xl:text-[20px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
+                Welcome! You're one step closer to finding the ideal AWS tools for  your business. Our platform helps you explore, compare, and test  drive AWS products before making a decision — so you  can build with confidence.
               </div>
               </div>
             </div>

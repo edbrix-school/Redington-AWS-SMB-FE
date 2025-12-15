@@ -121,17 +121,22 @@ export const FilesTable = () => {
         },
     ];
 
-    // Helper to render Document Type Icons (simulated using PrimeIcons for replication)
+    // Helper to render Document Type Icons
     const docTypeTemplate = (rowData) => {
-        let iconClass = "pi pi-file";
-        if (rowData.docType === "Audio") iconClass = "pi pi-volume-up";
-        else if (rowData.docType === "Video") iconClass = "pi pi-video";
-        else if (rowData.docType === "Website") iconClass = "pi pi-globe";
+        let iconSrc = "/images/document-text-table.svg";
+        if (rowData.docType === "Audio") iconSrc = "/images/audio-square.svg";
+        else if (rowData.docType === "Video") iconSrc = "/images/video-square.svg";
+        else if (rowData.docType === "Website") iconSrc = "/images/global-table.svg";
 
         return (
-            <div className="flex items-center gap-2 text-blue-600 cursor-pointer hover:underline">
-                <i className={`${iconClass} text-lg`}></i>
-                <span>{rowData.docType}</span>
+            <div className="flex items-center gap-2 cursor-pointer">
+                <Image 
+                    src={iconSrc} 
+                    alt={rowData.docType} 
+                    width={24} 
+                    height={24} 
+                />
+                <span className="text-[#667085] font-medium">{rowData.docType}</span>
             </div>
         );
     };
@@ -218,10 +223,10 @@ export const FilesTable = () => {
                 <div className="flex gap-3 items-center pb-4 md:pb-0">
                     {/* Add any top-right buttons here (e.g. Layout switcher from screenshot) */}
                     <button className="p-2 bg-gray-100 rounded hover:bg-gray-200">
-                        <i className="pi pi-th-large text-gray-500"></i>
+                        <Image src="/images/pi-th-large.svg" alt="th-large" width={20} height={20} />
                     </button>
                     <button className="p-2 bg-purple-100 rounded hover:bg-purple-200">
-                        <i className="pi pi-list text-purple-600"></i>
+                        <Image src="/images/grid-1.svg" alt="list" width={20} height={20} />
                     </button>
                 </div>
             </div>

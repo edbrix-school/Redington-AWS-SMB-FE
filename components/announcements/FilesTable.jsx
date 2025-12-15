@@ -139,7 +139,7 @@ export const FilesTable = () => {
                         width={20}
                         height={20}
                         alt="options"
-                        className="w18 h-auto cursor-pointer hover:opacity-100"
+                        className="w18 h-auto cursor-pointer"
                     />
                 </button>
             </div>
@@ -215,8 +215,8 @@ export const FilesTable = () => {
                             className="pl-9 py-2 border border-gray-200 rounded-md text-sm w-64 bg-gray-50 focus:bg-white transition-colors"
                         />
                     </div>
-                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-full p-2 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-white rounded-md hover:bg-gray-50 ml-2">
-                        <i className="smb-filter text-InterfaceTextsubtitle font12"></i>
+                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-full p-2 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-white rounded-md hover:bg-gray-50 ml-1">
+                        <i className="smb-filter text-InterfaceTextsubtitle font16"></i>
                     </div>
                 </div>
             </div>
@@ -271,8 +271,7 @@ export const FilesTable = () => {
                     alignFrozen="right"
                     align="center"
                     frozen
-                    body={actionBodyTemplate}
-                    filter
+                    body={actionBodyTemplate}                   
                     filterElement={() => <div className="w-full"></div>}
                 />
             </DataTable>
