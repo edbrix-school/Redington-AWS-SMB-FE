@@ -550,6 +550,12 @@ body {
 .pb14 {
   @apply pb-[12px] lg:pb-[14px] xl:pb-[14px] 2xl:pb-[14px] 3xl:pb-[0.729vw];
 }
+.pb12 {
+  @apply pb-[10px] lg:pb-[10px] xl:pb-[12px] 2xl:pb-[12px] 3xl:pb-[0.625vw];
+}
+.pb20 {
+  @apply pb-[18px] lg:pb-[20px] xl:pb-[20px] 2xl:pb-[20px] 3xl:pb-[1.042vw];
+}
 .mb20 {
   @apply mb-[18px] lg:mb-[18px] xl:mb-[20px] 2xl:mb-[20px] 3xl:mb-[1.042vw];
 }

@@ -5,6 +5,8 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import AiChatboxPopup from "./AichatboxPopup";
 import { Sidebar } from "primereact/sidebar";
+import Link from "next/link";
+import { TabMenu } from "primereact/tabmenu";
 
 const industrySector = [
   {
@@ -97,11 +99,18 @@ const byOrganizationType = [
   },
 ];
 
-const TABS = ["By Industry", "By Use Case", "By Organization Type"];
+const TABS = [
+  { label: "By Industry" },
+  { label: "By Use Case" },
+  { label: "By Organization Type" },
+];
 
 export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
-  const [activeTab, setActiveTab] = useState("By Industry");
-  const [activeIndex, setActiveIndex] = useState([-1]);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTab, setActiveTab] = useState(TABS[0].label);
+  const [activeIndex, setActiveIndex] = useState(-1);
+  //  const [activeTab, setActiveTab] = useState("By Industry");
+  //   const [activeIndex, setActiveIndex] = useState([-1]);
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const sectorDataMap = {
@@ -174,9 +183,20 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
 
       {/* Tabs */}
       <div className="mt-4 flex flex-wrap border-[#E5E7EB]">
-        {TABS.map((tab) => {
-          const isActive = tab === activeTab;
+        <TabMenu
+          model={TABS}
+          activeIndex={activeTabIndex}
+          className="catalog-tabs"
+          onTabChange={(e) => {
+            setActiveTabIndex(e.index); // active tab index
+            setActiveTab(e.value.label); // active tab label
+            setActiveIndex(null); // reset accordion
+          }}
+        />
+        {/* {TABS.map((tab) => {
+          const isActive = tab.label === activeTab;
           return (
+            
             <Button
               key={tab}
               type="button"
@@ -187,19 +207,21 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
               className={[
                 "customCatalogButton cursor-pointer px-2 py-3 font10 font-semibold",
                 isActive ? "active" : "", // Active state
-                tab === "By Use Case" ? "!border-l-0 !border-r-0" : "", // No border on "By Use Case"
+                tab === "By Use Case"
+                  ? "!border-l-0 !border-r-0 border-radius-[12px] "
+                  : "", // No border on "By Use Case"
                 tab === "By Industry"
-                  ? "border-l-[1px #E5E7EB] border-r-0"
+                  ? "!border-l-[1px] !border-l-[#E5E7EB] border-r-0 border-l-radius-[12px] border-r-radius-0"
                   : "", // Left border for "By Industry"
                 tab === "By Organization Type"
-                  ? "!border-l-0 !border-r-[1px #E5E7EB]"
+                  ? "!border-l-0 !border-r-[1px] !border-r-[#E5E7EB] border-r-radius-[12px] border-l-radius-0"
                   : "", // Right border for "By Organization Type"
               ].join(" ")}
             >
               {tab}
             </Button>
           );
-        })}
+        })} */}
       </div>
 
       {/* Accordion list */}
@@ -244,18 +266,18 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
                 }
               >
                 <div className="flex flex-col gap-4">
-                  <p className="font12 text-interface-text-subtitle">
+                  <Link href="" className="font12 text-interface-text-subtitle">
                     Public Cloud
-                  </p>
+                  </Link>
 
-                  <div className="flex items-center gap-2">
+                  <Link href="" className="flex items-center gap-2">
                     <p className="font12 text-interface-text-subtitle">
                       Azure Reservation
                     </p>
                     <span className="font12 text-interface-text-subtitle">
                       (18)
                     </span>
-                  </div>
+                  </Link>
                 </div>
               </AccordionTab>
             );
