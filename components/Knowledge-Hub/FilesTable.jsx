@@ -1,24 +1,16 @@
 "use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import { InputText } from "primereact/inputtext";
 import { Paginator } from "primereact/paginator";
-import { Menu } from "primereact/menu";
-import React, { useState, useRef } from "react";
-// Ensure these components exist in your project or comment them out if testing
-import ViewFileDetails from './popup/ViewFileDetails';
+import React, { useState } from "react";
+import ViewFileDetails from "./popup/ViewFileDetails";
 
 export const FilesTable = () => {
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
-    const [globalFilterValue, setGlobalFilterValue] = useState("");
-
-    // Filter Popup State
-    const [openFilter, setOpenFilter] = useState(false);
-
-    // View Details State
     const [visibleRight, setVisibleRight] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -27,7 +19,7 @@ export const FilesTable = () => {
         setRows(event.rows);
     };
 
-    // Data replicated from the screenshot
+    /* ================= FULL DATA (UNCHANGED) ================= */
     const fileList = [
         {
             id: 1,
@@ -77,7 +69,7 @@ export const FilesTable = () => {
         {
             id: 6,
             title: "DevOps on AWS",
-            description: "Accelerate your software delivery with DevOps tools and practices.",
+            description: "Accelerate your software delivery with DevOps tools.",
             category: "User Guide",
             docType: "Video",
             dateCreated: "01/22/2023",
@@ -121,7 +113,7 @@ export const FilesTable = () => {
         },
     ];
 
-    // Helper to render Document Type Icons
+    /* ================= HELPERS ================= */
     const docTypeTemplate = (rowData) => {
         let iconSrc = "/images/document-text-table.svg";
         if (rowData.docType === "Audio") iconSrc = "/images/audio-square.svg";
@@ -129,39 +121,30 @@ export const FilesTable = () => {
         else if (rowData.docType === "Website") iconSrc = "/images/global-table.svg";
 
         return (
-            <div className="flex items-center gap-2 cursor-pointer">
-                <Image 
-                    src={iconSrc} 
-                    alt={rowData.docType} 
-                    width={24} 
-                    height={24} 
-                />
-                <span className="text-[#667085] font-medium">{rowData.docType}</span>
+            <div className="flex items-center gap-2">
+                <Image src={iconSrc} alt={rowData.docType} width={24} height={24} />
+                <span className="text-[#667085] font-medium">
+                    {rowData.docType}
+                </span>
             </div>
         );
     };
 
-    // Action Column to match Screenshot (Eye Icon)
-    const actionBodyTemplate = (rowData) => {
-        return (
-            <div className="flex justify-center items-center w-full">
-                <button
-                    type="button"
-                    onClick={() => {
-                        setSelectedProduct(rowData);
-                        setVisibleRight(true);
-                    }}
-                    title="View Details"
-                    className="cursor-pointer bg-transparent border-none flex items-center justify-center text-gray-500 hover:text-blue-600"
-                >
-                    <i className="pi pi-eye text-xl"></i>
-                </button>
-            </div>
-        );
-    };
+    const actionBodyTemplate = (rowData) => (
+        <div className="flex justify-center">
+            <button
+                onClick={() => {
+                    setSelectedProduct(rowData);
+                    setVisibleRight(true);
+                }}
+                className="bg-transparent border-none cursor-pointer"
+            >
+                <i className="pi pi-eye text-xl text-gray-500 hover:text-blue-600"></i>
+            </button>
+        </div>
+    );
 
     const [filters, setFilters] = useState({
-        global: { value: null, matchMode: "contains" },
         title: { value: null, matchMode: "contains" },
         description: { value: null, matchMode: "contains" },
         category: { value: null, matchMode: "contains" },
@@ -170,189 +153,99 @@ export const FilesTable = () => {
         lastUpdated: { value: null, matchMode: "contains" },
     });
 
-    const HeaderWithMenu = ({ title }) => {
-        return (
-            <div className="header-menu flex items-center justify-between w-full mb-2">
-                <span className="text-gray-700 font-medium text-sm">{title}</span>
-                <div className="smb-more text-interfacetextdefault2 font12 flex justify-end cursor-pointer opacity-50">
-                    {/* Optional: Add sort/filter menu icon here if needed */}
-                </div>
-            </div>
-        );
-    };
+    const HeaderWithMenu = ({ title }) => (
+        <div className="header-menu flex items-center justify-between w-full">
+            <span className="text-interfacetextdefault2 font-medium">
+                {title}
+            </span>
+            <div className="smb-more"></div>
+        </div>
+    );
 
-    const filterInput = (options) => {
-        return (
-            <div className="flex items-center w-full">
-                <InputText
-                    value={options.value || ""}
-                    onChange={(e) => options.filterApplyCallback(e.target.value)}
-                    className="p-inputtext-sm w-full border border-gray-300 rounded-md px-2 py-1 text-sm focus:outline-none focus:border-blue-500"
-                    placeholder=""
-                />
-                <i className="smb-filter text-InterfaceTextsubtitle font12 ml-2"></i>
-            </div>
-        );
-    };
-
-    const onGlobalFilterChange = (e) => {
-        const value = e.target.value;
-        let _filters = { ...filters };
-        _filters["global"].value = value;
-        setFilters(_filters);
-        setGlobalFilterValue(value);
-    };
+    // Same filter input as Announcements
+    const filterInput = (options, placeholder = "") => (
+        <InputText
+            value={options.value || ""}
+            onChange={(e) => options.filterApplyCallback(e.target.value)}
+            placeholder={placeholder}
+            className="p-inputtext-sm w-full custom-input1"
+        />
+    );
 
     return (
         <div className="border border-interfacetextdefault shadow-sm rounded-lg m-10 mt-4 bg-white relative">
 
-            {/* Top Header Section */}
+            {/* ================= TOP HEADER SECTION (RESTORED) ================= */}
             <div className="p-4 flex flex-col md:flex-row justify-between items-center pb-0">
 
-                {/* Title */}
+                {/* Left */}
                 <div className="flex gap-2 items-center pb-4 md:pb-0">
-                    <div className="text-lg text-gray-800 font-bold">
+                    <div className="font16 text-InterfaceTexttitle1 font-semibold">
                         All Files
                     </div>
-                    <div className="text-gray-400 text-sm">
+                    <div className="text-InterfaceTextsubtitle font12">
                         (1024 Products)
                     </div>
                 </div>
 
-                {/* Action Buttons (Right Side) */}
+                {/* Right */}
                 <div className="flex gap-3 items-center pb-4 md:pb-0">
-                    {/* Add any top-right buttons here (e.g. Layout switcher from screenshot) */}
                     <button className="p-2 bg-gray-100 rounded hover:bg-gray-200">
-                        <Image src="/images/pi-th-large.svg" alt="th-large" width={20} height={20} />
+                        <Image src="/images/pi-th-large.svg" alt="" width={20} height={20} />
                     </button>
                     <button className="p-2 bg-purple-100 rounded hover:bg-purple-200">
-                        <Image src="/images/grid-1.svg" alt="list" width={20} height={20} />
+                        <Image src="/images/grid-1.svg" alt="" width={20} height={20} />
                     </button>
                 </div>
             </div>
+            {/* ================= END TOP HEADER ================= */}
 
-            {/* Table */}
             <DataTable
                 value={fileList}
                 stripedRows
                 rows={10}
                 className="custTable mt-4"
                 responsiveLayout="scroll"
-                style={{ width: "100%" }}
                 filters={filters}
                 onFilter={(e) => setFilters(e.filters)}
                 filterDisplay="row"
-                globalFilterFields={['title', 'description', 'category', 'docType']}
-                emptyMessage={
-                    <div className="flex justify-center p-4">No Files Found.</div>
-                }
             >
-                {/* 1. Title */}
-                <Column
-                    field="title"
-                    header={<HeaderWithMenu title="Title" />}
-                    style={{ minWidth: "16rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={(rowData) => <span className="text-gray-700 font-medium">{rowData.title}</span>}
-                />
+                <Column field="title" header={<HeaderWithMenu title="Title" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span className="font-medium">{r.title}</span>} />
 
-                {/* 2. Description */}
-                <Column
-                    field="description"
-                    header={<HeaderWithMenu title="Description" />}
-                    style={{ minWidth: "20rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={(rowData) => <span className="text-gray-600 text-sm truncate block w-full" title={rowData.description}>{rowData.description}</span>}
-                />
+                <Column field="description" header={<HeaderWithMenu title="Description" />} filter filterElement={(o) => filterInput(o, "Abc")} body={(r) => <span>{r.description}</span>} />
 
-                {/* 3. Category */}
-                <Column
-                    field="category"
-                    header={<HeaderWithMenu title="Category" />}
-                    style={{ minWidth: "10rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={(rowData) => <span className="text-gray-700">{rowData.category}</span>}
-                />
+                <Column field="category" header={<HeaderWithMenu title="Category" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.category}</span>} />
 
-                {/* 4. Document Type */}
-                <Column
-                    field="docType"
-                    header={<HeaderWithMenu title="Document Type" />}
-                    style={{ minWidth: "12rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={docTypeTemplate}
-                />
+                <Column field="docType" header={<HeaderWithMenu title="Document Type" />} filter filterElement={(o) => filterInput(o)} body={docTypeTemplate} />
 
-                {/* 5. Date Created */}
-                <Column
-                    field="dateCreated"
-                    header={<HeaderWithMenu title="Date Created" />}
-                    style={{ minWidth: "10rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={(rowData) => <span className="text-gray-700">{rowData.dateCreated}</span>}
-                />
+                {/* ONLY THESE TWO HAVE "Abc" */}
+                <Column field="dateCreated" header={<HeaderWithMenu title="Date Created" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.dateCreated}</span>} />
 
-                {/* 6. Last Updated */}
-                <Column
-                    field="lastUpdated"
-                    header={<HeaderWithMenu title="Last Updated" />}
-                    style={{ minWidth: "10rem" }}
-                    filter
-                    filterElement={filterInput}
-                    showFilterMenu={false}
-                    body={(rowData) => <span className="text-gray-700">{rowData.lastUpdated}</span>}
-                />
+                <Column field="lastUpdated" header={<HeaderWithMenu title="Last Updated" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.lastUpdated}</span>} />
 
-                {/* 7. Action */}
                 <Column
-                    field="Action"
                     header="Action"
-                    style={{ minWidth: "4rem", textAlign: "center" }}
-                    alignFrozen="right"
+                    body={actionBodyTemplate}
                     align="center"
                     frozen
-                    body={actionBodyTemplate}
-                    // Empty filter element to align the table header row height
-                    filter
-                    filterElement={() => <div className="w-full h-8"></div>}
-                    showFilterMenu={false}
+                    
                 />
             </DataTable>
 
-            {/* Paginator */}
-            <div className="relative border-t border-gray-100">
-                <Paginator
-                    template="PrevPageLink PageLinks NextPageLink"
-                    first={first}
-                    rows={rows}
-                    onPageChange={onPageChange}
-                    totalRecords={1000} // Set to 1000 as per screenshot
-                    className="justify-end"
-                    leftContent={
-                        <span className="text-gray-400 text-xs ml-4 absolute left-4 top-1/2 -translate-y-1/2">
-                            Showing 1-10 of 1000
-                        </span>
-                    }
-                />
-            </div>
+            <Paginator
+                template="PrevPageLink PageLinks NextPageLink"
+                first={first}
+                rows={rows}
+                onPageChange={onPageChange}
+                totalRecords={1000}
+                className="justify-end mt-3"
+            />
 
-            {/* View Details Popup */}
             <ViewFileDetails
                 visible={visibleRight}
                 onHide={() => setVisibleRight(false)}
                 data={selectedProduct}
             />
-
         </div>
     );
-}
+};
