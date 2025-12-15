@@ -61,38 +61,16 @@ const GroupSolution = () => {
                                 <div className="text-[#7F8488] font12 leading-[111%] min-h-[80px] xl:min-h-[86px] 2xl:min-h-[90px] 3xl:min-h-[4.792vw]">
                                     {item.description}
                                 </div>
-
-
-
-
-
-
-
                                 <div className="flex justify-end">
                                     <button class="group flex items-center rounded6 text-white bg-[#42536D] overflow-hidden px8 ">
                                         <span class="max-w-0 mr-1 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-32 text-right font11 ">
                                             View Solutions
                                         </span>
-
                                         <span class="flex items-center cursor-pointer bg-[#42536D] py4   ">
                                             <i className="smb-arrow-right font12"></i>
                                         </span>
                                     </button>
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             </div>
                         ))}
                     </div>

@@ -20,7 +20,7 @@ export default function Top() {
   const cities = [
     { name: "New York", code: "NY" },
     { name: "Rome", code: "RM" },
-   
+
   ];
 
   return (

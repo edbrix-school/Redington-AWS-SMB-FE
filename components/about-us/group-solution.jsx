@@ -64,8 +64,8 @@ const GroupSolution = () => {
                                     </div>
                                     {/* Icon (always visible) */}
                                     <div className="flex justify-end items-center">
-                                        <div className="flex items-center justify-center w-8 h-8 bg-BrandNeutral900 text-white rounded-[6px] 3xl:rounded-[0.313vw] text-lg">
-                                            ➜
+                                        <div className="flex items-center justify-center py4 px8 bg-BrandNeutral9001 text-white rounded6 font14">
+                                            <i className="smb-arrow-right font14"></i>
                                         </div>
                                     </div>
                                     {/* </div> */}

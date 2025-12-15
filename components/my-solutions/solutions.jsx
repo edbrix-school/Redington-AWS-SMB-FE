@@ -1,7 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
 import { Inter } from "next/font/google";
-import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 
@@ -49,10 +48,8 @@ const Solutions = () => {
     ];
 
     const [activeTab, setActiveTab] = useState("Active Tryouts");
-
     const TABS = ["Active Tryouts", "Expired Tryouts"];
     const op = useRef(null);
-
 
     return (
         <>

@@ -1,6 +1,10 @@
 "use client";
 import { Work_Sans } from "next/font/google";
 import { Roboto } from "next/font/google";
+import Image from "next/image";
+import React, { useState } from "react";
+import { Sidebar } from "primereact/sidebar";
+import CatalogPopup from "@/components/catalog/CatalogPopup";
 
 const roboto = Roboto({
     subsets: ["latin"],
@@ -14,35 +18,37 @@ const workSans = Work_Sans({
     variable: "--font-work-sans",
 });
 
-const cardData = [
-    {
-        sector: "Sector",
-        title: "Advertising & Marketing",
-        description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
-    },
-    {
-        sector: "Sector",
-        title: "Aerospace & Satellite",
-        description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
-    },
-    {
-        sector: "Sector",
-        title: "Education",
-        description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
-    },
-    {
-        sector: "Sector",
-        title: "Agriculture",
-        description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
-    },
-    {
-        sector: "Sector",
-        title: "Automotive",
-        description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
-    },
-];
-
 const GroupSolution = () => {
+
+    const [showCatalog, setShowCatalog] = useState(false);
+    const cardData = [
+        {
+            sector: "Sector",
+            title: "Advertising & Marketing",
+            description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
+        },
+        {
+            sector: "Sector",
+            title: "Aerospace & Satellite",
+            description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
+        },
+        {
+            sector: "Sector",
+            title: "Education",
+            description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
+        },
+        {
+            sector: "Sector",
+            title: "Agriculture",
+            description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
+        },
+        {
+            sector: "Sector",
+            title: "Automotive",
+            description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
+        },
+    ];
+
     return (
         <>
             <div className="mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
@@ -51,7 +57,7 @@ const GroupSolution = () => {
                 <div className="flex gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
                     <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt-[22px] xl:mt-[24px] 3xl:mt-[1.25vw]">
                         {cardData.map((item, i) => (
-                            <div key={i} className="sector-bg p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
+                            <div onClick={() => setShowCatalog(true)} key={i} className="sector-bg p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 cursor-pointer">
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
                                     {item.sector}
                                 </div>
@@ -61,43 +67,41 @@ const GroupSolution = () => {
                                 <div className="text-[#7F8488] font12 leading-[111%] min-h-[80px] xl:min-h-[86px] 2xl:min-h-[90px] 3xl:min-h-[4.792vw]">
                                     {item.description}
                                 </div>
-
-
-
-
-
-
                                 <div className="flex justify-end">
-                                    <button class="group flex items-center rounded6 text-white bg-[#42536D] overflow-hidden px8 ">
-                                        <span class="max-w-0 mr-1 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-32 text-right font11 ">
+                                    <button className="group flex items-center rounded6 text-white bg-[#42536D] overflow-hidden px8 ">
+                                        <span className="max-w-0 mr-1 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-32 text-right font11 ">
                                             View Solutions
                                         </span>
-
-                                        <span class="flex items-center cursor-pointer bg-[#42536D] py4   ">
-                                            <i className="smb-arrow-right font12"></i>
+                                        <span className="flex items-center cursor-pointer bg-[#42536D] py4   ">
+                                            <i className="smb-arrow-right font14"></i>
                                         </span>
                                     </button>
                                 </div>
-
-
-
-
-
-
-
-
-
                             </div>
                         ))}
                     </div>
-                    <div className="see-all-bg flex items-center justify-center p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
-                        <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center cursor-pointer">
-                            <i className="smb-arrowup text-center"></i>
-                            <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>
+                    <div className="see-all-bg flex items-center justify-center p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
+                        <div className="text-[#4E189A]  font-normal leading-tight flex flex-col justify-center spacey8 cursor-pointer">
+                            <div className="flex justify-center items-center">
+                            <Image src="/images/svg/send.svg" width="24" height="24" alt="logo" />
+                            </div>
+                            <div className="whitespace-nowrap px20 font14">See All</div>
                         </div>
                     </div>
                 </div>
             </div>
+            {/* Sidebar */}
+            <Sidebar
+                visible={showCatalog}
+                onHide={() => setShowCatalog(false)}
+                className="p-0  customsidebar popup-enter"
+                blockScroll
+            >
+                <CatalogPopup
+                    open={showCatalog}
+                    onClose={() => setShowCatalog(false)}
+                />
+            </Sidebar>
         </>
     );
 };
