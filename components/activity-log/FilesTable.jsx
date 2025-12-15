@@ -13,7 +13,7 @@ import ViewActivity from "./popup/ViewActivity";
 export const FilesTable = () => {
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
-    const [globalFilterValue, setGlobalFilterValue] = useState("");
+    const [globalFilter, setGlobalFilter] = useState("");
 
     const [openFilter, setOpenFilter] = useState(false);
     const [openViewActivity, setOpenViewActivity] = useState(false);
@@ -21,7 +21,7 @@ export const FilesTable = () => {
     const [visibleRight, setVisibleRight] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
-    const menuRef = useRef(null);
+    const menu = useRef(null);
 
     // Dropdown menu items
     const menuItems = [
@@ -64,19 +64,19 @@ export const FilesTable = () => {
         return (
             <div className="flex justify-center items-center w-full">
                 <button
-                    type="button"
-                    onClick={(e) => {
+                    onClick={(event) => {
                         setSelectedProduct(rowData);
-                        menuRef.current.toggle(e);
+                        menu.current.toggle(event);
                     }}
-                    className="cursor-pointer bg-transparent border-none flex items-center justify-center text-gray-600 hover:text-gray-900"
+                    title="Options"
+                    className="cursor-pointer bg-transparent border-none flex items-center justify-center"
                 >
                     <Image
                         src={"/images/more.svg"}
                         width={20}
                         height={20}
                         alt="options"
-                        className="w18 h-auto cursor-pointer hover:opacity-100"
+                        className="w18 h-auto cursor-pointer"
                     />
                 </button>
             </div>
@@ -94,32 +94,35 @@ export const FilesTable = () => {
 
     const HeaderWithMenu = ({ title }) => {
         return (
-            <div className="flex items-center justify-between w-full">
-                <span className="text-gray-800 font-medium text-xs">{title}</span>
-                <div className="smb-more text-interfacetextdefault2 font12 flex justify-end cursor-pointer opacity-50"></div>
+            <div className="header-menu flex items-center justify-between w-full">
+                <span className="text-interfacetextdefault2 font-medium">{title}</span>
+                <div className="smb-more text-interfacetextdefault2 font12 flex justify-end cursor-pointer">
+                </div>
             </div>
         );
     };
 
-    const filterInput = (options, placeholder = "") => {
+    // Modified filterInput to accept a custom placeholder
+    const filterInput = (options, placeholderText = "") => {
         return (
-            <div className="flex items-center w-full gap-2">
-                <InputText
-                    value={options.value || ""}
-                    onChange={(e) => options.filterApplyCallback(e.target.value)}
-                    className="p-inputtext-sm w-full border border-gray-300 rounded-md px-2 py-2 text-sm focus:outline-none focus:border-blue-500"
-                    placeholder={placeholder}
-                />
-                <i className="smb-filter text-InterfaceTextsubtitle font12 ml-1"></i>
-            </div>
+            <InputText
+                value={options.value || ""}
+                onChange={(e) => options.filterApplyCallback(e.target.value)}
+                placeholder={placeholderText}
+                className="p-inputtext-sm w-full custom-input1"
+            />
         );
     };
 
     return (
         <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4 bg-white relative">
 
-            {/* Header */}
-            <div className="p-4 flex justify-between items-center border-b border-gray-100 mb-2 ">
+            <Menu model={menuItems} popup ref={menu} />
+
+            {/* --- UPDATED HEADER SECTION --- */}
+            <div className="p15 flex flex-col md:flex-row justify-between items-center pb-0">
+
+                {/* Left Side: Title & Count */}
                 <div className="flex gap8 items-center pb22 md:pb-0">
                     <div className="font16 text-InterfaceTexttitle1 font-semibold mr-2">
                         List of Records
@@ -129,67 +132,106 @@ export const FilesTable = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center">
-                    <button className="p-2 cursor-pointer" onClick={() => setOpenFilter(true)}>
-                        <i className="smb-filter text-InterfaceTextsubtitle font16 ml-2"></i>
-                    </button>
+                {/* Right Side: Search Bar & Filter Button */}
+                <div className="flex gap-3 items-center pb22 md:pb-0">
+
+                    {/* Filter Button */}
+                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-9 w36 flex items-center justify-center text-center">
+                        <i className="smb-filter text-InterfaceTextsubtitle font18"></i>
+                    </div>
                 </div>
             </div>
+            {/* --- END HEADER SECTION --- */}
 
             {/* Table */}
             <DataTable
                 value={recordsList}
                 stripedRows
                 rows={10}
-                className="custTable"
+                className="custTable tableCustRed mt-4"
                 responsiveLayout="scroll"
                 style={{ width: "100%" }}
                 filters={filters}
                 onFilter={(e) => setFilters(e.filters)}
                 filterDisplay="row"
+                globalFilter={globalFilter}
                 globalFilterFields={["timeStamp", "activityType", "description", "user", "ipAddress"]}
                 emptyMessage={<div className="flex justify-center p-4">No Records Found.</div>}
-                pt={{
-                    thead: { className: "bg-gray-50" },
-                    headerRow: { className: "text-gray-700" },
-                }}
             >
-                <Column field="timeStamp" header={<HeaderWithMenu title="Time Stamp" />} style={{ minWidth: "14rem" }} filter filterElement={(opts) => filterInput(opts, "")} showFilterMenu={false} body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>} />
+                {/* 1. TimeStamp - Icon restored */}
+                <Column 
+                    field="timeStamp" 
+                    header={<HeaderWithMenu title="Time Stamp" />} 
+                    style={{ minWidth: "14rem" }} 
+                    filter 
+                    filterElement={(opts) => filterInput(opts, "")} 
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>} 
+                />
 
-                <Column field="activityType" header={<HeaderWithMenu title="Activity Type" />} style={{ minWidth: "12rem" }} filter filterElement={(opts) => filterInput(opts, "")} showFilterMenu={false} body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>} />
+                {/* 2. Activity Type - Icon restored */}
+                <Column 
+                    field="activityType" 
+                    header={<HeaderWithMenu title="Activity Type" />} 
+                    style={{ minWidth: "12rem" }} 
+                    filter 
+                    filterElement={(opts) => filterInput(opts, "")} 
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>} 
+                />
 
-                <Column field="description" header={<HeaderWithMenu title="Description/ Details" />} style={{ minWidth: "14rem" }} filter filterElement={(opts) => filterInput(opts, "Abc")} showFilterMenu={false} body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>} />
+                {/* 3. Description - Icon restored */}
+                <Column 
+                    field="description" 
+                    header={<HeaderWithMenu title="Description/ Details" />} 
+                    style={{ minWidth: "14rem" }} 
+                    filter 
+                    filterElement={(opts) => filterInput(opts, "Abc")} 
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>} 
+                />
 
-                <Column field="user" header={<HeaderWithMenu title="User" />} style={{ minWidth: "12rem" }} filter filterElement={(opts) => filterInput(opts, "Abc")} showFilterMenu={false} body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>} />
+                {/* 4. User - Icon restored */}
+                <Column 
+                    field="user" 
+                    header={<HeaderWithMenu title="User" />} 
+                    style={{ minWidth: "12rem" }} 
+                    filter 
+                    filterElement={(opts) => filterInput(opts, "Abc")} 
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>} 
+                />
 
-                <Column field="ipAddress" header={<HeaderWithMenu title="IP Address" />} style={{ minWidth: "12rem" }} filter filterElement={(opts) => filterInput(opts, "Abc")} showFilterMenu={false} body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>} />
+                {/* 5. IP Address - Icon restored */}
+                <Column 
+                    field="ipAddress" 
+                    header={<HeaderWithMenu title="IP Address" />} 
+                    style={{ minWidth: "12rem" }} 
+                    filter 
+                    filterElement={(opts) => filterInput(opts, "Abc")} 
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>} 
+                />
 
+                {/* Action Column - Hiding menu intentionally here */}
                 <Column
                     field="Action"
-                    header={<HeaderWithMenu title="Action" />}
+                    header="Action"
                     style={{ width: "5rem", textAlign: "center" }}
                     align="center"
                     body={actionBodyTemplate}
                     filter
-                    filterElement={() => <div className="w-full h-10"></div>}
+                    filterElement={() => <div className="w-full"></div>}
                     showFilterMenu={false}
                 />
             </DataTable>
 
-            {/* Dropdown Menu */}
-            <Menu model={menuItems} popup ref={menuRef} className="custom-menu" />
-
             {/* Pagination */}
-            <div className="relative mt-4">
+            <div className="relative custTablePaginator border-t border-gray-100">
                 <Paginator
                     template="PrevPageLink PageLinks NextPageLink"
                     first={first}
                     rows={rows}
                     onPageChange={onPageChange}
                     totalRecords={1000}
-                    className="justify-end !bg-transparent"
+                    className="justify-end"
                     leftContent={
-                        <span className="text-gray-500 font-medium text-sm ml-4 absolute left-0 top-1/2 -translate-y-1/2">
+                        <span className="text-gray-400 font-medium text-xs ml-4 absolute left-0 top-1/2 -translate-y-1/2">
                             Showing <span className="font-bold">1-10</span> of <span className="font-bold">1000</span>
                         </span>
                     }
