@@ -5,7 +5,7 @@ import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import { InputText } from "primereact/inputtext";
 import { Paginator } from "primereact/paginator";
-import { Menu } from "primereact/menu"; // 1. Import Menu
+import { Menu } from "primereact/menu"; 
 import React, { useState, useRef } from "react";
 import { ViewAnnouncements } from './popup/ViewAnnouncements';
 import Filter from './popup/Filter';
@@ -13,7 +13,6 @@ import Filter from './popup/Filter';
 export const FilesTable = () => {
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(10);
-    const [globalFilterValue, setGlobalFilterValue] = useState("");
 
     // Filter Popup State
     const [openFilter, setOpenFilter] = useState(false);
@@ -22,7 +21,7 @@ export const FilesTable = () => {
     const [visibleRight, setVisibleRight] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
-    // 2. Ref for the Menu
+    // Ref for the Menu
     const menu = useRef(null);
 
     const onPageChange = (event) => {
@@ -30,106 +29,44 @@ export const FilesTable = () => {
         setRows(event.rows);
     };
 
-    // 3. Menu Items logic
+    // Menu Items logic
     const menuItems = [
         {
-            label: 'View',
-            icon: 'pi pi-eye',
-            command: () => {
-                // Opens the existing View Popup
-                setVisibleRight(true);
-            }
+            template: (item, options) => (
+                <div
+                    onClick={() => {
+                        setVisibleRight(true);
+                        options.onClick();
+                    }}
+                    className="flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50"
+                >
+                    <i className="pi pi-eye text-gray-700 text-sm"></i>
+                    <span className="text-gray-700 text-sm">View</span>
+                </div>
+            ),
         },
-        // {
-        //     label: 'Edit',
-        //     icon: 'pi pi-pencil',
-        //     command: () => {
-        //         console.log("Edit clicked for:", selectedProduct);
-        //         // Add your edit logic here
-        //     }
-        // },
-        // {
-        //     label: 'Delete',
-        //     icon: 'pi pi-trash',
-        //     className: 'text-red-500',
-        //     command: () => {
-        //         console.log("Delete clicked for:", selectedProduct);
-        //         // Add your delete logic here
-        //     }
-        // }
     ];
 
     const announcementList = [
-        {
-            id: 1,
-            date: "03/03/2025",
-            type: "General",
-            message: "System maintenance scheduled on March 5th from 1:00 AM to 3:00 AM. Please save your work in advance",
-        },
-        {
-            id: 2,
-            date: "03/03/2025",
-            type: "General",
-            message: "New employee recognition program launched! Nominate your colleagues by March 10th.",
-        },
-        {
-            id: 3,
-            date: "03/03/2025",
-            type: "Campaign",
-            message: "Updated company leave policy is now live on the HR portal. Please review the changes",
-        },
-        {
-            id: 4,
-            date: "03/03/2025",
-            type: "Campaign",
-            message: "System maintenance scheduled on March 5th from 1:00 AM to 3:00 AM. Please save your work in advance",
-        },
-        {
-            id: 5,
-            date: "03/03/2025",
-            type: "Social Campaign",
-            message: "New employee recognition program launched! Nominate your colleagues by March 10th.",
-        },
-        {
-            id: 6,
-            date: "03/03/2025",
-            type: "Social Campaign",
-            message: "Updated company leave policy is now live on the HR portal. Please review the changes",
-        },
-        {
-            id: 7,
-            date: "03/03/2025",
-            type: "Campaign",
-            message: "System maintenance scheduled on March 5th from 1:00 AM to 3:00 AM. Please save your work in advance",
-        },
-        {
-            id: 8,
-            date: "03/03/2025",
-            type: "Campaign",
-            message: "New employee recognition program launched! Nominate your colleagues by March 10th.",
-        },
-        {
-            id: 9,
-            date: "03/03/2025",
-            type: "Social Campaign",
-            message: "Updated company leave policy is now live on the HR portal. Please review the changes",
-        },
-        {
-            id: 10,
-            date: "03/03/2025",
-            type: "Social Campaign",
-            message: "System maintenance scheduled on March 5th from 1:00 AM to 3:00 AM. Please save your work in advance",
-        },
+        { id: 1, date: "03/03/2025", type: "General", message: "System maintenance scheduled on March 5th..." },
+        { id: 2, date: "03/03/2025", type: "General", message: "New employee recognition program launched..." },
+        { id: 3, date: "03/03/2025", type: "Campaign", message: "Updated company leave policy is now live..." },
+        { id: 4, date: "03/03/2025", type: "Campaign", message: "System maintenance scheduled on March 5th..." },
+        { id: 5, date: "03/03/2025", type: "Social Campaign", message: "New employee recognition program launched..." },
+        { id: 6, date: "03/03/2025", type: "Social Campaign", message: "Updated company leave policy is now live..." },
+        { id: 7, date: "03/03/2025", type: "Campaign", message: "System maintenance scheduled on March 5th..." },
+        { id: 8, date: "03/03/2025", type: "Campaign", message: "New employee recognition program launched..." },
+        { id: 9, date: "03/03/2025", type: "Social Campaign", message: "Updated company leave policy is now live..." },
+        { id: 10, date: "03/03/2025", type: "Social Campaign", message: "System maintenance scheduled on March 5th..." },
     ];
 
-    // 4. Action Column Updated to trigger Menu
     const actionBodyTemplate = (rowData) => {
         return (
             <div className="flex justify-center items-center w-full">
                 <button
                     onClick={(event) => {
-                        setSelectedProduct(rowData); // Set the current row data
-                        menu.current.toggle(event);  // Toggle the menu
+                        setSelectedProduct(rowData);
+                        menu.current.toggle(event);
                     }}
                     title="Options"
                     className="cursor-pointer bg-transparent border-none flex items-center justify-center"
@@ -147,17 +84,18 @@ export const FilesTable = () => {
     };
 
     const [filters, setFilters] = useState({
-        global: { value: null, matchMode: "contains" },
         date: { value: null, matchMode: "contains" },
         type: { value: null, matchMode: "contains" },
         message: { value: null, matchMode: "contains" },
     });
 
+    const [globalFilter, setGlobalFilter] = useState('');
+
     const HeaderWithMenu = ({ title }) => {
         return (
             <div className="header-menu flex items-center justify-between w-full">
                 <span className="text-interfacetextdefault2 font-medium">{title}</span>
-                <div className="smb-more text-interfacetextdefault2 font12 flex justify-end cursor-pointer opacity-50">
+                <div className="smb-more text-interfacetextdefault2 font12 flex justify-end cursor-pointer">
                 </div>
             </div>
         );
@@ -165,34 +103,24 @@ export const FilesTable = () => {
 
     const filterInput = (options) => {
         return (
-            <div className="flex items-center w-full gap-2">
-                <InputText
-                    value={options.value || ""}
-                    onChange={(e) => options.filterApplyCallback(e.target.value)}
-                    className="p-inputtext-sm w-full custom-input border-gray-200"
-                />
-            </div>
+            <InputText
+                value={options.value || ""}
+                onChange={(e) => options.filterApplyCallback(e.target.value)}
+                placeholder="Search"
+                className="p-inputtext-sm w-full custom-input1"
+            />
         );
-    };
-
-    const onGlobalFilterChange = (e) => {
-        const value = e.target.value;
-        let _filters = { ...filters };
-        _filters["global"].value = value;
-        setFilters(_filters);
-        setGlobalFilterValue(value);
     };
 
     return (
         <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4 bg-white relative">
 
-            {/* 5. The Popup Menu Component */}
             <Menu model={menuItems} popup ref={menu} id="popup_menu" />
 
-            {/* Top Header Section */}
+            {/* --- UPDATED HEADER SECTION --- */}
             <div className="p15 flex flex-col md:flex-row justify-between items-center pb-0">
 
-                {/* Title */}
+                {/* Left Side: Title & Count */}
                 <div className="flex gap8 items-center pb22 md:pb-0">
                     <div className="font16 text-InterfaceTexttitle1 font-semibold mr-2">
                         All Announcements
@@ -202,34 +130,43 @@ export const FilesTable = () => {
                     </div>
                 </div>
 
-                {/* Global Search & Filter Button */}
-                <div className="flex gap10 items-center pb22 md:pb-0">
+                {/* Right Side: Search Bar & Filter Button */}
+                <div className="flex gap-3 items-center pb22 md:pb-0">
+                    
+                    {/* Search Bar - Replica of Screenshot */}
                     <div className="relative">
-                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
-                            <i className="pi pi-search"></i>
-                        </span>
+                        <i className="pi pi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
                         <InputText
-                            value={globalFilterValue}
-                            onChange={onGlobalFilterChange}
+                            value={globalFilter}
+                            onChange={(e) => setGlobalFilter(e.target.value)}
                             placeholder="Search"
-                            className="pl-9 py-2 border border-gray-200 rounded-md text-sm w-64 bg-gray-50 focus:bg-white transition-colors"
+                            className="p-inputtext-sm pl-10 text-gray-600 w-64" 
+                            style={{ 
+                                backgroundColor: '#F8FAFC', // Very light grey/blue background
+                                border: '1px solid #E2E8F0', // Subtle border
+                                borderRadius: '6px',
+                                paddingLeft: '2.5rem' // Space for the icon
+                            }}
                         />
                     </div>
-                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-full p-2 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-white rounded-md hover:bg-gray-50 ml-1">
-                        <i className="smb-filter text-InterfaceTextsubtitle font16"></i>
+
+                    {/* Filter Button */}
+                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-9 w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded-md hover:bg-[#ebeff3]">
+                        <i className="smb-filter text-InterfaceTextsubtitle font14"></i>
                     </div>
                 </div>
             </div>
+            {/* --- END HEADER SECTION --- */}
 
-            {/* Table */}
             <DataTable
                 value={announcementList}
                 stripedRows
                 rows={10}
-                className="custTable tableCustRed"
+                className="custTable tableCustRed mt-4" // Added mt-4 for spacing
                 responsiveLayout="scroll"
                 style={{ width: "100%" }}
                 filters={filters}
+                globalFilter={globalFilter}
                 onFilter={(e) => setFilters(e.filters)}
                 filterDisplay="row"
                 emptyMessage={
@@ -276,7 +213,6 @@ export const FilesTable = () => {
                 />
             </DataTable>
 
-            {/* Paginator */}
             <div className="relative custTablePaginator border-t border-gray-100">
                 <Paginator
                     template="PrevPageLink PageLinks NextPageLink"
@@ -293,13 +229,11 @@ export const FilesTable = () => {
                 />
             </div>
 
-            {/* View Announcement Details Popup */}
             <ViewAnnouncements
                 visible={visibleRight}
                 onHide={() => setVisibleRight(false)}
                 data={selectedProduct}
             />
-            {/* Filter Popup */}
             <Filter
                 visible={openFilter}
                 onHide={() => setOpenFilter(false)}
