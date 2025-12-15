@@ -117,7 +117,7 @@ export default function SigninTemplate() {
                     className="customcheckox"
                   />
                   <div className="ml-2 text-interfacetextdefault1 font14 font-medium">
-                    Remember me
+                    Remember Me
                   </div>
                 </div>
 
@@ -184,12 +184,12 @@ export default function SigninTemplate() {
               {/* Sign Up Link */}
               <div
                 onClick={() => setOpenPopupSignUp(true)}
-                className="flex py24 justify-center items-center cursor-pointer gap10"
+                className="flex py24 justify-center items-center cursor-pointer gap6 text-[14px] xl:text-[14px] 3xl:text-[0.729vw]"
               >
-                <div className="font16 text-[#7F8488]">
+                <div className=" text-[#7F8488]">
                   Not Registered Yet?
                 </div>
-                <span className="text-[#4A4167] font-medium">
+                <span className="text-[#4A4167] font-medium font14">
                   Create account.
                 </span>
               </div>
