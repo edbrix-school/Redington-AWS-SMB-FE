@@ -34,15 +34,15 @@ const TryOut = () => {
       left: "Left: 3hrs 45 mins"
     },
   ];
-    const op = useRef(null);
+  const op = useRef(null);
 
   return (
     <>
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12 my-solutions-bg">
         <div className="col-span-7">
           <div className="spacey30 ml-[70px] xl:ml-[80px] 2xl:ml-[86px] 3xl:ml-[4.635vw] mt-[80px] xl:mt-[100px] 2xl:mt-[120px] 3xl:mt-[7.031vw] mb-[80px] xl:mb-[84px] 2xl:mb-[90px] 3xl:mb-[5vw]">
             <div>
-              <div className="w-[45px] h-[2px] bg-[#645592]"></div>
+              <div className="w-[45px] h-[2px] bg-InterfaceSurfacehcprimary"></div>
               <div className="font20 text-interfacetextdefault1 font-medium">Latest Tryout</div>
             </div>
             <div>
@@ -57,63 +57,79 @@ const TryOut = () => {
               </div>
             </div>
             <div className="flex gap10 font-medium font18 mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
-              <Link href="" className="text-white border  border-[#5D9D4A] bg-BrandHighlightpure rounded-full py10 px24">Open the Solution</Link>
-              <Link href="" className="text-BrandHighlight500 border border-BrandHighlight500 bg-[#F5F6F8] rounded-full py10 px24">Buy it now</Link>
-              <Link href="" className="text-interfacetextdefault1 border border-none bg-none py10 px24">Cancel</Link>
+              <Link href="" className="text-white border border-BrandHighlight500 bg-BrandHighlightpure rounded-full py10 px24">Open the Solution</Link>
+              <Link href="" className="text-BrandHighlight500 border border-BrandHighlight500 bg-BrandNeutral501 rounded-full py10 px24">Buy it now</Link>
+              <Link href="" className="text-interfacetextdefault1 border border-none bg-none py10 px24 opacity-70">Cancel</Link>
             </div>
           </div>
         </div>
         <div className="col-span-5">
           <div className="mt-[36px] xl:mt-[40px] 2xl:mt-[46px] 3xl:mt-[2.656vw] mr-[28px] xl:mr-[32px] 2xl:mr-[34px] 3xl:mr-[1.927vw]">
+            {/* Heading */}
             <div>
-              <div className="w-[45px] h-[2px] bg-[#645592]"></div>
-              <div className="font20 text-interfacetextdefault1 font-medium"><span className="font-bold">Recent</span> Tryouts</div>
+              <div className="w-[45px] h-[2px] bg-InterfaceSurfacehcprimary"></div>
+              <div className="font20 text-interfacetextdefault1 font-medium">
+                <span className="font-bold">Recent</span> Tryouts
+              </div>
             </div>
-            <div className="mt24 h-[480px] xl:h-[520px] 2xl:h-[550px] 3xl:h-[29.427vw] overflow-y-auto">
-              {cardData.map((item, i) => (
-                <div key={i} className="bg-tryout bg-InterfaceSurfacecomponent shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12">
-                  <div className="flex justify-between items-center">
-                    <div className="flex gap8">
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">Web Hosting</div>
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">Security</div>
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">+2</div>
-                    </div>
-                    <div>
-                      {" "}
-                      <i
-                        className="text-[#3C4146] smb-square-more font20 cursor-pointer"
-                        onClick={(e) => op.current.toggle(e)}
-                      ></i>
-                      <OverlayPanel
-                        ref={op}
-                        className="w-[160px] custom-op rounded8"
-                      >
-                        <div className="flex flex-col text-[#3C4146] font14 font-[400]">
-                          <Link
-                            href="#"
-                            onClick={() => setOpenPopupViewTicket(true)}
-                            className=" leading-[140%] py4 px4"
-                          >
-                            View
-                          </Link>
-                          <Link
-                            href="#"
-                            className=" leading-[140%] py4 px4"
-                          >
-                            Cancel
-                          </Link>
+
+            {/* Scroll Container */}
+            <div className="relative mt24">
+              {/* Scrollable list */}
+              <div className="h-[480px] xl:h-[520px] 2xl:h-[550px] 3xl:h-[29.427vw] overflow-y-auto pr-2">
+                {cardData.map((item, i) => (
+                  <div
+                    key={i}
+                    className="bg-tryout bg-InterfaceSurfacecomponent shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12"
+                  >
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap8">
+                        <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase cursor-pointer">
+                          Web Hosting
                         </div>
-                      </OverlayPanel>
+                        <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase cursor-pointer">
+                          Security
+                        </div>
+                        <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase cursor-pointer">
+                          +2
+                        </div>
+                      </div>
+
+                      <div>
+                        <i className="text-[#3C4146] smb-square-more font20 cursor-pointer" onClick={(e) => op.current.toggle(e)}></i>
+                        <OverlayPanel ref={op} className="w-[160px] custom-op rounded8" >
+                          <div className="flex flex-col text-[#3C4146] font14 font-normal">
+                            <Link
+                              href="#"
+                              onClick={() => setOpenPopupViewTicket(true)}
+                              className="leading-[140%] py4 px4"
+                            >
+                              View
+                            </Link>
+                            <Link href="#" className="leading-[140%] py4 px4">
+                              Cancel
+                            </Link>
+                          </div>
+                        </OverlayPanel>
+                      </div>
+                    </div>
+
+                    <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8`}>
+                      {item.title}
+                    </div>
+
+                    <div className="flex gap-2 items-center">
+                      <i className="smb-watch text-[#D42600] font16"></i>
+                      <div className="font14 text-interfacetextdefault1">
+                        {item.left}
+                      </div>
                     </div>
                   </div>
-                  <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8`}>{item.title}</div>
-                  <div className="flex gap-2 items-center">
-                    <i className="smb-watch text-[#D42600] font16"></i>
-                    <div className="font14 text-interfacetextdefault1">{item.left}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+
+              {/* 🔥 Bottom Blur Overlay */}
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#ffffff] via-[#ffffff]/70 to-transparent" /></div>
           </div>
         </div>
       </div>

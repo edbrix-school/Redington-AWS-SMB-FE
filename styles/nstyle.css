@@ -119,3 +119,9 @@ display: none;
 .custom-accordion .p-accordion-tab-active .p-accordion-header-link::after {
   content: '▲';
 }
+
+.my-solutions-bg {
+  background-image: url("/images/my-solutions-bg.svg");
+  background-size: cover;
+  background-position: center;
+}

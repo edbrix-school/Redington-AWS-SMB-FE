@@ -1,8 +1,18 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
+import { Sidebar } from "primereact/sidebar";
+import AiChatboxPopup from "../catalog/AichatboxPopup";
 
 const Help = () => {
+    const [visible, setVisible] = useState(false);
+    const showSidebar = () => {
+        setVisible(true);
+    };
+    const hideSidebar = () => {
+        setVisible(false);
+    };
 
     return (
         <>
@@ -11,8 +21,7 @@ const Help = () => {
                     <div className="text-[#19212A] text-[24px] lg:text-[26px] xl:text-[30px] 2xl:text-[36px] 3xl:text-[2.031vw] leading-[140%]">How We can <span className="text-[#019049] font-bold">Help</span> You?</div>
                 </div>
                 <div className="">
-                    <div className="help-bg bg-no-repeat bg-none lg:bg-contain"
-                    >
+                    <div className="help-bg bg-no-repeat bg-none lg:bg-contain">
                         <div className=" grid grid-cols-12 md:grid-cols-12 mt-[40px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.344vw] gap-[14px] xl:gap-[16px] 3xl:gap-[0.833vw]">
                             <div className="col-span-12 md:col-span-6 lg:col-span-6">
                                 <div className="font24">Chat with Ton<span className="font-semibold">AI</span> about your problems and Needs</div>
@@ -44,7 +53,7 @@ const Help = () => {
                                                 <span className="font-bold">CloudQuarks Portal</span></div>
                                             <div className="font14 leading-[120%] mt-[6px] xl:mt-[8px] 3xl:mt-[0.417vw]">Just select and send your prefered solutions to CloudQuarks Portal, pay and start using <br /> the applications and Services. With Just a few clicks you go from the Mess to the</div>
                                             <div className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium text-[14px] xl:text-[16px] 3xl:text-[0.938vw] mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
-                                                <Link href="" className="text-[#212325]  open-ai-btn rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Open <span className="font-medium">Ton</span><span className="font-bold">AI</span></Link>
+                                                <Link onClick={showSidebar} href="" className="text-[#212325]  open-ai-btn rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Open <span className="font-medium">Ton</span><span className="font-bold">AI</span></Link>
                                                 <Link href="" className="text-[#5D9D4A] border border-[#ACD69F] bg-InterfaceSurfacecomponent rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Schedule a Session</Link>
                                             </div>
                                         </div>
@@ -56,6 +65,14 @@ const Help = () => {
                     </div>
                 </div>
             </div>
+            <Sidebar
+                visible={visible}
+                onHide={() => hideSidebar()}
+                className="p-0 z-[9999] customAichatboxsidebar !w-[53rem] lg:!w-[53rem] md:!w-[43rem] sm:!w-[100%]  "
+                position="right"
+            >
+                <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />
+            </Sidebar>
         </>
     );
 };

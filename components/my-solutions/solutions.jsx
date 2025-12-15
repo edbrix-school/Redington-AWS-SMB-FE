@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import { Inter } from "next/font/google";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
+import { InputText } from "primereact/inputtext";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -48,8 +49,11 @@ const Solutions = () => {
     ];
 
     const [activeTab, setActiveTab] = useState("Active Tryouts");
+    const [activeTab1, setActiveTab1] = useState("");
     const TABS = ["Active Tryouts", "Expired Tryouts"];
+    const TABS1 = ["kk", "NN"];
     const op = useRef(null);
+    const [globalFilter, setGlobalFilter] = useState('');
 
     return (
         <>
@@ -60,8 +64,8 @@ const Solutions = () => {
                             <div className="font24 text-interfacetextdefault1 font-semibold leading-[140%]">My Solutions</div>
                         </div>
                         <div className="border-t border-InterfaceStrokesoft1 pb14"></div>
-                        <div className="">
-                            <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+                        <div className="flex justify-between">
+                            <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
                                 {TABS.map((tab, index) => (
                                     <button
                                         key={tab}
@@ -75,6 +79,40 @@ const Solutions = () => {
                                         {tab}
                                     </button>
                                 ))}
+                            </div>
+                            <div className="flex items-center">
+                                <div className="relative">
+                                    <i className="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
+                                    <InputText
+                                        value={globalFilter}
+                                        onChange={(e) => setGlobalFilter(e.target.value)}
+                                        placeholder="Search"
+                                        className="p-inputtext-sm pl-10 text-gray-600 w-64"
+                                        style={{
+                                            backgroundColor: '#F8FAFC', // Very light grey/blue background
+                                            border: '1px solid #E2E8F0', // Subtle border
+                                            borderRadius: '6px',
+                                            paddingLeft: '2.5rem' // Space for the icon
+                                        }}
+                                    />
+                                </div>
+                                <div>
+                                    <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+                                        {TABS1.map((tab, index) => (
+                                            <button
+                                                key={tab}
+                                                onClick={() => setActiveTab1(tab)}
+                                                className={`
+            ${activeTab1 === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
+            text-center font-semibold text-[14px] py6 px12
+            ${index !== TABS1.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+          `}
+                                            >
+                                                {tab}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap24 mt24 p20">
