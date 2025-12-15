@@ -135,7 +135,7 @@ export default function FilterPopup({ visible, onHide }) {
                 </div>
                 <div className="flex flex-col gap6">
                   <label className="font14 font-medium text-InterfaceTexttitle1">
-                    Created By
+                    Status
                   </label>
 
                   <div className="grid grid-cols-1">

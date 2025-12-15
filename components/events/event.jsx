@@ -143,7 +143,7 @@ export const Events = () => {
                 className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted hover:bg-[#e9e8f0] rounded8"
                 
               >
-                <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
+                <i className="smb-filter text-InterfaceTextsubtitle font16 "></i>
               </div>
             </div>
           </div>
