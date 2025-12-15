@@ -1,10 +1,12 @@
 "use client";
-import Launchpad from "./launchpad";
-import Help from "./help";
-import GroupSolution from "./group-solution";
+
+import GroupSolution from "@/components/about-us/group-solution";
+import Help from "@/components/about-us/help";
+import Launchpad from "@/components/about-us/launchpad";
 
 
-const Landing = () => {
+
+const AboutUs = () => {
 
   return (
     <>
@@ -17,4 +19,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default AboutUs;

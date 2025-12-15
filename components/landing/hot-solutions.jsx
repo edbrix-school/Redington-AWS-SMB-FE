@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Carousel } from 'primereact/carousel';
 
 
@@ -61,11 +62,11 @@ const HotSolutions = () => {
                         <div className="space-y-[6px] xl:space-y-[6px] 3xl:sapce-y-[0.313vw] py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
                             <div className="font36 leading-[125%]">Amazon Bedrock</div>
                             <div className="font24 leading-[120%]">Discover Three proven use cases for Generative AI</div>
-                            <div className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium font14">
+                            <Link href="" className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium font14">
                                 <div className="text-[#8C55FD] border border-[#8C55FD] bg-white rounded-full py-[6px] xl:py-[8px] 3xl:py-[0.417vw] px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">
                                     Open
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-span-12 md:col-span-6 lg:col-span-7  grid grid-cols-7">
@@ -74,11 +75,11 @@ const HotSolutions = () => {
                                 <div className="space-y-[14px] xl:space-y-[16px] 3xl:sapce-y-[0.885vw] ">
                                     <div className="font32 leading-[120%]">Amazon CloudFront</div>
                                     <div className="font24 leading-[120%] opacity-80">Securely deliver content with low latency and high transfer speeds</div>
-                                    <div className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium font14">
+                                    <Link href="" className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium font14">
                                         <div className="text-[#8C55FD] border border-[#8C55FD] bg-white rounded-full py-[6px] xl:py-[8px] 3xl:py-[0.417vw] px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">
                                             See More
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

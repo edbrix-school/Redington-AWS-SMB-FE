@@ -20,7 +20,7 @@ const Launchpad = () => {
               </div>
               <div className="text-black text-[20px] xl:text-[22px] 2xl:text-[24px] 3xl:text-[1.25vw] leading-[120%] mt-[20px] xl:mt-[22px] 2xl:mt-[24px] 3xl:mt-[1.25vw]">One Platform to manage your multi-cloud infrastructure <br /> for all partners, vendors and customers</div>
               <div className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium text-[14px] xl:text-[16px] 3xl:text-[0.938vw] mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
-                <div className="text-[#5D9D4A]  border border-[#5D9D4A] bg-white rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Find&Launch!</div>
+                <Link href="" className="text-[#5D9D4A]  border border-[#5D9D4A] bg-white rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Find&Launch!</Link>
                 <Link href="/about-us" className="text-[#3C4146] border border-[#BBC1C7] bg-[#F5F6F8]  rounded-full py-[8px] xl:py-[10px] 3xl:py-[0.521vw] px-[20px] xl:px-[22px] 3xl:px-[1.25vw]">Read More</Link>
               </div>
             </div>

@@ -1,9 +1,9 @@
 "use client";
-import TryOut from "./tryout";
-import Solutions from "./solutions";
-import GroupSolution from "./group-solution";
 import TopBar from '../layout/top';
 import { NavBar } from '../layout/NavBar';
+import TryOut from '@/components/my-solutions/tryout';
+import Solutions from '@/components/my-solutions/solutions';
+import GroupSolution from '@/components/my-solutions/group-solution';
 
 
 const MySolutions = () => {

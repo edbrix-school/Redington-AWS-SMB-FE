@@ -1,9 +1,8 @@
 "use client";
-import Launchpad from "./launchpad";
-import Announcements from "./announcements";
-import HotSolutions from "./hot-solutions";
-import GroupSolution from "./group-solution";
-
+import Announcements from "@/components/landing/announcements";
+import GroupSolution from "@/components/landing/group-solution";
+import HotSolutions from "@/components/landing/hot-solutions";
+import Launchpad from "@/components/landing/launchpad";
 
 const Landing = () => {
 

@@ -45,11 +45,11 @@ const cardData = [
 const GroupSolution = () => {
     return (
         <>
-            <div className="mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+            <div className="mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
-                <div className="font16 text-interfacetextdefault1 font-medium">Group of Solutions by Sector</div>
+                <div className="font16 text-interfacetextdefault1 font-medium">Group of Products by Sector</div>
                 <div className="flex gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
-                    <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt-[22px] xl:mt-[24px] 3xl:mt-[1.25vw]">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt24">
                         {cardData.map((item, i) => (
                             <div key={i} className="sector-bg p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
@@ -67,25 +67,23 @@ const GroupSolution = () => {
 
 
 
-                                <div className="flex items-center">
-  <button
-    className="peer z-20 w-12 h-12 flex items-center justify-center
-               bg-[#42536D] text-white text-lg rounded-full
-               cursor-pointer transition-colors duration-200 hover:bg-[#2f3c50]">
-    ➜
-  </button>
 
-  <div
-    className="z-10 flex items-center h-12 -ml-12 pl-12
-               bg-purple-200 rounded-full overflow-hidden
-               w-12 peer-hover:w-40 transition-all duration-300 ease-out">
-    <span
-      className="text-purple-700 opacity-0 peer-hover:opacity-100
-                 transition-opacity duration-300 whitespace-nowrap">
-      View Solutions
-    </span>
-  </div>
-</div>
+                                <div className="flex justify-end">
+                                    <button class="group flex items-center rounded6 text-white bg-[#42536D] overflow-hidden px8 ">
+                                        <span class="max-w-0 mr-1 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-32 text-right font11 ">
+                                            View Solutions
+                                        </span>
+
+                                        <span class="flex items-center cursor-pointer bg-[#42536D] py4   ">
+                                            <i className="smb-arrow-right font12"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+
+
+
+
 
 
 
@@ -98,7 +96,7 @@ const GroupSolution = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="see-all-bg flex items-center justify-center p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
+                    <div className="see-all-bg flex items-center justify-center p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 mt16">
                         <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
                             <i className="smb-arrowup text-center"></i>
                             <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>

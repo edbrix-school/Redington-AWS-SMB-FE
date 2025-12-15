@@ -1,6 +1,7 @@
 "use client";
 import { Work_Sans } from "next/font/google";
 import { Roboto } from "next/font/google";
+import Link from "next/link";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -47,11 +48,11 @@ const Announcements = () => {
               proven use cases for <br />
               Generative AI
             </div>
-            <div className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium text-[12px] xl:text-[14px] 3xl:text-[0.833vw]">
+            <Link href="" className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium text-[12px] xl:text-[14px] 3xl:text-[0.833vw]">
               <div className="text-[#8C55FD] border border-[#8C55FD] bg-white rounded-full py-[6px] xl:py-[8px] 3xl:py-[0.417vw] px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">
                 Show All
               </div>
-            </div>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
             {cardData.map((item, i) => (

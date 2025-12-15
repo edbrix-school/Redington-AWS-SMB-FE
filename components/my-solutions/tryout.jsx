@@ -1,5 +1,8 @@
 "use client";
 import { Inter } from "next/font/google";
+import Link from "next/link";
+import { OverlayPanel } from "primereact/overlaypanel";
+import { useRef } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +34,7 @@ const TryOut = () => {
       left: "Left: 3hrs 45 mins"
     },
   ];
+    const op = useRef(null);
 
   return (
     <>
@@ -53,9 +57,9 @@ const TryOut = () => {
               </div>
             </div>
             <div className="flex gap10 font-medium font18 mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
-              <div className="text-white border  border-[#5D9D4A] bg-BrandHighlightpure rounded-full py10 px24">Open the Solution</div>
-              <div className="text-BrandHighlight500 border border-BrandHighlight500 bg-[#F5F6F8] rounded-full py10 px24">Buy it now</div>
-              <div className="text-interfacetextdefault1 border border-none bg-none py10 px24">Cancel</div>
+              <Link href="" className="text-white border  border-[#5D9D4A] bg-BrandHighlightpure rounded-full py10 px24">Open the Solution</Link>
+              <Link href="" className="text-BrandHighlight500 border border-BrandHighlight500 bg-[#F5F6F8] rounded-full py10 px24">Buy it now</Link>
+              <Link href="" className="text-interfacetextdefault1 border border-none bg-none py10 px24">Cancel</Link>
             </div>
           </div>
         </div>
@@ -70,11 +74,37 @@ const TryOut = () => {
                 <div key={i} className="bg-tryout bg-InterfaceSurfacecomponent shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12">
                   <div className="flex justify-between items-center">
                     <div className="flex gap8">
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4">Web Hosting</div>
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4">Security</div>
-                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4">+2</div>
+                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">Web Hosting</div>
+                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">Security</div>
+                      <div className="bg-BrandNeutral501 rounded4 font11 px12 py4 uppercase rounded4 cursor-pointer">+2</div>
                     </div>
-                    <i className="smb-square-more"></i>
+                    <div>
+                      {" "}
+                      <i
+                        className="text-[#3C4146] smb-square-more font20 cursor-pointer"
+                        onClick={(e) => op.current.toggle(e)}
+                      ></i>
+                      <OverlayPanel
+                        ref={op}
+                        className="w-[160px] custom-op rounded8"
+                      >
+                        <div className="flex flex-col text-[#3C4146] font14 font-[400]">
+                          <Link
+                            href="#"
+                            onClick={() => setOpenPopupViewTicket(true)}
+                            className=" leading-[140%] py4 px4"
+                          >
+                            View
+                          </Link>
+                          <Link
+                            href="#"
+                            className=" leading-[140%] py4 px4"
+                          >
+                            Cancel
+                          </Link>
+                        </div>
+                      </OverlayPanel>
+                    </div>
                   </div>
                   <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8`}>{item.title}</div>
                   <div className="flex gap-2 items-center">
