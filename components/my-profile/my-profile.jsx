@@ -156,7 +156,7 @@ export const MyProfile = () => {
 
                                     <button
                                         onClick={() => setShowUploadInterface(false)}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors whitespace-nowrap cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:from-[#EEF2F6] hover:to-[#EEF2F6] transition-colors whitespace-nowrap cursor-pointer"
                                     >
                                         <i className="smb-circle-close"></i>
                                         Change
@@ -169,7 +169,7 @@ export const MyProfile = () => {
                                     {/* Change Button */}
                                     <button
                                         onClick={handleChangeClick}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:from-[#EEF2F6] hover:to-[#EEF2F6] transition-colors cursor-pointer"
                                     >
                                         <i className="smb-refresh"></i>
                                         Change
@@ -180,7 +180,7 @@ export const MyProfile = () => {
                                     {/* Remove Button */}
                                     <button
                                         onClick={handleRemove}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:from-[#EEF2F6] hover:to-[#EEF2F6] transition-colors cursor-pointer"
                                     >
                                         <i className="smb-circle-close"></i>
                                         Remove
