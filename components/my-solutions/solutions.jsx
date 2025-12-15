@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Inter } from "next/font/google";
 import { Button } from "primereact/button";
+import { OverlayPanel } from "primereact/overlaypanel";
+import Link from "next/link";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -49,6 +51,7 @@ const Solutions = () => {
     const [activeTab, setActiveTab] = useState("Active Tryouts");
 
     const TABS = ["Active Tryouts", "Expired Tryouts"];
+    const op = useRef(null);
 
 
     return (
@@ -61,26 +64,20 @@ const Solutions = () => {
                         </div>
                         <div className="border-t border-InterfaceStrokesoft1 pb14"></div>
                         <div className="">
-                            <div className="flex flex-wrap rounded8">
-                                {TABS.map((tab) => {
-                                    const isActive = tab === activeTab;
-                                    return (
-                                        <Button
-                                            key={tab}
-                                            type="button"
-                                            onClick={() => {
-                                                setActiveTab(tab);
-                                                setActiveIndex([-1]); // Reset accordion when changing tabs
-                                            }}
-                                            className={[
-                                                "customCatalogButton cursor-pointer px10 py8 font11 font-semibold",
-                                                isActive ? "active" : "",
-                                            ].join(" ")}
-                                        >
-                                            {tab}
-                                        </Button>
-                                    );
-                                })}
+                            <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+                                {TABS.map((tab, index) => (
+                                    <button
+                                        key={tab}
+                                        onClick={() => setActiveTab(tab)}
+                                        className={`
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
+            text-center font-semibold text-[14px] py6 px12
+            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+          `}
+                                    >
+                                        {tab}
+                                    </button>
+                                ))}
                             </div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap24 mt24 p20">
@@ -92,7 +89,33 @@ const Solutions = () => {
                                             <div className="bg-InterfaceSurfacecomponent rounded4 font11 px12 py4 uppercase rounded4">Security</div>
                                             <div className="bg-InterfaceSurfacecomponent rounded4 font11 px12 py4 uppercase rounded4">+2</div>
                                         </div>
-                                        <i className="smb-square-more font24"></i>
+                                        <div>
+                                            {" "}
+                                            <i
+                                                className="text-[#3C4146] smb-square-more font20 cursor-pointer"
+                                                onClick={(e) => op.current.toggle(e)}
+                                            ></i>
+                                            <OverlayPanel
+                                                ref={op}
+                                                className="w-[160px] custom-op rounded8"
+                                            >
+                                                <div className="flex flex-col text-[#3C4146] font14 font-[400]">
+                                                    <Link
+                                                        href="#"
+                                                        onClick={() => setOpenPopupViewTicket(true)}
+                                                        className=" leading-[140%] py4 px4"
+                                                    >
+                                                        View
+                                                    </Link>
+                                                    <Link
+                                                        href="#"
+                                                        className=" leading-[140%] py4 px4"
+                                                    >
+                                                        Cancel
+                                                    </Link>
+                                                </div>
+                                            </OverlayPanel>
+                                        </div>
                                     </div>
                                     <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8 leading-[120%]`}>{item.title}</div>
                                     <div className="flex gap-2 items-center">

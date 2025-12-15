@@ -207,7 +207,7 @@ export default function SigninTemplate() {
               className="3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[450px] xl:h-[650px]"
             />
        
-            <div className="absolute right-0 xl:top-[47%] xl:left-[34%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[80px] lg:w-[80px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
+            <div className="absolute right-0 top-[47%]  xl:top-[47%] left-[37%] xl:left-[30%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[290px] lg:w-[300px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
               <div className={nunito.className}>
               <div className="text-[20px] lg:text-[22px] xl:text-[20px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
                 Welcome! You're one step closer to finding the ideal AWS tools for  your business. Our platform helps you explore, compare, and test  drive AWS products before making a decision — so you  can build with confidence.

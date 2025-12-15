@@ -314,7 +314,7 @@
 .catalog-tabs.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
   padding:0.75rem;
   font-size:11px;
-  border-bottom:
+  /* border-bottom: */
 }
 .customCatalogButton.p-button.active {
   background: #8078b9 !important;
@@ -1023,6 +1023,16 @@ font-weight: 600;
     width: 40px;
 }
 
+.custTable .p-column-filter-menu-button.p-column-filter-menu-button-open, .custTable .p-column-filter-menu-button.p-column-filter-menu-button-open:hover {
+    color: #495057;
+    background: transparent;
+}
+
+.custTable .p-column-filter-menu-button:hover{
+  background: transparent;
+}
+
+ 
 /* .custTablePaginator .pi-angle-left:before{
     font-family: 'Inter', sans-serif !important;
     content: "Previous" !important;

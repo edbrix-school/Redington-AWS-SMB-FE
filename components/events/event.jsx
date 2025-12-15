@@ -109,15 +109,15 @@ export const Events = () => {
     
     <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm">
       <div>
-        <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
+        <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
           {TABS.map((tab, index) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
-            text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer "}
+            text-center font-medium font12 py6 px12
+            ${index !== TABS.length - 1 ? " border-[#E5E7EB]  cursor-pointer " : ""}
           `}
             >
               {tab}
@@ -147,13 +147,13 @@ export const Events = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap20 overflow-y-auto  items-stretch">
+          <div className="grid grid-cols-1 xl:grid-cols-7 gap20 overflow-y-auto  items-stretch">
             <div
-              className=" col-span-1"
+              className=" col-span-4"
               activeIndex={activeIndex}
               onTabChange={(e) => setActiveIndex(e.index)}
             >
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 mb-[12px]">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 mb-[12px]">
                 <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">
                   <div className="flex justify-between gap-4">
                     <div className="flex gap8">
@@ -175,7 +175,7 @@ export const Events = () => {
                     <h1 className="text-[#3C4146] font24 font-bold leading-[120%]">
                       Data Analytics in the Cloud
                     </h1>
-                    <p className="mt12 text-[#7F8488] font16 font-[400] leading-tight">
+                    <p className="mt12 text-[#7F8488] font14 font-[400] leading-tight">
                       Discover how to leverage cloud-based data analytics tools
                       and techniques to gain insights from your data. This
                       workshop covers data warehousing, big data processing, and
@@ -200,7 +200,7 @@ export const Events = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 mb-[12px]">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 mb-[12px]">
                 <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">
                   <div className="flex justify-between gap-4">
                     <div className="flex gap8">
@@ -222,7 +222,7 @@ export const Events = () => {
                     <h1 className="text-[#3C4146] font24 font-bold leading-[120%]">
                       Data Analytics in the Cloud
                     </h1>
-                    <p className="mt12 text-[#7F8488] font16 font-[400] leading-tight">
+                    <p className="mt12 text-[#7F8488] font14 font-[400] leading-tight">
                       Discover how to leverage cloud-based data analytics tools
                       and techniques to gain insights from your data. This
                       workshop covers data warehousing, big data processing, and
@@ -247,7 +247,7 @@ export const Events = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 mb-[12px]">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 mb-[12px]">
                 <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">
                   <div className="flex justify-between gap-4">
                     <div className="flex gap8">
@@ -269,7 +269,7 @@ export const Events = () => {
                     <h1 className="text-[#3C4146] font24 font-bold leading-[120%]">
                       Data Analytics in the Cloud
                     </h1>
-                    <p className="mt12 text-[#7F8488] font16 font-[400] leading-tight">
+                    <p className="mt12 text-[#7F8488] font14 font-[400] leading-tight">
                       Discover how to leverage cloud-based data analytics tools
                       and techniques to gain insights from your data. This
                       workshop covers data warehousing, big data processing, and
@@ -296,14 +296,14 @@ export const Events = () => {
               </div>
             </div>
 
-            <div className=" col-span-1">
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
+            <div className=" col-span-3">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
                 <SimplebarChart />
               </div>
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 flex">
                 <SimplebarChart />
               </div>
-              <div className="h-[180px] lg:h-[200px] xl:h-[220px] 2xl:h-[230px] 3xl:h-[11.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8  flex">
+              <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 col-span-1 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8  flex">
                 <SimplebarChart />
               </div>
             </div>

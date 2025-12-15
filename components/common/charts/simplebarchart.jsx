@@ -9,7 +9,7 @@ export default function SimplebarChart() {
       left: "0%",
       right: "0%",
       bottom: "3%",
-      top: "3%",
+      top: "4%",
       containLabel: true,
     },
 
@@ -46,7 +46,7 @@ export default function SimplebarChart() {
       {
         type: "bar",
         data: [10, 18, 28, 40,46, 68, 73, 88,95],
-        barWidth:'50%',
+        barWidth:'59%',
         itemStyle: {
           borderRadius: [4, 4, 0, 0],
           color: function (params) {
