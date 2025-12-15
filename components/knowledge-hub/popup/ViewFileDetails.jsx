@@ -45,8 +45,8 @@ export default function ViewFileDetails({ visible, onHide }) {
                 {/* HEADER */}
                 <div className="sticky top-0 z-50 bg-white border-b border-gray-200">
                     <div className="px-6 py-4 flex items-center gap-4">
-                        <button onClick={onHide}>
-                            <ArrowLeft size={20} className="text-gray-600" />
+                        <button onClick={onHide} className="cursor-pointer">
+                            <Image src="/images/arrowleft.svg" width={20} height={20} alt="Back" className="text-gray-600" />
                         </button>
 
                         <div>
