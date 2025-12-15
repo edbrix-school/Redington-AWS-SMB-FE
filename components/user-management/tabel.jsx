@@ -103,7 +103,7 @@ export default function Tabel() {
       statusColors[status] || "text-gray-600 bg-gray-100 border-gray-300";
 
     return (
-      <span className={`py6 px12 rounded8 text12 border ${colorClass}`}>
+      <span className={`py4 px12 rounded6 font12 border ${colorClass}`}>
         {status}
       </span>
     );
