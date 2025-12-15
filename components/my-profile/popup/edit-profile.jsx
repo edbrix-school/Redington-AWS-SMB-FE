@@ -18,11 +18,12 @@ export default function EditProfile({ visible, onHide }) {
   const verifyButtonStyle = (isVerified) => ({
     borderRadius: 'var(--Border-Radius-rounded-md, 6px)',
     border: 'none',
-    background: isVerified
-      ? 'linear-gradient(180deg, var(--Overlays-primary-overlay-8, rgba(100, 85, 146, 0.08)) 0%, var(--Overlays-primary-overlay-12, rgba(100, 85, 146, 0.12)) 100%)'
-      : '#645592',
-    color: isVerified ? '#019049' : '#D1D5DB'
+    background: '#645592',
+    color: isVerified ? '#C9D0DB' : '#D1D5DB',
+    opacity: isVerified ? 0.3 : 1,
+    cursor: 'pointer'
   });
+
   const countries = [
     { name: "United Arab Emirates", code: "AE" },
     { name: "Saudi Arabia", code: "SA" },
@@ -43,7 +44,7 @@ export default function EditProfile({ visible, onHide }) {
       >
         <div className="flex flex-col h-full">
           {/* Fixed Header */}
-          <div className="flex-none bg-[#fff] p24 rounded-tl-[10px] border-b border-[#E5E7EB]">
+          <div className="flex-none bg-[#fff] p24 rounded-tl-[10px]">
             <div className="text-[#212325] font24 font-bold">
               Edit Profile Details
             </div>
@@ -137,12 +138,12 @@ export default function EditProfile({ visible, onHide }) {
                       )}
                     </div>
                     <button
-                      className="font14 font-medium py10 px20 cursor-pointer whitespace-nowrap flex items-center gap-2"
+                      className="font14 font-medium py-[6px] px-[16px] cursor-pointer whitespace-nowrap flex items-center gap-2"
                       style={verifyButtonStyle(emailVerified)}
                       onClick={() => setEmailVerified(true)}
                     >
-                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" />
-                      {emailVerified ? 'Verified!' : 'Verify'}
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }}/>
+                     Verify
                     </button>
                   </div>
                 </div>
@@ -168,12 +169,12 @@ export default function EditProfile({ visible, onHide }) {
                       )}
                     </div>
                     <button
-                      className="font14 font-medium py10 px20 cursor-pointer whitespace-nowrap flex items-center gap-2"
+                      className="font14 font-medium py-[6px] px-[16px] cursor-pointer whitespace-nowrap flex items-center gap-2"
                       style={verifyButtonStyle(mobileVerified)}
                       onClick={() => setMobileVerified(true)}
                     >
-                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" />
-                      {mobileVerified ? 'Verified!' : 'Verify'}
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }}/>
+                      Verify
                     </button>
                   </div>
                 </div>
@@ -271,7 +272,7 @@ export default function EditProfile({ visible, onHide }) {
           </div>
 
           {/* Fixed Footer */}
-          <div className="flex-none bg-[#fff] dark:bg-[#111928] p-[16px] xl:p-[16px] 3xl:p-[0.833vw] flex justify-end gap-4 border-t border-[#E5E7EB] rounded-bl-[10px]">
+          <div className="flex-none bg-[#fff] dark:bg-[#111928] p-[16px] xl:p-[16px] 3xl:p-[0.833vw] flex justify-end gap-4 rounded-bl-[10px]">
             <div className="text-[#3C4146] font16 font-medium py10 px20 border-solid border border-[#E5E7EB] rounded-lg cursor-pointer cancel-btn-bg hover:bg-[#f6f6f7]">
               <Link onClick={onHide} href={""}>
                 Cancel

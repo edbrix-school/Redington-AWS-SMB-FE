@@ -25,13 +25,13 @@ export const MyProfile = () => {
             <div className="bg-white rounded8 shadow-sm border border-InterfaceStrokesoft1">
 
                 {/* Header */}
-                <div className="p15 flex justify-between items-center border-b border-InterfaceStrokesoft1">
-                    <h2 className="font14 font-semibold text-InterfaceTexttitle1">
+                <div className="p15 mr-4 ml-4 flex justify-between items-center border-b border-InterfaceStrokesoft1">
+                    <h2 className="font16 text-InterfaceTexttitle1 font-semibold mr-2">
                         Personal Information
                     </h2>
                     <button
                         onClick={() => setShowEditProfile(true)}
-                        className="flex items-center gap8 px20 py10 bg-InterfaceSurfacehcprimary text-white rounded8 hover:bg-BrandPrimary900 transition-colors font14 font-semibold"
+                        className="flex items-center gap8 px20 py10 bg-InterfaceSurfacehcprimary text-white rounded8 hover:bg-BrandPrimary900 transition-colors font14 font-semibold cursor-pointer"
                     >
                         <i className="smb-edit"></i>
                         Edit Profile
@@ -156,7 +156,7 @@ export const MyProfile = () => {
 
                                     <button
                                         onClick={() => setShowUploadInterface(false)}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 hover:text-InterfaceSurfacehcprimary hover:border-InterfaceSurfacehcprimary transition-colors whitespace-nowrap cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors whitespace-nowrap cursor-pointer"
                                     >
                                         <i className="smb-circle-close"></i>
                                         Change
@@ -169,18 +169,18 @@ export const MyProfile = () => {
                                     {/* Change Button */}
                                     <button
                                         onClick={handleChangeClick}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#F6F8FA] hover:text-InterfaceSurfacehcprimary hover:border-InterfaceSurfacehcprimary transition-colors cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors cursor-pointer"
                                     >
                                         <i className="smb-refresh"></i>
                                         Change
                                     </button>
 
-                                    <span className="font14 text-InterfaceTextsubtitle mx-1">or</span>
+                                    <span className="font14 text-InterfaceTextsubtitle mx-3">or</span>
 
                                     {/* Remove Button */}
                                     <button
                                         onClick={handleRemove}
-                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#F6F8FA] hover:text-Interfacefeedbackerror700 hover:border-Interfacefeedbackerror700 transition-colors cursor-pointer"
+                                        className="flex items-center gap6 px12 py8 font14 text-InterfaceTexttitle1 border border-InterfaceStrokesoft1 rounded1 bg-gradient-to-b from-[#FEFEFE] to-[#EEF2F6] hover:bg-[#edf3f9] transition-colors cursor-pointer"
                                     >
                                         <i className="smb-circle-close"></i>
                                         Remove
