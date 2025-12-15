@@ -424,7 +424,7 @@ export default function ScheduleCalendarTable() {
             {/* Right side: Calendar */}
             <div className="flex-1 p-4">
               {/* Calendar placeholder (we'll add functionality later) */}
-              <div className="text-center">
+              <div className="text-center bg-white rounded-t-[8px]">
                 <EventCalenderFilter />
               </div>
             </div>

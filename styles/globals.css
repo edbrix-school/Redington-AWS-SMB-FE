@@ -1301,6 +1301,12 @@ body {
 
 
 /* Calendar start */
+.first-mon-custom{
+  border-top-left-radius:8px
+}
+.last-mon-custom{
+  border-top-right-radius:8px
+}
 .full-calendar-sec .fc .fc-toolbar.fc-header-toolbar{
     margin-bottom: 0;
 }

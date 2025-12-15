@@ -82,10 +82,10 @@ export default function Index(props) {
         <div className="grid grid-cols-6">
           <Tab>
             <div
-              className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
+              className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer first-mon-custom
                         ${
                           activeTab == 0
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
@@ -97,7 +97,7 @@ export default function Index(props) {
               className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
                         ${
                           activeTab == 1
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
@@ -109,7 +109,7 @@ export default function Index(props) {
               className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
                         ${
                           activeTab == 2
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
@@ -121,7 +121,7 @@ export default function Index(props) {
               className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
                         ${
                           activeTab == 3
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
@@ -133,7 +133,7 @@ export default function Index(props) {
               className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
                         ${
                           activeTab == 4
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
@@ -142,10 +142,10 @@ export default function Index(props) {
           </Tab>
           <Tab>
             <div
-              className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
+              className={`text-[16px] xl:text-[0.833vw] font-medium py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer last-mon-custom
                         ${
                           activeTab == 5
-                            ? "text-[#FFF] bg-[#0F1F38] border rounded-t-[8px]"
+                            ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
                             : "text-[#9CA1AB] bg-[#F5F6F7]"
                         }`}
             >
