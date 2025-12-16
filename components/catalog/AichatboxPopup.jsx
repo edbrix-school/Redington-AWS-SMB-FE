@@ -173,8 +173,8 @@ export default function AiChatboxPopup({ open, onClose }) {
       ) : (
        <div className="p24 bg-[#F5F6F8] "> 
         <div className="flex flex-col spacey20 ">
-          <div className="flex items-center justify-bewteen">
-            <div className=" flex flex-col justify-center items-center text-center overflow-y-auto px-[40px] custom-scroll">
+          <div className="flex items-center justify-between">
+            <div className=" flex items-center ">
               <Image
                 src="/images/tonai-chat-box.svg"
                 alt="TonAI"
@@ -182,7 +182,7 @@ export default function AiChatboxPopup({ open, onClose }) {
                 height={150}
               />
             </div>
-            <div className="flex gap-4 justify-center ">
+            <div className="flex items-center ">
               <Button
                 type="button"
                 className="chatfind-aws cursor-pointer px-2 py6 font14 font-semibold"
