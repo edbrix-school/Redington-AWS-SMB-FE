@@ -225,7 +225,7 @@ export const ServicesDeskList = () => {
   const [openpopupnewticket, setOpenPopupNewTicket] = useState(false);
   const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
   return (
-    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm">
+    <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 shadow-sm mx-[4.167vw]">
       <div>
         <div className=" items-center inline-flex rounded-[8px] border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
           {TABS.map((tab, index) => (

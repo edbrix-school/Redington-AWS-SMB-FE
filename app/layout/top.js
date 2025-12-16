@@ -82,7 +82,7 @@ export default function Top() {
                 optionLabel="name"
                 placeholder="English - EN"
                 panelClassName="custDropdown1panel"
-                className="w-[95px] xl:w-[105px] 2xl:w-[110px] 3xl:w-[5.471vw] text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] topdropdown"
+                className="w-[95px] xl:w-[105px] 2xl:w-[110px] 3xl:w-[5.871vw] text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] topdropdown"
               />
             </div>
 
