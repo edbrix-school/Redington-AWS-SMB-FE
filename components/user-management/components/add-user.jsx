@@ -63,7 +63,7 @@ export default function AddUser({ visible, onHide }) {
                          <div className=" flex justify-end items-center"> 
                               <div
                 onClick={() => setShow(true)}
-                className="font16 font-[500] py6 px20 flex items-center justify-center w-[100px] xl:w-[110px] 3xl:w-[6.113vw] border-[#ae9be7] rounded-lg bg-[#EDE8FF]  cursor-pointer  text-[#645592]"
+                className="font16 font-[400] py6 px15 flex items-center justify-center w-[80px] xl:w-[80px] 3xl:w-[4.113vw] border-[#ae9be7] rounded6 bg-[#EDE8FF]  cursor-pointer  text-[#645592]"
               >
                Search
               </div>

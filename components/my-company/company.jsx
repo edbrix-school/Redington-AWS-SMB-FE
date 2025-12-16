@@ -67,7 +67,7 @@ export const MyCompany = () => {
             </div>
           </div>
 
-          <div className="bg-[#F6F7F8] dark:bg-[#1F2A37] flex-1 overflow-y-auto ">
+          <div className="flex-1 overflow-y-auto ">
             <div className="py24">
               <div className=" spacey24 pb22">
                 <div className="grid grid-cols-2 gap20">

@@ -4,7 +4,7 @@ import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
 
 
-export default function PhoneInput({ placeholder = "Enter phone number" }) {
+export default function PhoneInput({ placeholder = "" }) {
     const [country, setCountry] = useState({
         name: "United Arab Emirates",
         code: "AE",
