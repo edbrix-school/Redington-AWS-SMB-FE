@@ -1657,3 +1657,10 @@ body {
 .verified-text {
   color: #019049;
 }
+
+.announcements-search {
+   background-color: #F8FAFC;
+   border: 1px solid #E2E8F0;
+   border-radius: 6px;
+   padding-left: 2.5rem;
+} 

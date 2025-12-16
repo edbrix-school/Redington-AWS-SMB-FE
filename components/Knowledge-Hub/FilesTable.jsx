@@ -351,11 +351,11 @@ export const FilesTable = () => {
                             body={titleBodyTemplate} // Uses the custom template defined above
                         />
 
-                        <Column field="description" header="Description" filter filterElement={(o) => filterInput(o, "Abc")} body={(r) => <span>{r.description}</span>} />
-                        <Column field="category" header="Category" filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.category}</span>} />
-                        <Column field="docType" header="Document Type" filter filterElement={(o) => filterInput(o)} body={docTypeTemplate} />
-                        <Column field="dateCreated" header="Date Created"  filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.dateCreated}</span>} />
-                        <Column field="lastUpdated" header="Last Updated" filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.lastUpdated}</span>} />
+                        <Column field="description" header="Description" sortable filter filterElement={(o) => filterInput(o, "Abc")} body={(r) => <span>{r.description}</span>} />
+                        <Column field="category" header="Category" sortable filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.category}</span>} />
+                        <Column field="docType" header="Document Type" sortable filter filterElement={(o) => filterInput(o)} body={docTypeTemplate} />
+                        <Column field="dateCreated" header="Date Created" sortable  filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.dateCreated}</span>} />
+                        <Column field="lastUpdated" header="Last Updated" sortable filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.lastUpdated}</span>} />
                         <Column header="Action" body={actionBodyTemplate} align="center" frozen />
                     </DataTable>
                 )}

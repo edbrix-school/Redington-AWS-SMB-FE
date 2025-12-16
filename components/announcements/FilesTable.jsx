@@ -181,18 +181,18 @@ export const FilesTable = () => {
         <div className="flex gap-3 items-center pb22 md:pb-0">
           {/* Search Bar - Replica of Screenshot */}
           <div className="relative">
-            <i className="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
+            <img
+              src="/images/search-normal-2.svg"
+              alt="search"
+              width={16}
+              height={16}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10"
+            />
             <InputText
               value={globalFilter}
               onChange={(e) => setGlobalFilter(e.target.value)}
               placeholder="Search"
-              className="p-inputtext-sm pl-10 text-gray-600 w-64"
-              style={{
-                backgroundColor: "#F8FAFC", // Very light grey/blue background
-                border: "1px solid #E2E8F0", // Subtle border
-                borderRadius: "6px",
-                paddingLeft: "2.5rem", // Space for the icon
-              }}
+              className="p-inputtext-sm pl-10 text-gray-600 w-64 announcements-search"
             />
           </div>
 
@@ -248,7 +248,7 @@ export const FilesTable = () => {
 
         <Column
           field="message"
-          header="Announcement" 
+          header="Announcement"
           style={{ minWidth: "25rem" }}
           filter
           sortable
@@ -265,7 +265,7 @@ export const FilesTable = () => {
           className="action-shadow-table"
           alignFrozen="right"
           align="center"
-          
+
           frozen
           body={actionBodyTemplate}
           filterElement={() => <div className="w-full"></div>}
