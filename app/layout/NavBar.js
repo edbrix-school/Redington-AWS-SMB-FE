@@ -78,11 +78,7 @@ export const NavBar = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white 
-                px-[15px] md:px-[15px] xl:px-[15px] 2xl:px-[0.938vw] 3xl:px-[0.938vw] 
-                py-[3px] md:py-[5px] xl:py-[5px] 2xl:py-[0.365vw] 3xl:py-[0.365vw]
-                
-                rounded-[50px]  text-[14px] md:text-[12px] xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-normal whitespace-nowrap shadow-md transition-colors flex-shrink-0 cursor-pointer">
+                <button className="bg-[#8078B9] hover:bg-[#5a52d5] text-white px-[15px] md:px-[15px] xl:px-[15px] 2xl:px-[0.938vw] 3xl:px-[0.938vw] py-[3px] md:py-[5px] xl:py-[5px] 2xl:py-[0.365vw] 3xl:py-[0.365vw] rounded-[50px]  text-[14px] md:text-[12px] xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-normal whitespace-nowrap shadow-md transition-colors flex-shrink-0 cursor-pointer">
                     Schedule a Session
                 </button>
             </div>

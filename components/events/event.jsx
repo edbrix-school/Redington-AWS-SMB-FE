@@ -151,7 +151,7 @@ export const Events = () => {
             <div
               className=" col-span-4"
               activeIndex={activeIndex}
-              onTabChange={(e) => setActiveIndex(e.index)}
+              // onTabChange={(e) => setActiveIndex(e.index)}
             >
               <div className="h-[160px] lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 mb-[12px]">
                 <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">

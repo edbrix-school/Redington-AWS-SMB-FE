@@ -18,9 +18,7 @@ export default function Searchbox() {
       <div className=" lg:max-w-md xl:max-w-lg  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer">
         {/* Search Input Container - Updated Background Color */}
         <div
-          className="relative h-[50px] lg:h-[60px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm 
-        p-[15px]  md:p-[20px] lg:p-[18px] xl:p-[22px] 2xl:p-[1vw] 3xl:p-[1.25vw]
-        cursor-pointer"
+          className="relative h-[50px] lg:h-[60px] xl:h-[70px] 3xl:h-[4.167vw] rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm p-[15px]  md:p-[20px] lg:p-[18px] xl:p-[22px] 2xl:p-[1vw] 3xl:p-[1.25vw] cursor-pointer"
           onClick={showSidebar}
         >
           {/* <input

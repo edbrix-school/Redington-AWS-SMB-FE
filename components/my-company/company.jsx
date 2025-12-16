@@ -27,9 +27,11 @@ export const MyCompany = () => {
         <div className="flex flex-col  mb30">
           <div className="border-top-left-radius: 1rem flex-none">
             <div className=" bg-[#fff] pb12 rounded-tl-[10px]">
-              <div className=" text-[#212325]  font24 font-bold">Company</div>
+              <div className=" text-[#212325]  font24 font-bold">
+                My Company
+              </div>
             </div>
-            <div className="flex justify-between pb20">
+            <div className="flex justify-between ">
               <div className="flex gap14 ">
                 <button
                   className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]"
@@ -40,27 +42,29 @@ export const MyCompany = () => {
                     width={16}
                     height={16}
                     alt="adduser"
-                    className="inline-block w14 h-auto "
+                    className="inline-block w15 h-auto "
                   />
                   Add
                 </button>
               </div>
               <div className="flex gap20">
-                <div>
-                  <Dropdown
-                    value={selectedSort}
-                    onChange={(e) => setSelectedSort(e.value)}
-                    options={Sort}
-                    optionLabel="name"
-                    placeholder="Select Year/Month"
-                    className="w300 custDropdown1 "
-                    panelClassName="custDropdown1panel"
+                <div className="relative custom-input">
+                  <InputText
+                    type="text"
+                    className="w-[250px] customglobalsearch"
+                    placeholder="Search "
+                  />
+
+                  <Image
+                    src="/images/svg/search-normal.svg"
+                    width={16}
+                    height={16}
+                    alt="search"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4"
                   />
                 </div>
-                <div
-                  className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8"
-                  onClick={() => setOpenPopup(true)}
-                >
+
+                <div className=" cursor-pointer h-full px14 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted hover:bg-[#eff0f1] rounded8">
                   <i className="smb-filter text-InterfaceTextsubtitle font14 "></i>
                 </div>
               </div>
@@ -117,7 +121,7 @@ export const MyCompany = () => {
                       Domain
                     </label>
 
-                    <div className="relative  custom-input">
+                    <div className="relative custommultiselect">
                       <MultiSelect
                         value={selectedDomains}
                         onChange={(e) => setSelectedDomains(e.value)}
@@ -126,7 +130,7 @@ export const MyCompany = () => {
                         display="chip"
                         placeholder="Select Domain"
                         maxSelectedLabels={3}
-                        className="w-full md:w-20rem"
+                        className="w-full custommultiselect"
                       />
                     </div>
                   </div>
