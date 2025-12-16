@@ -114,10 +114,26 @@ display: none;
 }
 
 .custom-accordion .p-accordion-header-link::after {
-  content: '▼';
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto; /* push icon to right */
 }
 .custom-accordion .p-accordion-tab-active .p-accordion-header-link::after {
-  content: '▲';
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/svg/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: auto; /* push icon to right */
 }
 
 .my-solutions-bg {
