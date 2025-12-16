@@ -115,7 +115,7 @@ export const FilesTable = () => {
     };
 
     return (
-        <div className="border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4 bg-white relative">
+        <div className="mx-[4.167vw] border border-interfacetextdefault shadow-lg rounded8 m-10 mt-4 bg-white relative">
 
             <Menu model={menuItems} popup ref={menu} />
 

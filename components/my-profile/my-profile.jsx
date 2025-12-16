@@ -21,7 +21,7 @@ export const MyProfile = () => {
     };
 
     return (
-        <div className="">
+        <div className="mx-[2vw]">
             <div className="bg-white rounded8 shadow-sm border border-InterfaceStrokesoft1">
 
                 {/* Header */}

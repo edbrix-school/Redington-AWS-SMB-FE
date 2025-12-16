@@ -23,7 +23,7 @@ export const MyCompany = () => {
   const [addUserpopup, setAddUser] = useState(false);
   return (
     <>
-      <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 custom-shadow">
+      <div className="bg-white shaow1 relative z-20 p24 spacey24 rounded8 custom-shadow mx-[2vw]">
         <div className="flex flex-col  mb30">
           <div className="border-top-left-radius: 1rem flex-none">
             <div className=" bg-[#fff] pb12 rounded-tl-[10px]">

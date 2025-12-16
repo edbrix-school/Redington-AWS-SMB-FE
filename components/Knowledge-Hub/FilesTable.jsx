@@ -272,7 +272,7 @@ export const FilesTable = () => {
     const currentGridData = fileList.slice(first, first + rows);
 
     return (
-        <div className="border border-interfacetextdefault shadow-sm rounded-lg m-10 mt-4 bg-white relative min-h-[600px] flex flex-col">
+        <div className="mx-[4.167vw] border border-interfacetextdefault shadow-sm rounded-lg m-10 mt-4 bg-white relative min-h-[600px] flex flex-col">
 
             {/* ================= TOP HEADER ================= */}
             <div className="p-4 flex flex-col md:flex-row justify-between items-center pb-0">
