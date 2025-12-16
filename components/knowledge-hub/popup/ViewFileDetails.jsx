@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Sidebar } from "primereact/sidebar";
 import { ArrowLeft, Eye } from "lucide-react";
+import CatalogPopup from "@/components/catalog/CatalogPopup"; // Added import for CatalogPopup
 
 export default function ViewFileDetails({ visible, onHide }) {
+    // Added state to control showing CatalogPopup
+    const [showCatalog, setShowCatalog] = useState(false);
 
     const FileListItem = ({ title, date, ActionIcon }) => (
         <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group">
@@ -31,21 +34,23 @@ export default function ViewFileDetails({ visible, onHide }) {
     );
 
     return (
-        <Sidebar
-            visible={visible}
-            onHide={onHide}
-            position="right"
-            showCloseIcon={false}
-            blockScroll
-            maskClassName="!bg-black/40"
-            className="!w-full md:!w-[900px] !p-0 !border-none overflow-hidden customsidebar2"
-        >
-            <div className="h-full bg-white flex flex-col">
+        <>
+            <Sidebar
+                visible={visible}
+                onHide={onHide}
+                position="right"
+                showCloseIcon={false}
+                blockScroll
+                maskClassName="!bg-black/40"
+                className="!w-full md:!w-[900px] !p-0 !border-none overflow-hidden customsidebar2"
+            >
+                <div className="h-full bg-white flex flex-col">
 
                 {/* HEADER */}
                 <div className="sticky top-0 z-50 bg-white border-b border-gray-200">
                     <div className="px-6 py-4 flex items-center gap-4">
-                        <button onClick={onHide} className="cursor-pointer">
+                        {/* Modified button to open CatalogPopup instead of hiding the sidebar */}
+                        <button onClick={() => setShowCatalog(true)} className="cursor-pointer">
                             <Image src="/images/arrowleft.svg" width={20} height={20} alt="Back" className="text-gray-600" />
                         </button>
 
@@ -190,6 +195,23 @@ export default function ViewFileDetails({ visible, onHide }) {
 
                 </div>
             </div>
-        </Sidebar>
+            </Sidebar>
+            <Sidebar
+                visible={showCatalog}
+                onHide={() => setShowCatalog(false)}
+                className="!w-full md:!w-[90vw] !p-0 !border-none overflow-hidden customsidebar"
+                blockScroll
+                position="right"
+                showCloseIcon={false}
+
+            >
+                <CatalogPopup
+                    open={true}
+                    onClose={() => setShowCatalog(false)}
+                />
+            </Sidebar>
+
+           
+        </>
     );
 }
