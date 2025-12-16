@@ -110,7 +110,7 @@ background-clip: text;
 }
 
 .custom-accordion .p-icon.p-accordion-toggle-icon{
-display: none;
+  display: none;
 }
 
 .custom-accordion .p-accordion-header-link::after {
@@ -150,4 +150,7 @@ display: none;
 }
 .items-page-dropdown .p-dropdown .p-dropdown-trigger {
   width: 1rem;
+}
+.twinthread-shadow{
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }

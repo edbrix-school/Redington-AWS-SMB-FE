@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Carousel } from 'primereact/carousel';
 import { Sidebar } from "primereact/sidebar";
 import AiChatboxPopup from "../catalog/AichatboxPopup";
+import TwinSlider from "../common/twin-thread-slider/twin-slider";
 
 
 const HotSolutions = () => {
@@ -35,12 +36,12 @@ const HotSolutions = () => {
 
     const productTemplate = (product) => {
         return (
-            <div className=" twinthread-bg twinthread-shadow rounded8">
-                <div className="w-[200px] xl:w-[200px] 3xl:w-[10.417vw] px16 py-[20px] xl:py-[24px] 3xl:py-[1.563vw] ">
-                    <div className="spacey16">
+            <div className=" twinthread-bg">
+                <div className="w-[200px] xl:w-[220px] 3xl:w-[10.417vw] px16 py-[20px] xl:py-[24px] 3xl:py-[1.563vw] ">
+                    <div className="spacey16 px10">
                         <Image src="/images/svg/twinthread-log.svg" width="168" height="28" alt="logo" />
                         <div className="text-[#0A291A] font-normal font14">TwinThread Industrial AI</div>
-                        <div className="text-[#4C525F99] font-light leading-[111%] font12">TwinThread accelerates digital transformation for industrial companies by integrating AI and machine learning into existing workflows, enabling continuous operational improvements with minimal disruption. It guides the crea...</div>
+                        <div className="text-[#4C525F99] font-normal leading-[111%] font12">TwinThread accelerates digital transformation for industrial companies by integrating AI and machine learning into existing workflows, enabling continuous operational improvements with minimal disruption. It guides the crea...</div>
                     </div>
                 </div>
             </div>
@@ -94,20 +95,7 @@ const HotSolutions = () => {
                         <div className="col-span-3">
                             <Image src="/images/amazon-cloudfront.svg" width="377" height="226" alt="logo" />
                         </div>
-                        <div className="col-span-12 relative mt-[30px] xl:mt-[40px] 3xl:mt-[2.292vw]">
-                            <div className="w-full hot-solution-carousel">
-                                <Carousel
-                                    value={products}
-                                    numVisible={1}
-                                    numScroll={1}
-                                    responsiveOptions={responsiveOptions}
-                                    itemTemplate={productTemplate}
-                                    circular
-                                    showNavigators={false}
-                                    indicatorsContentClassName="sbm-location"
-                                />
-                            </div>
-                        </div>
+                        <TwinSlider />
                     </div>
                 </div>
             </div>
