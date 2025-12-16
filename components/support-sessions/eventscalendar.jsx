@@ -25,6 +25,46 @@ export default function EventCalenderFilter(props) {
   ];
   const [events, setEvents] = useState([]);
 
+  useEffect(() => {
+    // Generate mock events for all months
+    const y = year;
+    const generatedEvents = [];
+
+    const colors = [
+      { class: "bg-[#F3E8FF] text-[#7E22CE]" }, // Purple
+      { class: "bg-[#ECFDF5] text-[#047857]" }, // Green
+      { class: "bg-[#EFF6FF] text-[#1D4ED8]" }, // Blue
+      { class: "bg-[#FFFbeb] text-[#B45309]" }, // Orange
+    ];
+
+    for (let m = 0; m < 12; m++) {
+      // Generate random number of events per month (e.g., 3 to 8)
+      const numEvents = Math.floor(Math.random() * 6) + 3;
+
+      for (let i = 0; i < numEvents; i++) {
+        // Random day 1-28 to be safe
+        const day = Math.floor(Math.random() * 27) + 1;
+        const hour = Math.floor(Math.random() * 12) + 6; // 6am to 6pm
+        const min = Math.random() > 0.5 ? "00" : "30";
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const id = Math.floor(Math.random() * 899999) + 100000;
+
+        // Format: YYYY-MM-DDTHH:mm:ss
+        const monthStr = (m + 1).toString().padStart(2, '0');
+        const dayStr = day.toString().padStart(2, '0');
+        const startTime = `${y}-${monthStr}-${dayStr}T${hour.toString().padStart(2, '0')}:${min}:00`;
+
+        generatedEvents.push({
+          start: startTime,
+          title: `[start_time]${startTime}[start_time]SR-${id}`,
+          colorClass: color.class
+        });
+      }
+    }
+
+    setEvents(generatedEvents);
+  }, [year]);
+
   //   const checkboxChecked = (index) => {
   //     console.log(index);
   //   };
