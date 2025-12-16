@@ -29,7 +29,7 @@ export default function Top() {
         className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw] z-[999] `}
       >
         {/* NAVBAR */}
-        <div className="relative flex items-center justify-between px-[20px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
+        <div className="relative flex items-center justify-between px-[5px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
           {/* LEFT SECTION */}
           <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw]">
             <div className="flex divide-x divide-[#494949] items-center">
@@ -107,7 +107,7 @@ export default function Top() {
         </div>
 
         {/* CENTER GRADIENT INSIDE NAVBAR */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
           <div className="custom-gradient flex items-center gap-[12px] lg:gap-[12px] xl:gap-[12px] 3xl:gap-[0.625vw] px-[10px] lg:px-[10px] xl:px-[20px] 2xl:px-[60px] 3xl:px-[9.208vw] py-[9px] lg:py-[0.891vw] xl:py-[0.550vw] 2xl:py-[0.469vw] 3xl:py-[0.659vw] rounded-md">
             <span className="text-[#fff] cursor-pointer whitespace-nowrap text-[12px] lg:text-[12px]  xl:text-[12px] 2xl:text-[0.833vw] 3xl:text-[0.833vw]">
               What are you looking for today?
