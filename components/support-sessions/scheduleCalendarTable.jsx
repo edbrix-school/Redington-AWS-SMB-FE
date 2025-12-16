@@ -9,7 +9,7 @@ import EventCalenderFilter from "../support-sessions/eventscalendar";
 export default function ScheduleCalendarTable() {
   const [visible, setVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-  const [activeSession, setActiveSession] = useState(1); 
+  const [activeSession, setActiveSession] = useState(1);
   const sessions = {
     upcoming: [
       {
@@ -27,7 +27,7 @@ export default function ScheduleCalendarTable() {
         description:
           "Figma ipsum component variant main layer. Draft team clip figjam fill polygon pixel effect bullet. Hand font select figma object link.",
         date: "March 28, 2023",
-        time: "09:00 - 09:30",
+        time: "09:00pm - 10:00pm",
         type: "Online",
       },
       {
@@ -36,7 +36,7 @@ export default function ScheduleCalendarTable() {
         description:
           "Figma ipsum component variant main layer. Draft team clip figjam fill polygon pixel effect bullet. Hand font select figma object link.",
         date: "March 28, 2023",
-        time: "09:00 - 09:30",
+        time: "09:00pm - 09:30pm",
         type: "Online",
       },
       {
@@ -45,7 +45,7 @@ export default function ScheduleCalendarTable() {
         description:
           "Figma ipsum component variant main layer. Draft team clip figjam fill polygon pixel effect bullet. Hand font select figma object link.",
         date: "March 28, 2023",
-        time: "09:00 - 09:30",
+        time: "09:00pm - 09:30pm",
         type: "Online",
       },
     ],
@@ -84,7 +84,7 @@ export default function ScheduleCalendarTable() {
   }, []);
   return (
     <>
-      <div className="flex items-center justify-between mb16">
+      <div className="flex items-center justify-between mb16 mx-[2vw]">
         <h3 className="font20 text-[#fff] font-[700]">Your Sessions</h3>
         <div
           onClick={showSidebar}
@@ -93,288 +93,232 @@ export default function ScheduleCalendarTable() {
           Schedule a Session
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col mx-[2vw]">
         {/* Main Content */}
-        <div>
+        <div className="mt-2">
           <div className="flex flex-col xl:flex-row w-full">
             {/* Left side: Upcoming and Completed Sessions */}
-            <div className="xl:w-[39.01vw] w-full  shrink-0">
+            <div className="xl:w-[39.01vw] w-full shrink-0 flex flex-col justify-between h-[750px]">
               <TabView
                 className="tabview"
                 activeIndex={activeTab}
                 onTabChange={(e) => setActiveTab(e.index)}
               >
                 <TabPanel header="Upcoming">
-                  {sessions.upcoming.map((session, index) => {
-                    const isActive = activeSession === session.id;
-                    const borderColorClass =
-                      index % 2 === 0 ? "border-[#7466AA]" : "border-[#019049]";
-                    return (
-                      <div
-                        key={session.id}
-                        onClick={() =>
-                          setActiveSession(isActive ? null : session.id)
-                        }
-                        className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
-                      >
-                        <div className="flex-1">
-                          {(index === 0 || index === 1) && (
-                            <p className="text-[#3C4146] font11">SR-112233</p>
-                          )}
-                          <h4
-                            className={`text-[#212325] text-lg font-semibold ${isActive ? " font17 font700" : "font17 font500"
-                              }`}
-                          >
-                            {session.title}
-                          </h4>
-                          {isActive && (
-                            <>
-                              <p className="text-[#3C4146] font-[14px]">
-                                {session.description}
-                              </p>
-                            </>
-                          )}
-                        </div>
-                        <div className="p-2 border-r broder-r-[0.7px solid #E5E7EB]">
-                          <p
-                            className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
-                              }`}
-                          >
-                            Wed
-                          </p>
-                          <p
-                            className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
-                              }`}
-                          >
-                            28
-                          </p>
-                        </div>
-                        <div className="flex-shrink-0 text-right p-2">
-                          <div className="flex items-start justify-start gap-2">
-                            <Image
-                              src="/assets/icons/clock.svg"
-                              alt="clock"
-                              width={20}
-                              height={20}
-                            />
-                            <p
-                              className={`text-[#7F8488]  ${isActive
-                                ? "text-[#3C4146] font-normal"
-                                : "font-normal"
+                  <div className="h-[600px] overflow-y-auto custom-scroll pr-2">
+                    {sessions.upcoming.map((session, index) => {
+                      const isActive = activeSession === session.id;
+                      const borderColorClass =
+                        index % 2 === 0 ? "border-[#7466AA]" : "border-[#019049]";
+                      return (
+                        <div
+                          key={session.id}
+                          onClick={() =>
+                            setActiveSession(isActive ? null : session.id)
+                          }
+                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
+                        >
+                          <div className="flex-1">
+                            {(index === 0 || index === 1) && (
+                              <p className="text-[#3C4146] font11">SR-112233</p>
+                            )}
+                            <h4
+                              className={`text-[#212325] text-lg font-semibold ${isActive ? " font16 font700" : "font16 font500"
                                 }`}
                             >
-                              {session.time}
-                            </p>
+                              {session.title}
+                            </h4>
+                            {isActive && (
+                              <>
+                                <p className="text-[#3C4146] font-[13px]">
+                                  {session.description}
+                                </p>
+                              </>
+                            )}
                           </div>
-                          <div className="flex items-center justify-start gap-2">
-                            <Image
-                              src="/assets/icons/location.svg"
-                              alt="locatiob"
-                              width={20}
-                              height={20}
-                            />
+                          <div className="w-[70px] flex flex-col items-center justify-center p-2 border-r border-[#E5E7EB]">
                             <p
-                              className={`text-[#7F8488]  ${isActive
-                                ? "text-[#3C4146] font-normal"
-                                : "font-normal"
+                              className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
                                 }`}
                             >
-                              {session.type}
+                              Wed
+                            </p>
+                            <p
+                              className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
+                                }`}
+                            >
+                              28
                             </p>
                           </div>
-                          {isActive && (
-                            <div
-                              className="flex items-center justify-start gap-2"
-                              onClick={showSidebar}
-                            >
+                          <div className="flex-shrink-0 w-[200px] p-2 pl-4">
+                            <div className="flex items-start justify-start gap-2">
                               <Image
-                                src="/assets/icons/view-icon.svg"
-                                alt="view"
+                                src="/assets/icons/clock.svg"
+                                alt="clock"
                                 width={20}
                                 height={20}
                               />
                               <p
                                 className={`text-[#7F8488]  ${isActive
-                                  ? "text-[#645592] font-normal"
+                                  ? "text-[#3C4146] font-normal"
                                   : "font-normal"
                                   }`}
                               >
-                                View
+                                {session.time}
                               </p>
                             </div>
-                          )}
+                            <div className="flex items-center justify-start gap-2">
+                              <Image
+                                src="/assets/icons/location.svg"
+                                alt="locatiob"
+                                width={20}
+                                height={20}
+                              />
+                              <p
+                                className={`text-[#7F8488]  ${isActive
+                                  ? "text-[#3C4146] font-normal"
+                                  : "font-normal"
+                                  }`}
+                              >
+                                {session.type}
+                              </p>
+                            </div>
+                            {isActive && (
+                              <div
+                                className="flex items-center justify-start gap-2"
+                                onClick={showSidebar}
+                              >
+                                <Image
+                                  src="/assets/icons/view-icon.svg"
+                                  alt="view"
+                                  width={20}
+                                  height={20}
+                                />
+                                <p
+                                  className={`text-[#7F8488]  ${isActive
+                                    ? "text-[#645592] font-normal"
+                                    : "font-normal"
+                                    }`}
+                                >
+                                  View
+                                </p>
+                              </div>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </TabPanel>
                 <TabPanel header="Completed">
-                  {sessions.completed.map((session, index) => {
-                    const isActive = activeSession === session.id;
-                    const borderColorClass =
-                      index % 2 === 0 ? "border-[#7466AA]" : "border-[#019049]";
-                    return (
-                      <div
-                        key={session.id}
-                        onClick={() =>
-                          setActiveSession(isActive ? null : session.id)
-                        }
-                        className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
-                      >
-                        <div className="flex-1">
-                          {(index === 0 || index === 1) && (
-                            <p className="text-[#3C4146] font11">SR-112233</p>
-                          )}
-                          <h4
-                            className={`text-[#212325] text-lg font-semibold ${isActive ? " font17 font700" : "font17 font500"
-                              }`}
-                          >
-                            {session.title}
-                          </h4>
-                          {isActive && (
-                            <>
-                              <p className="text-[#3C4146] font-[14px]">
-                                {session.description}
-                              </p>
-                            </>
-                          )}
-                        </div>
-                        <div className="p-2 border-r broder-r-[0.7px solid #E5E7EB]">
-                          <p
-                            className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
-                              }`}
-                          >
-                            Wed
-                          </p>
-                          <p
-                            className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
-                              }`}
-                          >
-                            28
-                          </p>
-                        </div>
-                        <div className="flex-shrink-0 text-right p-2">
-                          <div className="flex items-start justify-start gap-2">
-                            <Image
-                              src="/assets/icons/clock.svg"
-                              alt="clock"
-                              width={20}
-                              height={20}
-                            />
-                            <p
-                              className={`text-[#7F8488]  ${isActive
-                                ? "text-[#3C4146] font-normal"
-                                : "font-normal"
+                  <div className="h-[600px] overflow-y-auto custom-scroll pr-2">
+                    {sessions.completed.map((session, index) => {
+                      const isActive = activeSession === session.id;
+                      const borderColorClass =
+                        index % 2 === 0 ? "border-[#7466AA]" : "border-[#019049]";
+                      return (
+                        <div
+                          key={session.id}
+                          onClick={() =>
+                            setActiveSession(isActive ? null : session.id)
+                          }
+                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
+                        >
+                          <div className="flex-1">
+                            {(index === 0 || index === 1) && (
+                              <p className="text-[#3C4146] font11">SR-112233</p>
+                            )}
+                            <h4
+                              className={`text-[#212325] text-lg font-semibold ${isActive ? " font17 font700" : "font17 font500"
                                 }`}
                             >
-                              {session.time}
-                            </p>
+                              {session.title}
+                            </h4>
+                            {isActive && (
+                              <>
+                                <p className="text-[#3C4146] font-[14px]">
+                                  {session.description}
+                                </p>
+                              </>
+                            )}
                           </div>
-                          <div className="flex items-center justify-start gap-2">
-                            <Image
-                              src="/assets/icons/location.svg"
-                              alt="locatiob"
-                              width={20}
-                              height={20}
-                            />
+                          <div className="w-[70px] flex flex-col items-center justify-center p-2 border-r border-[#E5E7EB]">
                             <p
-                              className={`text-[#7F8488]  ${isActive
-                                ? "text-[#3C4146] font-normal"
-                                : "font-normal"
+                              className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
                                 }`}
                             >
-                              {session.type}
+                              Wed
+                            </p>
+                            <p
+                              className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
+                                }`}
+                            >
+                              28
                             </p>
                           </div>
-                          {isActive && (
-                            <div
-                              className="flex items-center justify-start gap-2"
-                              onClick={showSidebar}
-                            >
+                          <div className="flex-shrink-0 w-[200px] p-2 pl-4">
+                            <div className="flex items-start justify-start gap-2">
                               <Image
-                                src="/assets/icons/view-icon.svg"
-                                alt="view"
+                                src="/assets/icons/clock.svg"
+                                alt="clock"
                                 width={20}
                                 height={20}
                               />
                               <p
                                 className={`text-[#7F8488]  ${isActive
-                                  ? "text-[#645592] font-normal"
+                                  ? "text-[#3C4146] font-normal"
                                   : "font-normal"
                                   }`}
                               >
-                                View
+                                {session.time}
                               </p>
                             </div>
-                          )}
+                            <div className="flex items-center justify-start gap-2">
+                              <Image
+                                src="/assets/icons/location.svg"
+                                alt="locatiob"
+                                width={20}
+                                height={20}
+                              />
+                              <p
+                                className={`text-[#7F8488]  ${isActive
+                                  ? "text-[#3C4146] font-normal"
+                                  : "font-normal"
+                                  }`}
+                              >
+                                {session.type}
+                              </p>
+                            </div>
+                            {isActive && (
+                              <div
+                                className="flex items-center justify-start gap-2"
+                                onClick={showSidebar}
+                              >
+                                <Image
+                                  src="/assets/icons/view-icon.svg"
+                                  alt="view"
+                                  width={20}
+                                  height={20}
+                                />
+                                <p
+                                  className={`text-[#7F8488]  ${isActive
+                                    ? "text-[#645592] font-normal"
+                                    : "font-normal"
+                                    }`}
+                                >
+                                  View
+                                </p>
+                              </div>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    );
-                    // return (
-                    //   <div
-                    //     key={session.id}
-                    //     onClick={() =>
-                    //       setActiveSession(isActive ? null : session.id)
-                    //     }
-                    //     className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
-                    //   >
-                    //     <div className="flex-1">
-                    //       <h4
-                    //         className={`text-lg font-semibold ${
-                    //           isActive ? "font-bold" : "font-normal"
-                    //         }`}
-                    //       >
-                    //         {session.title}
-                    //       </h4>
-                    //       {isActive && (
-                    //         <>
-                    //           <p className="text-sm text-gray-600">
-                    //             {session.description}
-                    //           </p>
-                    //         </>
-                    //       )}
-                    //     </div>
-                    //     <div className="flex-shrink-0 text-right p-2">
-                    //       <div className="flex items-center justify-start gap-2">
-                    //         <Image
-                    //           src="/assets/icons/clock.svg"
-                    //           alt="clock"
-                    //           width={20}
-                    //           height={20}
-                    //         />
-                    //         <p className="text-gray-600">{session.time}</p>
-                    //       </div>
-                    //       <div className="flex items-center justify-start gap-2">
-                    //         <Image
-                    //           src="/assets/icons/location.svg"
-                    //           alt="location"
-                    //           width={20}
-                    //           height={20}
-                    //         />
-                    //         <p className="text-gray-600">{session.type}</p>
-                    //       </div>
-                    //       {isActive && (
-                    //         <div
-                    //           className="flex items-center justify-start gap-2"
-                    //           onClick={showSidebar}
-                    //         >
-                    //           <Image
-                    //             src="/assets/icons/view-icon.svg"
-                    //             alt="view"
-                    //             width={20}
-                    //             height={20}
-                    //           />
-                    //           <p className="text-gray-600">View</p>
-                    //         </div>
-                    //       )}
-                    //     </div>
-                    //   </div>
-                    // );
-                  })}
+                      );
+                    })}
+                  </div>
                 </TabPanel>
               </TabView>
-              <div>
-                <h3 className="font20 text-[#7F8488] font-normal">
+              <div className="mt-auto">
+                <h3 className="font18 text-[#7F8488] font-normal">
                   Calendar Legend
                 </h3>
                 <div className="flex items-center lg:flex-row md:flex-row sm:flex-col gap-2 mt-3">

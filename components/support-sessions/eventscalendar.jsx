@@ -1,10 +1,7 @@
 import { InputText } from "primereact/inputtext";
 import React, { useState, useEffect } from "react";
 import { Dropdown } from "primereact/dropdown";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import { Checkbox } from "primereact/checkbox";
 import CalenderPage from "../support-sessions/calendar";
-import ListMonth from "../support-sessions/listmonth";
 import moment from "moment";
 
 export default function EventCalenderFilter(props) {
@@ -76,29 +73,16 @@ export default function EventCalenderFilter(props) {
   //   };
 
   return (
-    <div className="grid -mt-[9px] lg:-mt-[9px] xl:-mt-[0.430vw] 2xl:-mt-[0.469vw] 3xl:-mt-[0.469vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
-      <Tabs selectedIndex={activeTab} onSelect={handleTabClick}>
-        <div className="grid gap-[36px] xl:gap-[1.875vw]">
-          <div>
-            <TabPanel>
-              <CalenderPage
-                events={events}
-                year={year}
-                // fetchsingleEvent={fetchsingleEvent}
-                activeTab={activeTab}
-              />
-            </TabPanel>
-            <TabPanel>
-              <ListMonth
-                events={events}
-                year={year}
-                // fetchsingleEvent={fetchsingleEvent}
-                activeTab={activeTab}
-              />
-            </TabPanel>
-          </div>
+    <div className="grid -mt-[9px] lg:-mt-[9px] xl:-mt-[0.430vw] 2xl:-mt-[1vw] 3xl:-mt-[1vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
+      <div className="grid gap-[36px] xl:gap-[1.875vw]">
+        <div>
+          <CalenderPage
+            events={events}
+            year={year}
+            activeTab={activeTab}
+          />
         </div>
-      </Tabs>
+      </div>
     </div>
   );
 }
