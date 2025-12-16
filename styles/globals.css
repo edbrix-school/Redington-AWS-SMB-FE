@@ -844,12 +844,12 @@ body {
 
 /* Card Wrappers & Grids */
 .sector-card {
-  @apply rounded-2xl bg-white/90 shadow-sm p-4 flex flex-col justify-between h-53 transition-transform hover:-translate-y-[2px];
-  transition: all 0.2s ease;
+  @apply rounded-2xl bg-white/90 shadow-sm p-4 flex flex-col justify-between h-53 transition-transform ;
+  /* transition: all 0.2s ease; */
 }
 .sector-card:hover {
   box-shadow: 0 4px 20px #bab0d9; /* soft neutral shadow */
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .sector-subtitle {
@@ -869,7 +869,7 @@ body {
 }
 
 .advertising-card {
-  @apply rounded-2xl bg-white/90 shadow-sm p-4 flex flex-col justify-between h-70 transition-transform hover:-translate-y-[2px];
+  @apply rounded-2xl bg-white/90 shadow-sm p-4 flex flex-col justify-between h-70  ;
 }
 
 .go-back{

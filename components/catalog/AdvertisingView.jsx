@@ -74,10 +74,10 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
               <Card
                 key={idx}
                 className="advertising-card flex flex-col
-    group rounded-2xl p-4 bg-white shadow-sm cursor-pointer
-    transition-all duration-300
-    hover:-translate-y-[2px]
-    hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
+                  group rounded-2xl p-4 bg-white shadow-sm cursor-pointer
+                  transition-all duration-300
+                
+                  hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)]
   "
                 onClick={showSidebar}
               >

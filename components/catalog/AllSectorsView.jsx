@@ -88,7 +88,7 @@ export default function AllSectorsView({ onSectorClick }) {
                 return (
                   <div
                     key={sector.name}
-                    className="flex items-center justify-center max-w-xs rounded-2xl bg-white/70 p-4 text-[14px] font-medium text-interface-text-default shadow-sm"
+                    className="flex items-center justify-center max-w-xs rounded-2xl bg-white/70 p-4 text-[14px] font-medium text-interface-text-default shadow-sm cursor-pointer"
                   >
                     View More
                   </div>
@@ -98,7 +98,7 @@ export default function AllSectorsView({ onSectorClick }) {
               return (
                 <Card
                   key={idx}
-                  className="sector-card group shadow-sm transition-transform hover:-translate-y-[2px] max-w-sm cursor-pointer flex flex-col"
+                  className="sector-card group shadow-sm max-w-sm cursor-pointer flex flex-col"
                   onClick={
                     isClickable
                       ? () => onSectorClick(sector.name, sector.count)
@@ -155,10 +155,9 @@ export default function AllSectorsView({ onSectorClick }) {
               );
             })}
           </div>
-        </div>
-
+       
         {/* Bottom promoted banners */}
-        <div className="shrink-0 mb-4">
+        <div className="mb-10">
           <div className="mt-5 grid gap-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
             {/* TonAI banner */}
             <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(180deg,#1C273D_0%,#304570_100%)] p-4 text-white">
@@ -177,9 +176,9 @@ export default function AllSectorsView({ onSectorClick }) {
                     height={100}
                   />
                   <h4 className="mt-2 font16 font-semibold leading-snug">
-                    Not Sure Which AWS Hub to Use for Your Business?
+                    Not Sure Which AWS Hub to Use <br/>for Your Business?
                   </h4>
-                  <p className="mt-2 font12 leading-[18px] text-slate-100/90">
+                  <p className="my18 font12 leading-[18px] text-slate-100/90">
                     Just ask our chatbot! It will ask you a few simple questions
                     and guide you step-by-step to the AWS hub that best fits
                     your business size, goals, and technical needs.
@@ -200,7 +199,7 @@ export default function AllSectorsView({ onSectorClick }) {
                     />
                   </button>
                 </div>
-                <div className="relative w-42 h-42 xl:w-52 xl:h-52 md:absolute md:right-[10rem] md:top-[4rem] xl:absolute xl:right-[5rem] xl:top-[4rem] 2xl:absolute 2xl:right-[4rem] 2xl:top-[4rem] hidden md:block">
+                <div className="relative w-42 h-42 xl:w-52 xl:h-52 md:absolute md:right-[10rem] md:top-[4rem] xl:absolute xl:right-[5rem] xl:top-[4rem] 2xl:absolute 2xl:right-[1rem] 2xl:top-[1rem] hidden md:block">
                   <Image
                     src="/images/catalog-tonai-girl.svg"
                     alt="vector"
@@ -251,6 +250,9 @@ export default function AllSectorsView({ onSectorClick }) {
             </div>
           </div>
         </div>
+ </div>
+
+
       </div>
     </>
   );

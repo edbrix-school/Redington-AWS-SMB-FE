@@ -284,8 +284,8 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           })}
         </Accordion>
 
-        {/* View more */}
-        <div className="flex justify-center mt-3">
+        {/* View more */} 
+        <div className="flex justify-center mt-3 cursor-pointer">
           <button
             type="button"
             className="font14 font-medium text-interface-text-default"
