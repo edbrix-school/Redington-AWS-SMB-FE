@@ -773,7 +773,7 @@ body {
 
 .twinthread-bg {
   background-image: url("/images/twinthread-bg.svg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
