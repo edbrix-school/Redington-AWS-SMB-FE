@@ -143,7 +143,7 @@ export const FilesTable = () => {
     const docTypeTemplate = (rowData) => {
         return (
             <div className="flex items-center gap-2">
-                <Image src={getDocIcon(rowData.docType)} alt={rowData.docType} width={24} height={24} />
+                <img src={getDocIcon(rowData.docType)} alt={rowData.docType} width={24} height={24} />
                 <span className="text-[#6480AB] font-medium">
                     {rowData.docType}
                 </span>
@@ -160,7 +160,7 @@ export const FilesTable = () => {
                 }}
                 className="bg-transparent border-none cursor-pointer"
             >
-                <Image src="/images/eye-white-bg.svg" width={20} height={20} alt="View" className="inline-block" />
+                <img src="/images/eye-white-bg.svg" width={20} height={20} alt="View" className="inline-block" />
             </button>
         </div>
     );
@@ -170,7 +170,7 @@ export const FilesTable = () => {
         return (
             <div className="flex items-center gap-2">
                 {/* Custom Reorder Handle inside Title Column */}
-                <Image
+                <img
                     src="/images/reorder-icon.svg"
                     alt="Reorder"
                     width={14}
@@ -207,7 +207,7 @@ export const FilesTable = () => {
 
                     {/* Content: Icon + Title */}
                     <div className="flex items-start gap-2 mb-6">
-                        <Image
+                        <img
                             src={getDocIcon(product.docType)}
                             alt={product.docType}
                             width={20}
@@ -293,14 +293,14 @@ export const FilesTable = () => {
                         className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
                         title="Grid View"
                     >
-                        <Image src={isGridView ? "/images/pi-th-large-bold.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
+                        <img src={isGridView ? "/images/pi-th-large-bold.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
                     </button>
                     <button
                         onClick={() => setIsGridView(false)}
                         className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${!isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
                         title="List View"
                     >
-                        <Image src={!isGridView ? "/images/grid-1-bold.svg" : "/images/grid-1.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
+                        <img src={!isGridView ? "/images/grid-1-bold.svg" : "/images/grid-1.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
                     </button>
                     {/* List Icon (Mapped to List View) */}
                     {/* <button

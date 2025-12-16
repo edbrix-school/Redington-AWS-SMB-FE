@@ -67,7 +67,7 @@ export default function Filter({ visible, onHide }) {
                                                 placeholder="Select Date"
                                                 className="w-full p-inputtext-custom"
                                             />
-                                            <div className="absolute right-3 top-[30%]"> <Image src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon" /></div>
+                                            <div className="absolute right-3 top-[30%]"> <img src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon" /></div>
                                         </div>
                                         <div className="relative custom-input">
                                             <Calendar
@@ -78,7 +78,7 @@ export default function Filter({ visible, onHide }) {
                                                 placeholder="Select Date"
                                                 className="w-full p-inputtext-custom"
                                             />
-                                            <div className="absolute right-3 top-[30%]"> <Image src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon" /></div>
+                                            <div className="absolute right-3 top-[30%]"> <img src="/images/calendar-icon.svg" width="16" height="16" className="w-[12px] h-[12px] lg:w-[14px] lg:h-[14px]" alt="icon" /></div>
                                         </div>
                                     </div>
                                 </div>

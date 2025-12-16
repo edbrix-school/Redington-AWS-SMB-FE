@@ -13,7 +13,7 @@ export default function ViewFileDetails({ visible, onHide }) {
         <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg border border-white/10 hover:bg-white/10 transition-colors cursor-pointer group">
             <div className="flex items-center gap-3">
                 <div className="h-10 w-10 bg-white/10 rounded flex items-center justify-center shrink-0">
-                    <Image src="/images/FilePdf.svg" width={18} height={18} alt="PDF" />
+                    <img src="/images/FilePdf.svg" width={18} height={18} alt="PDF" />
                 </div>
                 <div>
                     <p className="text-sm font-medium text-gray-200 group-hover:text-white">
@@ -25,7 +25,7 @@ export default function ViewFileDetails({ visible, onHide }) {
 
             <button className="text-gray-400 hover:text-white p-2">
                 {typeof ActionIcon === "string" ? (
-                    <Image src={ActionIcon} width={16} height={16} alt="Action" />
+                    <img src={ActionIcon} width={16} height={16} alt="Action" />
                 ) : (
                     <ActionIcon size={16} />
                 )}
@@ -51,7 +51,7 @@ export default function ViewFileDetails({ visible, onHide }) {
                     <div className="px-6 py-4 flex items-center gap-4">
                         {/* Modified button to open CatalogPopup instead of hiding the sidebar */}
                         <button onClick={() => setShowCatalog(true)} className="cursor-pointer">
-                            <Image src="/images/arrowleft.svg" width={20} height={20} alt="Back" className="text-gray-600" />
+                            <img src="/images/arrowleft.svg" width={20} height={20} alt="Back" className="text-gray-600" />
                         </button>
 
                         <div>
@@ -88,7 +88,7 @@ export default function ViewFileDetails({ visible, onHide }) {
                                 </h2>
                             </div>
                             <button className="p-1 text-gray-500 hover:text-gray-700">
-                                <Image src="/images/edit.svg" width={18} height={18} alt="Edit" />
+                                <img src="/images/edit.svg" width={18} height={18} alt="Edit" />
                             </button>
                         </div>
 
@@ -119,7 +119,7 @@ export default function ViewFileDetails({ visible, onHide }) {
                             <div className="pl-0 md:pl-6 mt-4 md:mt-0">
                                 <p className="text-xs text-gray-500 mb-1">Type</p>
                                 <div className="flex items-center gap-2 text-sm font-medium text-gray-900">
-                                    <Image
+                                    <img
                                         src="/images/document-text.svg"
                                         width={18}
                                         height={18}
