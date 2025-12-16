@@ -16,26 +16,31 @@ const workSans = Work_Sans({
 
 const cardData = [
     {
+        bgImage: "/images/all-sector-bg-1.svg",
         sector: "Sector",
         title: "Advertising & Marketing",
         description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
     },
     {
+        bgImage: "/images/all-sector-bg-2.svg",
         sector: "Sector",
         title: "Aerospace & Satellite",
         description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
     },
     {
+        bgImage: "/images/all-sector-bg-3.svg",
         sector: "Sector",
         title: "Education",
         description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
     },
     {
+        bgImage: "/images/all-sector-bg-3.svg",
         sector: "Sector",
         title: "Agriculture",
         description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
     },
     {
+        bgImage: "/images/all-sector-bg-1.svg",
         sector: "Sector",
         title: "Automotive",
         description: "Figma ipsum component variant main layer. Device rectangle bullet outline vector vertical distribute list. Team device link star text. Slice."
@@ -51,7 +56,12 @@ const GroupSolution = () => {
                 <div className="flex gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt24">
                         {cardData.map((item, i) => (
-                            <div key={i} className="sector-bg shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
+                            <div key={i} className=" bg-no-repeat
+    bg-right-top
+    bg-cover shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8"
+                                style={{
+                                    backgroundImage: `url(${item.bgImage})`
+                                }}>
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
                                     {item.sector}
                                 </div>

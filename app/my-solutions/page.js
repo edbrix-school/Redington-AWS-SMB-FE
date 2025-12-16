@@ -9,7 +9,7 @@ import GroupSolution from '@/components/my-solutions/group-solution';
 const MySolutions = () => {
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
+    <div className="min-h-screen bg-[#FAF9FB] font-sans flex flex-col">
       <TopBar />
       <div className=" ">
         <NavBar />

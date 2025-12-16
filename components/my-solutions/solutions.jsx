@@ -149,7 +149,7 @@ const Solutions = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap24 mt24 p20">
                             {cardData.map((item, i) => (
-                                <div key={i} className="col-span-1 bg-BrandNeutral501 shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12">
+                                <div key={i} className="col-span-1 bg-BrandNeutral501 hover:shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 rounded8 mb12">
                                     <div className="flex justify-between items-center">
                                         <div className="flex gap8">
                                             <div className="bg-InterfaceSurfacecomponent rounded4 font11 px12 py4 uppercase rounded4">Web Hosting</div>
@@ -195,7 +195,7 @@ const Solutions = () => {
                                     <div className="flex justify-end mt4">
                                         <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutralpure overflow-hidden">
                                             <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-40 text-right font12 ">
-                                                View Solutions
+                                                Test Drive
                                             </span>
                                             <span className="flex items-center cursor-pointer bg-BrandNeutralpure py8 px8">
                                                 <i className="smb-arrow-right font12"></i>
