@@ -19,7 +19,7 @@ export const SupportSessionsHeader = () => {
   };
   return (
     <>
-      <div className="relative overflow-hidden text-white min-h-[500px] flex flex-col justify-center support-session-banner-bg">
+      <div className="relative overflow-hidden text-white min-h-[500px] flex flex-col justify-center support-base-banner-bg">
         <div className="mx-auto w-full relative z-10 px-[4.167vw]">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-gray-300 ">
@@ -29,9 +29,7 @@ export const SupportSessionsHeader = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">
-            Support Sessions
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-roboto mb-3">Support Sessions</h1>
 
           {/* Description */}
           <p className="text-[#EEEEF0]  font-normal my24 leading-[120%] max-w-2xl">
@@ -43,6 +41,9 @@ export const SupportSessionsHeader = () => {
           <Searchbox />
         </div>
       </div>
+
+
+
       <Sidebar
         visible={visible}
         onHide={() => hideSidebar()}
