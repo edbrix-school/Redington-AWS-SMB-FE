@@ -100,7 +100,7 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
                   </div>
 
                   {/* ---------- TITLE ---------- */}
-                  <h4 className="mt-3 font-inter text-[16px] font-semibold leading-[22px] text-interface-text-title">
+                  <h4 className="mt-3 font-inter text-[16px] font-semibold leading-[22px] text-interface-text-title min-h-[55px]">
                     {title}
                   </h4>
 
@@ -119,7 +119,7 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
                   </div>
 
                   {/* ---------- DESCRIPTION ---------- */}
-                  <p className="mt-2 line-clamp-3 font-inter text-[12px] leading-[18px] text-interface-text-subtitle">
+                  <p className="mt-2 line-clamp-3 font-inter text-[12px] leading-[18px] text-interface-text-subtitle min-h-[58px]">
                     Redington&apos;s AI-powered solution on AWS that automates
                     and personalizes teaching, assessment, and feedback-enabling
                     scalable, efficient and student-centric education for
@@ -188,8 +188,8 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
           </div>
 
           {/* Bottom promoted banners */}
-        </div>
-        <div className="shrink-0 mb-4">
+        
+        <div className="mb-10">
           <div className="mt-5 grid gap-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
             {/* TonAI banner */}
             <div className="relative overflow-hidden rounded-2xl bg-[linear-gradient(180deg,#1C273D_0%,#304570_100%)] p-4 text-white">
@@ -284,6 +284,9 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
             </div>
           </div>
         </div>
+
+</div>
+
         {/* </div> */}
         {/* Sidebar for Popup Content */}
         <Sidebar
