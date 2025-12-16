@@ -174,7 +174,9 @@ export default function AiChatboxPopup({ open, onClose }) {
        <div className="p24 bg-[#F5F6F8] "> 
         <div className="flex flex-col spacey20 ">
           <div className="flex items-center justify-between">
-            <div className="flex  cursor-pointer">
+            
+            <div className=" flex items-center gap20 ">
+              <div className="flex  cursor-pointer">
         <Image
           src="/assets/arrow-left.svg"
           alt="TonAI"
@@ -184,7 +186,6 @@ export default function AiChatboxPopup({ open, onClose }) {
         />
         
       </div>
-            <div className=" flex items-center ">
               <Image
                 src="/images/tonai-chat-box.svg"
                 alt="TonAI"
