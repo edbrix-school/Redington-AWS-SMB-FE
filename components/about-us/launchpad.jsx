@@ -46,7 +46,7 @@ const Launchpad = () => {
 
         <div className="flex justify-center items-center gap-[16px] xl:gap-[18px] 2xl:gap-[20px] 3xl:gap-[1.146vw] mt-[30px] xl:mt-[40px] 2xl:mt-[50px] 3xl:mt-[2.969vw]">
           <div onClick={showSidebar} className="w-[600px] xl:w-[800px] 2xl:w-[800px] 3xl:w-[53.333vw] solution-bg flex justify-between items-center px-[16px] xl:px-[18px] 3xl:px-[1.042vw] py-[26px] xl:py-[28px] 3xl:py-[1.667vw] cursor-pointer">
-            <div className="text-interfacetextdefault2 font18">Lets Chat About you, your problems and quickly find the best solutions...</div>
+            <div className="text-interfacetextdefault2 font18 leading-[125%]">Lets Chat About you, your problems and quickly find the best solutions...</div>
             <i className="smb-search-status font32 text-interfacetextdefault1 cursor-pointer"></i>
           </div>
           <div className="text-black">

@@ -32,7 +32,7 @@ const AboutUs = () => {
  
   return (
     <>
-      <div className="relative bg-[linear-gradient(180deg,#F4FEFD_5.38%,#FDFCF6_62.88%,#FFF_96.7%)]">
+      <div className="relative bg-[#FFF]">
         <Launchpad />
         <GroupSolution />
         <Help />

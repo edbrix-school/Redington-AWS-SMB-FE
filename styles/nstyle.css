@@ -16,6 +16,7 @@
     rgba(66, 219, 62, 0.12) 97.08%
   );
   backdrop-filter: blur(27px);
+  box-shadow: 0 4px 64px 0 rgba(0, 0, 0, 0.08);
 }
 .sector-bg {
   background-image: url('/images/sector-bg.svg');
