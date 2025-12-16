@@ -164,6 +164,16 @@
   width: 350px;
 }
 
+
+.closecustomsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon  
+{
+ background-image: url(/images/closecircle.svg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100px !important;
+    height: 100px !important;
+}
 .customsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
   position: absolute;
   right: -100px;
