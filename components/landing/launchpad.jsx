@@ -13,7 +13,7 @@ const Launchpad = () => {
   return (
     <>
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 mt24">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 pt24">
           <div className="col-span-1 flex items-center">
             <div className="ml-[80px] xl:ml-[100px] 2xl:ml-[120px] 3xl:ml-[7.292vw]">
               <div className="w-fit relative">
@@ -34,11 +34,11 @@ const Launchpad = () => {
           </div>
           <div className="col-span-1 flex items-center">
             <Image
-              src="/images/launchpad.svg"
+              src="/images/PreLogin.svg"
               alt="launchpad"
-              width={1075}
-              height={714}
-              className="w-full h-[400px] md:w-[500px] lg:w-[600px] xl:w-[700px] 2xl:w-[900px] 3xl:w-[55.99vw]"
+              width={1090}
+              height={888}
+              className="w-full"
             />
           </div>
         </div>
