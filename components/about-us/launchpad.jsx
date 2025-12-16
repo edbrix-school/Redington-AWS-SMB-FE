@@ -33,7 +33,7 @@ const Launchpad = () => {
               </div> */}
               <div className="font24 font-semibold">About Redington Launchpad</div>
             </div>
-            <Image src="/images/about-us.png" width="860" height="430" alt="launchpad" />
+            <Image src="/images/junto.svg" width="860" height="430" alt="launchpad" />
           </div>
         </div>
 
