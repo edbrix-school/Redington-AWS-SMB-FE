@@ -53,11 +53,11 @@ const GroupSolution = () => {
             <div className="mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
                 <div className="font16 text-interfacetextdefault1 font-medium">Group of Products by Sector</div>
-                <div className="flex gap12">
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap12 mt24">
+                <div className=" gap12">
+                    <div className="grid grid-cols-10 md:grid-cols-6 lg:grid-cols-11 gap12 mt24">
                         {cardData.map((item, i) => (
-                            <div key={i} className=" bg-no-repeat bg-right-top bg-cover shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8"
-                                style={{backgroundImage: `url(${item.bgImage})`}}>
+                            <div key={i} className="col-span-10 md:col-span-3 lg:col-span-2 bg-no-repeat bg-right-top bg-cover shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8"
+                                style={{ backgroundImage: `url(${item.bgImage})` }}>
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
                                     {item.sector}
                                 </div>
@@ -79,11 +79,12 @@ const GroupSolution = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                    <div className="see-all-bg flex items-center justify-center p16 col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 mt16">
-                        <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
-                            <i className="smb-arrowup text-center"></i>
-                            <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>
+
+                        <div className="col-span-10 md:col-span-3 lg:col-span-1 see-all-bg flex items-center justify-center p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
+                            <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
+                                <i className="smb-arrowup text-center"></i>
+                                <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>
+                            </div>
                         </div>
                     </div>
                 </div>

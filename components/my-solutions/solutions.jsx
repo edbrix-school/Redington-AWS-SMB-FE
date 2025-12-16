@@ -94,18 +94,18 @@ const Solutions = () => {
                                     <div className=" items-center inline-flex rounded8 overflow-hidden">
                                         <div className="flex gap-2 items-center pb-4 md:pb-0">
                                             <button
-                                                onClick={() => setIsGridView(true)}
-                                                className={`p-2 rounded border border-[#E5E7EB] cursor-pointer border-none transition-colors flex items-center justify-center ${isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
-                                                title="Grid View"
-                                            >
-                                                <Image src={isGridView ? "/images/pi-th-large-bold.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
-                                            </button>
-                                            <button
                                                 onClick={() => setIsGridView(false)}
-                                                className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${!isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
+                                                className={`p-2 rounded6 cursor-pointer border-none transition-colors flex items-center justify-center ${!isGridView ? 'bg-[#EDE8FF] text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
                                                 title="List View"
                                             >
-                                                <Image src={!isGridView ? "/images/grid-1-bold.svg" : "/images/grid-1.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
+                                                <Image src={!isGridView ? "/images/svg/gray-list.svg" : "/images/svg/gray-list.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
+                                            </button>
+                                            <button
+                                                onClick={() => setIsGridView(true)}
+                                                className={`p-2 rounded border border-[#E5E7EB] cursor-pointer border-none transition-colors flex items-center justify-center ${isGridView ? 'bg-[#EDE8FF] text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
+                                                title="Grid View"
+                                            >
+                                                <Image src={isGridView ? "/images/svg/blue-grid.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
                                             </button>
                                         </div>
                                     </div>
@@ -115,25 +115,24 @@ const Solutions = () => {
                         <div className="border-t border-InterfaceStrokesoft1 pb14"></div>
                         <div className="flex justify-between items-center">
                             <div>
-                                <div className=" items-center flex rounded8 border border-[#E5E7EB] overflow-hidden">
+                                <div className=" items-center flex rounded8 font-sans border border-[#E5E7EB] overflow-hidden">
                                     {TABS.map((tab, index) => (
                                         <button
                                             key={tab}
                                             onClick={() => setActiveTab(tab)}
                                             className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
-            text-center font-normal font11 py6 px10  
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
-          `}
+                                                ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480] bg-[#F5F6F7] cursor-pointer"}
+                                                text-center font-medium font11 py6 px10  
+                                                ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+                                            `}
                                         >
                                             {tab}
                                         </button>
                                     ))}
                                 </div>
                             </div>
-                            <div className="flex items-center gap24">
-
-                                <div className="font14 leading-[140%] text-InterfaceTextdefault">Item per Page :</div>
+                            <div className="flex items-center gap8">
+                                <div className="font14 leading-[140%] text-interfacetextdefault1">Item per Page :</div>
                                 <div className="items-page-dropdown">
                                     <Dropdown
                                         value={selectedSort}
@@ -156,10 +155,8 @@ const Solutions = () => {
                                             <div className="bg-InterfaceSurfacecomponent rounded4 font11 px12 py4 uppercase rounded4">Security</div>
                                             <div className="bg-InterfaceSurfacecomponent rounded4 font11 px12 py4 uppercase rounded4">+2</div>
                                         </div>
-                                        <div>
-                                            {" "}
-                                            <i
-                                                className="text-[#3C4146] smb-square-more font20 cursor-pointer"
+                                        <div className="flex items-center">
+                                            <i className="text-[#3C4146] smb-square-more font20 cursor-pointer"
                                                 onClick={(e) => op.current.toggle(e)}
                                             ></i>
                                             <OverlayPanel
@@ -185,12 +182,14 @@ const Solutions = () => {
                                         </div>
                                     </div>
                                     <div className={`${inter.variable} font18 font-semibold text-interfacetextdefault1 mt16 mb8 leading-[120%]`}>{item.title}</div>
-                                    <div className="flex gap-2 items-center">
+                                    <div className="flex gap6 items-center">
                                         <i className="smb-watch text-[#7F8488] font16"></i>
-                                        <div className="font14 text-interfacetextdefault1">{item.left}</div>
+                                        <div className="font14 text-[#3C4146]">{item.left}</div>
                                     </div>
                                     <div className="mt12">
-                                        <div className="text-InterfaceTextsubtitle font12 leading-[116%] min-h-[80px] xl:min-h-[90px] 2xl:min-h-[99px] 3xl:min-[5.156vw]">Redington’s AI-powered solution on AWS that automates and personalizes teaching, assessment, and feedback-enabling scalable, efficient and student-centric education for schools and universities</div>
+                                        <div className={`${inter.variable} text-InterfaceTextsubtitle font12 leading-[116%] min-h-[80px] xl:min-h-[90px] 2xl:min-h-[99px] 3xl:min-[5.156vw] `}>Redington’s AI-powered solution on AWS that automates and personalizes teaching, assessment, and feedback-enabling scalable, efficient and student-centric education for schools and universities
+
+                                        </div>
                                     </div>
                                     <div className="flex justify-end mt4">
                                         <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutralpure overflow-hidden">

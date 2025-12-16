@@ -1,6 +1,5 @@
 import React from 'react';
-import { ChevronRight, Search } from 'lucide-react';
-import Image from 'next/image';
+import { ChevronRight } from 'lucide-react';
 import Searchbox from '../common/searchbox';
 import Link from 'next/link';
 

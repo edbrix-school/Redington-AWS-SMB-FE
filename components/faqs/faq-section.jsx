@@ -9,8 +9,8 @@ export const FAQSection = () => {
 
     return (
         <div className="">
-            <div className="grid grid-cols-12 gap-[50px] xl:gap-[54px] 2xl:gap-[58px] 3xl:gap-[3.229vw]">
-                <div className='col-span-4 bg-InterfaceSurfacecomponent rounded-xl relative z-20 min-h-screen spacey26 p16 rounded8 shadow-[0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]'>
+            <div className="grid grid-cols-12  gap-[50px] xl:gap-[54px] 2xl:gap-[58px] 3xl:gap-[3.229vw]">
+                <div className='col-span-12 lg:col-span-4 bg-InterfaceSurfacecomponent rounded-xl relative z-20 min-h-screen spacey26 p16 rounded8 shadow-[0_1px_3px_0_rgba(0,0,0,0.10),0_1px_2px_-1px_rgba(0,0,0,0.10)]'>
                     <div className='font18 text-interfacetextdefault1 font-semibold'>FAQ Categories</div>
                     {/* Search Input Container - Updated Background Color */}
                     <div className="relative py6 bg-InterfaceSurfacecomponent rounded4 flex items-center overflow-hidden border border-[rgba(66,83,109,0.38)] shadow-sm">
@@ -30,7 +30,7 @@ export const FAQSection = () => {
                                 className={`${activeIndexList === 0
                                     ? "bg-BrandNeutralpure text-[#fff] font-medium rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw]"
                                     : "bg-white text-interfacetextdefault1 font-normal border-b border-InterfaceStrokesoft1"
-                                    } block  p12 font16 leading-tight`}
+                                    } block  p12 font16 leading-[150%]`}
                             >
                                 General
                             </Link>
@@ -39,7 +39,7 @@ export const FAQSection = () => {
                                 className={`${activeIndexList === 1
                                     ? "bg-BrandNeutralpure text-[#fff] font-medium rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw]"
                                     : "bg-white text-interfacetextdefault1 font-normal border-b border-InterfaceStrokesoft1"
-                                    } block  p12 font16 leading-tight`}
+                                    } block  p12 font16 leading-[150%]`}
                             >
                                 Solutions
                             </Link>
@@ -48,7 +48,7 @@ export const FAQSection = () => {
                                 className={`${activeIndexList === 2
                                     ? "bg-BrandNeutralpure text-[#fff] font-medium rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw]"
                                     : "bg-white text-interfacetextdefault1 font-normal border-b border-InterfaceStrokesoft1"
-                                    } block  p12 font16 leading-tight`}
+                                    } block  p12 font16 leading-[150%]`}
                             >
                                 Applications
                             </Link>
@@ -57,14 +57,14 @@ export const FAQSection = () => {
                                 className={`${activeIndexList === 3
                                     ? "bg-BrandNeutralpure text-[#fff] font-medium rounded-[8px] xl:rounded-[8px] 3xl:rounded-[0.417vw]"
                                     : "bg-white text-interfacetextdefault1 font-normal border-b border-InterfaceStrokesoft1"
-                                    } block  p12 font16 leading-tight`}
+                                    } block  p12 font16 leading-[150%]`}
                             >
                                 Service unavailable
                             </Link>
                         </div>
                     </div>
                 </div>
-                <div className='col-span-8 bg-InterfaceSurfacecomponent rounded-xl relative z-20 min-h-screen p24 custom-accordion'>
+                <div className='col-span-12 lg:col-span-8 bg-InterfaceSurfacecomponent rounded-xl relative z-20 min-h-screen p24 custom-accordion'>
                     <div className='font18 text-interfacetextdefault1 font-semibold'>General Questions</div>
                     <Accordion activeIndex={3} className='mt24'>
                         <AccordionTab header="How do I start a test drive?" className='font16 font-medium text-interfacetextdefault1'>

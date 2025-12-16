@@ -19,16 +19,16 @@ const Launchpad = () => {
               <div className="w-fit relative">
                 <div className="flex justify-between items-baseline">
                   <Image src="/images/svg/logo-hero.svg" width="215" height="32" alt="logo" />
-                  <div className="absolute -right-5 -top-10">
+                  <div className=" -mr-5 -mt-10">
                     <Image src="/images/svg/flash.svg" width="95" height="95" alt="flash" />
                   </div>
                 </div>
-                <div className="font-archivo font-bold launchpad-bg text-[40px] lg:text-[60px] xl:text-[80px] 2xl:text-[102px] 3xl:text-[5.313vw]">Launchpad</div>
+                <div className="font-archivo font-bold launchpad-bg text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[102px] 3xl:text-[5.313vw]">Launchpad</div>
               </div>
               <div className="text-black font24 leading-[120%] mt24">One Platform to manage your multi-cloud infrastructure <br /> for all partners, vendors and customers</div>
               <div className="flex gap12 font-medium font18 mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
-                <Link href="" onClick={() => setShowCatalog(true)} className="text-[#5D9D4A]  border border-[#5D9D4A] bg-white rounded-full py10 px24">Find&Launch!</Link>
-                <Link href="/about-us" className="text-[#3C4146] border border-[#BBC1C7] bg-[#F5F6F8]  rounded-full py10 px24">Read More</Link>
+                <Link href="" onClick={() => setShowCatalog(true)} className="text-[#5D9D4A]  border border-[#5D9D4A] bg-white rounded-full py10 px24 hover:border-[#3C4146] hover:text-[#3C4146]">Find&Launch!</Link>
+                <Link href="/about-us" className="text-[#3C4146] border border-[#BBC1C7] bg-[#F5F6F8]  rounded-full py10 px24 hover:border-[#5D9D4A] hover:text-[#5D9D4A]">Read More</Link>
               </div>
             </div>
           </div>

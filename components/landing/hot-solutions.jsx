@@ -2,51 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Carousel } from 'primereact/carousel';
 import { Sidebar } from "primereact/sidebar";
 import AiChatboxPopup from "../catalog/AichatboxPopup";
 import TwinSlider from "../common/twin-thread-slider/twin-slider";
+import { Work_Sans } from "next/font/google";
 
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-work-sans",
+});
 
 const HotSolutions = () => {
-    const products = [
-        { id: 1, title: "Product 1", img: "https://via.placeholder.com/150" },
-        { id: 2, },
-        { id: 3, },
-        { id: 4, },
-    ];
-
-    const responsiveOptions = [
-        {
-            breakpoint: "1199px",
-            numVisible: 1,
-            numScroll: 1
-        },
-        {
-            breakpoint: "991px",
-            numVisible: 1,
-            numScroll: 1
-        },
-        {
-            breakpoint: "767px",
-            numVisible: 1,
-            numScroll: 1
-        }
-    ];
-
-    const productTemplate = (product) => {
-        return (
-            <div className=" twinthread-bg">
-                <div className="w-[200px] xl:w-[220px] 3xl:w-[10.417vw] px16 py-[20px] xl:py-[24px] 3xl:py-[1.563vw] ">
-                    <div className="spacey16 px10">
-                        <Image src="/images/svg/twinthread-log.svg" width="168" height="28" alt="logo" />
-                        <div className="text-[#0A291A] font-normal font14">TwinThread Industrial AI</div>
-                        <div className="text-[#4C525F99] font-normal leading-[111%] font12">TwinThread accelerates digital transformation for industrial companies by integrating AI and machine learning into existing workflows, enabling continuous operational improvements with minimal disruption. It guides the crea...</div>
-                    </div>
-                </div>
-            </div>
-        );
-    };
     const [visible, setVisible] = useState(false);
     const showSidebar = () => {
         setVisible(true);
@@ -59,7 +26,7 @@ const HotSolutions = () => {
         <>
             <div className="mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[70px] 3xl:mt-[4.271vw]">
                 <div className="flex justify-between items-center">
-                    <div className="text-[#000] text-[35px] xl:text-[40px] 2xl:text-[50px] 3xl:text-[3.333vw]">Hot Solutions</div>
+                    <div className={`${workSans.variable} text-[#000] text-[35px] xl:text-[40px] 2xl:text-[50px] 3xl:text-[3.333vw] `}>Hot Solutions</div>
                     <div onClick={showSidebar} className="w-[600px] xl:w-[800px] 2xl:w-[800px] 3xl:w-[53.333vw] solution-bg flex justify-between items-center px-[16px] xl:px-[18px] 3xl:px-[1.042vw] py-[26px] xl:py-[28px] 3xl:py-[1.667vw] cursor-pointer">
                         <div className="text-[#2C363F] font16">Let us Help you to find the right Solution!</div>
                         <Image src="/images/svg/flash.svg" width="28" height="28" alt="flash" />
@@ -68,7 +35,7 @@ const HotSolutions = () => {
                 <div className="grid grid-cols-12 md:grid-cols-12 grid-cols-12 mt-[38px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.344vw] gap-[14px] xl:gap-[16px] 3xl:gap-[0.833vw]">
                     <div className="col-span-12 md:col-span-6 lg:col-span-5  border border-[#E7E6F3] bg-[#F5F6F8] rounded12 overflow-hidden">
                         <Image src="/images/amazon-bedrock.svg" width="674" height="340" alt="logo" />
-                        <div className="space-y-[6px] xl:space-y-[6px] 3xl:sapce-y-[0.313vw] py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
+                        <div className="spacey6 py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
                             <div className="font36 leading-[125%] font-semibold">Amazon Bedrock</div>
                             <div className="font24 leading-[120%]">Discover Three proven use cases for Generative AI</div>
                             <Link href="" className="font14 flex">
@@ -81,10 +48,10 @@ const HotSolutions = () => {
                     <div className="col-span-12 md:col-span-6 lg:col-span-7  grid grid-cols-7">
                         <div className="col-span-4">
                             <div className="py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
-                                <div className="space-y-[14px] xl:space-y-[16px] 3xl:sapce-y-[0.885vw] ">
+                                <div className="spacey16 ">
                                     <div className="font32 leading-[120%]">Amazon CloudFront</div>
                                     <div className="font24 leading-[120%] opacity-80">Securely deliver content with low latency and high transfer speeds</div>
-                                    <Link href="" className="flex gap-[10px] xl:gap-[12px] 3xl:gap-[0.625vw] font-medium font14">
+                                    <Link href="" className="flex gap12 font-medium font14">
                                         <div className="font14 text-[#8C55FD] border border-[#8C55FD] bg-white rounded-full py8 px20">
                                             See More
                                         </div>

@@ -83,6 +83,8 @@
   --color-InterfaceTextinverse: var(--Interface-Text-inverse);
 
   --font-sans: var(--font-geist-sans);
+  --font-roboto: var(--font-roboto);
+  --font-work-sans: var(--font-work-sans);
   --font-mono: var(--font-geist-mono);
 
   /* ✅ BREAKPOINTS */
@@ -446,7 +448,9 @@ body {
 .px14 {
   @apply px-[12px] lg:px-[14px] xl:px-[14px] 2xl:px-[14px] 3xl:px-[0.729vw];
 }
-
+.p20 {
+  @apply p-[14px] lg:p-[16px] xl:p-[18px] xl:p-[20px] 3xl:p-[1.042vw] ;
+}
 .p24 {
   @apply p-[20px] lg:p-[20px] xl:p-[22px] xl:p-[24px] 3xl:p-[1.25vw] ;
 }
@@ -707,7 +711,7 @@ body {
 }
 
 .faq-base-banner-bg {
-  background-image: url("/images/faq-bg.png");
+  background-image: url("/images/faq-bg.svg");
   background-size: cover;
   background-position: 100% 50%;
 }
