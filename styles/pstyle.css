@@ -1270,8 +1270,8 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
   border-bottom: 0px solid transparent;
   border-radius: 6px !important;
   margin: 0 0 -2px;
-  padding: 0.75rem;
-  font-weight: 600;
+  padding: 0.50rem 0.75rem;
+  font-weight: 500;
   transition: box-shadow .2s;
 }
 .tabview.p-tabview .p-tabview-nav li {
