@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "primereact/card";
+import TwinSlider from "../common/twin-thread-slider/twin-slider";
 const industrySector = [
   {
     name: "Advertising & Marketing",
@@ -213,40 +214,8 @@ export default function AllSectorsView({ onSectorClick }) {
             </div>
 
             {/* TwinThread banner */}
-            <div className="relative overflow-hidden rounded-2xl bg-white p-4">
-              <Image
-                src="/images/twinthread-bg-img.svg"
-                alt="TwinThread"
-                fill
-                className="opacity-90 object-cover"
-              />
-              <div className="relative z-10 max-w-sm">
-                <Image
-                  src="/images/catalog-bottom-twinthread-logo.svg"
-                  alt="TwinThread"
-                  width={120}
-                  height={50}
-                />
-                <h4 className="mt-2 text-[16px] text-[#0A291A] font-medium leading-snug">
-                  TwinThread Industrial AI
-                </h4>
-                <p className="mt-2 text-[12px] leading-[18px] text-[#4C525F99]">
-                  TwinThread accelerates digital transformation for industrial
-                  companies by integrating AI and machine learning into existing
-                  workflows, enabling continuous operational improvements with
-                  minimal disruption. It guides the creation of a sustainable,
-                  customized Virtual Operations Center, enhancing productivity
-                  and paving the way for smarter future operations.
-                </p>
-              </div>
-              <div className="absolute bottom-5 left-30">
-                <Image
-                  src="/images/twinthread-carosel.svg"
-                  alt="TwinThread"
-                  width={120}
-                  height={50}
-                />
-              </div>
+            <div className="relative overflow-hidden ">
+              <TwinSlider/>
             </div>
           </div>
         </div>
