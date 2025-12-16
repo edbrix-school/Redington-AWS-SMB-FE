@@ -40,8 +40,9 @@ export default function Searchbox() {
       </div>
       <Sidebar
         visible={visible}
+        blockScroll={true}
         onHide={() => hideSidebar()}
-        className="p-0 z-[9999] customAichatboxsidebar !w-[53rem] lg:!w-[53rem] md:!w-[43rem] sm:!w-[100%]  "
+        className="p-0 z-[9999] customAichatboxsidebar customsidebar2 !w-[40rem] lg:!w-[40rem]  xl:!w-[45rem] 3xl:!w-[53rem] "
         position="right"
       >
         <AiChatboxPopup open={visible} onClose={() => hideSidebar()} />

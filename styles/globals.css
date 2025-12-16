@@ -932,25 +932,35 @@ body {
   left: 128px;
 }
 
-.find-aws.p-button{
-  height: 87px;
+.find-aws {
   padding: 16px;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
   background-size: cover;  
-  padding: 10px 20px;
+  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
   border: 0px
 
 }
-.find-help.p-button{
-  height: 87px;
+.chatfind-aws {
+  padding: 16px;
+  background-image: url(/images/chatboxbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  padding: 10px 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  color:#171717;
+  border: 0px
+
+}
+.find-help {
   padding: 16px;
   background-image: url(/images/ai-chatbox-pink.svg);
   background-repeat: no-repeat;
-  background-size: cover;  padding: 10px 20px;
+  background-size: cover;  padding: 30px 10px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1127,14 +1137,13 @@ body {
   border-radius: 7px;
 }
 .find-aws.p-button{
-   height: 90px;
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
   background-size: cover;  
-  padding: 10px 20px;
+  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1142,13 +1151,12 @@ body {
 
 }
 .find-help.p-button{
-  height: 90px;
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-pink.svg);
   background-repeat: no-repeat;
-  background-size: cover;  padding: 10px 20px;
+  background-size: cover;  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1179,14 +1187,13 @@ body {
   border-radius: 7px;
 }
 .find-aws.p-button{
-   height: 90px;
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
   background-size: cover;  
-  padding: 10px 20px;
+  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1194,13 +1201,13 @@ body {
 
 }
 .find-help.p-button{
-  height: 90px;
+ 
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-pink.svg);
   background-repeat: no-repeat;
-  background-size: cover;  padding: 10px 20px;
+  background-size: cover;  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1232,14 +1239,13 @@ body {
   border-radius: 0.417vw;
 }
 .find-aws.p-button{
-   height: 87px;
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-blue.svg);
   background-repeat: no-repeat;
   background-size: cover;  
-  padding: 10px 20px;
+  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;
@@ -1247,13 +1253,12 @@ body {
 
 }
 .find-help.p-button{
-  height: 87px;
   display: flex;
   justify-content:center;
   padding: 16px;
   background-image: url(/images/ai-chatbox-pink.svg);
   background-repeat: no-repeat;
-  background-size: cover;  padding: 10px 20px;
+  background-size: cover;  padding: 30px 20px;
   background-color: transparent;
   border-radius: 8px;
   color:#171717;

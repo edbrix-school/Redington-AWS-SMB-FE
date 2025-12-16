@@ -295,6 +295,15 @@
     outline: 0;
     box-shadow: 0 0 0 .2rem #0000;
 }
+.chat-reply-bubble {
+  border-radius: 16px 0 16px 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(181, 215, 248, 0.4) 0%,
+    rgba(247, 228, 239, 0.4) 100%
+  );
+}
+
 .customCatalogButton.p-button {
   color: #7f8488;
   background: #F5F6F7;
@@ -705,7 +714,7 @@
     padding: 0 !important;
 }
 
-.customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
+/* .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-close.p-sidebar-icon {
   position: absolute;
   left: 15px;
   top: 15px;
@@ -725,7 +734,7 @@
   width: 20px;
   height: 20px;
   display: block;
-}
+} */
 
 .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-close:enabled:hover,
 .customAichatboxsidebar.p-sidebar .p-sidebar-header .p-sidebar-icon:enabled:hover {
