@@ -135,7 +135,7 @@ export default function SigninTemplate() {
               </button>
 
               {/* Divider */}
-              <div className="flex items-center justify-center w-full gap-[6px] my24">
+              <div className="flex items-center justify-center w-full gap-[6px] my24 px70">
                 <div className="flex-1 border-t border-[#C9D3DB]"></div>
 
                 <div className="text-[#7F8488] font14 whitespace-nowrap">

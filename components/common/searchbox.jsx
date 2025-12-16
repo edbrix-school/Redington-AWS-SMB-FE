@@ -15,7 +15,7 @@ export default function Searchbox() {
 
   return (
     <>
-      <div className="xl:max-w-lg  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer">
+      <div className=" lg:max-w-md xl:max-w-lg  2xl:max-w-2xl  3xl:max-w-3xl relative cursor-pointer">
         {/* Search Input Container - Updated Background Color */}
         <div
           className="relative h-[50px] lg:h-[50px] xl:h-[70px] 3xl:h-[4.167vw]  rounded-lg flex justify-between items-center overflow-hidden  search-box shadow-sm 
