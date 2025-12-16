@@ -51,7 +51,7 @@ const GroupSolution = () => {
                 <div className="flex gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw]">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-[24px] xl:gap-[26px] 3xl:gap-[1.51vw] mt24">
                         {cardData.map((item, i) => (
-                            <div key={i} className="sector-bg p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded-[8px] 3xl:rounded-[0.417vw]">
+                            <div key={i} className="sector-bg shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] p-[14px] xl:p-[14px] 2xl:p-[16px] 3xl:p-[0.833vw] col-span-1 md:col-span-1 lg:col-span-1 space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
                                     {item.sector}
                                 </div>
@@ -61,12 +61,12 @@ const GroupSolution = () => {
                                 <div className="text-[#7F8488] font12 leading-[111%] min-h-[80px] xl:min-h-[86px] 2xl:min-h-[90px] 3xl:min-h-[4.792vw]">
                                     {item.description}
                                 </div>
-                                <div className="flex justify-end">
-                                    <button class="group flex items-center rounded6 text-white bg-[#42536D] overflow-hidden px8 ">
-                                        <span class="max-w-0 mr-1 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-32 text-right font11 ">
+                                <div className="flex justify-end mt4">
+                                    <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutral900 overflow-hidden">
+                                        <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-40 text-right font12 ">
                                             View Solutions
                                         </span>
-                                        <span class="flex items-center cursor-pointer bg-[#42536D] py4   ">
+                                        <span className="flex items-center cursor-pointer bg-BrandNeutral900 py8 px8">
                                             <i className="smb-arrow-right font12"></i>
                                         </span>
                                     </button>

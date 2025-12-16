@@ -125,3 +125,13 @@ display: none;
   background-size: cover;
   background-position: center;
 }
+
+.items-page-dropdown .custDropdown1 .p-inputtext{
+  background: transparent;
+}
+.items-page-dropdown .custDropdown1.p-dropdown{
+  padding: 4px 8px;
+}
+.items-page-dropdown .p-dropdown .p-dropdown-trigger {
+  width: 1rem;
+}

@@ -38,6 +38,7 @@
   --brand-primary-100: #DAEEFF;
   --Brand-Neutral-pure: #768FB5;
   --interface-surface-component-muted: #F5F6F7;
+  --Interface-Text-inverse: #EEEEF0;
 }
 
 
@@ -79,6 +80,7 @@
   --color-InterfaceSurfacepage: var(--Interface-Surface-page);
   --color-BrandHighlightpure: var(--Brand-Highlight-pure);
   --color-BrandHighlight500: var(--Brand-Highlight-500);
+  --color-InterfaceTextinverse: var(--Interface-Text-inverse);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -393,6 +395,9 @@ body {
 .px8 {
   @apply px-[8px] lg:px-[8px] xl:px-[8px] 3xl:px-[0.417vw];
 }
+.px10 {
+  @apply px-[8px] lg:px-[10px] xl:px-[10px] 3xl:px-[0.521vw];
+}
 .py4 {
   @apply py-[4px] lg:py-[4px] xl:py-[4px] 3xl:py-[0.202vw];
 }
@@ -529,6 +534,9 @@ body {
 }
 .gap20 {
   @apply gap-[20px] xl:gap-[20px] 2xl:gap-[20px] 3xl:gap-[1.042vw];
+}
+.gap22 {
+  @apply gap-[20px] xl:gap-[20px] 2xl:gap-[22px] 3xl:gap-[1.146vw];
 }
 .gap24 {
   @apply gap-[20px] xl:gap-[22px] 2xl:gap-[24px] 3xl:gap-[1.25vw];

@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 import { OverlayPanel } from "primereact/overlaypanel";
 import Link from "next/link";
 import { InputText } from "primereact/inputtext";
+import Image from 'next/image';
+import { Paginator } from "primereact/paginator";
+import { Dropdown } from "primereact/dropdown";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -47,40 +50,31 @@ const Solutions = () => {
             left: "Left: 3hrs 45 mins"
         },
     ];
-
+    const [first, setFirst] = useState(0);
+    const [rows, setRows] = useState(10);
     const [activeTab, setActiveTab] = useState("Active Tryouts");
-    const [activeTab1, setActiveTab1] = useState("");
     const TABS = ["Active Tryouts", "Expired Tryouts"];
-    const TABS1 = ["kk", "NN"];
+    const [isGridView, setIsGridView] = useState(false); // Default to List (Table) View
     const op = useRef(null);
     const [globalFilter, setGlobalFilter] = useState('');
+    const onPageChange = (event) => {
+        setFirst(event.first);
+        setRows(event.rows);
+    };
+    const [selectedSort, setSelectedSort] = useState(null);
+    const Sort = [
+        { name: "10", code: "NY" },
+        { name: "20", code: "RM" },
+    ];
 
     return (
         <>
             <div className="grid grid-cols-12 bg-InterfaceSurfacecomponent p24 rounded8 mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[40px] xl:mt-[44px] 2xl:mt-[48px] 3xl:mt-[2.5vw]">
                 <div className="col-span-12">
                     <div className="">
-                        <div className="mb20 ">
+                        <div className="mb20 flex justify-between">
                             <div className="font24 text-interfacetextdefault1 font-semibold leading-[140%]">My Solutions</div>
-                        </div>
-                        <div className="border-t border-InterfaceStrokesoft1 pb14"></div>
-                        <div className="flex justify-between">
-                            <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
-                                {TABS.map((tab, index) => (
-                                    <button
-                                        key={tab}
-                                        onClick={() => setActiveTab(tab)}
-                                        className={`
-            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
-            text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
-          `}
-                                    >
-                                        {tab}
-                                    </button>
-                                ))}
-                            </div>
-                            <div className="flex items-center">
+                            <div className="flex items-center gap24">
                                 <div className="relative">
                                     <i className="pi pi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 z-10"></i>
                                     <InputText
@@ -97,21 +91,59 @@ const Solutions = () => {
                                     />
                                 </div>
                                 <div>
-                                    <div className=" items-center inline-flex rounded8 border border-[#E5E7EB] bg-[#F5F6F7] overflow-hidden">
-                                        {TABS1.map((tab, index) => (
+                                    <div className=" items-center inline-flex rounded8 overflow-hidden">
+                                        <div className="flex gap-2 items-center pb-4 md:pb-0">
                                             <button
-                                                key={tab}
-                                                onClick={() => setActiveTab1(tab)}
-                                                className={`
-            ${activeTab1 === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
-            text-center font-semibold text-[14px] py6 px12
-            ${index !== TABS1.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
-          `}
+                                                onClick={() => setIsGridView(true)}
+                                                className={`p-2 rounded border border-[#E5E7EB] cursor-pointer border-none transition-colors flex items-center justify-center ${isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
+                                                title="Grid View"
                                             >
-                                                {tab}
+                                                <Image src={isGridView ? "/images/pi-th-large-bold.svg" : "/images/pi-th-large.svg"} alt="Grid" width={18} height={18} className={isGridView ? "" : "opacity-60"} />
                                             </button>
-                                        ))}
+                                            <button
+                                                onClick={() => setIsGridView(false)}
+                                                className={`p-2 rounded cursor-pointer border-none transition-colors flex items-center justify-center ${!isGridView ? 'bg-purple-100 text-purple-600' : 'bg-gray-50 text-gray-500 hover:bg-gray-100'}`}
+                                                title="List View"
+                                            >
+                                                <Image src={!isGridView ? "/images/grid-1-bold.svg" : "/images/grid-1.svg"} alt="List" width={18} height={18} className={!isGridView ? "" : "opacity-60"} />
+                                            </button>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="border-t border-InterfaceStrokesoft1 pb14"></div>
+                        <div className="flex justify-between items-center">
+                            <div>
+                                <div className=" items-center flex rounded8 border border-[#E5E7EB] overflow-hidden">
+                                    {TABS.map((tab, index) => (
+                                        <button
+                                            key={tab}
+                                            onClick={() => setActiveTab(tab)}
+                                            className={`
+            ${activeTab === tab ? "bg-[#8078B9] text-white" : "text-[#6f7480]  cursor-pointer"}
+            text-center font-normal font11 py6 px10  
+            ${index !== TABS.length - 1 ? "border-r border-[#E5E7EB]  cursor-pointer" : ""}
+          `}
+                                        >
+                                            {tab}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex items-center gap24">
+
+                                <div className="font14 leading-[140%] text-InterfaceTextdefault">Item per Page :</div>
+                                <div className="items-page-dropdown">
+                                    <Dropdown
+                                        value={selectedSort}
+                                        onChange={(e) => setSelectedSort(e.value)}
+                                        options={Sort}
+                                        optionLabel="name"
+                                        placeholder="10"
+                                        className=" custDropdown1 bg-white!"
+                                        panelClassName="custDropdown1panel "
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -161,10 +193,32 @@ const Solutions = () => {
                                         <div className="text-InterfaceTextsubtitle font12 leading-[116%] min-h-[80px] xl:min-h-[90px] 2xl:min-h-[99px] 3xl:min-[5.156vw]">Redington’s AI-powered solution on AWS that automates and personalizes teaching, assessment, and feedback-enabling scalable, efficient and student-centric education for schools and universities</div>
                                     </div>
                                     <div className="flex justify-end mt4">
-                                        <i className="smb-arrow-right font14 text-white bg-BrandNeutralpure rounded6 px8 py4"></i>
+                                        <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutralpure overflow-hidden">
+                                            <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-40 text-right font12 ">
+                                                View Solutions
+                                            </span>
+                                            <span className="flex items-center cursor-pointer bg-BrandNeutralpure py8 px8">
+                                                <i className="smb-arrow-right font12"></i>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        <div className="relative custTablePaginator border-t border-gray-100">
+                            <Paginator
+                                template="PrevPageLink PageLinks NextPageLink"
+                                first={first}
+                                rows={rows}
+                                onPageChange={onPageChange}
+                                totalRecords={1000}
+                                className="justify-end"
+                                leftContent={
+                                    <span className="text-gray-400 font-medium text-xs ml-4 absolute left-0 top-1/2 -translate-y-1/2">
+                                        Showing <span className="font-bold">1-10</span> of <span className="font-bold">1000</span>
+                                    </span>
+                                }
+                            />
                         </div>
                     </div>
                 </div>
