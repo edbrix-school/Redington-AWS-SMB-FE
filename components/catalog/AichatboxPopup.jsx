@@ -183,18 +183,18 @@ export default function AiChatboxPopup({ open, onClose }) {
               />
             </div>
             <div className="flex gap-4 justify-center ">
-              <Button
+              <div
                 type="button"
                 className="chatfind-aws cursor-pointer px-2 py6 font14 font-semibold"
               >
                 Find AWS Products for My Business
-              </Button>
-              <Button
+              </div>
+              <div
                 type="button"
                 className="chatfind-aws cursor-pointer px-2 py6 font14 font-semibold"
               >
                 Find Help for some problem
-              </Button>
+              </div>
             </div>
           </div>
          
