@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Sidebar } from "primereact/sidebar";
 import AiChatboxPopup from "../catalog/AichatboxPopup";
+import { ChevronRight } from "lucide-react";
 
 const Launchpad = () => {
   const [visible, setVisible] = useState(false);
@@ -18,11 +19,18 @@ const Launchpad = () => {
         <div className="flex items-center justify-center">
           <div className="">
             <div className="absolute mt-[20px] xl:mt-[30px] 2xl:mt-[30px] 3xl:mt-[1.563vw] xl:left-[70px] 2xl:left-[80px] 3xl:left-[4.688vw]">
-              <div className="flex items-center gap-[8px] font12">
+              <div className="flex items-center gap8 font12  ">
+                    <span className="text-interfacetextdefault1 font-normal">Home</span>
+                    <ChevronRight size={12} color="#828A91" />
+                    <span className="text-interfacetextdefault1 font-normal">Pages</span>
+                    <ChevronRight size={12} color="#828A91" />
+                    <span className="text-interfacetextdefault1 font-medium">About Redington Launchpad</span>
+                </div>
+              {/* <div className="flex items-center gap-[8px] font12">
                 <div className="text-interfacetextdefault1 font-normal">Home</div>
                 <div className="text-interfacetextdefault1 font-normal">Pages</div>
                 <div className="text-interfacetextdefault1 font-medium">About Redington Launchpad</div>
-              </div>
+              </div> */}
               <div className="font24 font-semibold">About Redington Launchpad</div>
             </div>
             <Image src="/images/about-us.png" width="860" height="430" alt="launchpad" />

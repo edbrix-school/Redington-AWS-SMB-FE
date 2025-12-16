@@ -42,24 +42,21 @@ const TwinSlider = () => {
                 </div>
             </div>
         );
-    };   
+    };
 
     return (
         <>
-            {/* <div className="col-span-12 relative mt-[30px] xl:mt-[40px] 3xl:mt-[2.292vw]"> */}
-            <div className="">
-                <div className="w-full hot-solution-carousel twinthread-shadow rounded8 overflow-hidden">
-                    <Carousel
-                        value={products}
-                        numVisible={1}
-                        numScroll={1}
-                        responsiveOptions={responsiveOptions}
-                        itemTemplate={productTemplate}
-                        circular
-                        showNavigators={false}
-                        indicatorsContentClassName="sbm-location"
-                    />
-                </div>
+            <div className="w-full hot-solution-carousel twinthread-shadow rounded8 overflow-hidden">
+                <Carousel
+                    value={products}
+                    numVisible={1}
+                    numScroll={1}
+                    responsiveOptions={responsiveOptions}
+                    itemTemplate={productTemplate}
+                    circular
+                    showNavigators={false}
+                    indicatorsContentClassName="sbm-location"
+                />
             </div>
         </>
     );

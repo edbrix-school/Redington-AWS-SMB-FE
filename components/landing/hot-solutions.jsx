@@ -61,7 +61,7 @@ const HotSolutions = () => {
                 <div className="flex justify-between items-center">
                     <div className="text-[#000] text-[35px] xl:text-[40px] 2xl:text-[50px] 3xl:text-[3.333vw]">Hot Solutions</div>
                     <div onClick={showSidebar} className="w-[600px] xl:w-[800px] 2xl:w-[800px] 3xl:w-[53.333vw] solution-bg flex justify-between items-center px-[16px] xl:px-[18px] 3xl:px-[1.042vw] py-[26px] xl:py-[28px] 3xl:py-[1.667vw] cursor-pointer">
-                        <div  className="text-[#2C363F] font16">Let us Help you to find the right Solution!</div>
+                        <div className="text-[#2C363F] font16">Let us Help you to find the right Solution!</div>
                         <Image src="/images/svg/flash.svg" width="28" height="28" alt="flash" />
                     </div>
                 </div>
@@ -95,7 +95,9 @@ const HotSolutions = () => {
                         <div className="col-span-3">
                             <Image src="/images/amazon-cloudfront.svg" width="377" height="226" alt="logo" />
                         </div>
-                        <TwinSlider />
+                        <div className="col-span-12 relative mt-[30px] xl:mt-[40px] 3xl:mt-[2.292vw]">
+                            <TwinSlider />
+                        </div>
                     </div>
                 </div>
             </div>
