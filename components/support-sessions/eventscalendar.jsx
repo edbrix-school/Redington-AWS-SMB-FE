@@ -76,7 +76,7 @@ export default function EventCalenderFilter(props) {
   //   };
 
   return (
-    <div className="grid gap-[29px] xl:gap-[1.510vw] relative z-[2]">
+    <div className="grid -mt-[9px] lg:-mt-[9px] xl:-mt-[0.430vw] 2xl:-mt-[0.469vw] 3xl:-mt-[0.469vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
       <Tabs selectedIndex={activeTab} onSelect={handleTabClick}>
         <div className="grid gap-[36px] xl:gap-[1.875vw]">
           <div>

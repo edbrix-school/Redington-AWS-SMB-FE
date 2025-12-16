@@ -9,7 +9,7 @@ import EventCalenderFilter from "../support-sessions/eventscalendar";
 export default function ScheduleCalendarTable() {
   const [visible, setVisible] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-  const [activeSession, setActiveSession] = useState(1);
+  const [activeSession, setActiveSession] = useState(1); 
   const sessions = {
     upcoming: [
       {
@@ -88,7 +88,7 @@ export default function ScheduleCalendarTable() {
         <h3 className="font20 text-[#fff] font-[700]">Your Sessions</h3>
         <div
           onClick={showSidebar}
-          className="font16 font-[500] py10 px20 border-[#5D9D4A] rounded-full bg-[#5D9D4A]  cursor-pointer text-[#fff]"
+          className="font14 py6 px14 border-[#5D9D4A] rounded-full bg-[#5D9D4A]  cursor-pointer text-[#fff]"
         >
           Schedule a Session
         </div>
@@ -122,9 +122,8 @@ export default function ScheduleCalendarTable() {
                             <p className="text-[#3C4146] font11">SR-112233</p>
                           )}
                           <h4
-                            className={`text-[#212325] text-lg font-semibold ${
-                              isActive ? " font17 font700" : "font17 font500"
-                            }`}
+                            className={`text-[#212325] text-lg font-semibold ${isActive ? " font17 font700" : "font17 font500"
+                              }`}
                           >
                             {session.title}
                           </h4>
@@ -138,16 +137,14 @@ export default function ScheduleCalendarTable() {
                         </div>
                         <div className="p-2 border-r broder-r-[0.7px solid #E5E7EB]">
                           <p
-                            className={`text-[#3C4146]  ${
-                              isActive ? "active-day" : "inactive-day"
-                            }`}
+                            className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
+                              }`}
                           >
                             Wed
                           </p>
                           <p
-                            className={`text-[#3C4146]  ${
-                              isActive ? "active-date" : "inactive-date"
-                            }`}
+                            className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
+                              }`}
                           >
                             28
                           </p>
@@ -161,11 +158,10 @@ export default function ScheduleCalendarTable() {
                               height={20}
                             />
                             <p
-                              className={`text-[#7F8488]  ${
-                                isActive
-                                  ? "text-[#3C4146] font-normal"
-                                  : "font-normal"
-                              }`}
+                              className={`text-[#7F8488]  ${isActive
+                                ? "text-[#3C4146] font-normal"
+                                : "font-normal"
+                                }`}
                             >
                               {session.time}
                             </p>
@@ -178,11 +174,10 @@ export default function ScheduleCalendarTable() {
                               height={20}
                             />
                             <p
-                              className={`text-[#7F8488]  ${
-                                isActive
-                                  ? "text-[#3C4146] font-normal"
-                                  : "font-normal"
-                              }`}
+                              className={`text-[#7F8488]  ${isActive
+                                ? "text-[#3C4146] font-normal"
+                                : "font-normal"
+                                }`}
                             >
                               {session.type}
                             </p>
@@ -199,11 +194,10 @@ export default function ScheduleCalendarTable() {
                                 height={20}
                               />
                               <p
-                                className={`text-[#7F8488]  ${
-                                  isActive
-                                    ? "text-[#645592] font-normal"
-                                    : "font-normal"
-                                }`}
+                                className={`text-[#7F8488]  ${isActive
+                                  ? "text-[#645592] font-normal"
+                                  : "font-normal"
+                                  }`}
                               >
                                 View
                               </p>
@@ -232,9 +226,8 @@ export default function ScheduleCalendarTable() {
                             <p className="text-[#3C4146] font11">SR-112233</p>
                           )}
                           <h4
-                            className={`text-[#212325] text-lg font-semibold ${
-                              isActive ? " font17 font700" : "font17 font500"
-                            }`}
+                            className={`text-[#212325] text-lg font-semibold ${isActive ? " font17 font700" : "font17 font500"
+                              }`}
                           >
                             {session.title}
                           </h4>
@@ -248,16 +241,14 @@ export default function ScheduleCalendarTable() {
                         </div>
                         <div className="p-2 border-r broder-r-[0.7px solid #E5E7EB]">
                           <p
-                            className={`text-[#3C4146]  ${
-                              isActive ? "active-day" : "inactive-day"
-                            }`}
+                            className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
+                              }`}
                           >
                             Wed
                           </p>
                           <p
-                            className={`text-[#3C4146]  ${
-                              isActive ? "active-date" : "inactive-date"
-                            }`}
+                            className={`text-[#3C4146]  ${isActive ? "active-date" : "inactive-date"
+                              }`}
                           >
                             28
                           </p>
@@ -271,11 +262,10 @@ export default function ScheduleCalendarTable() {
                               height={20}
                             />
                             <p
-                              className={`text-[#7F8488]  ${
-                                isActive
-                                  ? "text-[#3C4146] font-normal"
-                                  : "font-normal"
-                              }`}
+                              className={`text-[#7F8488]  ${isActive
+                                ? "text-[#3C4146] font-normal"
+                                : "font-normal"
+                                }`}
                             >
                               {session.time}
                             </p>
@@ -288,11 +278,10 @@ export default function ScheduleCalendarTable() {
                               height={20}
                             />
                             <p
-                              className={`text-[#7F8488]  ${
-                                isActive
-                                  ? "text-[#3C4146] font-normal"
-                                  : "font-normal"
-                              }`}
+                              className={`text-[#7F8488]  ${isActive
+                                ? "text-[#3C4146] font-normal"
+                                : "font-normal"
+                                }`}
                             >
                               {session.type}
                             </p>
@@ -309,11 +298,10 @@ export default function ScheduleCalendarTable() {
                                 height={20}
                               />
                               <p
-                                className={`text-[#7F8488]  ${
-                                  isActive
-                                    ? "text-[#645592] font-normal"
-                                    : "font-normal"
-                                }`}
+                                className={`text-[#7F8488]  ${isActive
+                                  ? "text-[#645592] font-normal"
+                                  : "font-normal"
+                                  }`}
                               >
                                 View
                               </p>

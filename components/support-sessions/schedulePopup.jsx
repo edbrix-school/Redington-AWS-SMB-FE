@@ -55,7 +55,7 @@ export default function SchedulePopup({ open, onClose }) {
       <div className="flex flex-col h-full">
         <div className="flex justify-between border-top-left-radius: 1rem ">
           <div className=" bg-[#fff] p24 rounded-tl-[10px]">
-            <div className=" text-[#212325]  font24 font-bold">
+            <div className=" text-[#212325] font24 font-bold">
               Schedule a Session
             </div>
           </div>

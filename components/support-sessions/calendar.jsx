@@ -126,7 +126,7 @@ const CalenderPage = (props) => {
   }
 
   return (
-    <div>
+    <>
       <Tabs selectedIndex={activeTab} onSelect={handleTabClick}>
         <TabList>
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
@@ -219,7 +219,7 @@ const CalenderPage = (props) => {
           </TabPanel>
         </div>
       </Tabs>
-    </div>
+    </>
   );
 };
 export default CalenderPage;
