@@ -89,7 +89,7 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
                         key={tag}
                         className="
           rounded-sm px-2 py-[3px] text-[10px] uppercase font-semibold
-          bg-transparent border border-transparent text-interface-text-default
+          bg-[#F5F6F8] border border-transparent text-interface-text-default
           transition-all duration-200
           hover:border-[#d1d5db] hover:bg-[#d1d5db]
         "
