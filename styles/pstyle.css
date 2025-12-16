@@ -933,9 +933,15 @@ font-weight: 600;
   border-radius: 0;
   /* display: none; */
 }
-.custTable svg.p-icon {
+/* .custTable svg.p-icon {
     pointer-events: auto;
     display: none;
+} */
+.custfiltericon .p-column-filter-menu-button svg.p-icon {
+display: none;
+}
+.custTable .filtericon{
+  display: none;
 }
 .custTable.p-datatable
   .p-datatable-thead

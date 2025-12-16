@@ -327,7 +327,7 @@ export const FilesTable = () => {
                         value={fileList}
                         stripedRows
                         rows={10}
-                        className="custTable mt-4"
+                        className="custTable mt-4 custfiltericon"
                         responsiveLayout="scroll"
                         filters={filters}
                         onFilter={(e) => setFilters(e.filters)}
@@ -344,17 +344,18 @@ export const FilesTable = () => {
                         */}
                         <Column
                             field="title"
-                            header={<HeaderWithMenu title="Title" />}
+                            header="Title" 
+                            sortable
                             filter
                             filterElement={(o) => filterInput(o)}
                             body={titleBodyTemplate} // Uses the custom template defined above
                         />
 
-                        <Column field="description" header={<HeaderWithMenu title="Description" />} filter filterElement={(o) => filterInput(o, "Abc")} body={(r) => <span>{r.description}</span>} />
-                        <Column field="category" header={<HeaderWithMenu title="Category" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.category}</span>} />
-                        <Column field="docType" header={<HeaderWithMenu title="Document Type" />} filter filterElement={(o) => filterInput(o)} body={docTypeTemplate} />
-                        <Column field="dateCreated" header={<HeaderWithMenu title="Date Created" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.dateCreated}</span>} />
-                        <Column field="lastUpdated" header={<HeaderWithMenu title="Last Updated" />} filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.lastUpdated}</span>} />
+                        <Column field="description" header="Description" filter filterElement={(o) => filterInput(o, "Abc")} body={(r) => <span>{r.description}</span>} />
+                        <Column field="category" header="Category" filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.category}</span>} />
+                        <Column field="docType" header="Document Type" filter filterElement={(o) => filterInput(o)} body={docTypeTemplate} />
+                        <Column field="dateCreated" header="Date Created"  filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.dateCreated}</span>} />
+                        <Column field="lastUpdated" header="Last Updated" filter filterElement={(o) => filterInput(o)} body={(r) => <span>{r.lastUpdated}</span>} />
                         <Column header="Action" body={actionBodyTemplate} align="center" frozen />
                     </DataTable>
                 )}

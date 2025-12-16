@@ -148,7 +148,7 @@ export const FilesTable = () => {
                 value={recordsList}
                 stripedRows
                 rows={10}
-                className="custTable tableCustRed mt-4"
+                className="custTable custfiltericon tableCustRed mt-4"
                 responsiveLayout="scroll"
                 style={{ width: "100%" }}
                 filters={filters}
@@ -161,9 +161,10 @@ export const FilesTable = () => {
                 {/* 1. TimeStamp - Icon restored */}
                 <Column 
                     field="timeStamp" 
-                    header={<HeaderWithMenu title="Time Stamp" />} 
+                    header="Time Stamp" 
                     style={{ minWidth: "14rem" }} 
                     filter 
+                    sortable
                     filterElement={(opts) => filterInput(opts, "")} 
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>} 
                 />
@@ -171,7 +172,8 @@ export const FilesTable = () => {
                 {/* 2. Activity Type - Icon restored */}
                 <Column 
                     field="activityType" 
-                    header={<HeaderWithMenu title="Activity Type" />} 
+                    header="Activity Type"
+                    sortable
                     style={{ minWidth: "12rem" }} 
                     filter 
                     filterElement={(opts) => filterInput(opts, "")} 
@@ -181,7 +183,8 @@ export const FilesTable = () => {
                 {/* 3. Description - Icon restored */}
                 <Column 
                     field="description" 
-                    header={<HeaderWithMenu title="Description/ Details" />} 
+                    header="Description/ Details"
+                    sortable
                     style={{ minWidth: "14rem" }} 
                     filter 
                     filterElement={(opts) => filterInput(opts, "Abc")} 
@@ -191,7 +194,8 @@ export const FilesTable = () => {
                 {/* 4. User - Icon restored */}
                 <Column 
                     field="user" 
-                    header={<HeaderWithMenu title="User" />} 
+                    header="User"
+                    sortable
                     style={{ minWidth: "12rem" }} 
                     filter 
                     filterElement={(opts) => filterInput(opts, "Abc")} 
@@ -201,7 +205,8 @@ export const FilesTable = () => {
                 {/* 5. IP Address - Icon restored */}
                 <Column 
                     field="ipAddress" 
-                    header={<HeaderWithMenu title="IP Address" />} 
+                    header="IP Address"
+                    sortable
                     style={{ minWidth: "12rem" }} 
                     filter 
                     filterElement={(opts) => filterInput(opts, "Abc")} 

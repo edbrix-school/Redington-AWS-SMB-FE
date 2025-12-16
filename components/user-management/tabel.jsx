@@ -174,14 +174,14 @@ export default function Tabel() {
     EmailAddress: { value: null, matchMode: "contains" },
     ContactNumber: { value: null, matchMode: "contains" },
   });
-  const HeaderWithMenu = ({ title }) => {
-    return (
-      <div className="header-menu flex items-center justify-between w-full">
-        <span className="text-interfacetextdefault2">{title}</span>
-        <div className="smb-more text-interfacetextdefault2  font12 flex justify-end cursor-pointer"></div>
-      </div>
-    );
-  };
+  // const HeaderWithMenu = ({ title }) => {
+  //   return (
+  //     <div className="header-menu flex items-center justify-between w-full">
+  //       <span className="text-interfacetextdefault2">{title}</span>
+  //       <div className="smb-more text-interfacetextdefault2  font12 flex justify-end cursor-pointer"></div>
+  //     </div>
+  //   );
+  // };
 
   // 🔥 Common filter input template
   const filterInput = (options) => {
@@ -255,7 +255,7 @@ export default function Tabel() {
           value={workspacelist}
           stripedRows
           rows={10}
-          className="custTable "
+          className="custfiltericon custTable "
           responsiveLayout="scroll"
           style={{ width: "100%" }}
           filters={filters}
@@ -268,7 +268,8 @@ export default function Tabel() {
         >
           <Column
             field="FirstName"
-            header={<HeaderWithMenu title="First Name" />}
+            sortable 
+            header="First Name" 
             style={{ minWidth: "11rem" }}
             filter
             filterElement={filterInput}
@@ -276,7 +277,8 @@ export default function Tabel() {
 
           <Column
             field="LastName"
-            header={<HeaderWithMenu title="Last Name" />}
+            sortable 
+            header="Last Name"
             style={{ minWidth: "10rem" }}
             filter
             filterElement={filterInput}
@@ -284,7 +286,8 @@ export default function Tabel() {
 
           <Column
             field="MobileNumber"
-            header={<HeaderWithMenu title="Mobile Number" />}
+            sortable 
+            header="Mobile Number" 
             style={{ minWidth: "12rem" }}
             filter
             filterElement={filterInput}
@@ -292,21 +295,24 @@ export default function Tabel() {
 
           <Column
             field="Email"
-            header={<HeaderWithMenu title="Email" />}
+            sortable 
+            header="Email" 
             style={{ minWidth: "10rem" }}
             filter
             filterElement={filterInput}
           />
           <Column
             field="Role"
-            header={<HeaderWithMenu title="Role" />}
+            sortable 
+            header="Role" 
             style={{ minWidth: "10rem" }}
             filter
             filterElement={filterInput}
           />
           <Column
             field="Status"
-            header={<HeaderWithMenu title="Status" />}
+            header="Status"
+            sortable 
             style={{ minWidth: "10rem" }}
             body={statusBodyTemplate}
             filter
@@ -314,7 +320,8 @@ export default function Tabel() {
           />
           <Column
             field="AuthorizedSignatory"
-            header={<HeaderWithMenu title="Authorized Signatory" />}
+            header="Authorized Signatory"
+            sortable 
             style={{ minWidth: "13rem" }}
             filter
             filterElement={filterInput}
