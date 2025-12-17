@@ -25,7 +25,7 @@ const HotSolutions = () => {
     return (
         <>
             <div className="mx-[10px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[70px] 3xl:mt-[4.271vw]">
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap justify-between items-center">
                     <div className={`${workSans.variable} text-[#000] text-[35px] xl:text-[40px] 2xl:text-[50px] 3xl:text-[3.333vw] `}>Hot Solutions</div>
                     <div onClick={showSidebar} className="w-[600px] xl:w-[800px] 2xl:w-[800px] 3xl:w-[53.333vw] solution-bg flex justify-between items-center px-[16px] xl:px-[18px] 3xl:px-[1.042vw] py-[26px] xl:py-[28px] 3xl:py-[1.667vw] cursor-pointer">
                         <div className="text-[#2C363F] font16">Let us Help you to find the right Solution!</div>
