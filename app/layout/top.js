@@ -152,7 +152,7 @@ export default function Top() {
       <Sidebar
         visible={showCatalog}
         onHide={() => setShowCatalog(false)}
-        className="p-0  customsidebar popup-enter closecustomsidebar"
+        className="p-0 customsidebar popup-enter closecustomsidebar "
         blockScroll
       >
         <CatalogPopup
@@ -166,7 +166,7 @@ export default function Top() {
         visible={showMobileSidebar}
         onHide={() => setShowMobileSidebar(false)}
         position="right"
-        className="!bg-[#232823] w-[300px] border-l border-[#494949]"
+        className="!bg-[#232823] w-[85vw] sm:w-[375px] border-l border-[#494949] customsidebar"
         style={{ backgroundColor: '#232823' }}
       >
         <div className="flex flex-col gap-6 p-4 text-white h-full bg-[#232823]">
@@ -178,10 +178,17 @@ export default function Top() {
               alt="logo"
               className="w-[100px] h-auto"
             />
-            <i
-              className="smb-close text-white text-[20px] cursor-pointer"
+            <svg
               onClick={() => setShowMobileSidebar(false)}
-            ></i>
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-8 h-8 text-white cursor-pointer"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </div>
 
           <div className="flex flex-col gap-6">
