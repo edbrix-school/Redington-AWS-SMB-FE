@@ -47,13 +47,13 @@ const GroupSolution = () => {
     return (
         <>
             <div className="">
-                <div className="bg-InterfaceSurfacecomponent1 rounded16 p-[24px] xl:p-[28px] 2xl:p-[30px] 3xl:p-[1.667vw] mx-[20px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+                <div className="bg-InterfaceSurfacecomponent1 rounded16 p-[24px] xl:p-[28px] 2xl:p-[30px] 3xl:p-[1.667vw] mx-[10px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                     <div className="flex justify-between items-center">
                         <div className="space-y-[5px]">
                             <div className="w-[45px] h-[2px] bg-InterfaceSurfacehcprimary"></div>
                             <div className="font16 text-interfacetextdefault font-medium">Trending Products By <span className="font-bold">Sector</span></div>
                         </div>
-                        <Link href="" className="text-[#B497FF] border border-[#B497FF] bg-none rounded-full py10 px24">Show All</Link>
+                        <Link href="" className="text-[#B497FF] border border-[#B497FF] bg-none rounded-full py10 px24 font14">Show All</Link>
                     </div>
                     <div className="flex gap12  ">
                         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap12 mt22">

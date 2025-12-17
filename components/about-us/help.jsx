@@ -30,7 +30,7 @@ const Help = () => {
                                     <Image src="/images/chat-with-tonai.svg" width="444" height="350" alt="logo" />
                                 </div>
                             </div>
-                            <div className="col-span-12 md:col-span-6 lg:col-span-6 mt-[100px] xl:mt-[120px] 3xl:mt-[8.333vw]">
+                            <div className="col-span-12 md:col-span-6 lg:col-span-6 mt-[10px] xl:mt-[120px] 3xl:mt-[8.333vw]">
                                 <div className="py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
                                     <div className="space-y-[14px] xl:space-y-[16px] 3xl:sapce-y-[0.885vw] ">
                                         <div className="font24 leading-[120%]">Connect with Amazing AWS Solutions</div>
@@ -41,13 +41,13 @@ const Help = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-12 grid-cols-12 -mt-[38px] xl:-mt-[40px] 2xl:-mt-[40px] 3xl:-mt-[2.344vw] flex justify-center items-center ">
+                            <div className="col-span-12 grid-cols-12 -mt-[20px] xl:-mt-[40px] 2xl:-mt-[40px] 3xl:-mt-[2.344vw] flex justify-center items-center  mb-20">
                                 <div className="col-span-3"></div>
-                                <div className="col-span-6 flex gap-[26px] xl:gap-[30px] 2xl:gap-[34px] 3xl:gap-[1.927vw]">
+                                <div className="col-span-6 flex flex-wrap gap-[26px] xl:gap-[30px] 2xl:gap-[34px] 3xl:gap-[1.927vw]">
                                     <div className="">
                                         <Image src="/images/onboarding-image.svg" width="419" height="674" alt="logo" />
                                     </div>
-                                    <div className="mt-[250px] xl:mt-[300px] 2xl:mt-[350px] 3xl:mt-[18.229vw]">
+                                    <div className="mt-[10px] xl:mt-[300px] 2xl:mt-[350px] 3xl:mt-[18.229vw]">
                                         <div>
                                             <div className="font24 leading-[130%]">Add the solutions you liked to<br />
                                                 <span className="font-bold">CloudQuarks Portal</span></div>

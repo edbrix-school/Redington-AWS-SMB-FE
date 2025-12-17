@@ -32,7 +32,7 @@ const AboutUs = () => {
  
   return (
     <>
-      <div className="relative bg-[#FFF]">
+      <div className="relative bg-[#FFF]  mx-[20px] xl:mx-[10px] 2xl:mx-[10px] 3xl:mx-[10px]">
         <Launchpad />
         <GroupSolution />
         <Help />
