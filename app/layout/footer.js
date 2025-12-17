@@ -87,34 +87,34 @@ export default function Footer() {
                   <i className="smb-call text14 pt-1 "></i>
                   +971 4 516 1504
                 </div>
-                <div className=" flex gap20">
+                <div className="flex gap20 items-center">
                   <Image
                     src="/images/facebook.svg"
-                    width={25}
-                    height={25}
+                    width={24}
+                    height={24}
                     alt="logo"
-                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                    className="w-[24px] lg:w-[24px] xl:w-[24px] 2xl:w-[24px] 3xl:w-[1.25vw] h-[24px] lg:h-[24px] xl:h-[24px] 2xl:h-[24px] 3xl:h-[1.25vw] cursor-pointer"
                   />
                   <Image
                     src="/images/twitter.svg"
-                    width={26}
-                    height={26}
+                    width={24}
+                    height={24}
                     alt="logo"
-                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                    className="w-[24px] lg:w-[24px] xl:w-[24px] 2xl:w-[24px] 3xl:w-[1.25vw] h-[24px] lg:h-[24px] xl:h-[24px] 2xl:h-[24px] 3xl:h-[1.25vw] cursor-pointer"
                   />
                   <Image
                     src="/images/linkedin.svg"
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     alt="logo"
-                    className="w-[22px] lg:w-[22px] xl:w-[22px] 2xl:w-[22px]  3xl:w-[1.146vw] h-[22px] lg:h-[22px] xl:h-[22px] 2xl:h-[22px] 3xl:h-[1.146vw] cursor-pointer"
+                    className="w-[24px] lg:w-[24px] xl:w-[24px] 2xl:w-[24px] 3xl:w-[1.25vw] h-[24px] lg:h-[24px] xl:h-[24px] 2xl:h-[24px] 3xl:h-[1.25vw] cursor-pointer"
                   />
                   <Image
                     src="/images/youtube.svg"
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     alt="logo"
-                    className="w-[26px] lg:w-[26px] xl:w-[28px] 3xl:w-[1.523vw] h-[26px] lg:h-[26px] xl:h-[28px] 3xl:h-[1.523vw] cursor-pointer"
+                    className="w-[24px] lg:w-[24px] xl:w-[24px] 2xl:w-[24px] 3xl:w-[1.25vw] h-[24px] lg:h-[24px] xl:h-[24px] 2xl:h-[24px] 3xl:h-[1.25vw] cursor-pointer"
                   />
                 </div>
               </div>
