@@ -15,10 +15,10 @@ const Launchpad = () => {
   };
   return (
     <>
-      <div className="relative">
+      <div className="relative mt-[50px] xl:mt-[50px] 2xl:mt-[50px] 3xl:mt-[1.563vw]">
         <div className="flex items-center justify-center">
           <div className="">
-            <div className="absolute mt-[20px] xl:mt-[30px] 2xl:mt-[30px] 3xl:mt-[1.563vw] xl:left-[70px] 2xl:left-[80px] 3xl:left-[4.688vw]">
+            <div className="absolute mt-[50px] xl:mt-[30px] 2xl:mt-[30px] 3xl:mt-[1.563vw] xl:left-[70px] 2xl:left-[80px] 3xl:left-[4.688vw]">
               <div className="flex items-center gap8 font12  ">
                 <Link href="/"><span className="text-interfacetextdefault1 font-normal">Home</span></Link>
                 <ChevronRight size={12} color="#828A91" />
