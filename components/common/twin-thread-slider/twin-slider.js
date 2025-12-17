@@ -54,6 +54,7 @@ const TwinSlider = () => {
                     responsiveOptions={responsiveOptions}
                     itemTemplate={productTemplate}
                     circular
+                    autoplayInterval={3000}
                     showNavigators={false}
                     indicatorsContentClassName="sbm-location"
                 />

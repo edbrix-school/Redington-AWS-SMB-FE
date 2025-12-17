@@ -55,14 +55,14 @@ const GroupSolution = () => {
 
     return (
         <>
-            <div className="mx-[10px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+            <div className="mx-4 xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[30px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[40px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
                 <div className="font16 text-interfacetextdefault1 font-medium">Group of Solutions by Sector</div>
                 <div className=" gap12">
-                    <div className="grid grid-cols-10 md:grid-cols-6 lg:grid-cols-11 gap12 mt24">
+                    <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-11 gap-4 md:gap12 mt24">
                         {cardData.map((item, i) => (
                             <div onClick={() => setShowCatalog(true)} key={i}
-                                className="col-span-10 md:col-span-3 lg:col-span-2 p16 bg-no-repeat bg-right-top bg-cover shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 cursor-pointer"
+                                className="col-span-1 md:col-span-3 lg:col-span-2 p16 bg-no-repeat bg-right-top bg-cover shadow-[0_0_15px_4px_rgba(140,85,253,0.15)] space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 cursor-pointer"
                                 style={{ backgroundImage: `url(${item.bgImage})` }} >
                                 <div className="text-[#3C4146] font10 font-normal leading-tight uppercase">
                                     {item.sector}
@@ -85,7 +85,7 @@ const GroupSolution = () => {
                                 </div>
                             </div>
                         ))}
-                        <div className="col-span-10 md:col-span-3 lg:col-span-1 see-all-bg flex items-center justify-center p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
+                        <div className="col-span-1 md:col-span-3 lg:col-span-1 see-all-bg flex items-center justify-center p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
                             <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
                                 <i className="smb-arrowup text-center"></i>
                                 <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>
