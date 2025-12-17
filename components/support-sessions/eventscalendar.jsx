@@ -7,13 +7,13 @@ import moment from "moment";
 export default function EventCalenderFilter(props) {
   const [activeTab, setActiveTab] = useState(0);
   //   const [monthTab, setMonthTab] = useState(0);
-  const [year, setYear] = useState(new Date().getFullYear());
+  // const [year, setYear] = useState(new Date().getFullYear());
   //   const [searchEvent, setSearchEvent] = useState("");
   //   const [eventDetails, setEventDetails] = useState({});
   //   const [categories, setCategories] = useState([]);
   //   const [allCategroy, setAllCategory] = useState(false);
   //   const [categoryFilter, setCategoryFilter] = useState([]);
-  // const [year, setYear] = useState('2024');
+  const [year, setYear] = useState("2025");
   const YearList = [
     { name: new Date().getFullYear() - 2, value: new Date().getFullYear() - 2 },
     { name: new Date().getFullYear() - 1, value: new Date().getFullYear() - 1 },
@@ -47,14 +47,16 @@ export default function EventCalenderFilter(props) {
         const id = Math.floor(Math.random() * 899999) + 100000;
 
         // Format: YYYY-MM-DDTHH:mm:ss
-        const monthStr = (m + 1).toString().padStart(2, '0');
-        const dayStr = day.toString().padStart(2, '0');
-        const startTime = `${y}-${monthStr}-${dayStr}T${hour.toString().padStart(2, '0')}:${min}:00`;
+        const monthStr = (m + 1).toString().padStart(2, "0");
+        const dayStr = day.toString().padStart(2, "0");
+        const startTime = `${y}-${monthStr}-${dayStr}T${hour
+          .toString()
+          .padStart(2, "0")}:${min}:00`;
 
         generatedEvents.push({
           start: startTime,
           title: `[start_time]${startTime}[start_time]SR-${id}`,
-          colorClass: color.class
+          colorClass: color.class,
         });
       }
     }
@@ -76,11 +78,7 @@ export default function EventCalenderFilter(props) {
     <div className="grid -mt-[9px] lg:-mt-[9px] xl:-mt-[0.430vw] 2xl:-mt-[0.350vw] 3xl:-mt-[0.350vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
       <div className="grid gap-[36px] xl:gap-[1.875vw]">
         <div>
-          <CalenderPage
-            events={events}
-            year={year}
-            activeTab={activeTab}
-          />
+          <CalenderPage events={events} year={year} activeTab={activeTab} />
         </div>
       </div>
     </div>
