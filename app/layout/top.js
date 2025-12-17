@@ -16,6 +16,7 @@ const roboto = Roboto({
 export default function Top() {
   const [selectedCity, setSelectedCity] = useState(null);
   const [showCatalog, setShowCatalog] = useState(false);
+  const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
   const cities = [
     { name: "New York", code: "NY" },
@@ -29,7 +30,7 @@ export default function Top() {
         className={`${roboto.variable} w-full fixed top-0 left-0 bg-[#232823] mb-[58px] 3xl:mb-[3.021vw] z-[999] `}
       >
         {/* NAVBAR */}
-        <div className="relative flex items-center justify-between px-[5px] xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
+        <div className="relative flex items-center justify-start lg:justify-between px-[5px] gap-4 lg:gap-0 xl:gap-4 xl:px-[20px] 3xl:px-[1.875vw] py-[7px] lg:py-[8px] xl:py-[10px] 2xl:py-[10px] 3xl:py-[0.533vw]">
           {/* LEFT SECTION */}
           <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw]">
             <div className="flex divide-x divide-[#494949] items-center">
@@ -65,32 +66,43 @@ export default function Top() {
               </div>
             </div>
           </div>
-          {/* RIGHT SECTION */}
-          <div className="flex items-center gap-[12px] lg:gap-[10px] xl:gap-[20px] 3xl:gap-[1.563vw] text-white pr-[2px] xl:pr-[12px] 3xl:pr-[1.25vw]">
-            <div className="cursor-pointer text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium">
-              Support
-            </div>
-            <div className="cursor-pointer text-[12px] lg:text-[11px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium">
-              Contact Us
-            </div>
-            <div className="flex items-center gap-[4px] xl:gap-[4px] 2xl:gap-[6px] text-[14px] font-medium mx-[6px] lg:mx-[4px] xl:mx-[6px] 2xl:mx-[10px] 3xl:mx-[0.625vw]">
-              <i className="smb-global text-[#fff] text-[15px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[0.833vw]"></i>
-              <Dropdown
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.value)}
-                options={cities}
-                optionLabel="name"
-                placeholder="English - EN"
-                panelClassName="custDropdown1panel"
-                className="w-[95px] xl:w-[105px] 2xl:w-[110px] 3xl:w-[5.871vw] text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] topdropdown"
-              />
+          {/* RIGHT SECTION WRAPPER - FLEX CONTAINER FOR ALIGNMENT */}
+          <div className="flex items-center gap-[12px] lg:gap-[10px] xl:gap-[20px] 3xl:gap-[1.563vw] pr-[10px] lg:pr-[2px] xl:pr-[12px] 3xl:pr-[1.25vw]">
+
+            {/* DESKTOP ONLY ITEMS: Support, Contact, Language */}
+            <div className="hidden lg:flex items-center gap-[12px] lg:gap-[10px] xl:gap-[20px] 3xl:gap-[1.563vw] text-white">
+              <div className="cursor-pointer text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium">
+                Support
+              </div>
+              <div className="cursor-pointer text-[12px] lg:text-[11px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium">
+                Contact Us
+              </div>
+              <div className="flex items-center gap-[4px] xl:gap-[4px] 2xl:gap-[6px] text-[14px] font-medium mx-[6px] lg:mx-[4px] xl:mx-[6px] 2xl:mx-[10px] 3xl:mx-[0.625vw]">
+                <i className="smb-global text-[#fff] text-[15px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[0.833vw]"></i>
+                <Dropdown
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.value)}
+                  options={cities}
+                  optionLabel="name"
+                  placeholder="English - EN"
+                  panelClassName="custDropdown1panel"
+                  className="w-[95px] xl:w-[105px] 2xl:w-[110px] 3xl:w-[5.871vw] text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] topdropdown"
+                />
+              </div>
             </div>
 
-            <div className="cursor-pointer flex gap-[16px] lg:gap-[16px] xl:gap-[16px] 3xl:gap-[1.238vw] items-center lg:pl-[2px] xl:pl-[4px] 2xl:pl-[8px] 3xl:pl-[0.521vw]">
+            {/* ALWAYS VISIBLE: SIGN IN (Adjusted gap for mobile) */}
+            {/* User requested to move Sign In to Hamburger on Mobile, so this should be HIDDEN on mobile now? 
+                "Add sign-in to the Hamburger" implies it's in the menu.
+                "Change the Hamburger icon to the user icon... When I click on this icon or the sign-in icon the dropdown opens" 
+                This suggests the trigger IS the user icon. 
+                So we hide the explicit Link on mobile, and show the Trigger.
+            */}
+            <div className="hidden lg:flex cursor-pointer gap-[16px] lg:gap-[16px] xl:gap-[16px] 3xl:gap-[1.238vw] items-center lg:pl-[2px] xl:pl-[4px] 2xl:pl-[8px] 3xl:pl-[0.521vw] text-white shrink-0">
               <Link href={"/sign-in"}>
                 <div className="flex items-center gap-[8px] xl:gap-[8px] 3xl:gap-[0.938vw]">
-                  <i className="smb-logout font14"></i>
-                  <div className="text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium">
+                  <i className="smb-logout font14 block lg:block"></i>
+                  <div className="text-[12px] lg:text-[12px]  xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw] font-medium whitespace-nowrap">
                     Sign In
                   </div>
                 </div>
@@ -102,6 +114,20 @@ export default function Top() {
                 alt="logo"
                 className="w-[26px] lg:w-[24px] xl:w-[26px] 3xl:w-[1.323vw] h-[26px] lg:h-[24px] xl:h-[26px] 3xl:h-[1.323vw] "
               />
+            </div>
+
+            {/* MOBILE MENU TRIGGER (User Icon + Arrow) */}
+            <div className="lg:hidden flex items-center gap-1 ml-2 cursor-pointer shrink-0" onClick={() => setShowMobileSidebar(true)}>
+              <Image
+                src="/images/user-square.svg"
+                width={30}
+                height={30}
+                alt="user menu"
+                className="w-[26px] h-[26px] shrink-0"
+              />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white shrink-0">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
             </div>
           </div>
         </div>
@@ -134,6 +160,86 @@ export default function Top() {
           onClose={() => setShowCatalog(false)}
         />
       </Sidebar>
+
+      {/* MOBILE SIDEBAR */}
+      <Sidebar
+        visible={showMobileSidebar}
+        onHide={() => setShowMobileSidebar(false)}
+        position="right"
+        className="!bg-[#232823] w-[300px] border-l border-[#494949]"
+        style={{ backgroundColor: '#232823' }}
+      >
+        <div className="flex flex-col gap-6 p-4 text-white h-full bg-[#232823]">
+          <div className="flex items-center justify-between mb-2">
+            <Image
+              src="/images/redington-logo.svg"
+              width={100}
+              height={22}
+              alt="logo"
+              className="w-[100px] h-auto"
+            />
+            <i
+              className="smb-close text-white text-[20px] cursor-pointer"
+              onClick={() => setShowMobileSidebar(false)}
+            ></i>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            <div className="custom-gradient flex items-center justify-between p-3 rounded-md">
+              <span className="text-[12px] font-medium text-white">What are you looking for today?</span>
+              <Image
+                src="/images/tonai.svg"
+                width={60}
+                height={40}
+                alt="icon"
+                className="w-[50px] h-auto"
+              />
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <div className="cursor-pointer text-[14px] font-medium border-b border-[#494949] pb-3 text-white hover:text-[#5CB456] transition-colors">
+                Support
+              </div>
+              <div className="cursor-pointer text-[14px] font-medium border-b border-[#494949] pb-3 text-white hover:text-[#5CB456] transition-colors">
+                Contact Us
+              </div>
+
+              <div className="flex items-center justify-between border-b border-[#494949] pb-3">
+                <div className="flex items-center gap-2">
+                  <i className="smb-global text-white text-[16px]"></i>
+                  <span className="text-[14px] font-medium text-white">Language</span>
+                </div>
+                <Dropdown
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.value)}
+                  options={cities}
+                  optionLabel="name"
+                  placeholder="EN"
+                  className="w-[80px] text-[12px]"
+                />
+              </div>
+
+              {/* SIGN IN LINK IN SIDEBAR */}
+              <Link href={"/sign-in"} onClick={() => setShowMobileSidebar(false)}>
+                <div className="flex items-center justify-between pt-2 group cursor-pointer">
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src="/images/user-square.svg"
+                      width={24}
+                      height={24}
+                      alt="user"
+                      className="grayscale group-hover:grayscale-0 transition-all"
+                    />
+                    <span className="text-[14px] font-medium text-white group-hover:text-[#5CB456] transition-colors">Sign In</span>
+                  </div>
+                  <i className="smb-logout font14 text-white group-hover:text-[#5CB456] transition-colors"></i>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Sidebar>
     </>
   );
 }
+
