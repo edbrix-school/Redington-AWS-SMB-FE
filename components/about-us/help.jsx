@@ -27,7 +27,7 @@ const Help = () => {
                                 <div className="font24">Chat with Ton<span className="font-semibold">AI</span> about your problems and Needs</div>
                                 <div className="font14 leading-[120%]"><span className="font-bold">TonAI</span> is trained to help you finding real solutions for real problems. No waste of time and money.</div>
                                 <div className="mt-[24px] xl:mt-[26px] 2xl:mt-[30px] 3xl:mt-[1.563vw]">
-                                    <Image src="/images/chat-with-tonai.svg" width="444" height="350" alt="logo" className="w-full h-auto max-w-[300px] xl:max-w-none mx-auto" />
+                                    <Image src="/images/chat-with-tonai.svg" width="450" height="350" alt="logo" className="h-auto" />
                                 </div>
                             </div>
                             <div className="col-span-12 md:col-span-6 lg:col-span-6 mt-[10px] xl:mt-[120px] 3xl:mt-[8.333vw]">
@@ -36,7 +36,7 @@ const Help = () => {
                                         <div className="font24 leading-[120%]">Connect with Amazing AWS Solutions</div>
                                         <div className="font14 leading-[120%]">Get Connected with Ideal solutions and try them out. Ask for Support anytime.</div>
                                         <div className="mt-[24px] xl:mt-[26px] 2xl:mt-[30px] 3xl:mt-[1.563vw]">
-                                            <Image src="/images/aws-solutions.svg" width="572" height="369" alt="logo" className="w-full h-auto max-w-[300px] xl:max-w-none mx-auto" />
+                                            <Image src="/images/aws-solutions.svg" width="572" height="369" alt="logo" className="w-full h-auto" />
                                         </div>
                                     </div>
                                 </div>
@@ -45,7 +45,7 @@ const Help = () => {
                                 <div className="col-span-3"></div>
                                 <div className="col-span-6 flex flex-wrap gap-[26px] xl:gap-[30px] 2xl:gap-[34px] 3xl:gap-[1.927vw]">
                                     <div className="">
-                                        <Image src="/images/onboarding-image.svg" width="419" height="674" alt="logo" className="w-full h-auto max-w-[300px] xl:max-w-none mx-auto" />
+                                        <Image src="/images/onboarding-image.svg" width="350" height="500" alt="logo" className="h-auto max-w-[300px] xl:max-w-none mx-auto" />
                                     </div>
                                     <div className="mt-[20px] xl:mt-[300px] 2xl:mt-[350px] 3xl:mt-[18.229vw]">
                                         <div>
