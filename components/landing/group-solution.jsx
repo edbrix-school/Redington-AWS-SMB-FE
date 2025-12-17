@@ -55,7 +55,7 @@ const GroupSolution = () => {
 
     return (
         <>
-            <div className="mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+            <div className="mx-[10px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
                 <div className="font16 text-interfacetextdefault1 font-medium">Group of Solutions by Sector</div>
                 <div className=" gap12">
