@@ -47,7 +47,7 @@ const GroupSolution = () => {
     return (
         <>
             <div className="">
-                <div className="bg-InterfaceSurfacecomponent1 rounded16 p-[24px] xl:p-[28px] 2xl:p-[30px] 3xl:p-[1.667vw] mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+                <div className="bg-InterfaceSurfacecomponent1 rounded16 p-[24px] xl:p-[28px] 2xl:p-[30px] 3xl:p-[1.667vw] mx-[20px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                     <div className="flex justify-between items-center">
                         <div className="space-y-[5px]">
                             <div className="w-[45px] h-[2px] bg-InterfaceSurfacehcprimary"></div>

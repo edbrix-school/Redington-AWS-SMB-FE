@@ -16,7 +16,7 @@ const Help = () => {
 
     return (
         <>
-            <div className="relative mx-[80px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[70px] 3xl:mt-[4.271vw]">
+            <div className="relative mx-[20px] xl:mx-[120px] 2xl:mx-[160px] 3xl:mx-[9.115vw] mt-[50px] xl:mt-[60px] 2xl:mt-[70px] 3xl:mt-[4.271vw]">
                 <div className="flex justify-center items-center">
                     <div className="text-[#19212A] text-[24px] lg:text-[26px] xl:text-[30px] 2xl:text-[36px] 3xl:text-[2.031vw] leading-[140%]">How We can <span className="text-[#019049] font-bold">Help</span> You?</div>
                 </div>
@@ -52,7 +52,7 @@ const Help = () => {
                                             <div className="font24 leading-[130%]">Add the solutions you liked to<br />
                                                 <span className="font-bold">CloudQuarks Portal</span></div>
                                             <div className="font14 leading-[120%] mt-[6px] xl:mt-[8px] 3xl:mt-[0.417vw]">Just select and send your prefered solutions to CloudQuarks Portal, pay and start using <br /> the applications and Services. With Just a few clicks you go from the Mess to the</div>
-                                            <div className="flex gap12 font-medium font18 mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw]">
+                                            <div className="flex flex-wrap gap12 font-medium font18 mt-[22px] xl:mt-[26px] 2xl:mt-[31px] 3xl:mt-[1.615vw] mb24">
                                                 <Link onClick={showSidebar} href="" className="text-[#212325]  open-ai-btn rounded-full py10 px24">Open <span className="font-medium">Ton</span><span className="font-bold">AI</span></Link>
                                                 <Link href="" className="text-[#5D9D4A] border border-[#ACD69F] bg-InterfaceSurfacecomponent rounded-full py10 px24">Schedule a Session</Link>
                                             </div>

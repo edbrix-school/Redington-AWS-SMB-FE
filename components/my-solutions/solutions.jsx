@@ -69,7 +69,7 @@ const Solutions = () => {
 
     return (
         <>
-            <div className="grid grid-cols-12 bg-InterfaceSurfacecomponent p24 rounded8 mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[40px] xl:mt-[44px] 2xl:mt-[48px] 3xl:mt-[2.5vw]">
+            <div className="grid grid-cols-12 bg-InterfaceSurfacecomponent p24 rounded8 mx-[20px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[40px] xl:mt-[44px] 2xl:mt-[48px] 3xl:mt-[2.5vw]">
                 <div className="col-span-12">
                     <div className="">
                         <div className="mb20 flex justify-between">

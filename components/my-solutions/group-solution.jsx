@@ -50,7 +50,7 @@ const cardData = [
 const GroupSolution = () => {
     return (
         <>
-            <div className="mx-[60px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
+            <div className="mx-[20px] xl:mx-[70px] 2xl:mx-[80px] 3xl:mx-[4.271vw] mt-[50px] xl:mt-[60px] 2xl:mt-[75px] 3xl:mt-[3.906vw] mb-[80px] xl:mb-[100px] 2xl:mb-[110px] 3xl:mb-[6.354vw]">
                 <div className="w-[45px] h-[2px] bg-[#645592]"></div>
                 <div className="font16 text-interfacetextdefault1 font-medium">Group of Products by Sector</div>
                 <div className=" gap12">

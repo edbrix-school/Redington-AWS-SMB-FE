@@ -34,7 +34,7 @@ const HotSolutions = () => {
                 </div>
                 <div className="grid grid-cols-12 md:grid-cols-12 grid-cols-12 mt-[38px] xl:mt-[40px] 2xl:mt-[40px] 3xl:mt-[2.344vw] gap-[14px] xl:gap-[16px] 3xl:gap-[0.833vw]">
                     <div className="col-span-12 md:col-span-6 lg:col-span-5  border border-[#E7E6F3] bg-[#F5F6F8] rounded12 overflow-hidden">
-                        <Image src="/images/amazon-bedrock.svg" width="674" height="340" alt="logo" />
+                        <Image src="/images/amazon-bedrock.svg" width="674" height="340" alt="logo" className="w-full" />
                         <div className="spacey6 py-[24px] xl:py-[26px] 2xl:py-[30px] 3xl:py-[1.719vw] px-[20px] xl:px-[24px] 3xl:px-[1.458vw]">
                             <div className="font36 leading-[125%] font-semibold">Amazon Bedrock</div>
                             <div className="font24 leading-[120%]">Discover Three proven use cases for Generative AI</div>
@@ -60,7 +60,7 @@ const HotSolutions = () => {
                             </div>
                         </div>
                         <div className="col-span-3">
-                            <Image src="/images/amazon-cloudfront.svg" width="377" height="226" alt="logo" />
+                            <Image src="/images/amazon-cloudfront.svg" width="377" height="226" alt="logo" className="w-full" />
                         </div>
                         <div className="col-span-12 relative mt-[30px] xl:mt-[40px] 3xl:mt-[2.292vw]">
                             <TwinSlider />
