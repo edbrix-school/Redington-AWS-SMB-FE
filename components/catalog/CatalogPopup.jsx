@@ -25,7 +25,7 @@ export default function CatalogPopup({ open, onClose }) {
   };
 
   return (
-    <div className="relative flex h-full w-full overflow-hidden rounded-r-[32px]">
+    <div className="relative flex h-full w-full lg:overflow-hidden xs:overflow-y-auto xs:!custom-scroll rounded-r-[32px]">
       {/* Inner layout */}
       <div className="flex h-full w-full flex-col md:flex-row">
         {/* left side */}
