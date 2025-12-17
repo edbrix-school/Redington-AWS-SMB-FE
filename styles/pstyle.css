@@ -315,25 +315,26 @@
 }
 .catalog-tabs.p-tabmenu{
   color: #7f8488;
-  background: #F5F6F7;
+  background: #F5F6F7 !important;
   border: 1px solid #E5E7EB;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 .catalog-tabs.p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
     background: #8078b9 !important;
     color: #fff !important;
-    border-radius: 12px;
     border-color:transparent
 }
 .catalog-tabs.p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
     color: #6c757d;
-    background: #fff;
+    background: #F5F6F7 !important;
     border-color: transparent;
 }
 .catalog-tabs.p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
-  padding:0.50rem;
+  padding:7px 10px;
   font-size:11px;
-  /* border-bottom: */
+  border-bottom: 2px solid #F5F6F7;
+  background-color: #F5F6F7;
+  border-radius: 0 !important;
 }
 .customCatalogButton.p-button.active {
   background: #8078b9 !important;
@@ -353,7 +354,7 @@
 }
 
 .customAccordian.p-accordion .p-accordion-header .p-accordion-header-link {
-  color: #6b7280;
+  color: #212325 !important;
   background:transparent;
   border-top: 0;
   border-left: 0;
@@ -366,7 +367,7 @@
   transition: box-shadow 0.2s, color 0.2s;
 }
 .customAccordian.p-accordion .p-accordion-content {
-  color: #4b5563;
+  color: #212325 !important;
   background: #fff;
   border: 0px solid transparent !important;
   border-radius: 0 0 6px 6px;
@@ -1476,7 +1477,7 @@ background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%,  rgba(100, 85, 
     color: var(--Interface-Text-title1);
   }
   .customAccordian.p-accordion .p-accordion-header .p-accordion-header-link {
-    color: #6b7280;
+     color: #212325 !important;
     background: transparent;
     border-top: 0;
     border-left: 0;

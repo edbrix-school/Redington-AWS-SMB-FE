@@ -225,7 +225,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
       </div>
 
       {/* Accordion list */}
-      <div className="mt-1 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]">
+      <div className="mt-1 h-[calc(100%-230px)] overflow-y-auto pr-1 lg:h-[calc(100%-260px)]  custom-scroll">
         <Accordion
           activeIndex={activeIndex}
           onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
@@ -284,7 +284,7 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
           })}
         </Accordion>
 
-        {/* View more */} 
+        {/* View more */}
         <div className="flex justify-center mt-3 ">
           <button
             type="button"
