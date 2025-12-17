@@ -31,7 +31,7 @@ export const MyCompany = () => {
                 My Company
               </div>
             </div>
-            <div className="flex justify-between ">
+            <div className="flex flex-wrap justify-between gap-2">
               <div className="flex gap14 ">
                 <button
                   className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded-full flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]"
@@ -74,7 +74,7 @@ export const MyCompany = () => {
           <div className="flex-1 overflow-y-auto ">
             <div className="py24">
               <div className=" spacey24 pb22">
-                <div className="grid grid-cols-2 gap20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap20">
                   <div className="flex flex-col gap6">
                     <label className="font14 font-medium text-InterfaceTexttitle1">
                       Company Name
@@ -102,7 +102,7 @@ export const MyCompany = () => {
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap20">
                   <div className="flex flex-col gap6">
                     <label className="font14 font-medium text-InterfaceTexttitle1">
                       Address
