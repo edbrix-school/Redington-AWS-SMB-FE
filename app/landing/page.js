@@ -8,11 +8,13 @@ const Landing = () => {
 
   return (
     <>
-      <div className="bg-[linear-gradient(180deg,#F4FEFD_5.38%,#FDFCF6_62.88%,#FFF_96.7%)]">
-        <Launchpad />
-        <Announcements />
-        <HotSolutions />
-        <GroupSolution />
+      <div className="min-h-screen bg-[linear-gradient(180deg,#F4FEFD_5.38%,#FDFCF6_62.88%,#FFF_96.7%)] font-sans flex flex-col overflow-x-hidden">
+        <main className="flex-grow relative z-20 pb-10"> {/* Negative margin to overlap Hero */}
+          <Launchpad />
+          <Announcements />
+          <HotSolutions />
+          <GroupSolution />
+        </main>
       </div>
     </>
   );

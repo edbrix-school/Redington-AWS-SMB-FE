@@ -207,8 +207,8 @@ export default function Tabel() {
               (Showing 10/100 Records)
             </div>
           </div>
-          <div className="flex justify-between py10">
-            <div className="flex gap14 ">
+          <div className="flex flex-col md:flex-row md:justify-between py10 gap10">
+            <div className="flex gap14 flex-nowrap">
               <button  onClick={() => {
                
                 setTimeout(() => setEditUser(true), 0);
@@ -233,7 +233,7 @@ export default function Tabel() {
                 Download
               </button>
             </div>
-            <div className="flex gap20">
+            <div className="flex gap20 w-full md:w-auto mt10 md:mt0">
               <div>
                 <Dropdown
                   value={selectedCity}
@@ -241,12 +241,12 @@ export default function Tabel() {
                   options={cities}
                   optionLabel="name"
                   placeholder="Select Year/Month"
-                  className="w300 custDropdown1 "
+                  className="w-full md:w300 custDropdown1 "
                   panelClassName="custDropdown1panel"
                 />
               </div>
-              <div className=" cursor-pointer h-full w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8 hover:bg-[#ebeff3]">
-                <i className="smb-filter text-InterfaceTextsubtitle font12 "></i>
+              <div className="cursor-pointer h-9 w36 shrink-0 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded8 hover:bg-[#ebeff3]">
+                <i className="smb-filter text-InterfaceTextsubtitle font12"></i>
               </div>
             </div>
           </div>

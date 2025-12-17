@@ -25,20 +25,22 @@
 import GroupSolution from "@/components/about-us/group-solution";
 import Help from "@/components/about-us/help";
 import Launchpad from "@/components/about-us/launchpad";
- 
- 
- 
+
+
+
 const AboutUs = () => {
- 
+
   return (
     <>
-      <div className="relative bg-[#FFF]">
-        <Launchpad />
-        <GroupSolution />
-        <Help />
+      <div className="min-h-screen bg-[#FFF] font-sans flex flex-col">
+        <main className="flex-grow relative z-20 pb-10 mx-[20px] xl:mx-[10px] 2xl:mx-[10px] 3xl:mx-[10px]"> {/* Negative margin to overlap Hero */}
+          <Launchpad />
+          <GroupSolution />
+          <Help />
+        </main>
       </div>
     </>
   );
 };
- 
+
 export default AboutUs;

@@ -38,17 +38,17 @@ const Announcements = () => {
   return (
     <>
       <div className="mt-[30px] xl:mt-[35px] 3xl:mt-[2.083vw]">
-        <div className=" mx-[10px] xl:mx-[120px] 2xl:mx-[140px] 3xl:mx-[7.115vw]">
+        <div className="w-full px-4 xl:mx-[120px] 2xl:mx-[140px] 3xl:mx-[7.115vw] xl:w-auto">
           {/* LEFT — ANNOUNCEMENTS */}
           {/* RIGHT — 4 EQUAL CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-11 gap24">
-            <div className="col-span-3 spacey16">
+          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-11 gap-6 md:gap24">
+            <div className="col-span-1 md:col-span-3 lg:col-span-3 spacey16 mb-6 md:mb-0">
               <h2 className={`${workSans.variable} font36 font-semibold text-black leading-[125%] `}>
                 Announcements
               </h2>
               <p className={`${roboto.variable} font20 font-normal leading-[120%] `}>
-                Discover Three <br />
-                proven use cases for <br />
+                Discover Three 
+                proven use cases for 
                 Generative AI
               </p>
               <button className="inline-flex items-center px20 py8 leading-[120%] border border-[#8C55FD] text-[#8C55FD] rounded-full font14 font-normal cursor-pointer">
@@ -58,7 +58,7 @@ const Announcements = () => {
             {cardData.map((item, i) => (
               <div
                 key={i}
-                className="col-span-2 bg-[#F4F4FA] p24 rounded6 flex flex-col justify-between min-h-[60px] lg:min-h-[200px] 3xl:min-h-0"
+                className="col-span-1 md:col-span-3 lg:col-span-2 bg-[#F4F4FA] p-6 lg:p24 rounded6 flex flex-col justify-between min-h-0 lg:min-h-[200px] 3xl:min-h-0"
               >
                 <h3 className="font20 leading-[120%] font-normal text-[#000]">
                   {item.title}

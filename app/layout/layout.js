@@ -19,7 +19,7 @@ export default function LayoutClient({ children }) {
     <div className={inter.className}>
       {!hideLayout && <Top />}
 
-      <div className={!hideLayout ? "mt-[50px] lg:mt-[46px] md:mt-[48px] xl:mt-[50px] 2xl:mt-[2.9vw] 3xl:mt-[3.021vw]" : ""}>
+      <div className={!hideLayout ? "mt-[48px] lg:mt-[46px] md:mt-[48px] xl:mt-[50px] 2xl:mt-[2.9vw] 3xl:mt-[3.021vw]" : ""}>
         <main>{children}</main>
       </div>
 
