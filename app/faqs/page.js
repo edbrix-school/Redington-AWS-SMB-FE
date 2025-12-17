@@ -12,7 +12,7 @@ export default function ServiceDesk() {
         <NavBar />
         <div className=''>
         <Hero />
-        <main className="flex-grow -mt-20 relative z-20 pb-10 px-[50px] lg:px-[60px] xl:px-[70px] 3xl:px-[3.75vw]"> 
+        <main className="flex-grow -mt-20 relative z-20 pb-10 px-[20px] lg:px-[60px] xl:px-[70px] 3xl:px-[3.75vw]"> 
           <FAQSection />
         </main>
         </div>
