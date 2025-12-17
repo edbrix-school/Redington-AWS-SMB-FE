@@ -213,6 +213,7 @@ export const FilesTable = () => {
         rows={10}
         className="custTable tableCustRed mt-4 custfiltericon" // Added mt-4 for spacing
         responsiveLayout="scroll"
+        scrollable
         style={{ width: "100%" }}
         filters={filters}
         globalFilter={globalFilter}
@@ -265,7 +266,6 @@ export const FilesTable = () => {
           className="action-shadow-table"
           alignFrozen="right"
           align="center"
-
           frozen
           body={actionBodyTemplate}
           filterElement={() => <div className="w-full"></div>}
