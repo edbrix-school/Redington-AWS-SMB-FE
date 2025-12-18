@@ -52,11 +52,14 @@ const CalenderPage = (props) => {
 
     return (
       <div
-        className={`flex flex-col gap-0.5 w-full rounded px-1 py-0.5 overflow-hidden ${colorClass}`}
+        title={`${formattedTime} ${displayTitle}`}
+        className={`flex flex-col gap-0.5 w-full rounded px-0.5 md:px-1 py-0.5 overflow-hidden ${colorClass} cursor-default`}
       >
-        <div className="flex items-center gap-1 text-[10px] leading-tight font-medium">
+        <div className="flex flex-col 2xl:flex-row items-start 2xl:items-center gap-0.5 2xl:gap-1 text-[8px] md:text-[10px] leading-tight font-medium">
+          {/* Change or add more spans here to display additional data */}
+          {/* Example: <span>{event.extendedProps.customField}</span> */}
           <span className="font-bold whitespace-nowrap">{formattedTime}</span>
-          <span className="truncate">{displayTitle}</span>
+          <span className="truncate w-full">{displayTitle}</span>
         </div>
       </div>
     );
@@ -84,7 +87,7 @@ const CalenderPage = (props) => {
             weekNumbers={true}
             weekNumberContent={(arg) => {
               return (
-                <div className="text-[10px] text-gray-400 font-medium pt-2">
+                <div className="text-[10px] text-gray-400 font-medium pt-2 md:block hidden">
                   WEEK {arg.num}
                 </div>
               );
@@ -92,9 +95,9 @@ const CalenderPage = (props) => {
             dayCellContent={(arg) => {
               const dayName = moment(arg.date).format("ddd");
               return (
-                <div className="flex items-start gap-1 p-2 text-sm text-[#5D636B]">
-                  <span className="">{arg.dayNumberText}</span>
-                  <span className="">{dayName}.</span>
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-0.5 md:gap-1 p-1 md:p-2 text-[10px] md:text-sm text-[#5D636B]">
+                  <span className="font-semibold md:font-normal">{arg.dayNumberText}</span>
+                  <span className="opacity-70 md:opacity-100">{dayName}.</span>
                 </div>
               );
             }}
@@ -133,7 +136,7 @@ const CalenderPage = (props) => {
     const secondEvents = getEventsForMonth(secondMonthDate);
 
     return (
-      <div className="full-calendar-sec bg-white py-[16px] xl:py-[1.25vw] px-[12px] xl:px-[0.833vw] h-[750px] overflow-y-auto custom-scroll">
+      <div className="full-calendar-sec bg-white py-[16px] xl:py-[1.25vw] px-[8px] md:px-[12px] xl:px-[0.833vw] h-auto md:h-[750px] overflow-y-auto custom-scroll">
         <MonthCalendar date={firstMonthDate} eventsList={firstEvents} />
         <MonthCalendar date={secondMonthDate} eventsList={secondEvents} />
       </div>
@@ -144,15 +147,15 @@ const CalenderPage = (props) => {
     <>
       <Tabs selectedIndex={activeTab} onSelect={handleTabClick}>
         <TabList>
+          {/* Add events tabs here */}
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer first-mon-custom
-                     ${
-                       activeTab == 0
-                         ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 0
+                    ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 Jan / Feb
               </div>
@@ -160,11 +163,10 @@ const CalenderPage = (props) => {
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
-                     ${
-                       activeTab == 1
-                         ? "text-[#FFF] bg-[#0F1F38]  rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 1
+                    ? "text-[#FFF] bg-[#0F1F38]  rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 Mar / Apr
               </div>
@@ -172,11 +174,10 @@ const CalenderPage = (props) => {
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
-                     ${
-                       activeTab == 2
-                         ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 2
+                    ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 May / Jun
               </div>
@@ -184,11 +185,10 @@ const CalenderPage = (props) => {
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
-                     ${
-                       activeTab == 3
-                         ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 3
+                    ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 Jul / Aug
               </div>
@@ -196,11 +196,10 @@ const CalenderPage = (props) => {
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer
-                     ${
-                       activeTab == 4
-                         ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 4
+                    ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 Sep / Oct
               </div>
@@ -208,11 +207,10 @@ const CalenderPage = (props) => {
             <Tab>
               <div
                 className={`text-[14px] lg:text-[16px] xl:text-[0.833vw] font-medium py-[10px] lg:py-[20px] xl:py-[1.042vw] xl:px-[1.875vw] px-[36px] text-center cursor-pointer last-mon-custom
-                     ${
-                       activeTab == 5
-                         ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
-                         : "text-[#9CA1AB] bg-[#F5F6F7]"
-                     }`}
+                     ${activeTab == 5
+                    ? "text-[#FFF] bg-[#0F1F38] rounded-t-[8px]"
+                    : "text-[#9CA1AB] bg-[#F5F6F7]"
+                  }`}
               >
                 Nov / Dec
               </div>

@@ -56,6 +56,8 @@ export default function EventCalenderFilter(props) {
         generatedEvents.push({
           start: startTime,
           title: `[start_time]${startTime}[start_time]SR-${id}`,
+          // You can add more data fields here (they will be available in event.extendedProps)
+          // Example: customField: "My extra data",
           colorClass: color.class,
         });
       }
@@ -75,7 +77,7 @@ export default function EventCalenderFilter(props) {
   //   };
 
   return (
-    <div className="grid -mt-[9px] lg:-mt-[9px] xl:-mt-[0.430vw] 2xl:-mt-[0.350vw] 3xl:-mt-[0.350vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
+    <div className="grid mt-[20px] lg:mt-[0.10vw] xl:mt-[0.9vw] 2xl:mt-[0vw] 3xl:-mt-[0vw] gap-[29px] lg:gap-[29px] xl:gap-[1.510vw] 2xl:gap-[1.510vw] 3xl:gap-[1.510vw] relative z-[2]">
       <div className="grid gap-[36px] xl:gap-[1.875vw]">
         <div>
           <CalenderPage events={events} year={year} activeTab={activeTab} />

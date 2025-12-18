@@ -116,9 +116,9 @@ export default function ScheduleCalendarTable() {
                           onClick={() =>
                             setActiveSession(isActive ? null : session.id)
                           }
-                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
+                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex flex-col md:flex-row justify-between items-start md:items-center border-l-4 ${borderColorClass} cursor-pointer gap-4 md:gap-0`}
                         >
-                          <div className="flex-1">
+                          <div className="flex-1 w-full">
                             {(index === 0 || index === 1) && (
                               <p className="text-[#3C4146] font11">SR-112233</p>
                             )}
@@ -136,7 +136,7 @@ export default function ScheduleCalendarTable() {
                               </>
                             )}
                           </div>
-                          <div className="w-[70px] flex flex-col items-center justify-center p-2 border-r border-[#E5E7EB]">
+                          <div className="w-full md:w-[70px] flex flex-row md:flex-col items-center justify-start md:justify-center p-2 border-b md:border-b-0 md:border-r border-[#E5E7EB] gap-2 md:gap-0">
                             <p
                               className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
                                 }`}
@@ -150,7 +150,7 @@ export default function ScheduleCalendarTable() {
                               28
                             </p>
                           </div>
-                          <div className="flex-shrink-0 w-[200px] p-2 pl-4">
+                          <div className="flex-shrink-0 w-full md:w-[200px] p-2 md:pl-4">
                             <div className="flex items-start justify-start gap-2">
                               <Image
                                 src="/assets/icons/clock.svg"
@@ -222,9 +222,9 @@ export default function ScheduleCalendarTable() {
                           onClick={() =>
                             setActiveSession(isActive ? null : session.id)
                           }
-                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex justify-between items-center border-l-4 ${borderColorClass} cursor-pointer`}
+                          className={`bg-white p-4 rounded-lg shadow-md mb-4 flex flex-col md:flex-row justify-between items-start md:items-center border-l-4 ${borderColorClass} cursor-pointer gap-4 md:gap-0`}
                         >
-                          <div className="flex-1">
+                          <div className="flex-1 w-full">
                             {(index === 0 || index === 1) && (
                               <p className="text-[#3C4146] font11">SR-112233</p>
                             )}
@@ -242,7 +242,7 @@ export default function ScheduleCalendarTable() {
                               </>
                             )}
                           </div>
-                          <div className="w-[70px] flex flex-col items-center justify-center p-2 border-r border-[#E5E7EB]">
+                          <div className="w-full md:w-[70px] flex flex-row md:flex-col items-center justify-start md:justify-center p-2 border-b md:border-b-0 md:border-r border-[#E5E7EB] gap-2 md:gap-0">
                             <p
                               className={`text-[#3C4146]  ${isActive ? "active-day" : "inactive-day"
                                 }`}
@@ -256,7 +256,7 @@ export default function ScheduleCalendarTable() {
                               28
                             </p>
                           </div>
-                          <div className="flex-shrink-0 w-[200px] p-2 pl-4">
+                          <div className="flex-shrink-0 w-full md:w-[200px] p-2 md:pl-4">
                             <div className="flex items-start justify-start gap-2">
                               <Image
                                 src="/assets/icons/clock.svg"
@@ -321,7 +321,7 @@ export default function ScheduleCalendarTable() {
                 <h3 className="font18 text-[#7F8488] font-normal">
                   Calendar Legend
                 </h3>
-                <div className="flex items-center lg:flex-row md:flex-row sm:flex-col gap-2 mt-3">
+                <div className="flex flex-wrap items-center gap-2 mt-3 mb-6 md:mb-0">
                   <button
                     type="button"
                     className="p7 rounded-[5.415px] font11 calendar-legend-Personal-btns"
@@ -354,7 +354,7 @@ export default function ScheduleCalendarTable() {
             </div>
 
             {/* Right side: Calendar */}
-            <div className="flex-1 pl-4">
+            <div className="flex-1 md:pl-4 mt-8 xl:mt-0">
               {/* Calendar placeholder (we'll add functionality later) */}
               <div className="text-center bg-white rounded-t-[8px]">
                 <EventCalenderFilter />
