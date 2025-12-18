@@ -37,9 +37,7 @@ export default function CatalogPopup({ open, onClose }) {
         </div>
         {/* Main content */}
         <div
-          className={`flex-1 border-t border-neutral-200/60 bg-[#f0f4f5] px-4 pb-4 pt-4 xs:px-5 sm:px-6 sm:pt-5 lg:border-t-0 lg:border-l lg:px-6 lg:pb-6 lg:pt-6 ${
-            open ? "lg:ml-[0px]" : ""
-          }`}
+          className={`flex-1 border-t border-neutral-200/60 bg-[#f0f4f5] px-4 pb-4 pt-4 xs:px-5 sm:px-6 sm:pt-5 lg:border-t-0 lg:border-l lg:px-6 lg:pb-6 lg:pt-6`}
         >
           <BreadcrumbBar
             selectedSector={selectedSector}

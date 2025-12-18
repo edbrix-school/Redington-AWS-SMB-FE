@@ -105,12 +105,10 @@ const TABS = [
   { label: "By Organization Type" },
 ];
 
-export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
+export default function CatalogSidebar() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [activeTab, setActiveTab] = useState(TABS[0].label);
   const [activeIndex, setActiveIndex] = useState(-1);
-  //  const [activeTab, setActiveTab] = useState("By Industry");
-  //   const [activeIndex, setActiveIndex] = useState([-1]);
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
   const sectorDataMap = {
@@ -193,35 +191,6 @@ export default function CatalogSidebar({ selectedSector, onSectorSelect }) {
             setActiveIndex(null); // reset accordion
           }}
         />
-        {/* {TABS.map((tab) => {
-          const isActive = tab.label === activeTab;
-          return (
-            
-            <Button
-              key={tab}
-              type="button"
-              onClick={() => {
-                setActiveTab(tab);
-                setActiveIndex([-1]); // Reset accordion when changing tabs
-              }}
-              className={[
-                "customCatalogButton cursor-pointer px-2 py-3 font10 font-semibold",
-                isActive ? "active" : "", // Active state
-                tab === "By Use Case"
-                  ? "!border-l-0 !border-r-0 border-radius-[12px] "
-                  : "", // No border on "By Use Case"
-                tab === "By Industry"
-                  ? "!border-l-[1px] !border-l-[#E5E7EB] border-r-0 border-l-radius-[12px] border-r-radius-0"
-                  : "", // Left border for "By Industry"
-                tab === "By Organization Type"
-                  ? "!border-l-0 !border-r-[1px] !border-r-[#E5E7EB] border-r-radius-[12px] border-l-radius-0"
-                  : "", // Right border for "By Organization Type"
-              ].join(" ")}
-            >
-              {tab}
-            </Button>
-          );
-        })} */}
       </div>
 
       {/* Accordion list */}
