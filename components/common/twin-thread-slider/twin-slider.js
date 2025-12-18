@@ -69,7 +69,7 @@ const TwinSlider = () => {
 
   return (
     <>
-      <div className="w-full hot-solution-carousel  rounded8 overflow-hidden">
+      <div className="w-full hot-solution-carousel twinthread-shadow rounded8 overflow-hidden">
         <Carousel
           value={products}
           numVisible={1}
