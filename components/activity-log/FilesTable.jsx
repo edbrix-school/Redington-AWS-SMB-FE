@@ -71,7 +71,7 @@ export const FilesTable = () => {
                     title="Options"
                     className="cursor-pointer bg-transparent border-none flex items-center justify-center"
                 >
-                    <img
+                    <Image
                         src={"/images/more.svg"}
                         width={20}
                         height={20}

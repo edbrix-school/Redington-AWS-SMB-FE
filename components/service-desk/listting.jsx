@@ -319,13 +319,13 @@ export const ServicesDeskList = () => {
                               <Link
                                 href="#"
                                 onClick={() => setOpenPopupViewTicket(true)}
-                                className=" leading-[140%] py4 px4"
+                                className=" leading-[140%] py4 px4 cursor-pointer"
                               >
                                 View
                               </Link>
                               <Link
                                 href="#"
-                                className=" leading-[140%] py4 px4"
+                                className=" leading-[140%] py4 px4 cursor-pointer"
                               >
                                 Cancel
                               </Link>

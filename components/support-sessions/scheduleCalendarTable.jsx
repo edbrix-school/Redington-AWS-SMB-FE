@@ -185,7 +185,7 @@ export default function ScheduleCalendarTable() {
                             </div>
                             {isActive && (
                               <div
-                                className="flex items-center justify-start gap-2"
+                                className="flex items-center justify-start gap-2 cursor-pointer"
                                 onClick={showSidebar}
                               >
                                 <Image
@@ -291,7 +291,7 @@ export default function ScheduleCalendarTable() {
                             </div>
                             {isActive && (
                               <div
-                                className="flex items-center justify-start gap-2"
+                                className="flex items-center justify-start gap-2 cursor-pointer"
                                 onClick={showSidebar}
                               >
                                 <Image
@@ -324,28 +324,28 @@ export default function ScheduleCalendarTable() {
                 <div className="flex flex-wrap items-center gap-2 mt-3 mb-6 md:mb-0">
                   <button
                     type="button"
-                    className="p7 rounded-[5.415px] font11 calendar-legend-Personal-btns"
+                    className="p7 rounded-[5.415px] font11 calendar-legend-Personal-btns cursor-pointer"
                   >
                     Personal Support Sessions
                   </button>
 
                   <button
                     type="button"
-                    className="p7 rounded-[5.415px] bg-[#E7E6F3] text-[#5B4D80] font11 font-normal"
+                    className="p7 rounded-[5.415px] bg-[#E7E6F3] text-[#5B4D80] font11 font-normal cursor-pointer"
                   >
                     Webinars
                   </button>
 
                   <button
                     type="button"
-                    className="p7 rounded-[5.415px] bg-[#CDE3FF] text-[#1C6497] font11 font-normal"
+                    className="p7 rounded-[5.415px] bg-[#CDE3FF] text-[#1C6497] font11 font-normal cursor-pointer"
                   >
                     On Site Trainings
                   </button>
 
                   <button
                     type="button"
-                    className="p7 rounded-[5.415px] bg-[#FFF6D3] text-[#8B5215] font11 font-normal"
+                    className="p7 rounded-[5.415px] bg-[#FFF6D3] text-[#8B5215] font11 font-normal cursor-pointer"
                   >
                     Live Sessions
                   </button>

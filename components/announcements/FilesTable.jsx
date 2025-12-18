@@ -121,7 +121,7 @@ export const FilesTable = () => {
           title="Options"
           className="cursor-pointer bg-transparent border-none flex items-center justify-center"
         >
-          <img
+          <Image
             src={"/images/more.svg"}
             width={20}
             height={20}
@@ -181,7 +181,7 @@ export const FilesTable = () => {
         <div className="flex gap-3 items-center pb22 md:pb-0">
           {/* Search Bar - Replica of Screenshot */}
           <div className="relative">
-            <img
+            <Image
               src="/images/search-normal-2.svg"
               alt="search"
               width={16}

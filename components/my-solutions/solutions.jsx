@@ -167,13 +167,13 @@ const Solutions = () => {
                                                     <Link
                                                         href="#"
                                                         onClick={() => setOpenPopupViewTicket(true)}
-                                                        className=" leading-[140%] py4 px4"
+                                                        className=" leading-[140%] py4 px4 cursor-pointer"
                                                     >
                                                         View
                                                     </Link>
                                                     <Link
                                                         href="#"
-                                                        className=" leading-[140%] py4 px4"
+                                                        className=" leading-[140%] py4 px4 cursor-pointer"
                                                     >
                                                         Cancel
                                                     </Link>
@@ -192,7 +192,7 @@ const Solutions = () => {
                                         </div>
                                     </div>
                                     <div className="flex justify-end mt4">
-                                        <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutralpure overflow-hidden">
+                                        <button className="group flex items-center rounded6 text-white px8 bg-BrandNeutralpure overflow-hidden cursor-pointer">
                                             <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:max-w-40 text-right font12 ">
                                                 Test Drive
                                             </span>

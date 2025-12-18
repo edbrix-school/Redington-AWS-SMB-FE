@@ -118,7 +118,7 @@ export default function Tabel() {
           title="Edit"
           className="cursor-pointer"
         > */}
-          <div onClick={(e) => op.current.toggle(e)}>
+          <div onClick={(e) => op.current.toggle(e)} className="cursor-pointer">
             <Image
               src={"/images/more.svg"}
               width={20}
@@ -209,8 +209,8 @@ export default function Tabel() {
           </div>
           <div className="flex flex-col md:flex-row md:justify-between py10 gap10">
             <div className="flex gap14 flex-nowrap">
-              <button  onClick={() => {
-               
+              <button onClick={() => {
+
                 setTimeout(() => setEditUser(true), 0);
               }} className="bg-BrandNeutralpure cursor-pointer py6 px14 font14 text-InterfaceSurfacecomponent rounded20 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                 <Image
@@ -268,8 +268,8 @@ export default function Tabel() {
         >
           <Column
             field="FirstName"
-            sortable 
-            header="First Name" 
+            sortable
+            header="First Name"
             style={{ minWidth: "11rem" }}
             filter
             filterElement={filterInput}
@@ -277,7 +277,7 @@ export default function Tabel() {
 
           <Column
             field="LastName"
-            sortable 
+            sortable
             header="Last Name"
             style={{ minWidth: "10rem" }}
             filter
@@ -286,8 +286,8 @@ export default function Tabel() {
 
           <Column
             field="MobileNumber"
-            sortable 
-            header="Mobile Number" 
+            sortable
+            header="Mobile Number"
             style={{ minWidth: "12rem" }}
             filter
             filterElement={filterInput}
@@ -295,16 +295,16 @@ export default function Tabel() {
 
           <Column
             field="Email"
-            sortable 
-            header="Email" 
+            sortable
+            header="Email"
             style={{ minWidth: "10rem" }}
             filter
             filterElement={filterInput}
           />
           <Column
             field="Role"
-            sortable 
-            header="Role" 
+            sortable
+            header="Role"
             style={{ minWidth: "10rem" }}
             filter
             filterElement={filterInput}
@@ -312,7 +312,7 @@ export default function Tabel() {
           <Column
             field="Status"
             header="Status"
-            sortable 
+            sortable
             style={{ minWidth: "10rem" }}
             body={statusBodyTemplate}
             filter
@@ -321,7 +321,7 @@ export default function Tabel() {
           <Column
             field="AuthorizedSignatory"
             header="Authorized Signatory"
-            sortable 
+            sortable
             style={{ minWidth: "13rem" }}
             filter
             filterElement={filterInput}
@@ -355,7 +355,7 @@ export default function Tabel() {
         onHide={() => setOpenPermissionPopup(false)}
       />
       <EditUser visible={addUserpopup} onHide={() => setAddUser(false)} />
-        <AddUser visible={editUserpopup} onHide={() => setEditUser(false)} />
+      <AddUser visible={editUserpopup} onHide={() => setEditUser(false)} />
     </>
   );
 }

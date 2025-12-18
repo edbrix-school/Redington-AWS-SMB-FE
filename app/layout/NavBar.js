@@ -33,8 +33,8 @@ export const NavBar = () => {
         const desktopClasses = `px-[3px] md:px-[5px] xl:px-[6px] 2xl:px-[0.513vw] 3xl:px-[0.513vw] py-[3px] md:py-[5px] xl:py-[4px] 2xl:py-[0.313vw] 3xl:py-[0.313vw] rounded-[6px] 
         text-[14px] md:text-[12px] xl:text-[11px] 2xl:text-[0.729vw] 3xl:text-[0.729vw]
         font-medium whitespace-nowrap transition-all ${isActive
-            ? 'bg-[#4A4167] text-white shadow-md'
-            : 'text-[#C9D0DB] hover:text-white'
+                ? 'bg-[#4A4167] text-white shadow-md'
+                : 'text-[#C9D0DB] hover:text-white'
             }`;
 
         const mobileClasses = `px-4 py-3 rounded-md text-sm font-medium text-left ${isActive
@@ -63,7 +63,7 @@ export const NavBar = () => {
                 {/* Mobile Menu Button */}
                 <div className="lg:hidden">
                     <button
-                        className="text-white bg-transparent"
+                        className="text-white bg-transparent cursor-pointer"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X /> : <Menu />}

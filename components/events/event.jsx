@@ -185,7 +185,7 @@ export const Events = () => {
                     <div className="flex justify-end mt-auto">
                       <div>
                         <div className="flex gap20">
-                          <div onClick={() => setOpenPopup(true)} className="flex gap14 ">
+                          <div onClick={() => setOpenPopup(true)} className="flex gap14 cursor-pointer">
                             <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                               Register
                             </button>
@@ -232,7 +232,7 @@ export const Events = () => {
                     <div className="flex justify-end mt-auto">
                       <div>
                         <div className="flex gap20">
-                          <div onClick={() => setOpenPopup(true)} className="flex gap14 ">
+                          <div onClick={() => setOpenPopup(true)} className="flex gap14 cursor-pointer">
                             <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                               Register
                             </button>
@@ -279,7 +279,7 @@ export const Events = () => {
                     <div className="flex justify-end mt-auto">
                       <div>
                         <div className="flex gap20">
-                          <div onClick={() => setOpenPopup(true)} className="flex gap14 ">
+                          <div onClick={() => setOpenPopup(true)} className="flex gap14 cursor-pointer">
                             <button className="bg-BrandNeutralpure leading-[110%] cursor-pointer py4 px-[8px] font12 text-InterfaceSurfacecomponent rounded4 flex items-center gap-[4px] xl:gap-[4px] 3xl:gap-[0.26vw]">
                               Register
                             </button>

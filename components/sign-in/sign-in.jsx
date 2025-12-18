@@ -18,7 +18,7 @@ const inter = Inter({
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["200", "300", "400", "600", "700", "800", "900"],
-  variable: "--font-nunito",  
+  variable: "--font-nunito",
 
 });
 export default function SigninTemplate() {
@@ -51,7 +51,7 @@ export default function SigninTemplate() {
                       className="w-[200px] lg:w-[260px] xl:w-[260px] 2xl:w-[268px] 3xl:w-[13.958vw] h-auto lg:h-[40px] xl:h-[40px] 2xl:h-[2.292vw] 3xl:h-[2.292vw]"
                     />
                   </div>
-                 
+
                 </div>
 
               </div>
@@ -59,7 +59,7 @@ export default function SigninTemplate() {
 
             <button
               onClick={() => setOpenPopup(true)}
-              className="text-InterfaceSurfacecomponent rounded8 bg-InterfaceStrokesoft py6 px14"
+              className="text-InterfaceSurfacecomponent rounded8 bg-InterfaceStrokesoft py6 px14 cursor-pointer"
             >
               <div className="font14 font-medium">Contact Us</div>
             </button>
@@ -206,15 +206,15 @@ export default function SigninTemplate() {
               alt="illustration"
               className="w-auto 3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[450px] xl:h-[650px]"
             />
-       
+
             <div className="absolute right-0 top-[47%]  xl:top-[47%] left-[37%] xl:left-[30%]  3xl:top-[47%] 2xl:left-[30%] 3xl:left-[30%] w-[180px] lg:w-[300px] xl:w-[300px] 2xl:w-[24.479vw] 3xl:w-[24.479vw]">
               <div className={nunito.className}>
-              <div className="text-[18px] lg:text-[22px] xl:text-[20px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
-                Welcome! You're one step closer to finding the ideal AWS tools for  your business. Our platform helps you explore, compare, and test  drive AWS products before making a decision — so you  can build with confidence.
-              </div>
+                <div className="text-[18px] lg:text-[22px] xl:text-[20px] 2xl:text-[1.563vw] 3xl:text-[1.563vw] font-[500] text-[#7F8488] leading-[140%]">
+                  Welcome! You're one step closer to finding the ideal AWS tools for  your business. Our platform helps you explore, compare, and test  drive AWS products before making a decision — so you  can build with confidence.
+                </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>

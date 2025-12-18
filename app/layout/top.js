@@ -35,26 +35,30 @@ export default function Top() {
           <div className="flex items-center gap-[16px] xl:gap-[16px] 3xl:gap-[0.938vw]">
             <div className="flex divide-x divide-[#494949] items-center">
               <div className="pr-[10px] xl:pr-[10px] 2xl:pr-[12px] 3xl:pr-[0.729vw]">
-                <Image
-                  src="/images/redington-logo.svg"
-                  width={100}
-                  height={22}
-                  alt="logo"
-                  className="w-[70px] lg:w-[80px] xl:w-[80px] 3xl:w-[5.108vw] h-auto"
-                />
+                <Link href="/" className="cursor-pointer">
+                  <Image
+                    src="/images/redington-logo.svg"
+                    width={100}
+                    height={22}
+                    alt="logo"
+                    priority
+                    className="w-[70px] lg:w-[80px] xl:w-[80px] 3xl:w-[5.108vw] h-auto"
+                  />
+                </Link>
               </div>
               <Image
                 src="/images/aws.svg"
                 width={100}
                 height={20}
                 alt="aws"
+                priority
                 className="w-[30px] lg:w-[32px] xl:w-[34px] 3xl:w-[2.104vw] h-auto ml-[10px]"
               />
             </div>
 
             {/* MIDDLE BUTTONS */}
             <div
-              className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw]"
+              className="flex items-center gap-[14px] xl:gap-[19px] 3xl:gap-[1.033vw] cursor-pointer"
               onClick={() => setShowCatalog(true)}
             >
               <i className="smb-flash-light text-[#5CB456] text-[20px] xl:text-[21px] 2xl:text-[22px] 3xl:text-[1.294vw]"></i>
@@ -112,6 +116,7 @@ export default function Top() {
                 width={30}
                 height={30}
                 alt="logo"
+                priority
                 className="w-[26px] lg:w-[24px] xl:w-[26px] 3xl:w-[1.323vw] h-[26px] lg:h-[24px] xl:h-[26px] 3xl:h-[1.323vw] "
               />
             </div>
@@ -123,6 +128,7 @@ export default function Top() {
                 width={30}
                 height={30}
                 alt="user menu"
+                priority
                 className="w-[26px] h-[26px] shrink-0"
               />
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-white shrink-0">

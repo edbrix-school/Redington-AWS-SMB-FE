@@ -44,7 +44,7 @@ export default function BlockUser({ visible, onHide }) {
                 <div className="px130">
                   <div
                     onClick={onHide}
-                    className="text-center flex justify-center mt40  "
+                    className="text-center flex justify-center mt40 cursor-pointer"
                   >
                     <button className="w220 flex items-center justify-center gap-[2px] xl:gap-[2px] 2xl:gap-[3px] cursor-pointer text-InterfaceSurfacecomponent bg-[#D42600] font16 font-medium py8  ">
                       <Image

@@ -24,6 +24,7 @@ const Launchpad = () => {
                     width={215}
                     height={32}
                     alt="logo"
+                    priority
                     className="w-[120px] sm:w-[180px] lg:w-[215px] h-auto"
                   />
 
@@ -33,6 +34,7 @@ const Launchpad = () => {
                       width={95}
                       height={95}
                       alt="flash"
+                      priority
                       className="w-[50px] sm:w-[75px] lg:w-[95px] h-auto"
                     />
                   </div>
@@ -83,6 +85,7 @@ const Launchpad = () => {
               alt="launchpad"
               width={1090}
               height={888}
+              priority
               className="w-full max-w-[350px] md:max-w-[600px] lg:max-w-[800px] h-auto"
             />
           </div>

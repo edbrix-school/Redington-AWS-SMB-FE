@@ -80,7 +80,7 @@ const GroupSolution = () => {
                             </div>
                         ))}
 
-                        <div className="col-span-10 md:col-span-3 lg:col-span-1 see-all-bg flex items-center justify-center p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8">
+                        <div className="col-span-10 md:col-span-3 lg:col-span-1 see-all-bg flex items-center justify-center p16  space-y-[15px] xl:space-y-[17px] 3xl:space-y-[0.885vw] text-black rounded8 cursor-pointer">
                             <div className="text-[#4E189A] font14 font-normal leading-tight flex flex-col justify-center">
                                 <i className="smb-arrowup text-center"></i>
                                 <div className="whitespace-nowrap px-[16px] xl:px-[18px] 3xl:px-[1.042vw]">See All</div>

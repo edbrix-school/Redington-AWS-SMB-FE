@@ -66,7 +66,7 @@ export default function Filter({ visible, onHide }) {
                                     </label>
 
                                     <div className="grid grid-cols-2 gap10">
-                                        <div className="relative  custom-input">
+                                        <div className="relative custom-input">
                                             <Calendar
                                                 id="date"
                                                 value={date}

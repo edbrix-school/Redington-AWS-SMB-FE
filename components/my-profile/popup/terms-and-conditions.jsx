@@ -73,7 +73,7 @@ export default function TermsAndConditions({ visible, onHide }) {
                     <div className="flex-none bg-[#fff] p-4 flex justify-end gap-4 border-t border-[#E5E7EB] rounded-bl-[10px] sticky bottom-0">
                         <button
                             onClick={onHide}
-                            className="text-[#3C4146] font-medium py-2 px-5 border border-[#E5E7EB] rounded-lg hover:bg-[#f2f2f3]"
+                            className="text-[#3C4146] font-medium py-2 px-5 border border-[#E5E7EB] rounded-lg hover:bg-[#f2f2f3] cursor-pointer"
                         >
                             Close
                         </button>

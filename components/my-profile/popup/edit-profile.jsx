@@ -132,7 +132,7 @@ export default function EditProfile({ visible, onHide }) {
                       />
                       {emailVerified && (
                         <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 verified-text font12 font-medium">
-                          <img src="/images/verify.svg" width={16} height={16} alt="Verified" />
+                          <Image src="/images/verify.svg" width={16} height={16} alt="Verified" />
                           Verified!
                         </div>
                       )}
@@ -142,8 +142,8 @@ export default function EditProfile({ visible, onHide }) {
                       style={verifyButtonStyle(emailVerified)}
                       onClick={() => setEmailVerified(true)}
                     >
-                      <img src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }}/>
-                     Verify
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }} />
+                      Verify
                     </button>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function EditProfile({ visible, onHide }) {
                       />
                       {mobileVerified && (
                         <div className="absolute right-[12px] top-1/2 -translate-y-1/2 flex items-center gap-1 verified-text font12 font-medium">
-                          <img src="/images/verify.svg" width={16} height={16} alt="Verified" />
+                          <Image src="/images/verify.svg" width={16} height={16} alt="Verified" />
                           Verified!
                         </div>
                       )}
@@ -173,7 +173,7 @@ export default function EditProfile({ visible, onHide }) {
                       style={verifyButtonStyle(mobileVerified)}
                       onClick={() => setMobileVerified(true)}
                     >
-                      <img src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }}/>
+                      <Image src="/images/shield-tick.svg" width={18} height={18} alt="Verify" style={{ opacity: emailVerified ? 0.6 : 1 }} />
                       Verify
                     </button>
                   </div>
@@ -263,7 +263,7 @@ export default function EditProfile({ visible, onHide }) {
                     </div>
                   </div>
                   <button className="font14 font-medium mt-3 py10 px20 border-[#645592] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-white whitespace-nowrap flex items-center justify-center gap-2 w-full sm:w-auto sm:self-end">
-                    <img src="/images/key-square.svg" width={18} height={18} alt="Change Password" />
+                    <Image src="/images/key-square.svg" width={18} height={18} alt="Change Password" />
                     Change Password
                   </button>
                 </div>

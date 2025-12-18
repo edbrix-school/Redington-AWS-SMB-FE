@@ -113,7 +113,7 @@ export const MyProfile = () => {
 
                             {/* Profile Image */}
                             <div className="w-16 h-16 rounded-12 overflow-hidden bg-gray-200 flex-shrink-0">
-                                <img
+                                <Image
                                     src={profileImage}
                                     alt="Profile"
                                     width={64}

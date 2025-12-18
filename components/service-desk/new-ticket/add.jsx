@@ -216,7 +216,7 @@ export default function NewTicket({ visible, onHide }) {
                         onClick={() =>
                           document.getElementById("fileUpload").click()
                         }
-                        className="mt-4 px14 py8 rounded-md bg-[#768FB5] text-white flex items-center gap-2"
+                        className="mt-4 px14 py8 rounded-md bg-[#768FB5] text-white flex items-center gap-2 cursor-pointer"
                       >
                         <Image
                           src="/images/document-upload-white.svg"
