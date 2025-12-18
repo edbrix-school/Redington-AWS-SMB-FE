@@ -166,7 +166,7 @@ export const FilesTable = () => {
                     style={{ minWidth: "14rem" }}
                     filter
                     sortable
-                    filterElement={(opts) => filterInput(opts, "")}
+                    filterElement={(opts) => filterInput(opts, "Search")}
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>}
                 />
 
@@ -177,7 +177,7 @@ export const FilesTable = () => {
                     sortable
                     style={{ minWidth: "12rem" }}
                     filter
-                    filterElement={(opts) => filterInput(opts, "")}
+                    filterElement={(opts) => filterInput(opts, "Search")}
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>}
                 />
 
@@ -188,7 +188,7 @@ export const FilesTable = () => {
                     sortable
                     style={{ minWidth: "14rem" }}
                     filter
-                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    filterElement={(opts) => filterInput(opts, "Search")}
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>}
                 />
 
@@ -199,7 +199,7 @@ export const FilesTable = () => {
                     sortable
                     style={{ minWidth: "12rem" }}
                     filter
-                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    filterElement={(opts) => filterInput(opts, "Search")}
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>}
                 />
 
@@ -210,7 +210,7 @@ export const FilesTable = () => {
                     sortable
                     style={{ minWidth: "12rem" }}
                     filter
-                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    filterElement={(opts) => filterInput(opts, "Search")}
                     body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>}
                 />
 
