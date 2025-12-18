@@ -150,6 +150,7 @@ export const FilesTable = () => {
                 rows={10}
                 className="custTable custfiltericon tableCustRed mt-4"
                 responsiveLayout="scroll"
+                scrollable
                 style={{ width: "100%" }}
                 filters={filters}
                 onFilter={(e) => setFilters(e.filters)}
@@ -218,7 +219,9 @@ export const FilesTable = () => {
                     field="Action"
                     header="Action"
                     style={{ width: "5rem", textAlign: "center" }}
+                    alignFrozen="right"
                     align="center"
+                    frozen
                     body={actionBodyTemplate}
                     filter
                     filterElement={() => <div className="w-full"></div>}
