@@ -34,9 +34,9 @@ export const FilesTable = () => {
     {
       template: (item, options) => (
         <div
-          onClick={() => {
+          onClick={(e) => {
             setVisibleRight(true);
-            options.onClick();
+            options.onClick(e);
           }}
           className="flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50"
         >

@@ -28,9 +28,9 @@ export const FilesTable = () => {
         {
             template: (item, options) => (
                 <div
-                    onClick={() => {
+                    onClick={(e) => {
                         setOpenViewActivity(true);
-                        options.onClick();
+                        options.onClick(e);
                     }}
                     className="flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50"
                 >
@@ -160,58 +160,58 @@ export const FilesTable = () => {
                 emptyMessage={<div className="flex justify-center p-4">No Records Found.</div>}
             >
                 {/* 1. TimeStamp - Icon restored */}
-                <Column 
-                    field="timeStamp" 
-                    header="Time Stamp" 
-                    style={{ minWidth: "14rem" }} 
-                    filter 
+                <Column
+                    field="timeStamp"
+                    header="Time Stamp"
+                    style={{ minWidth: "14rem" }}
+                    filter
                     sortable
-                    filterElement={(opts) => filterInput(opts, "")} 
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>} 
+                    filterElement={(opts) => filterInput(opts, "")}
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>}
                 />
 
                 {/* 2. Activity Type - Icon restored */}
-                <Column 
-                    field="activityType" 
+                <Column
+                    field="activityType"
                     header="Activity Type"
                     sortable
-                    style={{ minWidth: "12rem" }} 
-                    filter 
-                    filterElement={(opts) => filterInput(opts, "")} 
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>} 
+                    style={{ minWidth: "12rem" }}
+                    filter
+                    filterElement={(opts) => filterInput(opts, "")}
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>}
                 />
 
                 {/* 3. Description - Icon restored */}
-                <Column 
-                    field="description" 
+                <Column
+                    field="description"
                     header="Description/ Details"
                     sortable
-                    style={{ minWidth: "14rem" }} 
-                    filter 
-                    filterElement={(opts) => filterInput(opts, "Abc")} 
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>} 
+                    style={{ minWidth: "14rem" }}
+                    filter
+                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>}
                 />
 
                 {/* 4. User - Icon restored */}
-                <Column 
-                    field="user" 
+                <Column
+                    field="user"
                     header="User"
                     sortable
-                    style={{ minWidth: "12rem" }} 
-                    filter 
-                    filterElement={(opts) => filterInput(opts, "Abc")} 
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>} 
+                    style={{ minWidth: "12rem" }}
+                    filter
+                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>}
                 />
 
                 {/* 5. IP Address - Icon restored */}
-                <Column 
-                    field="ipAddress" 
+                <Column
+                    field="ipAddress"
                     header="IP Address"
                     sortable
-                    style={{ minWidth: "12rem" }} 
-                    filter 
-                    filterElement={(opts) => filterInput(opts, "Abc")} 
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>} 
+                    style={{ minWidth: "12rem" }}
+                    filter
+                    filterElement={(opts) => filterInput(opts, "Abc")}
+                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>}
                 />
 
                 {/* Action Column - Hiding menu intentionally here */}
