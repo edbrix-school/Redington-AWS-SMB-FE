@@ -148,11 +148,8 @@ export const Events = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 xl:grid-cols-7 gap-4 md:gap-5 overflow-y-auto  items-stretch">
-              <div
-                className=" col-span-4"
-                activeIndex={activeIndex}
-              // onTabChange={(e) => setActiveIndex(e.index)}
-              >
+              <div className=" col-span-4">
+
                 <div className="h-auto lg:h-[180px] xl:h-[200px] 2xl:h-[210px] 3xl:h-[10.417vw] spacey24 mb-[12px]">
                   <div className="spacey24 shadow-sm p16 border border-[#f3f5f8] mb-[12px] rounded8 h-full flex flex-col">
                     <div className="flex justify-between gap-4">

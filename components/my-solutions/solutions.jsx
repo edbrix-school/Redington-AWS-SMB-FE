@@ -7,11 +7,12 @@ import { InputText } from "primereact/inputtext";
 import Image from 'next/image';
 import { Paginator } from "primereact/paginator";
 import { Dropdown } from "primereact/dropdown";
+import ViewTicket from "./../service-desk/ticket-view/view";
 
 const inter = Inter({
     subsets: ["latin"],
     weight: ["100", "300", "400", "500", "700", "900"],
-    variable: "--font-roboto",
+    variable: "--font-inter",
 });
 
 const Solutions = () => {
@@ -57,6 +58,8 @@ const Solutions = () => {
     const [isGridView, setIsGridView] = useState(false); // Default to List (Table) View
     const op = useRef(null);
     const [globalFilter, setGlobalFilter] = useState('');
+    const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
+
     const onPageChange = (event) => {
         setFirst(event.first);
         setRows(event.rows);
@@ -222,6 +225,10 @@ const Solutions = () => {
                     </div>
                 </div>
             </div>
+            <ViewTicket
+                visible={openpopupviewticket}
+                onHide={() => setOpenPopupViewTicket(false)}
+            />
         </>
     );
 };

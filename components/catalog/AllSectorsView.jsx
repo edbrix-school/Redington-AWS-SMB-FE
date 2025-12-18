@@ -206,6 +206,7 @@ export default function AllSectorsView({ onSectorClick }) {
                       src="/images/catalog-tonai-girl.svg"
                       alt="vector"
                       fill
+                      unoptimized={true}
                       // width={230}
                       // height={230}
                       className=" opacity-90"

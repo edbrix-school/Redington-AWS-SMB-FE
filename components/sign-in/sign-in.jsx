@@ -204,6 +204,7 @@ export default function SigninTemplate() {
               width={650}
               height={850}
               alt="illustration"
+              priority
               className="w-auto 3xl:w-[33.854vw] 3xl:h-[44.271vw] 2xl:w-[33vw] 2xl:h-[44vw] xl:w-[450px] xl:h-[650px]"
             />
 

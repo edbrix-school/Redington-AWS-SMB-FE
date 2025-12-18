@@ -2,13 +2,14 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { OverlayPanel } from "primereact/overlaypanel";
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { Roboto } from "next/font/google";
+import ViewTicket from "./../service-desk/ticket-view/view";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
+  variable: "--font-inter",
 });
 
 const roboto = Roboto({
@@ -42,12 +43,11 @@ const TryOut = () => {
     },
   ];
   const op = useRef(null);
+  const [openpopupviewticket, setOpenPopupViewTicket] = useState(false);
 
   return (
     <>
-      <div className="grid grid-cols-12 gap24 my-solutions-bg 
-      pl-[20px] lg:pl-[30px] xl:pl-[80px] 2xl:pl-[86px] 3xl:pl-[4.635vw] 
-      pr-[20px] lg:pr-[30px] xl:pr-[32px] 2xl:pr-[34px] 3xl:pr-[1.927vw]">
+      <div className="grid grid-cols-12 gap24 my-solutions-bg pl-[20px] lg:pl-[30px] xl:pl-[80px] 2xl:pl-[86px] 3xl:pl-[4.635vw] pr-[20px] lg:pr-[30px] xl:pr-[32px] 2xl:pr-[34px] 3xl:pr-[1.927vw]">
         <div className="col-span-12 md:col-span-6 lg:col-span-7">
           <div className="spacey30 mt-[80px] xl:mt-[100px] 2xl:mt-[120px] 3xl:mt-[7.031vw] mb-[80px] xl:mb-[84px] 2xl:mb-[90px] 3xl:mb-[5vw]">
             <div className="spacey8">
@@ -142,6 +142,10 @@ const TryOut = () => {
           </div>
         </div>
       </div>
+      <ViewTicket
+        visible={openpopupviewticket}
+        onHide={() => setOpenPopupViewTicket(false)}
+      />
     </>
   );
 };

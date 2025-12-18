@@ -281,11 +281,8 @@ export const ServicesDeskList = () => {
               </div>
             </div>
           </div>
-          <div
-            className="h-[800px]  3xl:h-[36.458vw] overflow-auto"
-            activeIndex={activeIndex}
-            onTabChange={(e) => setActiveIndex(e.index)} // Update accordion active state on tab change
-          >
+          <div className="h-[800px]  3xl:h-[36.458vw] overflow-auto">
+
             {selectedData.map((sector, index) => {
               return (
                 <div key={sector.name}>
@@ -356,7 +353,7 @@ export const ServicesDeskList = () => {
                           width="24"
                           height="24"
                           alt="profile"
-                          rounded-full
+                          className="rounded-full"
                         />
                         {/* profile-img */}
 

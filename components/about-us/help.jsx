@@ -45,7 +45,7 @@ const Help = () => {
                                 <div className="col-span-3"></div>
                                 <div className="col-span-6 flex flex-wrap gap-[26px] xl:gap-[30px] 2xl:gap-[34px] 3xl:gap-[1.927vw]">
                                     <div className="">
-                                        <Image src="/images/onboarding-image.svg" width="350" height="500" alt="logo" className="h-auto max-w-[300px] xl:max-w-none mx-auto" />
+                                        <Image src="/images/onboarding-image.svg" width="350" height="500" unoptimized={true} alt="logo" className="h-auto max-w-[300px] xl:max-w-none mx-auto" />
                                     </div>
                                     <div className="mt-[20px] xl:mt-[300px] 2xl:mt-[350px] 3xl:mt-[18.229vw]">
                                         <div>
