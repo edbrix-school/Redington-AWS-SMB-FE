@@ -60,12 +60,8 @@ export default function ViewFileDetails({ visible, onHide }) {
                                 </h1>
 
                                 <div className="mt-2 flex gap-2">
-                                    <span className="px-2 py-0.5 bg-gray-100 text-[10px] font-semibold rounded uppercase">
-                                        Web Hosting
-                                    </span>
-                                    <span className="px-2 py-0.5 bg-gray-100 text-[10px] font-semibold rounded uppercase">
-                                        Security
-                                    </span>
+                                    <span className="kh-badge">Web Hosting</span>
+                                    <span className="kh-badge">Security</span>
                                 </div>
                             </div>
                         </div>

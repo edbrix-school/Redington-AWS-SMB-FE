@@ -15,7 +15,7 @@ export const ViewAnnouncements = ({ visible, onHide, data }) => {
         >
             <div className="flex flex-col h-full">
                 {/* ------------ HEADER ------------ */}
-                <div className="flex-shrink-0 px-5 py-5 flex items-center justify-between bg-white border-b border-gray-200">
+                <div className="sidebar-header flex items-center justify-between border-b border-gray-200">
                     <h2 className="text-lg font-semibold text-gray-900 tracking-tight">
                         Announcement
                     </h2>
@@ -29,7 +29,7 @@ export const ViewAnnouncements = ({ visible, onHide, data }) => {
                 </div>
 
                 {/* ------------ BODY ------------ */}
-                <div className="flex-1 overflow-y-auto px-5 pb-8">
+                <div className="sidebar-content p24">
 
                     {/* --- TOP CARD --- */}
                     <div className="mt-4 rounded-xl overflow-hidden border border-gray-200 bg-white">

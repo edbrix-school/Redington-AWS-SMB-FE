@@ -43,7 +43,7 @@ export default function Filter({ visible, onHide }) {
             >
                 <div className="flex flex-col h-full">
                     <div className="border-top-left-radius: 1rem flex-none">
-                        <div className=" bg-[#fff] p24 rounded-tl-[10px]">
+                        <div className="sidebar-header">
                             <div className=" text-[#212325]  font24 font-bold">
                                 Apply Filter
                             </div>
@@ -110,8 +110,8 @@ export default function Filter({ visible, onHide }) {
                         </div>
                     </div>
                     <div className="absolute bottom-0 right-0 left-0 flex-none">
-                        <div className="bg-[#fff] dark:bg-[#111928] p-[16px] xl:p-[16px] 3xl:p-[0.833vw] flex justify-end gap-4 rounded-bl-[10px]">
-                            <div className=" text-[#3C4146] font16 font-[500] py10 px20  border-solid border border-[#E5E7EB] rounded-lg   cursor-pointer cancel-btn-bg hover:bg-[#f6f6f7]">
+                        <div className="sidebar-footer">
+                            <div className="btn-secondary">
                                 <Link onClick={onHide} href={""}>
                                     Cancel
                                 </Link>
@@ -119,7 +119,7 @@ export default function Filter({ visible, onHide }) {
 
                             <div
                                 onClick={() => setShow(true)}
-                                className="font16 font-[500] py10 px20  border-[#645592] rounded-lg bg-[#645592]  cursor-pointer hover:bg-[#5c4c8d] text-[#fff]"
+                                className="btn-primary"
                             >
                                 Apply Filter
                             </div>

@@ -190,7 +190,7 @@ export const FilesTable = () => {
 
                     {/* Header: Category + Menu */}
                     <div className="flex justify-between items-start mb-3">
-                        <span className="bg-gray-100 text-gray-500 text-[10px] uppercase font-bold px-2 py-1 rounded">
+                        <span className="kh-badge-muted">
                             {product.category}
                         </span>
 

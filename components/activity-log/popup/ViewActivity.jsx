@@ -5,13 +5,8 @@ import { Sidebar } from "primereact/sidebar";
 import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import Link from "next/link";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-
 
 export default function ViewActivity({ visible, onHide }) {
-
-
     return (
         <div>
             <Sidebar
@@ -23,49 +18,48 @@ export default function ViewActivity({ visible, onHide }) {
 
             >
                 <div className="flex flex-col h-full">
-
                     <div className="border-top-left-radius: 1rem flex-none">
-                        <div className=" bg-[#fff] p24 rounded-tl-[10px]">
+                        <div className="sidebar-header">
                             <div className=" text-[#212325]  font24 font-bold">
                                 View
                             </div>
                         </div>
                     </div>
 
-                    <div className=" overflow-y-auto h-full border-t border-[#E5E7EB]">
+                    <div className="sidebar-content">
                         <div className="p24">
                             {/* Row 1: Full Timestamp & Activity */}
                             <div className="grid grid-cols-2 gap14 pb-2">
-                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
-                                    <label className="font12 font-normal text-[#7F8488]">
+                                <div className="detail-row">
+                                    <label className="detail-label">
                                         Full Timestamp
                                     </label>
-                                    <div className="font14 font-semibold text-[#3C4146]">20/05/2025, 11:00 hrs</div>
+                                    <div className="detail-value">20/05/2025, 11:00 hrs</div>
                                 </div>
-                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
-                                    <label className="font12 font-normal text-[#7F8488]">
+                                <div className="detail-row">
+                                    <label className="detail-label">
                                         Activity
                                     </label>
-                                    <div className="font14 font-semibold text-[#3C4146]">Order Placed</div>
+                                    <div className="detail-value">Order Placed</div>
                                 </div>
                             </div>
 
                             {/* Row 2: Event Specific Data Fields & Performed by */}
                             <div className="grid grid-cols-2 gap14 pb-2">
-                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
-                                    <label className="font12 font-normal text-[#7F8488]">
+                                <div className="detail-row">
+                                    <label className="detail-label">
                                         Event Specific Data Fields
                                     </label>
-                                    <div className="font14 font-semibold text-[#3C4146]">
+                                    <div className="detail-value">
                                         Order ID : #12345
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
-                                    <label className="font12 font-normal text-[#7F8488]">
+                                <div className="detail-row">
+                                    <label className="detail-label">
                                         Performed by (User, System, API)
                                     </label>
-                                    <div className="font14 font-semibold text-[#3C4146]">
+                                    <div className="detail-value">
                                         Robert Fox
                                     </div>
                                 </div>
@@ -73,11 +67,11 @@ export default function ViewActivity({ visible, onHide }) {
 
                             {/* Row 3: IP Address */}
                             <div className="grid grid-cols-2 gap14">
-                                <div className="flex flex-col gap4 py10 border-b border-[#E5E7EB]">
-                                    <label className="font12 font-normal text-[#7F8488]">
+                                <div className="detail-row">
+                                    <label className="detail-label">
                                         IP Address
                                     </label>
-                                    <div className="font14 font-semibold text-[#3C4146]">
+                                    <div className="detail-value">
                                         120.4.199.254
                                     </div>
                                 </div>
@@ -85,8 +79,8 @@ export default function ViewActivity({ visible, onHide }) {
                         </div>
                     </div>
                     <div className="absolute bottom-0 right-0 left-0 flex-none">
-                        <div className="bg-[#fff] dark:bg-[#111928] p-[16px] xl:p-[16px] 3xl:p-[0.833vw] flex justify-end gap-4 rounded-bl-[10px]">
-                            <div className=" text-[#3C4146] font16 font-[500] py10 px20  border-solid border border-[#E5E7EB] rounded-lg   cursor-pointer cancel-btn-bg hover:bg-[#f6f6f7]">
+                        <div className="sidebar-footer">
+                            <div className="btn-secondary">
                                 <Link onClick={onHide} href={""}>
                                     Cancel
                                 </Link>
@@ -94,7 +88,7 @@ export default function ViewActivity({ visible, onHide }) {
 
                             <div
                                 onClick={() => setShow(true)}
-                                className="font16 font-[500] py10 px20  border-[#645592] rounded-lg bg-[#645592]  cursor-pointer hover:bg-[#5c4c8d] text-[#fff]"
+                                className="btn-primary"
                             >
                                 Apply Filter
                             </div>

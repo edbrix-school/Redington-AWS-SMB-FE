@@ -38,10 +38,10 @@ export const FilesTable = () => {
             setVisibleRight(true);
             options.onClick(e);
           }}
-          className="flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50"
+          className="menu-item"
         >
-          <i className="pi pi-eye text-gray-700 text-sm"></i>
-          <span className="text-gray-700 text-sm">View</span>
+          <i className="pi pi-eye text-muted-sm"></i>
+          <span className="text-muted-sm">View</span>
         </div>
       ),
     },
@@ -112,14 +112,14 @@ export const FilesTable = () => {
 
   const actionBodyTemplate = (rowData) => {
     return (
-      <div className="flex justify-center items-center w-full">
+      <div className="center-full">
         <button
           onClick={(event) => {
             setSelectedProduct(rowData);
             menu.current.toggle(event);
           }}
           title="Options"
-          className="cursor-pointer bg-transparent border-none flex items-center justify-center"
+          className="btn-icon"
         >
           <Image
             src={"/images/more.svg"}
@@ -197,10 +197,7 @@ export const FilesTable = () => {
           </div>
 
           {/* Filter Button */}
-          <div
-            onClick={() => setOpenFilter(true)}
-            className="cursor-pointer h-10 w36 flex items-center justify-center text-center border border-InterfaceStrokedefault bg-interfacesurfacecomponentmuted rounded-md hover:bg-[#ebeff3]"
-          >
+          <div onClick={() => setOpenFilter(true)} className="filter-button-muted h-10 w36">
             <i className="smb-filter text-InterfaceTextsubtitle font14"></i>
           </div>
         </div>
@@ -230,9 +227,7 @@ export const FilesTable = () => {
           filter
           sortable
           filterElement={filterInput}
-          body={(rowData) => (
-            <span className="text-gray-700 font-medium">{rowData.date}</span>
-          )}
+          body={(rowData) => <span className="text-muted-sm">{rowData.date}</span>}
         />
 
         <Column
@@ -242,9 +237,7 @@ export const FilesTable = () => {
           filter
           sortable
           filterElement={filterInput}
-          body={(rowData) => (
-            <span className="text-gray-700">{rowData.type}</span>
-          )}
+          body={(rowData) => <span className="text-muted-sm">{rowData.type}</span>}
         />
 
         <Column
@@ -254,9 +247,7 @@ export const FilesTable = () => {
           filter
           sortable
           filterElement={filterInput}
-          body={(rowData) => (
-            <span className="text-gray-600 text-sm">{rowData.message}</span>
-          )}
+          body={(rowData) => <span className="text-muted-sm">{rowData.message}</span>}
         />
 
         <Column
@@ -280,11 +271,7 @@ export const FilesTable = () => {
           onPageChange={onPageChange}
           totalRecords={100}
           className="justify-end"
-          leftContent={
-            <span className="text-gray-400 text-xs ml-4 absolute left-4 top-1/2 -translate-y-1/2">
-              Showing 1-10 of 1000
-            </span>
-          }
+          leftContent={<span className="pagination-summary">Showing 1-10 of 1000</span>}
         />
       </div>
 

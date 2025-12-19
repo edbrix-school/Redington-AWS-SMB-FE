@@ -1667,3 +1667,36 @@ body {
    border-radius: 6px;
    padding-left: 2.5rem;
 } 
+
+
+/* Activity Log: FilesTable.jsx uses menu-item, text-muted-sm, btn-icon, center-full, pagination-summary, filter-button */
+.menu-item { @apply flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50; }
+.text-muted-sm { @apply text-gray-700 text-sm; }
+.btn-icon { @apply cursor-pointer bg-transparent border-0 flex items-center justify-center; }
+.center-full { @apply flex justify-center items-center w-full; }
+.pagination-summary { @apply text-gray-400 font-medium text-xs ml-4 absolute left-0 top-1/2 -translate-y-1/2; }
+/* Announcements & Activity Log: filter trigger button */
+.filter-button { @apply cursor-pointer h-9 flex items-center justify-center text-center; }
+/* Announcements: FilesTable.jsx filter button with muted bg and border */
+.filter-button-muted { @apply cursor-pointer h-9 flex items-center justify-center text-center bg-interfacesurfacecomponentmuted rounded-md hover:bg-[#ebeff3]; }
+/* Popups: Filter/View headers, contents, and footers */
+.sidebar-header { @apply bg-[#fff] p-[24px] rounded-tl-[10px]; }
+.sidebar-content { @apply overflow-y-auto h-full border-t border-[#E5E7EB]; }
+.sidebar-footer { @apply bg-[#fff] dark:bg-[#111928] p-[16px] flex justify-end gap-4 rounded-bl-[10px]; }
+/* Popups: ViewActivity.jsx and ViewAnnouncements.jsx detail rows */
+.detail-row { @apply flex flex-col gap-[4px] py-[10px] border-b border-[#E5E7EB]; }
+.detail-label { @apply text-[12px] font-normal text-[#7F8488]; }
+.detail-value { @apply text-[14px] font-semibold text-[#3C4146]; }
+/* Popups & Actions: Buttons */
+.btn-secondary { @apply text-[#3C4146] text-[16px] font-[500] py-[10px] px-[20px] border border-[#E5E7EB] rounded-lg cursor-pointer hover:bg-[#f6f6f7]; background: linear-gradient(180deg, rgba(100, 85, 146, 0.08) 0%, rgba(100, 85, 146, 0.12) 100%); }
+.btn-primary { @apply text-[16px] font-[500] py-[10px] px-[20px] rounded-lg bg-[#645592] cursor-pointer hover:bg-[#5c4c8d] text-[#fff]; }
+/* Badges: shared across tables and lists */
+.badge { @apply px-2 py-0.5 bg-gray-100 text-[10px] font-semibold rounded uppercase; }
+/* Knowledge Hub: ViewFileDetails.jsx uses .badge for category tags */
+/* Knowledge Hub: FilesTable.jsx uses .badge-muted for grid card category label */
+.badge-muted { @apply px-2 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded uppercase; }
+/* Knowledge Hub specific variants (do not merge across folders) */
+/* KH: Popup/ViewFileDetails.jsx category tags */
+.kh-badge { @apply px-2 py-0.5 bg-gray-100 text-[10px] font-semibold rounded uppercase; }
+/* KH: FilesTable.jsx grid card category label */
+.kh-badge-muted { @apply px-2 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded uppercase; }

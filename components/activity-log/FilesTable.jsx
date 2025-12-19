@@ -32,10 +32,10 @@ export const FilesTable = () => {
                         setOpenViewActivity(true);
                         options.onClick(e);
                     }}
-                    className="flex items-center gap-2 px-3 py-2 cursor-pointer rounded-md hover:bg-gray-50"
+                    className="menu-item"
                 >
-                    <i className="pi pi-eye text-gray-700 text-sm"></i>
-                    <span className="text-gray-700 text-sm">View</span>
+                    <i className="pi pi-eye text-muted-sm"></i>
+                    <span className="text-muted-sm">View</span>
                 </div>
             ),
         },
@@ -62,14 +62,14 @@ export const FilesTable = () => {
     // Action Column (Dropdown on click)
     const actionBodyTemplate = (rowData) => {
         return (
-            <div className="flex justify-center items-center w-full">
+            <div className="center-full">
                 <button
                     onClick={(event) => {
                         setSelectedProduct(rowData);
                         menu.current.toggle(event);
                     }}
                     title="Options"
-                    className="cursor-pointer bg-transparent border-none flex items-center justify-center"
+                    className="btn-icon"
                 >
                     <Image
                         src={"/images/more.svg"}
@@ -136,7 +136,7 @@ export const FilesTable = () => {
                 <div className="flex gap-3 items-center pb22 md:pb-0">
 
                     {/* Filter Button */}
-                    <div onClick={() => setOpenFilter(true)} className="cursor-pointer h-9 w36 flex items-center justify-center text-center">
+                    <div onClick={() => setOpenFilter(true)} className="filter-button">
                         <i className="smb-filter text-InterfaceTextsubtitle font18"></i>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ export const FilesTable = () => {
                     filter
                     sortable
                     filterElement={(opts) => filterInput(opts, "Search")}
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.timeStamp}</span>}
+                    body={(rowData) => <span className="text-muted-sm">{rowData.timeStamp}</span>}
                 />
 
                 {/* 2. Activity Type - Icon restored */}
@@ -178,7 +178,7 @@ export const FilesTable = () => {
                     style={{ minWidth: "12rem" }}
                     filter
                     filterElement={(opts) => filterInput(opts, "Search")}
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.activityType}</span>}
+                    body={(rowData) => <span className="text-muted-sm">{rowData.activityType}</span>}
                 />
 
                 {/* 3. Description - Icon restored */}
@@ -189,7 +189,7 @@ export const FilesTable = () => {
                     style={{ minWidth: "14rem" }}
                     filter
                     filterElement={(opts) => filterInput(opts, "Search")}
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.description}</span>}
+                    body={(rowData) => <span className="text-muted-sm">{rowData.description}</span>}
                 />
 
                 {/* 4. User - Icon restored */}
@@ -200,7 +200,7 @@ export const FilesTable = () => {
                     style={{ minWidth: "12rem" }}
                     filter
                     filterElement={(opts) => filterInput(opts, "Search")}
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.user}</span>}
+                    body={(rowData) => <span className="text-muted-sm">{rowData.user}</span>}
                 />
 
                 {/* 5. IP Address - Icon restored */}
@@ -211,7 +211,7 @@ export const FilesTable = () => {
                     style={{ minWidth: "12rem" }}
                     filter
                     filterElement={(opts) => filterInput(opts, "Search")}
-                    body={(rowData) => <span className="text-gray-700 text-sm">{rowData.ipAddress}</span>}
+                    body={(rowData) => <span className="text-muted-sm">{rowData.ipAddress}</span>}
                 />
 
                 {/* Action Column - Hiding menu intentionally here */}
@@ -239,7 +239,7 @@ export const FilesTable = () => {
                     totalRecords={1000}
                     className="justify-end"
                     leftContent={
-                        <span className="text-gray-400 font-medium text-xs ml-4 absolute left-0 top-1/2 -translate-y-1/2">
+                        <span className="pagination-summary">
                             Showing <span className="font-bold">1-10</span> of <span className="font-bold">1000</span>
                         </span>
                     }
