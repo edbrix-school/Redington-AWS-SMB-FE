@@ -41,7 +41,7 @@ export default function ViewFileDetails({ visible, onHide }) {
                 position="right"
                 showCloseIcon={false}
                 blockScroll
-                maskClassName="!bg-black/40"
+                maskClassName="!bg-black/40"               
                 className="!w-full md:!w-[900px] !p-0 !border-none overflow-hidden customsidebar2"
             >
                 <div className="h-full bg-white flex flex-col">
@@ -50,7 +50,7 @@ export default function ViewFileDetails({ visible, onHide }) {
                     <div className="sticky top-0 z-50 bg-white border-b border-gray-200">
                         <div className="px-6 py-4 flex items-center gap-4">
                             {/* Modified button to open CatalogPopup instead of hiding the sidebar */}
-                            <button onClick={() => setShowCatalog(true)} className="cursor-pointer">
+                            <button onClick={() => { setShowCatalog(true); onHide?.(); }} className="cursor-pointer">
                                 <img src="/images/arrowleft.svg" width={20} height={20} alt="Back" className="text-gray-600" />
                             </button>
 
@@ -198,12 +198,12 @@ export default function ViewFileDetails({ visible, onHide }) {
                 className="!w-full md:!w-[90vw] !p-0 !border-none overflow-hidden customsidebar"
                 blockScroll
                 position="right"
-                showCloseIcon={false}
-
+                showCloseIcon={false}                
             >
                 <CatalogPopup
                     open={true}
                     onClose={() => setShowCatalog(false)}
+                    origin="knowledge-hub"
                 />
             </Sidebar>
 
