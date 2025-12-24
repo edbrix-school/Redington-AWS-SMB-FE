@@ -22,8 +22,9 @@ const SOLUTIONS = [
 
 const TAGS = ["Web Hosting", "Security", "+2"];
 
-export default function AdvertisingView({ sectorName, onBackClick }) {
+export default function AdvertisingView({ sectorName, onBackClick, origin }) {
   const [visible, setVisible] = useState(false);
+  const isKnowledgeHubViewDetails = origin === "knowledge-hub";
   const calculateRightPosition = useCallback(() => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 2560) {
@@ -261,8 +262,9 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
           visible={visible}
           onHide={hideSidebar}
           position="right"
+           maskClassName="!bg-black/40 backdrop-blur-md"
           className="p-4 !w-[50rem] customMultipopupsidebar overflow-y-auto custom-scroll "
-          style={{ right: `${rightPosition + 0}px` }} // Adjust 'right' based on sidebar width
+          style={isKnowledgeHubViewDetails ? undefined : { right: `${rightPosition + 0}px` }} // Adjust 'right' based on sidebar width
         >
           <div className="flex flex-col ">
             {/* Header with arrow and title */}
@@ -270,9 +272,10 @@ export default function AdvertisingView({ sectorName, onBackClick }) {
               <Image
                 src="/assets/icons/arrowleft.svg"
                 alt="Go Back"
-                className="go-back"
+                className="go-back cursor-pointer"
                 width={20}
                 height={20}
+                onClick={hideSidebar}
               />
               <div className="flex-1 px-4">
                 <h4 className="multi-agent-title">

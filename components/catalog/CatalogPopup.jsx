@@ -6,7 +6,7 @@ import AllSectorsView from "./AllSectorsView";
 import AdvertisingView from "./AdvertisingView";
 import BreadcrumbBar from "./BreadcrumbBar";
 
-export default function CatalogPopup({ open, onClose }) {
+export default function CatalogPopup({ open, onClose, origin }) {
   const [selectedSector, setSelectedSector] = useState(null);
   const [sectorCount, setSectorCount] = useState(null);
 
@@ -50,6 +50,7 @@ export default function CatalogPopup({ open, onClose }) {
             <AdvertisingView
               sectorName={selectedSector}
               onBackClick={handleBackToAll}
+              origin={origin}
             />
           )}
         </div>
